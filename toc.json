@@ -1,0 +1,781 @@
+{
+    "toc": {
+        "label": "Db2 on Cloud",
+        "properties": [
+            {
+                "name": "subcollection",
+                "value": "Db2onCloud"
+            },
+            {
+                "name": "audience",
+                "value": "service"
+            },
+            {
+                "name": "arm",
+                "value": "1920570"
+            },
+            {
+                "name": "href",
+                "value": "/docs/services/Db2onCloud/index.html"
+            },
+            {
+                "name": "path",
+                "value": "services/Db2onCloud"
+            }
+        ],
+        "topics": [
+            {
+                "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
+                "label": "Getting started",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/index.html#interfaces",
+                        "label": "Interfaces",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/index.html#web_console",
+                                "label": "Db2 on Cloud web console"
+                            },
+                            {
+                                "href": "services/Db2onCloud/index.html#connect_apps",
+                                "label": "Installing Db2 command line clients and drivers on your computer"
+                            },
+                            {
+                                "href": "services/Db2onCloud/index.html#data_src",
+                                "label": "Use Db2 on Cloud as a data source for your IBM Cloud apps or services"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/index.html#samples",
+                        "label": "Samples",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/index.html#intro_vid",
+                        "label": "Video: Introducing Db2 on Cloud",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/index.html#vid_api",
+                        "label": "Video: Using REST API to communicate with Db2 on Cloud",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/index.html#cognos_vid",
+                        "label": "Video: Integrating Jupyter notebooks",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/features_specs.html#overview",
+                "label": "Features & specs",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/iam.html#iam",
+                "label": "Identity and access management (IAM) on IBM Cloud",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/iam.html#enabled",
+                        "label": "Is IAM enabled on your instance?",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#features",
+                        "label": "Features of IBM Cloud IAM",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#connect",
+                        "label": "Client connections and user logins",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#sup-if",
+                        "label": "Supported interfaces",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/iam.html#odbc-clpplus",
+                                "label": "ODBC and CLPPLUS"
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#jdbc",
+                                "label": "JDBC"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#console-ux",
+                        "label": "Console user experience",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#api",
+                        "label": "REST API experience",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#fed",
+                        "label": "IBMid federation",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/iam.html#restrictions",
+                        "label": "Restrictions",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/connecting.html#connect",
+                "label": "Connecting",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                        "label": "Prerequisites",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                "label": "Configuring your environment"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                        "label": "Connecting programmatically",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
+                        "label": "Connecting apps and tools",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "Connecting to another Db2 database",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Connecting to another Db2 database"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/federation.html#overview",
+                        "label": "Data virtualization (federation)",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/federation.html#use_cases",
+                                "label": "Use Cases",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/federation.html#consolidate-data-sources",
+                                        "label": "Consolidate data sources"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/federation.html#attach-to-db2-warehouse-on-cloud",
+                                        "label": "Attach to Db2 Warehouse on Cloud"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/federation.html#sharded-data-across-multiple-servers",
+                                        "label": "Sharded data across multiple servers"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/federation.html#increase-database-capacity-beyond-fixed-limits",
+                                        "label": "Increase database capacity beyond fixed limits"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/federation.html#getting_started",
+                                "label": "Getting started",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/federation.html#on-the-db2-on-cloud-target-machine",
+                                        "label": "On the Db2 on Cloud target machine"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/federation.html#on-a-db2-on-cloud-machine-being-used-as-a-federation-source",
+                                        "label": "On a Db2 on Cloud machine being used as a federation source"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/federation.html#additional-information",
+                                "label": "Additional information",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/free_plan.html#free_plan",
+                "label": "Free Lite plan",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/free_plan.html#architecture",
+                        "label": "Architecture",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/free_plan.html#outside_na",
+                        "label": "Using the Lite plan outside continental North America",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/plans_pricing.html#plans_pricing",
+                "label": "Plans and pricing",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#plans_cfgs",
+                        "label": "Plans and configurations",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#pricing",
+                        "label": "Pricing",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/plans_pricing.html#examples",
+                                "label": "Billing examples"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/flex_scaling.html#scale",
+                "label": "Flexible scaling",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/br.html#br",
+                "label": "Backup and restore",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/ha.html#ha",
+                "label": "High availability (HA)",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/ha.html#rule_14",
+                        "label": "Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/ha.html#add_dr",
+                        "label": "How to add a Geo-Replicated Disaster Recovery Node",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/ha.html#manage_ha_dr",
+                        "label": "Managing high availability and disaster recovery nodes",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/ha.html#faq",
+                        "label": "FAQ",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-",
+                                "label": "What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "Loading your data",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Loading your data"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/dcw.html#dcw",
+                        "label": "Assessing your database compatibility"
+                    },
+                    {
+                        "href": "services/Db2onCloud/migration.html#migration",
+                        "label": "Migrating data to IBM Cloud",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/migration.html#cos",
+                                "label": "Loading data from object store",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/migration.html#onprem",
+                                "label": "Migrating data from on-premises system",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/migration.html#lift",
+                                        "label": "Lift CLI"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/migration.html#mdms",
+                                        "label": "IBM Cloud Mass Data Migration"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/audit.html#audit",
+                "label": "Auditing",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
+                "label": "Managing users",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/maintenance.html#main_not_pol",
+                "label": "Maintenance and notification policies",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/maintenance.html#maintenance",
+                        "label": "Maintenance policy",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/maintenance.html#notification",
+                        "label": "Notification policy",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/local_dev_env.html#local_dev",
+                "label": "Local development environment",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/communities.html#communities",
+                "label": "Communities",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=abmWJYe7Kcc",
+                "label": "Walk-through video",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://ibm.biz/db2oncloud-features",
+                "label": "Features and advantages",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/docview.wss?uid=swg21961758",
+                "label": "What's new",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html",
+                "label": "Frequently asked questions",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://developer.ibm.com/answers/index.html",
+                "label": "IBM Developer Answers",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
+                "label": "Security compliances",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html",
+                "label": "Knowledge Center",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud",
+                "label": "Guided demo: Complete common tasks through the web console",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html",
+                "label": "Tutorial: Time travel query to access historical data",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/cloud/garage/tutorials/ibm-db2-on-cloud/exploring-the-capabilities-of-db-2-on-cloud",
+                "label": "Tutorial: Develop apps with Jupyter Notebooks and REST API",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=PSNBDwgf9ts",
+                "label": "Video: Using RESTful API",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=bNfH0Wzx3is",
+                "label": "Video: Integrating Jupyter notebooks",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "http://ibm.biz/db2oc_api",
+                "label": "REST API",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html",
+                "label": "SQL reference",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "howto"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/help.html#help_support",
+                "label": "Help and support",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/help.html#gettinghelp",
+                        "label": "Getting help and support for Db2 on Cloud",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "help"
+                    }
+                ]
+            }
+        ]
+    }
+}
