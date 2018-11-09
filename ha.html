@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-10-22">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/ha.md">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>High availability (HA)</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="ha" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-ha">
+        <h1 id="ha">High availability (HA)</h1>
+        <p class="shortdesc">Db2 on Cloud high availability plans have excellent availability characteristics with a 99.99% SLA. </p>
+        <p>The standard high availability plans without a disaster recovery (DR) node provide seamless failover and rolling updates. They are managed for you by using automatic client reroute (ACR) and portable IPs.</p>
+        <p>In addition, you can add a Geo-Replicated Disaster Recovery Node. This offsite DR node option gives you the ability to rapidly synchronize your data in real time to a database node in an offsite IBM Cloud data center of your choice. </p>
+        <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">List of data center locations where DR nodes are available. <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></p>
+        <p>Db2 on Cloud uses the Db2 High Availability Disaster Recovery (HADR) technology in <code>ASYNC</code> mode to achieve the offsite DR node capability and provides <code>Read on Standby</code> on the DR node.</p>
+        <section id="section-rule_14">
+          <h2 id="rule_14"><strong>Brazil: Supplementary Rule 14</strong> (applies to systems provisioned for the Brazilian federal government)</h2>
+          <p>At this time, the disaster recovery (DR) option for Db2 on Cloud offerings is not available in Brazil for the federal government due to Supplementary Rule 14.</p>
+        </section>
+        <section id="section-add_dr">
+          <h2 id="add_dr">How to add a Geo-Replicated Disaster Recovery Node</h2>
+          <p>For existing Db2 on Cloud users:</p>
+          <ul>
+            <li>You can add an on-demand DR node to existing Db2 on Cloud instances. After clicking your instance in the IBM Cloud dashboard, you will see an option called <strong>Manage Disaster Recovery</strong>. You can add a Geo-Replicated Disaster Recovery
+              Node from there.</li>
+            <li>If you purchased Db2 on Cloud on contract through a sales representative and do not have an IBM Cloud subscription, contact your IBM representative to add a DR node.</li>
+          </ul>
+          <p>If you are currently not a Db2 on Cloud user:</p>
+          <ul>
+            <li>Order Db2 on Cloud through IBM Cloud, or speak to your sales representative.</li>
+            <li>You can then add a DR node by using <strong>Manage Disaster Recovery</strong> in the console.
+              <!--- Through the web console, you can also add a disaster recovery (DR) node located in a datacenter of your choice. -->
+
+            </li>
+          </ul>
+        </section>
+        <section id="section-manage_ha_dr">
+          <h2 id="manage_ha_dr">Managing high availability and disaster recovery nodes</h2>
+          <p>For standard HA nodes, which are not offsite, the failover is managed for you by IBM. IBM monitors the health of your server, failover, and failing back as needed, including rolling updates and scaling to keep uptime as high as possible.</p>
+          <p>For Geo-Replicated Disaster Recovery (HADR), you must manually fail over by using <strong>Manage Disaster Recovery</strong> in the console. In addition, you can fail over by using an API as described <a href="https://developer.ibm.com/answers/questions/457901/where-can-i-find-api-documentation-for-db2-on-clou.html"
+              target="_blank">here <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+        </section>
+        <section id="section-faq">
+          <h2 id="faq">FAQ</h2>
+          <section id="section-what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-">
+            <h3 id="what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-">What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?</h3>
+            <p><strong>A</strong>: No. You are given 2 resolvable host names. If your app is configured to use Db2 ACR (Active Connection Reroute), then your app gets rerouted to the new primary node.</p>
+            <p>For more information about the Geo-Replicated Disaster Recovery Node, click <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">here <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

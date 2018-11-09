@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS TYPE="markdown.toc"?>
+<toc label="Db2 on Cloud">
+  <property name="subcollection" value="Db2onCloud"/>
+  <property name="audience" value="service"/>
+  <property name="arm" value="1920570"/>
+  <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <topic href="index.html#getting_started_db2oncloud" label="시작하기">
+    <property name="navgroup" value="learn"/>
+    <topic href="index.html#interfaces" label="인터페이스">
+      <property name="type" value="anchor"/>
+      <topic href="index.html#web_console" label="Db2 on Cloud 웹 콘솔"></topic>
+      <topic href="index.html#connect_apps" label="로컬 컴퓨터에서 애플리케이션 또는 선호하는 도구 연결"></topic>
+      <topic href="index.html#data_src" label="IBM Cloud 앱 또는 서비스의 데이터 소스로 Db2 on Cloud 사용"></topic>
+    </topic>
+    <topic href="index.html#samples" label="샘플">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="connecting.html#connect" label="연결">
+    <property name="navgroup" value="learn"/>
+    <topic href="connecting.html#connect_prereq" label="전제조건">
+      <property name="type" value="anchor"/>
+      <topic href="connecting.html#cfg_env" label="환경 구성"></topic>
+    </topic>
+    <topic href="connecting.html#conx_prgrm" label="프로그래밍 방식으로 연결">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="connecting.html#conx_apps_tools" label="앱 및 도구 연결">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic label="다른 Db2 서버에 연결">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="다른 Db2 서버에 연결"/>
+    <topic href="federation.html#overview" label="데이터 가상화(연합)">
+      <topic href="federation.html#use_cases" label="유스 케이스">
+        <property name="type" value="anchor"/>
+        <topic href="federation.html#-" label="데이터 소스 통합"></topic>
+        <topic href="federation.html#db2-warehouse-on-cloud-" label="Db2 Warehouse on Cloud에 연결"></topic>
+        <topic href="federation.html#-" label="다중 서버의 샤드된 데이터"></topic>
+        <topic href="federation.html#-" label="고정된 한계를 초과하여 데이터베이스 용량 증가"></topic>
+      </topic>
+      <topic href="federation.html#getting_started" label="시작하기">
+        <property name="type" value="anchor"/>
+        <topic href="federation.html#db2-on-cloud-" label="Db2 on Cloud 대상 시스템의 경우"></topic>
+        <topic href="federation.html#-db2-on-cloud-" label="연합 소스로 사용 중인 Db2 on Cloud 시스템의 경우"></topic>
+      </topic>
+      <topic href="federation.html#-" label="추가 정보">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+  </topic>
+  <topic href="free_plan.html#free_plan" label="무료 라이트 플랜">
+    <property name="navgroup" value="learn"/>
+    <topic href="free_plan.html#architecture" label="아키텍처">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#outside_na" label="북아메리카 대륙 이외의 지역에서 라이트 플랜 사용">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="flex_scaling.html#scale" label="유연한 스케일링">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="br.html#br" label="백업 및 복원">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="ha.html#ha" label="고가용성(HA)">
+    <property name="navgroup" value="learn"/>
+    <topic href="ha.html#add_dr" label="Geo-Replicated Disaster Recovery 노드 추가 방법">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="ha.html#manage_ha_dr" label="고가용성 및 재해 복구 노드 관리">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="ha.html#faq" label="FAQ">
+      <property name="type" value="anchor"/>
+      <topic href="ha.html#-dr-db2-dns-ip-" label="인계 후 DR 복구를 위해 Db2를 사용하는 애플리케이션에 필요한 변경사항은 무엇입니까? 인계 후 DNS 이름 또는 IP 주소가 변경됩니까?"></topic>
+    </topic>
+  </topic>
+  <topic label="데이터 로드">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="데이터 로드"/>
+    <topic href="dcw.html#dcw" label="데이터베이스 호환성 평가"></topic>
+    <topic href="migration.html#migration" label="IBM Cloud로 데이터 마이그레이션">
+      <topic href="migration.html#cos" label="오브젝트 저장소에서 데이터 로드">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="migration.html#onprem" label="온프레미스 시스템에서 데이터 마이그레이션">
+        <property name="type" value="anchor"/>
+        <topic href="migration.html#lift" label="Lift CLI"></topic>
+        <topic href="migration.html#mdms" label="IBM Cloud Mass Data Migration"></topic>
+      </topic>
+    </topic>
+  </topic>
+  <topic href="audit.html#audit" label="감사">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="user_mgmt.html#user_mgmt" label="사용자 관리">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="plans_cfgs.html#plans_cfgs" label="플랜 및 구성">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="maintenance.html#-" label="유지보수 및 알림 정책">
+    <property name="navgroup" value="learn"/>
+    <topic href="maintenance.html#maintenance" label="유지보수 정책">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="maintenance.html#notification" label="알림 정책">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="local_dev_env.html#local_dev" label="로컬 개발 환경">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="communities.html#communities" label="커뮤니티">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.youtube.com/watch?v=abmWJYe7Kcc" label="실습 동영상">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://ibm.biz/db2oncloud-features" label="기능 및 장점">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="What's new">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Frequently asked questions">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="Security compliances">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="http://ibm.biz/db2oc_api" label="REST API">
+    <property name="navgroup" value="reference"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL 참조">
+    <property name="navgroup" value="reference"/>
+  </topic>
+  <topic href="help.html#help_support" label="도움 및 지원">
+    <property name="navgroup" value="help"/>
+    <topic href="help.html#gettinghelp" label="Db2 on Cloud에 대한 도움 및 지원 받기">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+</toc>

@@ -1,0 +1,537 @@
+{
+    "toc": {
+        "label": "Db2 on Cloud",
+        "properties": [
+            {
+                "name": "subcollection",
+                "value": "Db2onCloud"
+            },
+            {
+                "name": "audience",
+                "value": "service"
+            },
+            {
+                "name": "arm",
+                "value": "1920570"
+            },
+            {
+                "name": "href",
+                "value": "/docs/services/Db2onCloud/index.html"
+            }
+        ],
+        "topics": [
+            {
+                "href": "index.html#getting_started_db2oncloud",
+                "label": "入门",
+                "topics": [
+                    {
+                        "href": "index.html#interfaces",
+                        "label": "界面",
+                        "topics": [
+                            {
+                                "href": "index.html#web_console",
+                                "label": "Db2 on Cloud Web 控制台"
+                            },
+                            {
+                                "href": "index.html#connect_apps",
+                                "label": "从本地计算机连接应用程序或喜爱的工具"
+                            },
+                            {
+                                "href": "index.html#data_src",
+                                "label": "使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "index.html#samples",
+                        "label": "样本",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "connecting.html#connect",
+                "label": "连接",
+                "topics": [
+                    {
+                        "href": "connecting.html#connect_prereq",
+                        "label": "先决条件",
+                        "topics": [
+                            {
+                                "href": "connecting.html#cfg_env",
+                                "label": "配置环境"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "connecting.html#conx_prgrm",
+                        "label": "以编程方式连接",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "connecting.html#conx_apps_tools",
+                        "label": "连接应用程序和工具",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "连接到其他 Db2 服务器",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "连接到其他 Db2 服务器"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "federation.html#overview",
+                        "label": "数据虚拟化（联合）",
+                        "topics": [
+                            {
+                                "href": "federation.html#use_cases",
+                                "label": "用例",
+                                "topics": [
+                                    {
+                                        "href": "federation.html#-",
+                                        "label": "合并数据源"
+                                    },
+                                    {
+                                        "href": "federation.html#-db2-warehouse-on-cloud",
+                                        "label": "连接到 Db2 Warehouse on Cloud"
+                                    },
+                                    {
+                                        "href": "federation.html#-",
+                                        "label": "在多台服务器之间分片数据"
+                                    },
+                                    {
+                                        "href": "federation.html#-",
+                                        "label": "将数据库容量提高到超出固定限制"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "federation.html#getting_started",
+                                "label": "入门",
+                                "topics": [
+                                    {
+                                        "href": "federation.html#-db2-on-cloud-",
+                                        "label": "在 Db2 on Cloud 目标机器上"
+                                    },
+                                    {
+                                        "href": "federation.html#-db2-on-cloud-",
+                                        "label": "在将用作联合源的 Db2 on Cloud 机器上"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "federation.html#-",
+                                "label": "其他信息",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "href": "free_plan.html#free_plan",
+                "label": "免费轻量套餐",
+                "topics": [
+                    {
+                        "href": "free_plan.html#architecture",
+                        "label": "体系结构",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "free_plan.html#outside_na",
+                        "label": "在北美大陆之外使用轻量套餐",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "flex_scaling.html#scale",
+                "label": "灵活扩展",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "br.html#br",
+                "label": "备份和复原",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "ha.html#ha",
+                "label": "高可用性 (HA)",
+                "topics": [
+                    {
+                        "href": "ha.html#add_dr",
+                        "label": "如何添加地理复制灾难恢复节点",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "ha.html#manage_ha_dr",
+                        "label": "管理高可用性和灾难恢复节点",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "ha.html#faq",
+                        "label": "常见问题",
+                        "topics": [
+                            {
+                                "href": "ha.html#-db2-dr-dns-ip-",
+                                "label": "对于使用 Db2 来处理接管后 DR 恢复的应用程序，需要进行哪些更改？接管后 DNS 名称或 IP 地址会更改吗？"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "装入数据",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "装入数据"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "dcw.html#dcw",
+                        "label": "评估数据库兼容性"
+                    },
+                    {
+                        "href": "migration.html#migration",
+                        "label": "将数据迁移至 IBM Cloud",
+                        "topics": [
+                            {
+                                "href": "migration.html#cos",
+                                "label": "从对象存储装入数据",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "migration.html#onprem",
+                                "label": "从内部部署系统迁移数据",
+                                "topics": [
+                                    {
+                                        "href": "migration.html#lift",
+                                        "label": "Lift CLI"
+                                    },
+                                    {
+                                        "href": "migration.html#mdms",
+                                        "label": "IBM Cloud Mass Data Migration"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "href": "audit.html#audit",
+                "label": "审计",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "user_mgmt.html#user_mgmt",
+                "label": "管理用户",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "plans_cfgs.html#plans_cfgs",
+                "label": "套餐和配置",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "maintenance.html#-",
+                "label": "维护和通知策略",
+                "topics": [
+                    {
+                        "href": "maintenance.html#maintenance",
+                        "label": "维护策略",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "maintenance.html#notification",
+                        "label": "通知策略",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "local_dev_env.html#local_dev",
+                "label": "本地开发环境",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "communities.html#communities",
+                "label": "社区",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=abmWJYe7Kcc",
+                "label": "逐步演示视频",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://ibm.biz/db2oncloud-features",
+                "label": "功能和优势",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/docview.wss?uid=swg21961758",
+                "label": "新增内容",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html",
+                "label": "常见问题",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
+                "label": "安全合规性",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html",
+                "label": "Knowledge Center",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "http://ibm.biz/db2oc_api",
+                "label": "REST API",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "reference"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html",
+                "label": "SQL 参考",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "reference"
+                    }
+                ]
+            },
+            {
+                "href": "help.html#help_support",
+                "label": "帮助和支持",
+                "topics": [
+                    {
+                        "href": "help.html#gettinghelp",
+                        "label": "获取有关 Db2 on Cloud 的帮助和支持",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "help"
+                    }
+                ]
+            }
+        ]
+    }
+}

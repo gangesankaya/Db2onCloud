@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-03-15">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Cómo empezar</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="getting_started_db2oncloud" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-getting_started_db2oncloud">
+        <h1 id="getting_started_db2oncloud">Cómo empezar</h1>
+        <p>IBM&reg; Db2&reg; on Cloud es una base de datos SQL suministrada para usted en la nube. Puede utilizar Db2 on Cloud como utilizaría cualquier software de base de datos, pero sin tener que preocuparse de la configuración del hardware ni de la instalación
+          y el mantenimiento del software. </p>
+        <p class="shortdesc">Si va a desplegar el plan Lite gratuito desde fuera de América del Norte continental, consulte: <a href="free_plan.html#outside_na" target="_blank">Utilización del plan Lite fuera de América del Norte continental</a>.</p>
+        <p>También puede instalar una base de datos Db2 local utilizando la <a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions">descarga gratuita de Db2 Developer Edition <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.
+          De esta forma, se instala rápidamente una edición de Db2 para desarrolladores lista para utilizar dentro de un contenedor Docker (no se requiere Docker; todos los componentes necesarios se instalarán automáticamente). </p>
+        <!-- ## Free trial
+
+You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
+
+        <section id="section-interfaces">
+          <h2 id="interfaces">Interfaces</h2>
+          <p class="shortdesc">Puede trabajar con la base de datos de Db2 on Cloud de los siguientes modos:</p>
+          <ul>
+            <li>Consola web de Db2 on Cloud</li>
+            <li>API REST</li>
+            <li>Conecte aplicaciones o herramientas preferidas desde el sistema local</li>
+            <li>Utilice Db2 on Cloud como origen de datos para apps o servicios de IBM Cloud</li>
+          </ul>
+          <section id="section-web_console">
+            <h3 id="web_console">Consola web de Db2 on Cloud</h3>
+            <p class="shortdesc">La consola web proporciona una interfaz gráfica para todo lo que puede utilizar su base de datos, incluyendo: recursos de cargas, un editor SQL, descargas de controladores, etc.</p>
+            <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
+            <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
+
+            <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
+
+            <p>Puede acceder a la consola web de Db2 on Cloud de los siguientes modos:</p>
+            <ul>
+              <li>Desde el panel de control de IBM Cloud - Puede abrir la consola web desde la página Detalles de servicio para el servicio de IBM Db2 on Cloud.</li>
+              <li>URL directo - Puede marcar como favorito el URL de la consola web para el servicio de Db2 on Cloud.</li>
+            </ul>
+            <!-- ###REST APIs
+
+With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
+{: shortdesc} -->
+
+          </section>
+          <section id="section-connect_apps">
+            <h3 id="connect_apps">Conecte aplicaciones o herramientas preferidas desde el sistema local</h3>
+            <p class="shortdesc">Configure el entorno local para conectar la base de datos de Db2 on Cloud siguiendo estos pasos:</p>
+            <ol>
+              <li>Descargue el <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html" target="_blank">paquete de controladores <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>                de la página Información de conexión de la consola web de Db2 on Cloud.</li>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">Instale el paquete de controladores <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>                en el sistema donde esté ejecutando las apps o las herramientas.</li>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">Configure los archivos de controladores <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>                para la base de datos de Db2 on Cloud.</li>
+            </ol>
+          </section>
+          <section id="section-data_src">
+            <h3 id="data_src">Utilice Db2 on Cloud como origen de datos para apps o servicios de IBM Cloud</h3>
+            <p class="shortdesc">Las apps alojadas en IBM Cloud pueden conectarse a la base de datos de Db2 on Cloud exactamente del mismo modo que pueden conectarse las aplicaciones locales a la base de datos de Db2 on Cloud.</p>
+            <p>Cuando las apps utilizan la plataforma de IBM Cloud, puede sacar partido de la variable de entorno <code>VCAP _SERVICES</code> para simplificar la tarea de especificar detalles y credenciales de bases de datos:</p>
+            <ol>
+              <li>En el panel de control de IBM Cloud, en el separador <strong>Conexiones</strong> de la página Detalles del servicio para el servicio de IBM Db2 on Cloud, pulse el botón <strong>Crear conexión</strong>.</li>
+              <li>Seleccione la app de IBM Cloud para utilizarla con la base de datos de Db2 on Cloud como origen de datos y luego pulse el botón <strong>Conectar</strong>.</li>
+              <li>
+                <p>Actualice el código de aplicación para recuperar detalles y credenciales de la base de datos desde la variable de entorno <code>VCAP_SERVICES</code>:</p>
+                <p> <strong>Ejemplo sin <code>VCAP_SERVICES</code></strong></p>
+                <pre><code class="lang-php hljs"> <span class="hljs-meta">&lt;?php</span>
+ $driver      = <span class="hljs-string">"DRIVER={IBM DB2 ODBC DRIVER};"</span>;
+
+ $database    = <span class="hljs-string">"BLUDB"</span>;         <span class="hljs-comment"># Obtenga los detalles de la base de datos desde</span>
+ $hostname    = <span class="hljs-string">"&lt;Host-name&gt;"</span>;   <span class="hljs-comment"># la página Conectar de</span>
+ $port        = <span class="hljs-number">50000</span>;           <span class="hljs-comment"># la consola web de Db2 on Cloud.</span>
+ $user        = <span class="hljs-string">"&lt;User-ID &gt;"</span>;    <span class="hljs-comment">#</span>
+ $password    = <span class="hljs-string">"&lt;Password&gt;"</span>;    <span class="hljs-comment">#</span>
+ $dsn         = <span class="hljs-string">"DATABASE=$database;"</span> .
+                <span class="hljs-string">"HOSTNAME=$hostname;"</span> .
+                <span class="hljs-string">"PORT=$port;"</span> .
+                <span class="hljs-string">"PROTOCOL=TCPIP;"</span> .
+                <span class="hljs-string">"UID=$user;"</span> .
+                <span class="hljs-string">"PWD=$password;"</span>;
+
+ $conn_string = $driver . $dsn;
+
+ $conn        = db2_connect( $conn_string, <span class="hljs-string">""</span>, <span class="hljs-string">""</span> );
+ <span class="hljs-meta">?&gt;</span>
+</code></pre>
+                <p> <strong>Ejemplo con <code>VCAP_SERVICES</code></strong></p>
+                <pre><code class="lang-php hljs"> <span class="hljs-meta">&lt;?php</span>
+ $driver      = <span class="hljs-string">"DRIVER={IBM DB2 ODBC DRIVER};"</span>;
+
+ $vcap        = json_decode( getenv( <span class="hljs-string">"VCAP_SERVICES"</span> ), <span class="hljs-keyword">true</span> );
+ $dsn         = $vcap[ <span class="hljs-string">"dashDB"</span> ][<span class="hljs-number">0</span>][ <span class="hljs-string">"credentials"</span> ][ <span class="hljs-string">"dsn"</span> ];
+
+ $conn_string = $driver . $dsn;
+
+ $conn        = db2_connect( $conn_string, <span class="hljs-string">""</span>, <span class="hljs-string">""</span> );
+ <span class="hljs-meta">?&gt;</span>
+</code></pre>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-samples">
+          <h2 id="samples">Ejemplos</h2>
+          <p class="shortdesc">Aquí tiene los enlaces a ejemplos que demuestran cómo conectarse a la base de datos de Db2 on Cloud desde aplicaciones en distintos idiomas:</p>
+          <ul>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting__net_applications.html" target="_blank">.NET <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>
+              <!-- * [JAVA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_java.html){:new_window} -->
+            </li>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_jdbc_applications.html" target="_blank">JDBC <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>
+              <!-- * [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_nodejs.html){:new_window} -->
+            </li>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank">PHP <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>
+              <!-- * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:new_window} -->
+            </li>
+            <li>Ejemplos de <a href="https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld" target="_blank">Ejemplos de Db2 on Cloud en GitHub <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

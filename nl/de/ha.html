@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-07-19">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Hochverfügbarkeit (High Availability, HA)</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="ha" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-ha">
+        <h1 id="ha">Hochverfügbarkeit (High Availability, HA)</h1>
+        <p class="shortdesc">Db2 on Cloud-Hochverfügbarkeitspläne weisen mit einem SLA von 99,99 % ausgezeichnete Verfügbarkeitsmerkmale auf. </p>
+        <p>Die Standardhochverfügbarkeitspläne ohne DR-Knoten (Disaster Recovery) bieten eine nahtlose Funktionsübernahme und rollierende Aktualisierungen. Sie werden mithilfe von automatischer Clientweiterleitung (ACR) und portierbaren IPs verwaltet.</p>
+        <p>Darüber hinaus kann ein DR-Knoten (Disaster Recovery) mit Georeplikation hinzugefügt werden. Diese Option eines ausgelagerten DR-Knotens ermöglicht die schnelle Echtzeitsynchronisierung von Daten auf einen Datenbankknoten an einem von Ihnen ausgewählten
+          ausgelagerten IBM Cloud-Rechenzentrum. </p>
+        <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">Liste der Standorte von Rechenzentren mit verfügbaren DR-Knoten <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a></p>
+        <p>Db2 on Cloud verwendet die Db2 HADR-Technologie (High Availability Disaster Recovery) im asynchronen Modus (<code>ASYNC</code>), um die Funktion des ausgelagerten Disaster-Recovery-Knotens bereitzustellen, und ermöglicht Leseoperationen in der
+          Bereitschaftsdatenbank (<code>Read on Standby</code>) auf dem DR-Knoten.</p>
+        <section id="section-add_dr">
+          <h2 id="add_dr">Vorgehensweise für das Hinzufügen eines DR-Knotens mit Georeplikation</h2>
+          <p>Für vorhandene Db2 on Cloud-Benutzer:</p>
+          <ul>
+            <li>Sie können einen bedarfsgesteuerten DR-Knoten zu vorhandenen Db2 on Cloud-Instanzen hinzufügen. Nach dem Klicken auf die Instanz im IBM Cloud-Dashboard wird die Option <strong>Disaster Recovery verwalten</strong> angezeigt. Hier können Sie
+              einen DR-Knoten mit Georeplikation hinzufügen.</li>
+            <li>Wenn Sie Db2 on Cloud durch das Abschließen eines Vertrags mit einem Vertriebsbeauftragten erworben haben und nicht über ein IBM Cloud-Abonnement verfügen, wenden Sie sich für das Hinzufügen eines DR-Knotens an den zuständige IBM Ansprechpartner.</li>
+          </ul>
+          <p>Wenn Sie zurzeit kein Db2 on Cloud-Benutzer sind:</p>
+          <ul>
+            <li>Bestellen Sie Db2 on Cloud über IBM Cloud oder wenden Sie sich an den zuständigen Vertriebsbeauftragten.</li>
+            <li>Sie können dann einen DR-Knoten hinzufügen, indem Sie die Option <strong>Disaster Recovery verwalten</strong> in der Konsole verwenden.
+              <!--- Through the web console, you can also add a disaster recovery (DR) node located in a datacenter of your choice. -->
+
+            </li>
+          </ul>
+        </section>
+        <section id="section-manage_ha_dr">
+          <h2 id="manage_ha_dr">HADR-Knoten (High Availability Disaster Recovery) verwalten</h2>
+          <p>Bei Standardhochverfügbarkeitsknoten, die nicht ausgelagert sind, wird die Funktionsübernahme von IBM verwaltet. IBM überwacht den Serverstatus und führt Failover- und Failbackoperationen nach Bedarf aus, einschließlich rollierender Aktualisierungen
+            und Skalierung, um eine möglichst hohe Verfügbarkeitszeit zu erreichen.</p>
+          <p>Bei der Disaster Recovery mit Georeplikation (HADR) müssen Sie die Funktionsübernahme manuell durchführen, indem Sie die Option <strong>Disaster Recovery verwalten</strong> in der Konsole verwenden. Darüber hinaus können Sie die Funktionsübernahme
+            auch mithilfe einer API durchführen. Eine Beschreibung finden Sie <a href="https://developer.ibm.com/answers/questions/457901/where-can-i-find-api-documentation-for-db2-on-clou.html" target="_blank">hier <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.</p>
+        </section>
+        <section id="section-faq">
+          <h2 id="faq">Häufig gestellte Fragen</h2>
+          <section id="section-welche-nderungen-sind-f-r-eine-anwendung-die-db2-verwendet-erforderlich-um-die-arbeit-mit-dem-dr-knoten-nach-der-bernahme-zu-erm-glichen-wird-der-dns-name-oder-die-ip-adresse-nach-der-bernahme-ge-ndert-">
+            <h3 id="welche-nderungen-sind-f-r-eine-anwendung-die-db2-verwendet-erforderlich-um-die-arbeit-mit-dem-dr-knoten-nach-der-bernahme-zu-erm-glichen-wird-der-dns-name-oder-die-ip-adresse-nach-der-bernahme-ge-ndert-">Welche Änderungen sind für eine Anwendung, die Db2 verwendet, erforderlich, um die Arbeit mit dem DR-Knoten nach der Übernahme zu ermöglichen? Wird der DNS-Name oder die IP-Adresse nach der Übernahme geändert?</h3>
+            <p><strong>A</strong>: Nein. Sie erhalten zwei auflösbare Hostnamen. Wenn die App so konfiguriert ist, dass sie Db2 ACR (Active Connection Reroute) verwendet, wird sie an den neuen Primärknoten weitergeleitet.</p>
+            <p>Weitere Informationen zum DR-Knoten mit Georeplikation können Sie aufrufen, indem Sie <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">hier <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>              klicken.</p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-03-15">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>概説</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="getting_started_db2oncloud" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-getting_started_db2oncloud">
+        <h1 id="getting_started_db2oncloud">概説</h1>
+        <p>IBM&reg; Db2&reg; on Cloud は、クラウド内でプロビジョンされた SQL データベースです。 任 意のデータベース・ソフトウェアを使用するのと同じように Db2 on Cloud を使用できますが、面倒なハードウェアのセットアッ プやソフトウェアのインストールおよびメンテナンスは必要ありません。 </p>
+        <p class="shortdesc">北アメリカ大陸以外で無料 Lite プランを導入する場合は、
+          <a href="free_plan.html#outside_na" target="_blank">北アメリカ大陸以外での Lite プランの利用</a> を参照してください。</p>
+        <p>また、
+          <a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions"> 無料の
+Db2 Developer Edition ダウンロード <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・
+アイコン
+"></a> を使用して、ローカルの Db2 データベースをインストー ルすることもできま す。 ここでは、すぐに使用できる Db2 Developer Edition が、Docker コンテナー内のツールとともに速や かにインストールされます (Docker は不要です。必要なコンポーネントは自動的にインストールされます)。 </p>
+        <!-- ## Free trial
+
+You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
+
+        <section id="section-interfaces">
+          <h2 id="interfaces">インターフェース</h2>
+          <p class="shortdesc">以下の方法で、Db2 on Cloud データベースを使用した作業を行うことができます。</p>
+          <ul>
+            <li>Db2 on Cloud Web コンソール</li>
+            <li>REST API</li>
+            <li>ローカル・コンピューターからアプリケーションまたは任意のツールを接続する</li>
+            <li>IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する</li>
+          </ul>
+          <section id="section-web_console">
+            <h3 id="web_console">Db2 on Cloud Web コンソール</h3>
+            <p class="shortdesc">Web コンソールは、ロード機能、SQL エディター、ドライバー・ダウンロードなど、データベースを使用するために必要なすべての操作を実行できるグラフィカル・インターフェースです。</p>
+            <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
+            <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
+
+            <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
+
+            <p>以下の方法で、Db2 on Cloud Web コンソールにアクセスできます。</p>
+            <ul>
+              <li>IBM Cloud ダッシュボードから - IBM Db2 on Cloud サービスの「サービス詳細」ページから Web コンソールを開くことができます。</li>
+              <li>ダイレクト URL - Db2 on Cloud サービスの Web コンソールの URL をブックマークできます。</li>
+            </ul>
+            <!-- ###REST APIs
+
+With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
+{: shortdesc} -->
+
+          </section>
+          <section id="section-connect_apps">
+            <h3 id="connect_apps">ローカル・コンピューターからアプリケーションまたは任意のツールを接続する</h3>
+            <p class="shortdesc">以下の手順を実行して、Db2 on Cloud データベースに接続するようにローカル環境を構成します。</p>
+            <ol>
+              <li>Db2 on Cloud Web コンソールの「接続情報 (Connection info)」ページから<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html" target="_blank">ドライバー・パッケージ <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>                をダウンロードします。</li>
+              <li>アプリまたはツールが実行されているコンピューターで <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">ドライバー・パッケージのインストール<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>                を行います。</li>
+              <li>Db2 on Cloud データベース用に<a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">ドライバー・ファイルの構成 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>                を行います。</li>
+            </ol>
+          </section>
+          <section id="section-data_src">
+            <h3 id="data_src">IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する</h3>
+            <p class="shortdesc">IBM Cloud でホストされているアプリは、ローカル・アプリケーションが Db2 on Cloud データベースに接続するのとまったく同じ方法で、Db2 on Cloud データベースに接続できます。</p>
+            <p>アプリが IBM Cloud プラットフォームを使用している場合、<code>VCAP _SERVICES</code> 環境変数を利用して、データベースの詳細および資格情報を指定する作業を単純化できます。</p>
+            <ol>
+              <li>IBM Cloud ダッシュボードで、IBM Db2 on Cloud サービスの「サービス詳細」ページの<strong>「接続」</strong>タブで、<strong>「接続の作成」</strong>ボタンをクリックします。</li>
+              <li>Db2 on Cloud データベースをデータ・ソースとして使用する IBM Cloud アプリを選択し、<strong>「接続」</strong>ボタンをクリックします。</li>
+              <li>
+                <p>データベースの詳細および資格情報を <code>VCAP_SERVICES</code> 環境変数から取り出すようにアプリケーション・コードを更新します。</p>
+                <p> <strong><code>VCAP_SERVICES</code> を使用しない例</strong></p>
+                <pre><code class="lang-php hljs"> <span class="hljs-meta">&lt;?php</span>
+ $driver      = <span class="hljs-string">"DRIVER={IBM DB2 ODBC DRIVER};"</span>;
+
+ $database    = <span class="hljs-string">"BLUDB"</span>;         <span class="hljs-comment"># Get these database details from</span>
+ $hostname    = <span class="hljs-string">"&lt;Host-name&gt;"</span>;   <span class="hljs-comment"># the Connect page of the Db2 on Cloud</span>
+ $port        = <span class="hljs-number">50000</span>;           <span class="hljs-comment"># web console.</span>
+ $user        = <span class="hljs-string">"&lt;User-ID &gt;"</span>;    <span class="hljs-comment">#</span>
+ $password    = <span class="hljs-string">"&lt;Password&gt;"</span>;    <span class="hljs-comment">#</span>
+ $dsn         = <span class="hljs-string">"DATABASE=$database;"</span> .
+                <span class="hljs-string">"HOSTNAME=$hostname;"</span> .
+                <span class="hljs-string">"PORT=$port;"</span> .
+                <span class="hljs-string">"PROTOCOL=TCPIP;"</span> .
+                <span class="hljs-string">"UID=$user;"</span> .
+                <span class="hljs-string">"PWD=$password;"</span>;
+
+ $conn_string = $driver . $dsn;
+
+ $conn        = db2_connect( $conn_string, <span class="hljs-string">""</span>, <span class="hljs-string">""</span> );
+ <span class="hljs-meta">?&gt;</span>
+</code></pre>
+                <p> <strong><code>VCAP_SERVICES</code> を使用する例</strong></p>
+                <pre><code class="lang-php hljs"> <span class="hljs-meta">&lt;?php</span>
+ $driver      = <span class="hljs-string">"DRIVER={IBM DB2 ODBC DRIVER};"</span>;
+
+ $vcap        = json_decode( getenv( <span class="hljs-string">"VCAP_SERVICES"</span> ), <span class="hljs-keyword">true</span> );
+ $dsn         = $vcap[ <span class="hljs-string">"dashDB"</span> ][<span class="hljs-number">0</span>][ <span class="hljs-string">"credentials"</span> ][ <span class="hljs-string">"dsn"</span> ];
+
+ $conn_string = $driver . $dsn;
+
+ $conn        = db2_connect( $conn_string, <span class="hljs-string">""</span>, <span class="hljs-string">""</span> );
+ <span class="hljs-meta">?&gt;</span>
+</code></pre>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-samples">
+          <h2 id="samples">例</h2>
+          <p class="shortdesc">各種の言語で作成されたアプリケーションから Db2 on Cloud データベースに接続する方法を示すサンプルへのリンクは次のとおりです。</p>
+          <ul>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting__net_applications.html" target="_blank">.NET <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>
+              <!-- * [JAVA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_java.html){:new_window} -->
+            </li>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_jdbc_applications.html" target="_blank">JDBC <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>
+              <!-- * [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_nodejs.html){:new_window} -->
+            </li>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank">PHP <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>
+              <!-- * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:new_window} -->
+            </li>
+            <li><a href="https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld" target="_blank">GitHub にある Db2 on Cloud サンプル<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a></li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

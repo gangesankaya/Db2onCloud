@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-05-11">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Daten in IBM Cloud migrieren</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="migration" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-migration">
+        <h1 id="migration">Daten in IBM Cloud migrieren</h1>
+        <p class="shortdesc">Sie können Daten aus einer Datendatei im Format mit Begrenzern (CSV oder TXT), die sich in einem lokalen Netz oder in einem Objektspeicher (Amazon S3 oder IBM Cloud Object Storage) befindet, in IBM&reg; Db2&reg; on Cloud laden. Es ist auch möglich,
+          Daten von einem lokalen System zu migrieren.</p>
+        <section id="section-cos">
+          <h2 id="cos">Daten aus dem Objektspeicher laden</h2>
+          <p>Wählen Sie eine der folgenden Methoden aus, um Daten aus Amazon S3 zu laden:</p>
+          <ul>
+            <li>Über die Db2 on Cloud-Webkonsole. <strong>Laden &gt; Amazon S3</strong>. </li>
+            <li>
+              <p>Direkt über die externen Tabellen. Im Folgenden ist eine SQL-Beispielanweisung dargestellt:</p>
+              <pre><code class="hljs">INSERT INTO &lt;table-name&gt; SELECT * FROM EXTERNAL &#39;&lt;mys3file.txt&gt;&#39; USING
+    (CCSID 1208 s3(&#39;s3.amazonaws.com&#39;, 
+    &#39;&lt;S3-access-key-ID&gt;&#39;,
+    &#39;&lt;S3-secret-access-key&gt;&#39;, 
+    &#39;&lt;my_bucket&gt;&#39;
+       )
+  )
+</code></pre>
+            </li>
+          </ul>
+          <p>Im Folgenden ist eine SQL-Beispielanweisung dargestellt, mit der Daten direkt mithilfe externer Tabellen aus IBM Cloud Object Storage geladen werden:</p>
+          <pre><code class="hljs">INSERT INTO &lt;table-name&gt; SELECT * FROM EXTERNAL &#39;&lt;mys3file.txt&gt;&#39; USING
+  (CCSID 1208 s3(&#39;s3-api.us-geo.objectstorage.softlayer.net&#39;, 
+  &#39;&lt;S3-access-key-ID&gt;&#39;,
+  &#39;&lt;S3-secret-access-key&gt;&#39;, 
+  &#39;&lt;my_bucket&gt;&#39;
+     )
+  )
+</code></pre>
+          <p><strong>Hinweis:</strong> Geben Sie für IBM Cloud Object Storage {&quot;HMAC:true&quot;} im Feld <em>Inline-Konfigurationsparameter hinzufügen</em> an, um beim Erstellen neuer Serviceberechtigungsnachweise HMAC-Berechtigungsnachweise zu erstellen.</p>
+        </section>
+        <section id="section-onprem">
+          <h2 id="onprem">Daten aus einem lokalen System migrieren</h2>
+          <p>Wählen Sie abhängig von der Größe des verwendeten Datasets eine der folgenden Methoden aus, um Daten aus einem lokalen System zu migrieren:</p>
+          <ul>
+            <li>Weniger als 25 TB an Daten: <a href="#lift">IBM Lift-Befehlszeilenschnittstelle</a></li>
+            <li>25 TB und mehr an Daten: <a href="#mdms">IBM Cloud Mass Data Migration</a></li>
+          </ul>
+          <section id="section-lift">
+            <h3 id="lift">Lift-Befehlszeilenschnittstelle</h3>
+            <p>Bei der Lift-Befehlszeilenschnittstelle handelt es sich um eine Anwendung, die Sie kostenfrei nutzen können, um Ihre Daten aus den verschiedenen, in Tabelle 1 aufgeführten Datenquellen in IBM Cloud zu migrieren. </p>
+            <table>
+              <caption caption-side="top">Tabelle 1. Migrationsdatenquellen</caption>
+              <thead>
+                <tr>
+                  <th>Zieldatenbank in IBM Cloud</th>
+                  <th>Datenquelle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IBM Db2 on Cloud</td>
+                  <td>IBM Db2</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Oracle-Datenbank</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Microsoft SQL Server</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>CSV-Dateiformat</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Informationen zum Download und zur Installation der Lift-Befehlszeilenschnittstelle finden Sie in <a href="https://lift.ng.bluemix.net/#download" target="_blank">Lift-Befehlszeilenschnittstelle herunterladen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.</p>
+            <p>Eine in einzelne Schritte unterteilte Anleitung zur Migration Ihrer Daten in IBM Cloud mithilfe der Lift-Befehlszeilenschnittstelle finden Sie in <a href="https://lift.ng.bluemix.net/#docs" target="_blank">Daten in IBM Db2 on Cloud migrieren <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.</p>
+          </section>
+          <section id="section-mdms">
+            <h3 id="mdms">IBM Cloud Mass Data Migration</h3>
+            <p>Hierbei handelt es sich um eine schnelle, einfache und sichere Möglichkeit, Datenvolumen von mehreren Tera- oder Petabyte physisch in IBM Cloud zu transferieren. Mit Mass Data Migration steht ein mobiles Speichermedium mit 120 TB verwendbarer
+              Speicherkapazität bereit, das das Verschieben von Daten in IBM Cloud beschleunigen kann. Die gängigen Probleme bei der Datenübertragung, wie z. B. hohe Kosten, lange Übertragungsdauer und Sicherheitsaspekte, können überwunden werden - mit
+              einem einigen Service.</p>
+            <p><img src="images/mdms.svg" alt="Ansicht des Mass Data Migration-Geräts"></p>
+            <p>Weitere Informationen zum Mass Data Migration-Gerät finden Sie in <a href="/docs/infrastructure/mass-data-migration/index.html#getting-started-with-ibm-cloud-mass-data-migration" target="_blank">Einführung in IBM Cloud Mass Data Migration</a>.</p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

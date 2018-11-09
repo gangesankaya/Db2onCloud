@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-07-19">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Alta disponibilidad (HA)</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="ha" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-ha">
+        <h1 id="ha">Alta disponibilidad (HA)</h1>
+        <p class="shortdesc">Los planes de alta disponibilidad de Db2 on Cloud ofrecen excelentes características de disponibilidad con un SLA del 99,99 %. </p>
+        <p>Los planes de alta disponibilidad estándar sin nodo DR proporcionan funciones de migración tras error ininterrumpida y de actualización continua. Se gestionan automáticamente mediante una redirección automática de cliente (ACR) e IP portables.</p>
+        <p>Además, puede añadir un nodo de recuperación tras desastre replicado geográficamente. Esta opción de nodo DR externo le ofrece la posibilidad de sincronizar rápidamente sus datos en tiempo real con un nodo de base de datos en el centro de datos
+          externo de IBM Cloud que elija. </p>
+        <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">Lista de ubicaciones de centros de datos donde hay disponibles nodos de DR. <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></p>
+        <p>Db2 on Cloud utiliza la tecnología de recuperación tras desastre de alta disponibilidad de Db2 (HADR) en modalidad <code>ASYNC</code> para lograr la capacidad de nodo DR externo y ofrece la función <code>Read on Standby</code> en el nodo DR.</p>
+        <section id="section-add_dr">
+          <h2 id="add_dr">Cómo añadir un nodo de recuperación tras desastre replicado geográficamente</h2>
+          <p>Para usuarios actuales de Db2 on Cloud:</p>
+          <ul>
+            <li>Puede añadir un nodo DR bajo demanda a las instancias existentes de Db2 on Cloud. Tras pulsar la instancia en el panel de control de IBM Cloud, verá una opción denominada <strong>Gestionar recuperación tras desastre</strong>. Desde allí, puede
+              añadir un nodo de recuperación tras desastre replicado geográficamente.</li>
+            <li>Si ha adquirido Db2 on Cloud en contrato mediante un representante de ventas y no dispone de suscripción a IBM Cloud, póngase en contacto con el representante de IBM para añadir un nodo DR.</li>
+          </ul>
+          <p>Si actualmente no es usuario de Db2 on Cloud:</p>
+          <ul>
+            <li>Solicite Db2 on Cloud mediante IBM Cloud o póngase en contacto con un representante de ventas.</li>
+            <li>Puede añadir un nodo DR mediante la opción <strong>Gestionar recuperación tras desastre</strong> en la consola.
+              <!--- Through the web console, you can also add a disaster recovery (DR) node located in a datacenter of your choice. -->
+
+            </li>
+          </ul>
+        </section>
+        <section id="section-manage_ha_dr">
+          <h2 id="manage_ha_dr">Gestión de nodos de recuperación tras desastre y alta disponibilidad</h2>
+          <p>Para los nodos HA estándar, que no son externos, IBM gestiona la migración tras error por usted. IBM supervisa el estado del servidor, la migración tras error y la vuelta a utilizar el servidor de nuevo según sea necesario, incluidas las actualizaciones
+            continuas y el escalado para mantener al máximo el tiempo de funcionamiento.</p>
+          <p>Para la recuperación tras desastre replicada geográficamente (HADR), debe realizar la migración tras error manualmente mediante <strong>Gestionar recuperación tras desastre</strong> en la consola. Además, puede realizar la migración tras error
+            mediante una API, tal como se describe <a href="https://developer.ibm.com/answers/questions/457901/where-can-i-find-api-documentation-for-db2-on-clou.html" target="_blank">aquí <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+        </section>
+        <section id="section-faq">
+          <h2 id="faq">Preguntas más frecuentes</h2>
+          <section id="section--cu-les-son-los-cambios-necesarios-para-una-aplicaci-n-que-utiliza-db2-para-trabajar-con-la-recuperaci-n-dr-tras-la-toma-de-control-cambian-el-nombre-dns-o-la-direcci-n-ip-tras-la-toma-de-control-">
+            <h3 id="-cu-les-son-los-cambios-necesarios-para-una-aplicaci-n-que-utiliza-db2-para-trabajar-con-la-recuperaci-n-dr-tras-la-toma-de-control-cambian-el-nombre-dns-o-la-direcci-n-ip-tras-la-toma-de-control-">¿Cuáles son los cambios necesarios para una aplicación que utiliza Db2 para trabajar con la recuperación DR tras la toma de control? ¿Cambian el nombre DNS o la dirección IP tras la toma de control?</h3>
+            <p><strong>R</strong>: No. Se proporcionan 2 nombres de host que se pueden resolver. Si la app está configurada para utilizar Db2 ACR (Active Connection Reroute), la app se reencamina al nuevo nodo primario.</p>
+            <p>Para obtener más información sobre el nodo de recuperación tras desastre replicado geográficamente, pulse <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">aquí <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

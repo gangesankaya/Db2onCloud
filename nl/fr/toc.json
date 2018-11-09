@@ -1,0 +1,537 @@
+{
+    "toc": {
+        "label": "Db2 on Cloud",
+        "properties": [
+            {
+                "name": "subcollection",
+                "value": "Db2onCloud"
+            },
+            {
+                "name": "audience",
+                "value": "service"
+            },
+            {
+                "name": "arm",
+                "value": "1920570"
+            },
+            {
+                "name": "href",
+                "value": "/docs/services/Db2onCloud/index.html"
+            }
+        ],
+        "topics": [
+            {
+                "href": "index.html#getting_started_db2oncloud",
+                "label": "Initiation",
+                "topics": [
+                    {
+                        "href": "index.html#interfaces",
+                        "label": "Interfaces",
+                        "topics": [
+                            {
+                                "href": "index.html#web_console",
+                                "label": "Console Web Db2 on Cloud"
+                            },
+                            {
+                                "href": "index.html#connect_apps",
+                                "label": "Connectez des applications ou vos outils préférés depuis votre ordinateur local"
+                            },
+                            {
+                                "href": "index.html#data_src",
+                                "label": "Utilisez Db2 on Cloud comme source de données pour vos applications ou services IBM Cloud"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "index.html#samples",
+                        "label": "Exemples",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "connecting.html#connect",
+                "label": "Connexion",
+                "topics": [
+                    {
+                        "href": "connecting.html#connect_prereq",
+                        "label": "Prérequis",
+                        "topics": [
+                            {
+                                "href": "connecting.html#cfg_env",
+                                "label": "Configuration de votre environnement"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "connecting.html#conx_prgrm",
+                        "label": "Connexion à l'aide d'un programme",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "connecting.html#conx_apps_tools",
+                        "label": "Connexion d'applications et d'outils",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "Connexion à un autre serveur Db2",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Connexion à un autre serveur Db2"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "federation.html#overview",
+                        "label": "Virtualisation de données (fédération)",
+                        "topics": [
+                            {
+                                "href": "federation.html#use_cases",
+                                "label": "Cas d'utilisation",
+                                "topics": [
+                                    {
+                                        "href": "federation.html#consolidation-des-sources-de-donn-es",
+                                        "label": "Consolidation des sources de données"
+                                    },
+                                    {
+                                        "href": "federation.html#association-db2-warehouse-on-cloud",
+                                        "label": "Association à Db2 Warehouse on Cloud"
+                                    },
+                                    {
+                                        "href": "federation.html#donn-es-partitionn-es-sur-des-serveurs-multiples",
+                                        "label": "Données partitionnées sur des serveurs multiples"
+                                    },
+                                    {
+                                        "href": "federation.html#augmentation-de-la-capacit-d-une-base-de-donn-es-au-del-des-limites-fix-es",
+                                        "label": "Augmentation de la capacité d'une base de données au-delà des limites fixées"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "federation.html#getting_started",
+                                "label": "Initiation",
+                                "topics": [
+                                    {
+                                        "href": "federation.html#sur-la-machine-cible-db2-on-cloud",
+                                        "label": "Sur la machine cible Db2 on Cloud"
+                                    },
+                                    {
+                                        "href": "federation.html#sur-une-machine-db2-on-cloud-utilis-e-en-tant-que-source-de-la-f-d-ration",
+                                        "label": "Sur une machine Db2 on Cloud utilisée en tant que source de la fédération"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "federation.html#informations-compl-mentaires",
+                                "label": "Informations complémentaires",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "href": "free_plan.html#free_plan",
+                "label": "Plan Lite gratuit",
+                "topics": [
+                    {
+                        "href": "free_plan.html#architecture",
+                        "label": "Architecture",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "free_plan.html#outside_na",
+                        "label": "Utilisation du plan Lite en dehors de l'Amérique du Nord continentale",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "flex_scaling.html#scale",
+                "label": "Mise à l'échelle flexible",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "br.html#br",
+                "label": "Sauvegarde et restauration",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "ha.html#ha",
+                "label": "Haute disponibilité (HA)",
+                "topics": [
+                    {
+                        "href": "ha.html#add_dr",
+                        "label": "Ajout d'un noeud de reprise après incident géorépliqué",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "ha.html#manage_ha_dr",
+                        "label": "Gestion de la haute disponibilité et des noeuds de reprise après incident",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "ha.html#faq",
+                        "label": "Foire aux questions",
+                        "topics": [
+                            {
+                                "href": "ha.html#quelles-sont-les-modifications-requises-pour-une-application-qui-utilise-db2-afin-qu-elle-mette-en-oeuvre-la-reprise-apr-s-incident-apr-s-la-reprise-est-ce-que-le-nom-dns-ou-l-adresse-ip-change-apr-s-la-reprise-",
+                                "label": "Quelles sont les modifications requises pour une application qui utilise Db2 afin qu'elle mette en oeuvre la reprise après incident après la reprise ? Est-ce que le nom DNS ou l'adresse IP change après la reprise ?"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "Chargement de vos données",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Chargement de vos données"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "dcw.html#dcw",
+                        "label": "Evaluation de la compatibilité de votre base de données"
+                    },
+                    {
+                        "href": "migration.html#migration",
+                        "label": "Migration de données vers IBM Cloud",
+                        "topics": [
+                            {
+                                "href": "migration.html#cos",
+                                "label": "Chargement de données depuis un conteneur d'objets",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "migration.html#onprem",
+                                "label": "Migration de données depuis un système sur site",
+                                "topics": [
+                                    {
+                                        "href": "migration.html#lift",
+                                        "label": "Interface de ligne de commande IBM Lift"
+                                    },
+                                    {
+                                        "href": "migration.html#mdms",
+                                        "label": "IBM Cloud Mass Data Migration"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "href": "audit.html#audit",
+                "label": "Audit",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "user_mgmt.html#user_mgmt",
+                "label": "Gestion des utilisateurs",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "plans_cfgs.html#plans_cfgs",
+                "label": "Plans et configurations",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "maintenance.html#politiques-de-maintenance-et-de-notification",
+                "label": "Politiques de maintenance et de notification",
+                "topics": [
+                    {
+                        "href": "maintenance.html#maintenance",
+                        "label": "Politique de maintenance",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "maintenance.html#notification",
+                        "label": "Règle de notification",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "local_dev_env.html#local_dev",
+                "label": "Environnement de développement local",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "communities.html#communities",
+                "label": "Communautés",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=abmWJYe7Kcc",
+                "label": "Vidéo de revue",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://ibm.biz/db2oncloud-features",
+                "label": "Fonctions et avantages",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/docview.wss?uid=swg21961758",
+                "label": "Nouveautés",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html",
+                "label": "Questions fréquemment posées",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
+                "label": "Conformités à la sécurité",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html",
+                "label": "Knowledge Center",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "http://ibm.biz/db2oc_api",
+                "label": "API REST",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "reference"
+                    }
+                ]
+            },
+            {
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html",
+                "label": "Structured Query Language (SQL)",
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "reference"
+                    }
+                ]
+            },
+            {
+                "href": "help.html#help_support",
+                "label": "Aide et support",
+                "topics": [
+                    {
+                        "href": "help.html#gettinghelp",
+                        "label": "Aide et assistance pour Db2 on Cloud",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "help"
+                    }
+                ]
+            }
+        ]
+    }
+}

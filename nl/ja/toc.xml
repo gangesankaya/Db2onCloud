@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS TYPE="markdown.toc"?>
+<toc label="Db2 on Cloud">
+  <property name="subcollection" value="Db2onCloud"/>
+  <property name="audience" value="service"/>
+  <property name="arm" value="1920570"/>
+  <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <topic href="index.html#getting_started_db2oncloud" label="概説">
+    <property name="navgroup" value="learn"/>
+    <topic href="index.html#interfaces" label="インターフェース">
+      <property name="type" value="anchor"/>
+      <topic href="index.html#web_console" label="Db2 on Cloud Web コンソール"></topic>
+      <topic href="index.html#connect_apps" label="ローカル・コンピューターからアプリケーションまたは任意のツールを接続する"></topic>
+      <topic href="index.html#data_src" label="IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する"></topic>
+    </topic>
+    <topic href="index.html#samples" label="例">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="connecting.html#connect" label="接続">
+    <property name="navgroup" value="learn"/>
+    <topic href="connecting.html#connect_prereq" label="前提条件">
+      <property name="type" value="anchor"/>
+      <topic href="connecting.html#cfg_env" label="環境の構成"></topic>
+    </topic>
+    <topic href="connecting.html#conx_prgrm" label="プログラムによる接続">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="connecting.html#conx_apps_tools" label="アプリケーションとツールの接続">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic label="他の Db2 サーバーへの接続">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="他の Db2 サーバーへの接続"/>
+    <topic href="federation.html#overview" label="データ仮想化 (フェデレーション)">
+      <topic href="federation.html#use_cases" label="ユース・ケース">
+        <property name="type" value="anchor"/>
+        <topic href="federation.html#-" label="データ・ソースの統合"></topic>
+        <topic href="federation.html#db2-warehouse-on-cloud-" label="Db2 Warehouse on Cloud への接続"></topic>
+        <topic href="federation.html#-" label="複数サーバーでのデータ・シャード"></topic>
+        <topic href="federation.html#-" label="制限を超えたデータベース容量の拡張"></topic>
+      </topic>
+      <topic href="federation.html#getting_started" label="概説">
+        <property name="type" value="anchor"/>
+        <topic href="federation.html#db2-on-cloud-" label="Db2 on Cloud ターゲット・マシン上:"></topic>
+        <topic href="federation.html#-db2-on-cloud-" label="フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:"></topic>
+      </topic>
+      <topic href="federation.html#-" label="追加情報">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+  </topic>
+  <topic href="free_plan.html#free_plan" label="無料 Lite プラン">
+    <property name="navgroup" value="learn"/>
+    <topic href="free_plan.html#architecture" label="アーキテクチャー">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#outside_na" label="北アメリカ大陸以外での Lite プランの利用">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="flex_scaling.html#scale" label="柔軟なスケーリング">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="br.html#br" label="バックアップとリストア">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="ha.html#ha" label="高可用性 (HA)">
+    <property name="navgroup" value="learn"/>
+    <topic href="ha.html#add_dr" label="Geo レプリケートされた災害復旧ノードの追加方法">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="ha.html#manage_ha_dr" label="高可用性および災害復旧ノードの管理">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="ha.html#faq" label="FAQ">
+      <property name="type" value="anchor"/>
+      <topic href="ha.html#-db2-dr-dns-ip-" label="テークオーバー後に、DB2 を使用しているアプリケーションが DR リカバリーと連動するためには、何を変更する必要がありますか? テークオーバー後、DNS 名や IP アドレスは変更されますか?"></topic>
+    </topic>
+  </topic>
+  <topic label="データのロード">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="データのロード"/>
+    <topic href="dcw.html#dcw" label="データベース互換性の評価"></topic>
+    <topic href="migration.html#migration" label="IBM Cloud へのデータ・マイグレーション">
+      <topic href="migration.html#cos" label="オブジェクト・ストアからのデータのロード">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="migration.html#onprem" label="オンプレミス・システムからのデータのマイグレーション">
+        <property name="type" value="anchor"/>
+        <topic href="migration.html#lift" label="Lift CLI"></topic>
+        <topic href="migration.html#mdms" label="IBM Cloud Mass Data Migration"></topic>
+      </topic>
+    </topic>
+  </topic>
+  <topic href="audit.html#audit" label="監査">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="user_mgmt.html#user_mgmt" label="ユーザーの管理">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="plans_cfgs.html#plans_cfgs" label="プランおよび構成">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="maintenance.html#-" label="保守と通知に関するポリシー">
+    <property name="navgroup" value="learn"/>
+    <topic href="maintenance.html#maintenance" label="保守ポリシー">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="maintenance.html#notification" label="通知ポリシー">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="local_dev_env.html#local_dev" label="ローカル開発環境">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="communities.html#communities" label="コミュニティー">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.youtube.com/watch?v=abmWJYe7Kcc" label="ウォークスルー・ビデオ">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://ibm.biz/db2oncloud-features" label="機能および利点">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="最新情報">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="よくあるご質問">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="セキュリティー・コンプライアンス">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="http://ibm.biz/db2oc_api" label="REST API">
+    <property name="navgroup" value="reference"/>
+  </topic>[SQL
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="リファレンス">
+    <property name="navgroup" value="reference"/>
+  </topic>
+  <topic href="help.html#help_support" label="ヘルプおよびサポート">
+    <property name="navgroup" value="help"/>
+    <topic href="help.html#gettinghelp" label="Db2 on Cloud のヘルプおよびサポートの利用">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+</toc>

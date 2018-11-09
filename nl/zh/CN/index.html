@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-03-15">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>入门</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="getting_started_db2oncloud" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-getting_started_db2oncloud">
+        <h1 id="getting_started_db2oncloud">入门</h1>
+        <p>IBM&reg; Db2&reg; on Cloud 是在云中为您供应的 SQL 数据库。您可以像使用任何数据库软件一样使用 Db2 on Cloud，但是却没有硬件设置或软件安装和维护的麻烦。</p>
+        <p class="shortdesc">如果从北美大陆之外部署免费轻量套餐，请参阅：<a href="free_plan.html#outside_na" target="_blank">在北美大陆之外使用轻量套餐</a>。</p>
+        <p>您还可以使用<a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions">免费下载的 Db2 Developer Edition <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a> 来安装本地 Db2 数据库。这样会快速安装随时可用的开发者版本的 Db2 以及 Docker 容器内的工具（不需要
+          Docker，它将自动安装任何必要的组件）。 </p>
+        <!-- ## Free trial
+
+You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
+
+        <section id="section-interfaces">
+          <h2 id="interfaces">界面</h2>
+          <p class="shortdesc">您可以通过以下方法来使用 Db2 on Cloud 数据库：</p>
+          <ul>
+            <li>Db2 on Cloud Web 控制台</li>
+            <li>REST API</li>
+            <li>从本地计算机连接应用程序或喜爱的工具</li>
+            <li>使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源</li>
+          </ul>
+          <section id="section-web_console">
+            <h3 id="web_console">Db2 on Cloud Web 控制台</h3>
+            <p class="shortdesc">Web 控制台为您需要使用数据库的所有项目提供图形界面，包括：装入功能、SQL 编辑器、驱动程序下载等。</p>
+            <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
+            <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
+
+            <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
+
+            <p>您可以通过以下方法来访问 Db2 on Cloud Web 控制台：</p>
+            <ul>
+              <li>从 IBM Cloud 仪表板 - 您可以从 IBM Db2 on Cloud 服务的“服务详细信息”页面打开 Web 控制台。</li>
+              <li>直接 URL - 您可以针对 Db2 on Cloud 服务为 Web 控制台的 URL 设置书签。</li>
+            </ul>
+            <!-- ###REST APIs
+
+With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
+{: shortdesc} -->
+
+          </section>
+          <section id="section-connect_apps">
+            <h3 id="connect_apps">从本地计算机连接应用程序或喜爱的工具</h3>
+            <p class="shortdesc">通过完成以下步骤，配置本地环境以连接到 Db2 on Cloud 数据库：</p>
+            <ol>
+              <li>从 Db2 on Cloud Web 控制台的“连接信息”页面下载 <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html" target="_blank">驱动程序包 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</li>
+              <li>在运行应用程序和工具的计算机上<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">安装驱动程序包 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</li>
+              <li>为 Db2 on Cloud 数据库<a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">配置驱动程序文件 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</li>
+            </ol>
+          </section>
+          <section id="section-data_src">
+            <h3 id="data_src">使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源</h3>
+            <p class="shortdesc">在 IBM Cloud 上托管的应用程序可以使用与本地应用程序连接到 Db2 on Cloud 数据库完全相同的方法，连接到 Db2 on Cloud 数据库。</p>
+            <p>当应用程序使用 IBM Cloud 平台时，您可以利用 <code>VCAP _SERVICES</code> 环境变量来简化指定数据库详细信息和凭证的任务：</p>
+            <ol>
+              <li>在 IBM Cloud 仪表板上，在 IBM Db2 on Cloud 服务的“服务详细信息”页面的<strong>连接</strong>选项卡上，单击<strong>创建连接</strong>按钮。</li>
+              <li>选择 IBM Cloud 应用程序以使用 Db2 on Cloud 数据库作为数据源，然后单击<strong>连接</strong>按钮。</li>
+              <li>
+                <p>更新应用程序代码以从 <code>VCAP_SERVICES</code> 环境变量检索数据库详细信息和凭证：</p>
+                <p> <strong>没有 <code>VCAP_SERVICES</code> 的示例</strong></p>
+                <p> ```php &lt;?php $driver = &quot;DRIVER={IBM DB2 ODBC DRIVER};&quot;;</p>
+              </li>
+            </ol>
+            <pre><code class="hljs">$database    = &quot;BLUDB&quot;;         # Get these database details from
+$hostname    = &quot;&lt;Host-name&gt;&quot;;   # the Connect page of the Db2 on Cloud
+$port        = 50000;           # web console.
+$user        = &quot;&lt;User-ID &gt;&quot;;    #
+$password    = &quot;&lt;Password&gt;&quot;;    #
+$dsn         = &quot;DATABASE=$database;&quot; .
+               &quot;HOSTNAME=$hostname;&quot; .
+               &quot;PORT=$port;&quot; .
+               &quot;PROTOCOL=TCPIP;&quot; .
+               &quot;UID=$user;&quot; .
+               &quot;PWD=$password;&quot;;
+
+
+
+$conn_string = $driver . $dsn;
+
+
+
+$conn        = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
+?&gt;
+```
+
+**具有 `VCAP_SERVICES` 的示例**
+
+```php
+&lt;?php
+$driver      = &quot;DRIVER={IBM DB2 ODBC DRIVER};&quot;;
+
+
+
+$vcap        = json_decode( getenv( &quot;VCAP_SERVICES&quot; ), true );
+$dsn         = $vcap[ &quot;dashDB&quot; ][0][ &quot;credentials&quot; ][ &quot;dsn&quot; ];
+
+$conn_string = $driver . $dsn;
+
+
+
+$conn        = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
+?&gt;
+```
+</code></pre>
+          </section>
+        </section>
+        <section id="section-samples">
+          <h2 id="samples">样本</h2>
+          <p class="shortdesc">以下链接是演示在不同的语言中，如何从应用程序连接到 Db2 on Cloud 数据库的样本：</p>
+          <ul>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting__net_applications.html" target="_blank">.NET <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>
+              <!-- * [JAVA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_java.html){:new_window} -->
+            </li>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_jdbc_applications.html" target="_blank">JDBC <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>
+              <!-- * [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_nodejs.html){:new_window} -->
+            </li>
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank">PHP <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>
+              <!-- * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:new_window} -->
+            </li>
+            <li><a href="https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld" target="_blank">GitHub 上的 Db2 on Cloud 样本 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>
