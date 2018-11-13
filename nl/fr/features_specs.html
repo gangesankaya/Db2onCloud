@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Fonctions &amp; spécifications</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="overview" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-overview">
+        <h1 id="overview">Fonctions &amp; spécifications</h1>
+        <p class="shortdesc">Les fonctions et spécifications IBM&reg; Db2&reg; on Cloud sont répertoriées ici pour votre commodité.</p>
+        <table>
+          <caption caption-side="top">Table 1. Fonctions et spécifications prises en charge dans Db2 on Cloud</caption>
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Fonction</th>
+              <th>Pris en charge ?</th>
+              <th>Commentaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Général</td>
+              <td>Db2 AESE</td>
+              <td>O</td>
+              <td>Db2 v11.1.3.3</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Lecture en veille</td>
+              <td>O</td>
+              <td>Noeud DR hors site seulement</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Mises à jour en continu automatiques</td>
+              <td>O</td>
+              <td>Avec plans haute disponibilité</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Options d&#39;emplacement de centre de données</td>
+              <td>O</td>
+              <td><a href="https://ibm.biz/db2oncloud-locations" target="_blank">Emplacements <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>. Voir aussi : Durées de déploiement et de mise à l&#39;échelle.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>BLU en mémoire</td>
+              <td>O</td>
+              <td>La valeur par défaut est la ligne, indiquer <code>CREATE TABLE..AS COL</code> pour BLU</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Activity Tracker</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Droits d&#39;accès de l&#39;utilisateur root fournis</td>
+              <td>N</td>
+              <td>Utiliser Hébergé Db2 si des droits d&#39;accès de l&#39;utilisateur root sont obligatoires</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Haute disponibilité &amp; réplication</td>
+              <td>DR hors site</td>
+              <td>O</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Haute disponibilité (2 noeuds dans 1 zone)</td>
+              <td>O</td>
+              <td>99,99 % disponibilité SLA</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Différentes zones dans même centre de données</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Cache de données de calcul (CDC)</td>
+              <td>O</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Utilisation en tant que fonction de reprise sur sinistre haute disponibilité sur site</td>
+              <td>N</td>
+              <td>Utiliser CDC. Pour plus de détails, voir <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank">How can I migrate or sync data from Db2 to Db2 on Cloud? <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Basculement autonome - Haute disponibilité</td>
+              <td>O</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Basculement autonome - DR hors site</td>
+              <td>N</td>
+              <td>Utiliser bouton ou API</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Déplacements IP avec basculement</td>
+              <td>O</td>
+              <td>Haute disponibilité local seulement ; pas de HADR hors site</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Règles de maintenance &amp; SLA</td>
+              <td>Plans à haute disponibilité</td>
+              <td>99,99 %</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Plans à serveur unique</td>
+              <td>99,5 %</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Noeud DR hors site</td>
+              <td>99,5 %</td>
+              <td>Doit utiliser une haute disponibilité supplémentaire pour atteindre 99,99 %</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Politique de maintenance</td>
+              <td>O</td>
+              <td><a href="https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html" target="_blank">Lire les détails <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Conformités à la sécurité</td>
+              <td>Prêt pour la loi HIPAA</td>
+              <td>O</td>
+              <td>Tous les plans payants y compris Flex. Doit demander le mode HIPAA auprès du support IBM.
+                <!--For Db2 Warehouse on Cloud [see docs here ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/Db2whc/index.html#getting_started){:new_window}.-->
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>HITRUST</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>Hébergé par Db2 peut être utilisé aujourd&#39;hui pour HITRUST</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>International Organization for Standardization (ISO)</td>
+              <td>O</td>
+              <td>ISO 27001, 27002, 27017 et 27018</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>SOC (Service Organization Controls)</td>
+              <td>O</td>
+              <td>SOC 2 Type 2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>GDPR</td>
+              <td>O</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Cloud EU</td>
+              <td>O</td>
+              <td>Utiliser région de Francfort. Support physique proposé en Europe.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Liste complète des conformités</td>
+              <td>O</td>
+              <td><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" target="_blank">Conformités de sécurité <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sauvegarde &amp; restauration</td>
+              <td>Sauvegardes quotidiennes</td>
+              <td>O</td>
+              <td>14 jours de sauvegardes quotidiennes</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Reprise en libre service ponctuelle</td>
+              <td>Disponible le 15 nov 2018</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Sauvegardes conservées hors site</td>
+              <td>A la demande</td>
+              <td>Hors site par défaut au 1er déc 2018</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Conservation de sauvegarde jusqu&#39;à 10 ans</td>
+              <td>A la demande</td>
+              <td>Dès le 1er déc 2018. Requiert un ticket de demande de service.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Interrogation d&#39;anciennes données sans restauration</td>
+              <td>O</td>
+              <td><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>                doit être configuré</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Réseau, sécurité &amp; machines virtuelles</td>
+              <td>Machine virtuelle à service exclusif</td>
+              <td>O</td>
+              <td>Tous les plans payants, y compris Flex, sont des machines virtuelles à service exclusif ou bare metal.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>ICIAE</td>
+              <td>O</td>
+              <td>Demande du support IBM. Si ICIAE est demandé pour un environnement de service existant, vos données doivent être migrées vers votre environnement ICIAE par le support IBM.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>VPN</td>
+              <td>O</td>
+              <td>Demande du support IBM</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Chiffrement sur disque</td>
+              <td>O</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Connexions SSL/TLS</td>
+              <td>O</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Placement sur liste blanche IP</td>
+              <td>Certaines</td>
+              <td>Disponible au niveau utilisateur Db2. Pour le niveau réseau, pensez à ICIAE ou similaire.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>KeyProtect (Bring your own key)</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>MIS / Service interconnecté</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Tarification &amp; achat</td>
+              <td>Remises BYOL</td>
+              <td>O</td>
+              <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank">Annonce <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Disponible via IBM Cloud</td>
+              <td>O</td>
+              <td>A la fois Abonnement et Paiement à la carte</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Disponible via commande devis logiciel</td>
+              <td>O</td>
+              <td>Tous les plans y compris Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Parts &amp; details. <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Facturation quotidienne</td>
+              <td>O</td>
+              <td>La facturation pour les plans Flex repose sur une utilisation quotidienne aux heures pleines. Par exemple, si vous passez de 2 à 8 coeurs pour une heure d&#39;un jour, vous serez facturé pour 8 coeurs pour uniquement ce jour, et 2 coeurs
+                pour tous les autres jours du mois.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Facturation horaire</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Grille tarifaire principale</td>
+              <td>Mensuelle</td>
+              <td>Les prix sont définis sur une base mensuelle (par exemple, 189 dollars américains par mois). Un prix mensuel au prorata repose sur le nombre de jours de service activé pendant le mois au cours duquel le service a été interrompu. <a href="plans_pricing.html">Exemples</a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Durées de déploiement &amp; de mise à l&#39;échelle</td>
+              <td>Dallas</td>
+              <td><strong>Déploiement </strong>: &lt; 5 minutes. <strong>Mise à l&#39;échelle </strong>: &lt; 45 minutes.</td>
+              <td>Plan Flex seulement, selon le stock</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Autre Sud des Etats-Unis</td>
+              <td><strong>Déploiement </strong>: 1 jour. <strong>Mise à l&#39;échelle </strong>: 8 heures.</td>
+              <td>Certains emplacements plus courts que d&#39;autres</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Francfort &amp; Londres</td>
+              <td><strong>Déploiement </strong>: &lt; 5 minutes. <strong>Mise à l&#39;échelle </strong>: 2 heures.</td>
+              <td>Plan Flex seulement, selon le stock</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Autre EU</td>
+              <td><strong>Déploiement</strong>: 3-5 jours. <strong>Mise à l&#39;échelle </strong>: 1-2 jours.</td>
+              <td>Certains emplacements plus courts que d&#39;autres</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Sydney</td>
+              <td><strong>Déploiement </strong>: &lt; 1 heure. <strong>Mise à l&#39;échelle </strong>: 2 heures.</td>
+              <td>Plan Flex seulement, selon le stock</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Autre Asie-Pacifique</td>
+              <td><strong>Déploiement</strong>: 3-5 jours. <strong>Mise à l&#39;échelle </strong>: 3-5 jours.</td>
+              <td>Certains emplacements plus courts que d&#39;autres. Des volumes plus faibles en Asie-Pacifique se traduisent par des délais de mise à disposition d&#39;infrastructure plus lents.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

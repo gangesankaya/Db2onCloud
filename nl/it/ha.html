@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-07-19">
+  <meta name="dcterms.date" content="2018-10-22">
   <meta name="source.format" content="markdown">
 
 
@@ -27,17 +27,21 @@
       <section id="section-ha">
         <h1 id="ha">Elevata disponibilità (HA)</h1>
         <p class="shortdesc">I piani di elevata disponibilità di Db2 on Cloud dispongono di eccellenti caratteristiche disponibili con un 99.99% di SLA. </p>
-        <p>I piani di alta disponibilità standard senza un nodo DR forniscono gli aggiornamenti in sequenza e dell&#39;errore senza problemi. Vengono gestiti per te tramite ACR (automatic client reroute) e gli IP portatili.</p>
+        <p>I piani di alta disponibilità standard senza un nodo di ripristino di emergenza (DR) forniscono gli aggiornamenti in sequenza e dell&#39;errore senza problemi. Vengono gestiti per te tramite ACR (automatic client reroute) e gli IP portatili.</p>
         <p>In aggiunta, puoi aggiungere un nodo di ripristino di emergenza (DR) con replica geografica. Questa opzione del nodo DR offsite ti fornisce la capacità di sincronizzare rapidamente i tuoi dati in tempo reale in un nodo del database in un data
           center IBM Cloud di tua scelta. </p>
         <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">Elenco delle ubicazioni dei data center in cui sono disponibili i nodi DR. <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a></p>
         <p>Db2 on Cloud utilizza la tecnologia Db2 High Availability Disaster Recovery (HADR) in modalità <code>ASYNC</code> per raggiungere la capacità del nodo DR offsite e fornisce <code>Read on Standby</code> nel nodo DR.</p>
+        <section id="section-rule_14">
+          <h2 id="rule_14"><strong>Brasile: regola supplementare 14</strong> (si applica ai sistemi forniti al governo federale brasiliano)</h2>
+          <p>In questo momento l&#39;opzione di ripristino di emergenza (DR) per l&#39;offerta Db2 on Cloud non è disponibile in Brasile per il governo federale a causa della regola supplementare 14.</p>
+        </section>
         <section id="section-add_dr">
           <h2 id="add_dr">Come aggiungere un nodo di ripristino di emergenza (DR) con replica geografica</h2>
           <p>Per gli utenti Db2 on Cloud esistenti:</p>
           <ul>
             <li>Puoi aggiungere un nodo DR su richiesta alle istanze Db2 on Cloud esistenti. Dopo aver fatto clic sulla tua istanza nel dashboard IBM Cloud, visualizzerai un&#39;opzione denominata <strong>Manage Disaster Recovery</strong>. Puoi aggiungere
-              un nodo di ripristino di emergenza (DR) con replica geografica da qui. </li>
+              un nodo di ripristino di emergenza (DR) con replica geografica da qui.</li>
             <li>Se hai acquistato Db2 on Cloud con contratto tramite una rappresentante delle vendite e non hai una sottoscrizione IBM Cloud, contatta il tuo rappresentante di IBM per aggiungere un nodo DR.</li>
           </ul>
           <p>Se al momento non sei un utente Db2 on Cloud:</p>
@@ -58,8 +62,8 @@
         </section>
         <section id="section-faq">
           <h2 id="faq">Domande frequenti (FAQ)</h2>
-          <section id="section-quali-sono-le-modifiche-necessarie-per-un-applicazione-che-utilizza-db2-per-utilizzare-il-ripristino-dr-dopo-una-sostituzione-il-nome-dns-o-l-indirizzo-ip-vengono-modificati-dopo-la-sostituzione-">
-            <h3 id="quali-sono-le-modifiche-necessarie-per-un-applicazione-che-utilizza-db2-per-utilizzare-il-ripristino-dr-dopo-una-sostituzione-il-nome-dns-o-l-indirizzo-ip-vengono-modificati-dopo-la-sostituzione-">Quali sono le modifiche necessarie per un&#39;applicazione che utilizza Db2 per utilizzare il ripristino DR dopo una sostituzione? Il nome DNS o l&#39;indirizzo IP vengono modificati dopo la sostituzione?</h3>
+          <section id="section-quali-sono-le-modifiche-necessarie-per-un-applicazione-che-utilizza-db2-per-utilizzare-il-nodo-di-ripristino-di-emergenza-dr-dopo-una-sostituzione-il-nome-dns-o-l-indirizzo-ip-vengono-modificati-dopo-la-sostituzione-">
+            <h3 id="quali-sono-le-modifiche-necessarie-per-un-applicazione-che-utilizza-db2-per-utilizzare-il-nodo-di-ripristino-di-emergenza-dr-dopo-una-sostituzione-il-nome-dns-o-l-indirizzo-ip-vengono-modificati-dopo-la-sostituzione-">Quali sono le modifiche necessarie per un&#39;applicazione che utilizza Db2 per utilizzare il nodo di ripristino di emergenza DR dopo una sostituzione? Il nome DNS o l&#39;indirizzo IP vengono modificati dopo la sostituzione?</h3>
             <p><strong>A</strong>: no. Ti vengono forniti 2 nomi host risolvibili. Se la tua applicazione è configurata per utilizzare Db2 ACR (Active Connection Reroute), viene reinstradata al nuovo nodo primario.</p>
             <p>Per ulteriori informazioni sul nodo di ripristino di emergenza (DR) con replica geografica, fai clic <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">qui <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
           </section>

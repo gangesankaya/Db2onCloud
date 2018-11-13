@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-07-19">
+  <meta name="dcterms.date" content="2018-10-22">
   <meta name="source.format" content="markdown">
 
 
@@ -27,10 +27,14 @@
       <section id="section-ha">
         <h1 id="ha">高可用性 (HA)</h1>
         <p class="shortdesc">Db2 on Cloud 高可用性方案具有絕佳的可用性特徵，及 99.99% SLA。</p>
-        <p>標準高可用性方案提供無縫失效接手及漸進式更新。系統使用自動用戶端重新遞送 (ACR) 及可攜式 IP 為您管理。</p>
+        <p>沒有災難回復 (DR) 節點的標準高可用性方案提供無縫失效接手及漸進式更新。系統使用自動用戶端重新遞送 (ACR) 及可攜式 IP 為您管理。</p>
         <p>此外，您可以新增「異地抄寫災難回復節點」。這個異地 DR 節點選項讓您能快速即時將資料同步化到您選擇之異地 IBM Cloud 資料中心的資料庫節點。 </p>
         <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">提供 DR 節點的資料中心位置清單。<img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></p>
         <p>Db2 on Cloud 使用 Db2 高可用性災難復原 (HADR) 技術的 <code>ASYNC</code> 模式來達到異地 DR 節點功能，並在 DR 節點上提供 <code>Read on Standby</code>。</p>
+        <section id="section-rule_14">
+          <h2 id="rule_14"><strong>巴西：增補規則 14</strong>（適用於為巴西聯邦政府佈建的系統）</h2>
+          <p>目前，由於增補規則 14 之故，巴西的聯邦政府無法使用 Db2 on Cloud 供應項目的災難回復 (DR) 選項。</p>
+        </section>
         <section id="section-add_dr">
           <h2 id="add_dr">如何新增異地抄寫災難回復節點</h2>
           <p>對於現有 Db2 on Cloud 使用者：</p>
@@ -55,7 +59,7 @@
         <section id="section-faq">
           <h2 id="faq">常見問題</h2>
           <section id="section--db2-dr-dns-ip-">
-            <h3 id="-db2-dr-dns-ip-">使用 Db2 的應用程式在接管之後，若要使用 DR 回復，需要做什麼變更？DNS 名稱或 IP 位址會在接管之後變更嗎？</h3>
+            <h3 id="-db2-dr-dns-ip-">使用 Db2 的應用程式在接管之後，若要使用 DR 節點，需要做什麼變更？DNS 名稱或 IP 位址會在接管之後變更嗎？</h3>
             <p><strong>答</strong>：不會。您會得到 2 個可解析的主機名稱。如果您的應用程式已配置為使用 Db2 ACR（作用中連線重新遞送），則應用程式會重新遞送到新的主要節點。</p>
             <p>如需異地抄寫災難回復節點的相關資訊，請按一下<a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">這裡 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
           </section>

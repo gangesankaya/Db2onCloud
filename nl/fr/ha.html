@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-07-19">
+  <meta name="dcterms.date" content="2018-10-22">
   <meta name="source.format" content="markdown">
 
 
@@ -33,12 +33,16 @@
         <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">Liste des emplacements de centre de données où des noeuds de reprise après incident sont disponibles. <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></p>
         <p>Db2 on Cloud utilise la technologie Db2 HADR (High Availability Disaster Recovery) en mode <code>ASYNC</code> pour atteindre la capacité du noeud de reprise après incident hors site et fournit une <code>fonction de lecture en veille</code> sur
           ce noeud.</p>
+        <section id="section-rule_14">
+          <h2 id="rule_14"><strong>Brésil : Règle 14 supplémentaire </strong> (concerne les systèmes mis à disposition pour le gouvernement fédéral brésilien)</h2>
+          <p>A ce stade, l&#39;option de reprise après incident pour les offres Db2 on Cloud n&#39;est pas disponible au Brésil pour le gouvernement fédéral en raison de la Règle 14 supplémentaire.</p>
+        </section>
         <section id="section-add_dr">
           <h2 id="add_dr">Ajout d&#39;un noeud de reprise après incident géorépliqué</h2>
           <p>Pour les utilisateurs Db2 on Cloud existants :</p>
           <ul>
             <li>Vous pouvez ajouter un noeud de reprise après incident à la demande à des instances Db2 on Cloud existantes. Après avoir cliqué sur votre instance dans le tableau de bord IBM Cloud, vous verrez s&#39;afficher une option appelée <strong>Manage Disaster Recovery</strong>.
-              Vous pouvez ajouter un noeud de reprise après incident géorépliqué à partir de cet endroit. </li>
+              Vous pouvez ajouter un noeud de reprise après incident géorépliqué à partir de cet endroit.</li>
             <li>Si vous avez acheté Db2 on Cloud sur contrat via un ingénieur commercial et que vous n&#39;avez pas d&#39;abonnement IBM Cloud, contactez votre interlocuteur IBM pour ajouter un noeud de reprise après incident.</li>
           </ul>
           <p>Si vous n&#39;êtes pas un utilisateur Db2 on Cloud actuellement :</p>
@@ -59,9 +63,9 @@
         </section>
         <section id="section-faq">
           <h2 id="faq">Foire aux questions</h2>
-          <section id="section-quelles-sont-les-modifications-requises-pour-une-application-qui-utilise-db2-afin-qu-elle-mette-en-oeuvre-la-reprise-apr-s-incident-apr-s-la-reprise-est-ce-que-le-nom-dns-ou-l-adresse-ip-change-apr-s-la-reprise-">
-            <h3 id="quelles-sont-les-modifications-requises-pour-une-application-qui-utilise-db2-afin-qu-elle-mette-en-oeuvre-la-reprise-apr-s-incident-apr-s-la-reprise-est-ce-que-le-nom-dns-ou-l-adresse-ip-change-apr-s-la-reprise-">Quelles sont les modifications requises pour une application qui utilise Db2 afin qu&#39;elle mette en oeuvre la reprise après incident après la reprise ? Est-ce que le nom DNS ou l&#39;adresse IP change après la reprise ?</h3>
-            <p><strong>R</strong> : Non. Deux noms d&#39;hôte qui peuvent être résolus vous sont affectés. Si votre application est configurée pour utiliser Db2 ACR (Active Connection Reroute), elle est alors réacheminée vers le noeud principal. </p>
+          <section id="section-quelles-sont-les-modifications-requises-pour-une-application-qui-utilise-db2-afin-qu-elle-fonctionne-avec-le-noeud-de-reprise-apr-s-incident-apr-s-la-reprise-est-ce-que-le-nom-dns-ou-l-adresse-ip-change-apr-s-la-reprise-">
+            <h3 id="quelles-sont-les-modifications-requises-pour-une-application-qui-utilise-db2-afin-qu-elle-fonctionne-avec-le-noeud-de-reprise-apr-s-incident-apr-s-la-reprise-est-ce-que-le-nom-dns-ou-l-adresse-ip-change-apr-s-la-reprise-">Quelles sont les modifications requises pour une application qui utilise Db2 afin qu&#39;elle fonctionne avec le noeud de reprise après incident après la reprise ? Est-ce que le nom DNS ou l&#39;adresse IP change après la reprise ?</h3>
+            <p><strong>R</strong> : Non. Deux noms d&#39;hôte qui peuvent être résolus vous sont affectés. Si votre application est configurée pour utiliser Db2 ACR (Active Connection Reroute), elle est alors réacheminée vers le noeud principal.</p>
             <p>Pour plus d&#39;informations sur le noeud de reprise après incident géorépliqué, cliquez <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">ici <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
           </section>
         </section>

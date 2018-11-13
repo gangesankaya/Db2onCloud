@@ -5,6 +5,7 @@
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
   <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <property name="path" value="services/Db2onCloud"/>
   <topic href="index.html#getting_started_db2oncloud" label="Introdução">
     <property name="navgroup" value="learn"/>
     <topic href="index.html#interfaces" label="Interfaces">
@@ -14,6 +15,47 @@
       <topic href="index.html#data_src" label="Use o Db2 on Cloud como uma origem de dados para os seus apps ou serviços do IBM Cloud"></topic>
     </topic>
     <topic href="index.html#samples" label="Amostra">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#intro_vid" label="Vídeo: Introduzindo o Db2 on Cloud">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#vid_api" label="Vídeo: Usando a API de REST para se comunicar com o Db2 on Cloud">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#cognos_vid" label="Vídeo: Integrando os blocos de notas do Jupyter">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="features_specs.html#overview" label="Recursos e especificações">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="iam.html#iam" label="Identity and Access Management (IAM) no IBM Cloud">
+    <property name="navgroup" value="learn"/>
+    <topic href="iam.html#enabled" label="O IAM está ativado na instância?">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#features" label="Recursos do IBM Cloud IAM">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#connect" label="Conexões do cliente e logins do usuário">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#sup-if" label="Interfaces suportadas">
+      <property name="type" value="anchor"/>
+      <topic href="iam.html#odbc-clpplus" label="ODBC e CLPPLUS"></topic>
+      <topic href="iam.html#jdbc" label="JDBC"></topic>
+    </topic>
+    <topic href="iam.html#console-ux" label="Experiência do usuário do console">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#api" label="Experiência da API de REST">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#fed" label="Federação do IBMid">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#restrictions" label="Restrictions">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -30,10 +72,10 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic label="Conectando-se a outro servidor Db2">
+  <topic label="Conectando-se a outro banco de dados Db2">
     <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Conectando-se a outro servidor Db2"/>
-    <topic href="federation.html#overview" label="Virtualização de dados (Federação)">
+    <property name="topicgroup" value="Conectando-se a outro banco de dados Db2"/>
+    <topic href="federation.html#overview" label="Virtualização de dados (federação)">
       <topic href="federation.html#use_cases" label="Casos de Uso">
         <property name="type" value="anchor"/>
         <topic href="federation.html#consolidar-origens-de-dados" label="Consolidar origens de dados"></topic>
@@ -68,6 +110,9 @@
   </topic>
   <topic href="ha.html#ha" label="Alta disponibilidade (HA)">
     <property name="navgroup" value="learn"/>
+    <topic href="ha.html#-brasil-regra-suplementar-14-aplica-se-aos-sistemas-fornecidos-para-o-governo" label="Brasil: Regra Suplementar 14 (aplica-se aos sistemas fornecidos para o governo">
+      <property name="type" value="anchor"/>
+    </topic>
     <topic href="ha.html#add_dr" label="Como incluir um nó de recuperação de desastre geo-replicado">
       <property name="type" value="anchor"/>
     </topic>
@@ -76,7 +121,7 @@
     </topic>
     <topic href="ha.html#faq" label="FAQ">
       <property name="type" value="anchor"/>
-      <topic href="ha.html#quais-s-o-as-mudan-as-requeridas-para-que-um-aplicativo-use-o-db2-para-trabalhar-com-a-recupera-o-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-" label="Quais são as mudanças requeridas para que um aplicativo use o Db2 para trabalhar com a recuperação de DR após o controle? O nome DNS ou o endereço IP mudam após o controle?"></topic>
+      <topic href="ha.html#quais-s-o-as-mudan-as-necess-rias-para-que-um-aplicativo-que-usa-o-db2-funcione-com-o-n-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-" label="Quais são as mudanças necessárias para que um aplicativo que usa o Db2 funcione com o nó de DR após o controle? O nome DNS ou o endereço IP mudam após o controle?"></topic>
     </topic>
   </topic>
   <topic label="Carregando seus dados">
@@ -130,11 +175,29 @@
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Perguntas mais frequentes">
     <property name="navgroup" value="learn"/>
   </topic>
+  <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
+    <property name="navgroup" value="learn"/>
+  </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="Conformidades de segurança">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Centro de Conhecimento">
     <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="Demo orientada: Concluir tarefas comuns por meio do console da web">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" label="Tutorial: Consulta de viagem no tempo para acessar os dados históricos">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://www.ibm.com/cloud/garage/tutorials/ibm-db2-on-cloud/exploring-the-capabilities-of-db-2-on-cloud" label="Tutorial: Desenvolver aplicativos com os blocos de notas do Jupyter e a API de REST">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://www.youtube.com/watch?v=PSNBDwgf9ts" label="Vídeo: Usando a API de RESTful">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://www.youtube.com/watch?v=bNfH0Wzx3is" label="Vídeo: Integrando os blocos de notas do Jupyter">
+    <property name="navgroup" value="howto"/>
   </topic>
   <topic href="http://ibm.biz/db2oc_api" label="API do REST">
     <property name="navgroup" value="reference"/>

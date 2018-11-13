@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-09-18">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Identity and access management (IAM) su IBM Cloud</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="iam" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-iam">
+        <h1 id="iam">Identity and access management (IAM) su IBM Cloud</h1>
+        <p class="shortdesc">Identity and access management (IAM) ti abilita ad autenticare in modo sicuro gli utenti per i servizi della piattaforma e controllare l&#39;accesso alle risorse in modo coerente alla piattaforma IBM Cloud. Ad esempio, con un solo accesso a IBM
+          Cloud con il tuo ID IBM, hai accesso a tutte le console del servizio e alle loro applicazioni senza dover accedere ad ognuna di esse separatamente.</p>
+        <section id="section-enabled">
+          <h2 id="enabled">IAM è abilitato sulla tua istanza?</h2>
+          <p>In poco tempo, le istanze del database gestite da IBM&reg; Db2&reg; on Cloud su IBM Cloud saranno abilitate ad utilizzare IAM per il controllo dell&#39;accesso. Per controllare se IAM è abilitato sulla tua istanza, esegui la seguente query:</p>
+          <p><code>SELECT CASE WHEN VALUE = &#39;IBMIAMauth&#39; THEN 1 ELSE 0 END AS IAM_ENABLED FROM SYSIBMADM.DBMCFG WHERE NAME = &#39;srvcon_gssplugin_list&#39;</code></p>
+          <p>Se il valore restituito per <strong>IAM_ENABLED</strong> è 1, IAM è abilitato sulla tua istanza.</p>
+        </section>
+        <section id="section-features">
+          <h2 id="features">Funzioni di IAM IBM Cloud</h2>
+          <p>Le seguenti funzioni IAM sono implementate per il servizio gestito da Db2 on Cloud con due tipi di identità supportate:</p>
+          <p><strong>ID IBM</strong></p>
+          <p>Gli utenti con un ID IBM devono essere aggiunti a ogni istanza del servizio database dall&#39;amministratore del database tramite la console o l&#39;API REST prima che questi utenti possano collegarsi a quella particolare istanza del servizio
+            database. Proprio come per un utente non ID IBM, un ID utente per l&#39;istanza del servizio database deve essere immesso nello stesso momento in cui viene aggiunto l&#39;utente ID IBM. Questo ID utente deve essere univoco all&#39;interno
+            dell&#39;istanza del servizio database. Questo ID utente è anche l&#39;ID di autorizzazione (AUTH) all&#39;interno del database. L&#39;amministratore del database può concedere e revocare le autorizzazioni basate sull&#39;ID AUTH.</p>
+          <p><strong>ID servizio</strong></p>
+          <p>Un ID identifica un servizio o un&#39;applicazione in modo simile a come un ID utente identifica un utente. Gli ID servizio sono gli ID che possono essere utilizzati dalle applicazioni per l&#39;autenticazione a un servizio IBM Cloud. Un ID
+            servizio rappresenta un&#39;entità separata dall&#39;ID IBM di appartenenza. Pertanto, autorità e autorizzazioni diverse possono essere concesse in modo specifico all&#39;ID servizio all&#39;interno del database. Gli ID servizio non hanno
+            password. Deve essere creata una chiave API per ogni ID servizio per l&#39;ID da collegare all&#39;istanza del servizio database. Per ulteriori informazioni sugli ID servizio, consulta: <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/"
+              target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
+        </section>
+        <section id="section-connect">
+          <h2 id="connect">Connessioni client e accessi utente</h2>
+          <p><strong>Prerequisito</strong>: Client Db2 V11.1 FP3 e successive.</p>
+          <p>I seguenti metodi possono essere utilizzati per l&#39;autenticazione IAM:</p>
+          <p><strong>Token di accesso</strong></p>
+          <p>Puoi ottenere un token di accesso dal servizio IAM direttamente dall&#39;applicazione tramite l&#39;API REST utilizzando una chiave API. Per ulteriori informazioni, consulta: <a href="https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey"
+              target="_blank">Getting an IBM Cloud IAM token by using an API key <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>. Il token di accesso ha un periodo di validità predefinito di 60 minuti prima
+            della scadenza. Se il token è scaduto, il server Db2 non consentirà di stabilire la connessione. Non viene controllata la scadenza del token dopo che la connessione è stata stabilita. Così come era prima dell&#39;integrazione di IAM, la connessione
+            rimarrà in essere fino a quando l&#39;applicazione non si scollega o viene terminata a causa di altre ragioni.</p>
+          <pre><code class="hljs">curl -k -X POST \
+  --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+  --header &quot;Accept: application/json&quot; \
+  --data-urlencode &quot;grant_type=urn:ibm:params:oauth:grant-type:apikey&quot; \
+  --data-urlencode &quot;apikey=&lt;apikey&gt;&quot; \
+  &quot;https://iam.bluemix.net/identity/token&quot;
+</code></pre>
+          <p>Un token di accesso identifica un utente ID IBM o un ID servizio al database. Il server del database verifica la validità del token di accesso prima di accettarlo. Questo è il metodo migliore se l&#39;applicazione deve connettersi a più di un&#39;istanza
+            del servizio database o ad altre istanze del sevizio IBM Cloud perché minimizza la comunicazione al servizio IAM per convalidare il token di accesso.</p>
+          <p><strong>Chiave API</strong></p>
+          <p>Possono essere create più chiavi per ogni ID servizio o utente ID IBM. Ogni chiave API viene normalmente creata per una singola applicazione. Consente all&#39;applicazione di connettersi all&#39;istanza del servizio database fino a quando l&#39;ID
+            IBM di appartenenza o l&#39;ID servizio viene aggiunto come un utente alla stessa istanza del servizio database. La chiave API ha le stesse autorizzazioni all&#39;interno del database come l&#39;ID servizio o l&#39;ID IBM di appartenenza.
+            Se un&#39;applicazione non deve più essere consentita per connettersi al database, la chiave API corrispondente può essere rimossa. Questo metodo di autenticazione richiede meno modifiche nell&#39;applicazione rispetto all&#39;utilizzo di
+            un token di accesso poiché non richiede un&#39;interazione diretta con il servizio IAM. Per ulteriori informazioni sulla creazione e la gestione delle chiavi API, consulta: <a href="https://console.bluemix.net/docs/iam/userid_keys.html#userapikey"
+              target="_blank">Gestione delle chiavi API utente <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
+          <p><strong>ID IBM/password</strong></p>
+          <p>Puoi utilizzare l&#39;ID IBM e la password per accedere alla console e anche all&#39;interno dell&#39;applicazione negli stessi modi in cui sono consentiti l&#39;ID utente e la password. Si verifica un&#39;eccezione quando l&#39;ID IBM è federato
+            perché non è possibile eseguire un reindirizzamento alla pagina di accesso della tua organizzazione. Tuttavia, il metodo consigliato per un&#39;applicazione di stabilire una connessione all&#39;istanza del servizio database è quello di utilizzare
+            un token di accesso.</p>
+        </section>
+        <section id="section-sup-if">
+          <h2 id="sup-if">Interfacce supportate</h2>
+          <p>Sono supportate le seguenti interfacce client del database:</p>
+          <ul>
+            <li><a href="#odbc-clpplus">ODBC</a></li>
+            <li><a href="#odbc-clpplus">CLPPLUS</a></li>
+            <li><a href="#jdbc">JDBC</a></li>
+          </ul>
+          <section id="section-odbc-clpplus">
+            <h3 id="odbc-clpplus">ODBC e CLPPLUS</h3>
+            <p>Per un&#39;applicazione ODBC o un client riga di comando (CLPPLUS) per connettersi a un server Db2 utilizzando l&#39;autenticazione IAM, deve essere prima configurato un nome dell&#39;origine dati (DSN) in un file di configurazione <code>db2dsdriver.cfg</code>,
+              immettendo il seguente comando:</p>
+            <p><code>db2cli writecfg add -dsn &lt;dsn_alias&gt; -database &lt;database_name&gt; -host &lt;host_name_or_IP_address&gt; -port 50001 -parameter &quot;Authentication=GSSPLUGIN;SecurityTransportMode=SSL&quot;</code></p>
+            <p>Il file di configurazione <code>db2dsdriver.cfg</code> è un file XML, normalmente ubicato nella directory <code>sqllib/cfg</code>, che contiene un elenco di alias DSN e le relative proprietà.</p>
+            <p>Il seguente esempio di un file di configurazione di <code>db2dsdriver.cfg</code> mostra le configurazioni utilizzate per stabilire una connessione a un&#39;istanza del servizio database. Il file di configurazione fornisce l&#39;alias DSN,
+              il nome del database, il nome host (o l&#39;indirizzo IP) e il tipo <strong>Authentication</strong> e i valori del parametro <strong>SecurityTransportMode</strong>: </p>
+            <pre><code class="hljs">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot; ?&gt;
+&lt;configuration&gt;
+        &lt;dsncollection&gt;
+        &lt;dsn alias=&quot;&lt;data_source_name&gt;&quot; name=&quot;bludb&quot; host=&quot;&lt;host_name_or_IP_address&gt;&quot; port=&quot;50001&quot;&gt;
+            &lt;parameter name=&quot;Authentication&quot; value=&quot;GSSPLUGIN&quot;/&gt;
+            &lt;parameter name=&quot;SecurityTransportMode&quot; value=&quot;SSL&quot;/&gt;
+        &lt;/dsn&gt;
+        &lt;/dsncollection&gt;
+        &lt;databases&gt;
+            &lt;database name=&quot;bludb&quot; host=&quot;&lt;host_name_or_IP_address&gt;&quot; port=&quot;50001&quot;/&gt;
+        &lt;/databases&gt;
+&lt;/configuration&gt;
+</code></pre>
+            <ul>
+              <li>
+                <p>La stringa di connessione ODBC può contenere uno dei seguenti:</p>
+                <p> <strong>Token di accesso</strong></p>
+                <p> <code>DSN=&lt;dsn&gt;;ACCESSTOKEN=&lt;access_token&gt;</code></p>
+                <p> <strong>Chiave API</strong></p>
+                <p> <code>DSN=&lt;dsn&gt;;APIKEY=&lt;api_key&gt;</code></p>
+                <p> <strong>ID IBM/password</strong></p>
+                <p> <code>DSN=&lt;dsn&gt;;UID=&lt;ibmid&gt;;PWD=&lt;password&gt;</code></p>
+                <p> Per ODBC, può essere specificato <strong>AUTHENTICATION=GSSPLUGIN</strong> nel file di configurazione <code>db2dsdriver.cfg</code> o nella stringa di connessione dell&#39;applicazione.</p>
+              </li>
+              <li>
+                <p>Il comando di connessione CLPPLUS può contenere uno dei seguenti:</p>
+                <p> <strong>Token di accesso</strong></p>
+                <p> Connettiti all&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) e passa il token di accesso immettendo il seguente comando allo script o prompt del comando CLPPLUS:</p>
+                <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
+                <p> <strong>Chiave API</strong></p>
+                <p> Connettiti all&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) con una chiave API immettendo il seguente comando allo script o prompt del comando CLPPLUS:</p>
+                <p> <code>connect @&lt;data_source_name&gt; using(apikey &lt;api-key-string&gt;)</code></p>
+                <p> <strong>ID IBM/password</strong></p>
+                <p> Connettiti all&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) con un ID IBM/password immettendo il seguente comando allo script o prompt del comando CLPPLUS:</p>
+                <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
+                <p> Per ulteriori dettagli sulla connessione agli alias DSN con CLPPLUS, consulta: <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
+              </li>
+            </ul>
+          </section>
+          <section id="section-jdbc">
+            <h3 id="jdbc">JDBC</h3>
+            <p>Il driver JDBC di tipo 4 è supportato per l&#39;autenticazione IAM.</p>
+            <p>I seguenti esempi mostrano i frammenti di connessione per i tre metodi:</p>
+            <p><strong>Token di accesso</strong></p>
+            <pre><code class="hljs">DB2SimpleDataSource dataSource;
+
+dataSource.setDriverType( 4 );
+dataSource.setDatabaseName( &quot;BLUDB&quot; );
+dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
+dataSource.setPortNumber( 50001 );
+dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
+dataSource.setPluginName( &quot;IBMIAMauth&quot; );
+dataSource.setAccessToken( &quot;&lt;access_token&gt;&quot; );
+Connection conn = dataSource.getConnection( );
+</code></pre>
+            <p><strong>Chiave API</strong></p>
+            <pre><code class="hljs">DB2SimpleDataSource dataSource;
+
+dataSource.setDriverType( 4 );
+dataSource.setDatabaseName( &quot;BLUDB&quot; );
+dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
+dataSource.setPortNumber( 50001 );
+dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
+dataSource.setPluginName( &quot;IBMIAMauth&quot; );
+dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
+Connection conn = dataSource.getConnection( );
+</code></pre>
+            <p><strong>ID IBM/password</strong></p>
+            <pre><code class="hljs">DB2SimpleDataSource dataSource;
+
+dataSource.setDriverType( 4 );
+dataSource.setDatabaseName( &quot;BLUDB&quot; );
+dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
+dataSource.setPortNumber( 50001 );
+dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
+dataSource.setPluginName( &quot;IBMIAMauth&quot; );
+Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&lt;password&gt;&quot; );
+</code></pre>
+          </section>
+        </section>
+        <section id="section-console-ux">
+          <h2 id="console-ux">Esperienza utente console</h2>
+          <p>La pagina di accesso della console di servizio ha l&#39;opzione di accedere con i tuoi ID IBM e password. Dopo aver fatto clic sul pulsante <strong>Sign In via IBMid</strong>, l&#39;utente viene indirizzato alla pagina di accesso IAM, su cui
+            viene immessa la password. Quando l&#39;autenticazione è stata completata, l&#39;utente viene reindirizzato nuovamente alla console. Prima di eseguire correttamente l&#39;accesso, l&#39;ID IBM deve essere aggiunto a ogni istanza del servizio
+            database dall&#39;amministratore del database tramite la console o l&#39;API REST. Proprio come per un utente non ID IBM, un ID utente per l&#39;istanza del servizio database deve essere immesso nello stesso momento in cui viene aggiunto l&#39;utente
+            ID IBM. L&#39;ID utente deve essere univoco all&#39;interno dell&#39;istanza del servizio database. Questo ID utente è anche l&#39;ID di autorizzazione (AUTH) all&#39;interno del database. </p>
+        </section>
+        <section id="section-api">
+          <h2 id="api">Esperienza API REST</h2>
+          <p>L&#39;API REST Db2 on Cloud è stata migliorata per accettare anche un token di accesso IAM per le funzioni che in precedenza accettavano un token di accesso generato dal servizio database.</p>
+          <ul>
+            <li>
+              <p>Per aggiungere un nuovo utente ID IBM, esegui la seguente chiamata API di esempio:</p>
+              <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
+              <p><strong>Nota</strong>: il valore <code>&lt;userid&gt;</code> per <code>&quot;id&quot;</code> e <code>&quot;ibmid&quot;</code> non deve essere lo stesso. I due ID diversi non sono collegati in alcun modo.</p>
+            </li>
+            <li>
+              <p>Per migrare un utente del database non ID IBM esistente (ad esempio, <code>abcuser</code>) e farne un utente ID IBM, elimina prima l&#39;ID utente non ID IBM eseguendo la seguente chiamata API di esempio:</p>
+              <p><code>curl --tlsv1.2 -X DELETE &quot;https://&lt;IPaddress&gt;/dbapi/v3/users/abcuser&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot;</code></p>
+              <p>Successivamente, riaggiungi l&#39;utente con un ID IBM che è lo stesso dell&#39;ID utente precedente (<code>abcuser</code>) eseguendo la seguente chiamata API di esempio:</p>
+              <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;abcuser&quot;,&quot;ibmid&quot;:&quot;abcuser@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
+              <p>Poiché l&#39;ID utente (<code>abcuser</code>) rimane lo stesso per il nuovo ID IBM per tale utente, le autorizzazioni database concesse per l&#39;utente restano invariate. Se un elenco di utenti del database non ID IBM esistenti deve essere
+                migrato per renderli utenti ID IBM, devi eseguire la coppia precedente di chiamate API per ogni utente.</p>
+            </li>
+            <li>
+              <p>Per aggiungere molti nuovi utenti ID IBM contemporaneamente, crea un file batch che elenca le seguenti chiamate API di esempio, una per ogni utente:</p>
+              <pre><code class="hljs">curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid1&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid1&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;
+curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid2&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid2&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;
+.
+.
+.
+</code></pre>
+            </li>
+          </ul>
+          <p>Per ulteriori dettagli sull&#39;API del tuo servizio, consulta: <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
+        </section>
+        <section id="section-fed">
+          <h2 id="fed">Federazione ID IBM</h2>
+          <p>Per utilizzare il tuo provider di identità come ad esempio LDAP, devi prima federare il tuo server LDAP con l&#39;ID IBM. Per istruzioni su come federare il server LDAP con l&#39;ID IBM, consulta: <a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc"
+              target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>. Dopo che la federazione dell&#39;ID IBM è stata completata e gli utenti consentiti
+            sono stati aggiunti all&#39;istanza del servizio database dall&#39;amministratore del database, questi utenti possono accedere alla console con i loro ID utente e password aziendali. In alternativa, questi utenti possono utilizzare un token
+            di accesso o una chiave API che rappresenta il proprio ID utente per connettersi all&#39;istanza del servizio database tramite una delle interfacce client del database supportate.</p>
+        </section>
+        <section id="section-restrictions">
+          <h2 id="restrictions">Limitazioni</h2>
+          <p>Le seguenti sono le limitazioni che riguardano l&#39;autenticazione IAM:</p>
+          <ul>
+            <li>L&#39;autenticazione IAM per un client Db2 che si collega a un server Db2 è supportata solo su una connessione SSL.</li>
+            <li>La federazione dell&#39;ID IBM è supportata per consentire l&#39;utilizzo di un portale o di un server di gestione utenti personalizzato per l&#39;autenticazione. Tale supporto non include alcuna federazione di gruppo.</li>
+            <li>L&#39;autenticazione IAM per la federazione del database non è supportata.</li>
+            <li>L&#39;esecuzione dei comandi delle estensioni definite dall&#39;utente (UDX) e IDA tramite CLPPlus non è supportata.</li>
+            <li>Il driver JDBC di tipo 2 non è supportato.</li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

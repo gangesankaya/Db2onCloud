@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Características y especificaciones</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="overview" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-overview">
+        <h1 id="overview">Características y especificaciones</h1>
+        <p class="shortdesc">Aquí encontrará las características y especificaciones de IBM&reg; Db2&reg; on Cloud resumidas para su comodidad.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Característica</th>
+              <th>¿Se admite?</th>
+              <th>Comentarios</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>General</td>
+              <td>AESE Db2</td>
+              <td>Sí</td>
+              <td>Db2 v11.1.3.3</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Read on Standby</td>
+              <td>Sí</td>
+              <td>Solo nodo DR externo</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Actualización continua automática</td>
+              <td>Sí</td>
+              <td>Con planes de alta disponibilidad</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Opciones de ubicación de centro de datos</td>
+              <td>Sí</td>
+              <td><a href="https://ibm.biz/db2oncloud-locations" target="_blank">Ubicaciones <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>. Vea también: Duraciones de despliegue y escalado.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>BLU en memoria</td>
+              <td>Sí</td>
+              <td>El valor predeterminado es fila, especifique <code>CREATE TABLE..AS COL</code> para BLU</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Activity Tracker</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">En hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Acceso raíz proporcionado</td>
+              <td>No</td>
+              <td>Utilice Db2 Hosted si es necesario el acceso raíz</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Alta disponibilidad y replicación</td>
+              <td>DR externo</td>
+              <td>Sí</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Alta disponibilidad (2 nodos en 1 zona)</td>
+              <td>Sí</td>
+              <td>SLA de tiempo de funcionamiento del 99,99%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Zonas diferentes en el mismo centro de datos</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">En hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Change Data Capture (CDC)</td>
+              <td>Sí</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Utilizar como HADR para local</td>
+              <td>No</td>
+              <td>Utilizar CDC. Para obtener información, consulte <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank">¿Cómo puedo migrar o sincronizar los datos de Db2 a Db2 on Cloud? <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Migración tras error autónoma - Alta disponibilidad</td>
+              <td>Sí</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Migración tras error autónoma - DR externo</td>
+              <td>No</td>
+              <td>Utilizar el botón o la API</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>La IP se mueve con la migración tras error</td>
+              <td>Sí</td>
+              <td>Solo alta disponibilidad local. Sin HADR externa</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Políticas y SLA de mantenimiento</td>
+              <td>Planes de alta disponibilidad</td>
+              <td>99,99%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Planes de servidor único</td>
+              <td>99,5%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Nodo DR externo</td>
+              <td>99,5%</td>
+              <td>Debe utilizar una alta disponibilidad local adicional para alcanzar el 99,99%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Política de mantenimiento</td>
+              <td>Sí</td>
+              <td><a href="https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html" target="_blank">Leer detalles <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Conformidad de seguridad</td>
+              <td>Preparada para HIPAA</td>
+              <td>Sí</td>
+              <td>Todos los planes de pago, incluido el flexible. Debe solicitar el modo HIPAA a IBM Support.
+                <!--For Db2 Warehouse on Cloud [see docs here ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/Db2whc/index.html#getting_started){:new_window}.-->
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>HITRUST</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">En hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></td>
+              <td>Ahora Db2 Hosted puede utilizarse para HITRUST</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>International Organization for Standardization (organización</td>
+            </tr>
+          </tbody>
+        </table>
+        <p caption="Tabla 1. Características y especificaciones admitidas en Db2 on Cloud" caption-side="top">internacional para la normalización, ISO) | Sí | ISO 27001, 27002, 27017 y 27018 | | | Service Organization Controls (SOC) | Sí | SOC 2 de tipo 2 | | | GDPR | Sí | - | | | Nube de la UE | Sí | Utilice Frankfurt como región. Se proporciona soporte
+          físico en la UE. | | | Lista completa de conformidades | Sí | <a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" target="_blank">Conformidad de seguridad <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>          | | | | | | | Copia de seguridad y restauración | Copias de seguridad diarias | Sí | 14 días de copia de seguridad diaria | | | Recuperación de autoservicio en un punto en el tiempo | Disponible el 15 de noviembre de 2018 | - | | | Copias de
+          seguridad conservadas externamente | A petición | A fecha 1 de diciembre de 2018, el valor predeterminado es externo | | | Conservar copias de seguridad hasta 10 años | A petición | A fecha 1 de diciembre de 2018. Requiere una incidencia de
+          soporte. | | | Consultar datos antiguos sin restaurar | Sí | Debe configurar <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>          | | | | | | | Red, seguridad y máquinas virtuales | Máquina virtual de un único arrendatario | Sí | Todos los planes de pago, incluido el flexible, son de máquina virtual de un único arrendatario o nativos. | | | ICIAE | Sí | Solicitud de IBM
+          Support. Si se solicita ICIAE para un entorno de servicio existente, IBM Support debe mirar sus datos a su entorno ICIAE. | | | VPN | Sí | Solicitud de IBM Support | | | Cifrado en disco | Sí | - | | | Conexiones SSL/TLS | Sí | - | | | Elaboración
+          de una lista blanca de IP | Algunos | Disponible a nivel de usuario de Db2. Para el nivel de red, considere ICIAE o similar. | | | KeyProtect (Traiga su propia clave) | <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">En hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>          | - | | | MIS / Servicio interconectado | <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">En hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> | - | | | | | |
+          | Precios y compra | Descuentos BYOL | Sí | <a href="https://ibm.biz/db2oncloud-byol" target="_blank">Anuncio <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> | | | Disponible a través
+          de IBM Cloud | Sí | Tanto en suscripción como en pago según uso | | | Disponible a través de pedido de presupuesto de software | Sí | Todos los planes, incluido el flexible. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Partes y detalles. <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>|
+          | | Facturación diaria | Sí | La facturación de los planes flexibles está basada en los picos de uso diario. Por ejemplo, si escala de 2 a 8 núcleos durante una hora de un día, se le facturarán 8 núcleos solo ese día y 2, el resto de los días
+          del mes. | | | Facturación horaria | <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">En hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> | - | | | Métrica de
+          precio principal | Mensual | Los precios se determinan mensualmente (por ejemplo, $189 USD al mes). El precio mensual prorrateado está basado en el número de días de servicio activado durante el mes en el que finaliza el servicio. <a href="plans_pricing.html">Ejemplos</a>          | | | | | | | Duraciones de despliegue y escalado | Dallas | <strong>Despliegue</strong>: &lt; 5 minutos. <strong>Escalado</strong>: &lt; 45 minutos. | Solo plan flexible, dependiendo del inventario | | | EE.UU. Sur, otros | <strong>Despliegue</strong>:
+          1 día. <strong>Escalado</strong>: 8 horas. | Algunas ubicaciones son más cortas que otras | | | Frankfurt y Londres | <strong>Despliegue</strong>: &lt; 5 minutos. <strong>Escalado</strong>: 2 horas. | Solo plan flexible, dependiendo del inventario
+          | | | UE, otros | <strong>Despliegue</strong>: 3-5 días. <strong>Escalado</strong>: 1-2 días. | Algunas ubicaciones son más cortas que otras | | | Sídney | <strong>Despliegue</strong>: &lt; 1 hora. <strong>Escalado</strong>: 2 horas. | Solo
+          plan flexible, dependiendo del inventario | | | AP, otros | <strong>Despliegue</strong>: 3-5 días. <strong>Escalado</strong>: 3-5 días. | Algunas ubicaciones son más cortas que otras. Volúmenes menores en AP pueden causar tiempos de suministro
+          de infraestructura más lentos. |</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

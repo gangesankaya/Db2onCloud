@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="dcterms.date" content="2018-09-18">
+  <meta name="source.format" content="markdown">
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>IBM Cloud의 IAM(Identity and Access Management)</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="iam" role="article">
+      <!-- Attribute definitions -->
+
+      <section id="section-iam">
+        <h1 id="iam">IBM Cloud의 IAM(Identity and Access Management)</h1>
+        <p class="shortdesc">IAM(Identity and Access Management)을 사용하면 플랫폼 서비스에 대해 사용자를 안전하게 인증하고 IBM Cloud 플랫폼에서 일관되게 리소스에 대한 액세스를 제어할 수 있습니다. 예를 들어 IBM ID로 IBM Cloud에 한 번만 로그인하면, 각각에 로그인할 필요 없이 모든 서비스 콘솔 및 애플리케이션에 액세스할 수 있습니다.</p>
+        <section id="section-enabled">
+          <h2 id="enabled">인스턴스에서 IAM을 사용하도록 설정되어 있습니까?</h2>
+          <p>일정 기간 동안 IBM Cloud의 IBM&reg; Db2&reg; on Cloud 관리 데이터베이스 인스턴스를 사용하여 IAM을 액세스 제어에 사용할 수 있습니다. 인스턴스에서 IAM이 사용으로 설정되어 있는지 확인하려면 다음 조회를 실행하십시오.</p>
+          <p><code>SELECT CASE WHEN VALUE = &#39;IBMIAMauth&#39; THEN 1 ELSE 0 END AS IAM_ENABLED FROM SYSIBMADM.DBMCFG WHERE NAME = &#39;srvcon_gssplugin_list&#39;</code></p>
+          <p><strong>IAM_ENABLED</strong>의 리턴값이 1인 경우 인스턴스에서 IAM이 사용으로 설정됩니다.</p>
+        </section>
+        <section id="section-features">
+          <h2 id="features">IBM Cloud IAM의 기능</h2>
+          <p>두 가지 유형의 지원되는 ID로 Db2 on Cloud 관리 서비스에 대해 다음 IAM 기능이 구현됩니다.</p>
+          <p><strong>IBM ID</strong></p>
+          <p>IBM ID가 있는 사용자를 특정 데이터베이스 서비스 인스턴스에 연결하려면 먼저 데이터베이스 관리자가 콘솔 또는 REST API를 통해 해당 사용자를 각 데이터베이스 서비스 인스턴스에 추가해야 합니다. 비IBM ID 사용자의 경우와 같이 IBM ID 사용자가 추가될 때 데이터베이스 서비스 인스턴스의 사용자 ID를 입력해야 합니다. 이 사용자 ID는 데이터베이스 서비스 인스턴스 내에서 고유해야 합니다. 또한 이 사용자 ID는 데이터베이스
+            내에서 권한 부여(AUTH) ID입니다. 데이터베이스 관리자는 AUTH ID를 기반으로 하여 권한을 부여하고 취소할 수 있습니다.</p>
+          <p><strong>서비스 ID</strong></p>
+          <p>서비스 ID는 사용자 ID가 사용자를 식별하는 방법과 유사하게 서비스 또는 애플리케이션을 식별합니다. 서비스 ID는 애플리케이션이 IBM Cloud 서비스로 인증하는 데 사용할 수 있는 ID입니다. 서비스 ID는 소유한 IBM ID와 별개의 항목입니다. 따라서 데이터베이스 내의 특정한 서비스 ID에 다른 권한을 부여할 수 있습니다. 서비스 ID에는 비밀번호가 없습니다. 데이터베이스 서비스 인스턴스에 연결할 각각의 서비스 ID에
+            대해 API 키를 작성해야 합니다. 서비스 ID에 대한 자세한 정보는 <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank">IBM Cloud IAM 서비스 ID 및 API 키 소개 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를
+            참조하십시오.</p>
+        </section>
+        <section id="section-connect">
+          <h2 id="connect">클라이언트 연결 및 사용자 로그인</h2>
+          <p><strong>필수 소프트웨어</strong>: Db2 Client V11.1 FP3 이상.</p>
+          <p>다음은 IAM 인증을 위해 사용할 수 있는 방법입니다.</p>
+          <p><strong>액세스 토큰</strong></p>
+          <p>REST API를 통해 API 키를 사용하여 애플리케이션이 IAM 서비스에서 직접 액세스 토큰을 얻을 수 있습니다. 자세한 정보는 <a href="https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey" target="_blank">API 키를 사용하여 IBM Cloud IAM 토큰 가져오기 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를
+            참조하십시오. 액세스 토큰의 기본 유효 기간은 만료되기 전 60분입니다. 토큰이 만료되면 Db2 서버에서 연결을 설정할 수 없습니다. 연결이 설정된 후에는 토큰 만료를 확인하지 않습니다. IAM 통합 이전과 같이 연결은 애플리케이션 연결이 끊어지거나 다른 이유로 인해 연결이 종료되기 전까지는 계속 연결되어 있습니다.</p>
+          <pre><code class="hljs">curl -k -X POST \
+  --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
+  --header &quot;Accept: application/json&quot; \
+  --data-urlencode &quot;grant_type=urn:ibm:params:oauth:grant-type:apikey&quot; \
+  --data-urlencode &quot;apikey=&lt;apikey&gt;&quot; \
+  &quot;https://iam.bluemix.net/identity/token&quot;
+</code></pre>
+          <p>액세스 토큰은 데이터베이스에 대한 IBM ID 사용자 또는 서비스 ID를 식별합니다. 데이터베이스 서버는 액세스 토큰을 승인하기 전에 액세스 토큰의 유효성을 확인합니다. 이 방법은 액세스 토큰을 유효성 검증하기 위해 IAM과 통신하는 과정을 최소화하므로 애플리케이션을 둘 이상의 데이터베이스 서비스 인스턴스 또는 다른 IBM Cloud 서비스 인스턴스에 연결해야 하는 경우 가장 좋은 방법입니다.</p>
+          <p><strong>API 키</strong></p>
+          <p>각 IBM ID 사용자 또는 서비스 ID에 대해 여러 개의 API 키를 작성할 수 있습니다. 각 API 키는 일반적으로 단일 애플리케이션에 대해 작성됩니다. 소유한 IBM ID 또는 서비스 ID가 동일한 데이터베이스 서비스 인스턴스에 사용자로 추가되어 있는 한 애플리케이션을 데이터베이스 서비스 인스턴스에 연결할 수 있습니다. API 키는 데이터베이스 내에서 소유한 IBM ID 또는 서비스 ID와 동일한 권한을 가집니다. 애플리케이션을
+            더 이상 데이터베이스에 연결하지 않는 경우 해당 API 키를 제거할 수 있습니다. 이 인증 방법은 IAM 서비스와 직접 상호작용할 필요가 없으므로 액세스 토큰을 사용하는 경우보다 애플리케이션을 덜 변경합니다. API 키 작성 및 관리에 대한 자세한 정보는 <a href="https://console.bluemix.net/docs/iam/userid_keys.html#userapikey" target="_blank">사용자 API 키 관리 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를
+            참조하십시오.</p>
+          <p><strong>IBM ID/비밀번호</strong></p>
+          <p>IBM ID/비밀번호는 콘솔에 로그인하는 데 사용할 수 있으며 사용자 ID/비밀번호가 허용되는 것과 동일한 방식으로 애플리케이션 내에서 사용할 수도 있습니다. 조직의 로그인 페이지에 대한 리디렉션을 수행할 수 없기 때문에 IBM ID가 연합된 경우 예외가 발생합니다. 그러나 애플리케이션의 데이터베이스 서비스에 대한 연결을 설정하기 위해서는 액세스 토큰을 사용할 것을 권장합니다.</p>
+        </section>
+        <section id="section-sup-if">
+          <h2 id="sup-if">지원되는 인터페이스</h2>
+          <p>다음 데이터베이스 클라이언트 인터페이스가 지원됩니다.</p>
+          <ul>
+            <li><a href="#odbc-clpplus">ODBC</a></li>
+            <li><a href="#odbc-clpplus">CLPPLUS</a></li>
+            <li><a href="#jdbc">JDBC</a></li>
+          </ul>
+          <section id="section-odbc-clpplus">
+            <h3 id="odbc-clpplus">ODBC 및 CLPPLUS</h3>
+            <p>IAM 인증을 사용하여 ODBC 애플리케이션 또는 명령행 클라이언트(CLPPLUS)를 Db2 서버에 연결하는 경우 먼저 다음 명령을 실행하여 <code>db2dsdriver.cfg</code> 구성 파일에 데이터 소스 이름(DSN)을 구성해야 합니다.</p>
+            <p><code>db2cli writecfg add -dsn &lt;dsn_alias&gt; -database &lt;database_name&gt; -host &lt;host_name_or_IP_address&gt; -port 50001 -parameter &quot;Authentication=GSSPLUGIN;SecurityTransportMode=SSL&quot;</code></p>
+            <p><code>db2dsdriver.cfg</code> 구성 파일은 일반적으로 <code>sqllib/cfg</code> 디렉토리에 있는 XML 파일이며, DSN 별명 목록과 해당 특성이 포함되어 있습니다.</p>
+            <p>다음은 데이터베이스 서비스 인스턴스에 대한 연결을 설정하는 데 사용되는 구성을 보여주는 <code>db2dsdriver.cfg</code> 구성 파일의 예입니다. 구성 파일은 DSN 별명, 데이터베이스 이름, 호스트 이름(또는 IP 주소) 및 <strong>인증</strong> 유형과 <strong>SecurityTransportMode</strong> 매개변수값을 제공합니다.</p>
+            <pre><code class="hljs">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot; ?&gt;
+&lt;configuration&gt;
+        &lt;dsncollection&gt;
+        &lt;dsn alias=&quot;&lt;data_source_name&gt;&quot; name=&quot;bludb&quot; host=&quot;&lt;host_name_or_IP_address&gt;&quot; port=&quot;50001&quot;&gt;
+            &lt;parameter name=&quot;Authentication&quot; value=&quot;GSSPLUGIN&quot;/&gt;
+            &lt;parameter name=&quot;SecurityTransportMode&quot; value=&quot;SSL&quot;/&gt;
+        &lt;/dsn&gt;
+        &lt;/dsncollection&gt;
+        &lt;databases&gt;
+            &lt;database name=&quot;bludb&quot; host=&quot;&lt;host_name_or_IP_address&gt;&quot; port=&quot;50001&quot;/&gt;
+        &lt;/databases&gt;
+&lt;/configuration&gt;
+</code></pre>
+            <ul>
+              <li>
+                <p>ODBC 연결 문자열에는 다음 중 하나가 포함될 수 있습니다.</p>
+                <p> <strong>액세스 토큰</strong></p>
+                <p> <code>DSN=&lt;dsn&gt;;ACCESSTOKEN=&lt;access_token&gt;</code></p>
+                <p> <strong>API 키</strong></p>
+                <p> <code>DSN=&lt;dsn&gt;;APIKEY=&lt;api_key&gt;</code></p>
+                <p> <strong>IBM ID/비밀번호</strong></p>
+                <p> <code>DSN=&lt;dsn&gt;;UID=&lt;ibmid&gt;;PWD=&lt;password&gt;</code></p>
+                <p> ODBC의 경우 <strong>AUTHENTICATION=GSSPLUGIN</strong>을 <code>db2dsdriver.cfg</code> 구성 파일 또는 애플리케이션의 연결 문자열에 지정할 수 있습니다.</p>
+              </li>
+              <li>
+                <p>CLPPLUS 연결 명령에는 다음 중 하나가 포함될 수 있습니다.</p>
+                <p> <strong>액세스 토큰</strong></p>
+                <p> CLPPLUS 명령 프롬프트 또는 스크립트에서 다음 명령을 실행하여 DSN 별명(<code>@&lt;data_source_name&gt;</code>)에 연결하고 액세스 토큰을 전달합니다.</p>
+                <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
+                <p> <strong>API 키</strong></p>
+                <p> CLPPLUS 명령 프롬프트 또는 스크립트에서 다음 명령을 실행하여 API 키로 DSN 별명(<code>@&lt;data_source_name&gt;</code>)에 연결합니다.</p>
+                <p> <code>connect @&lt;data_source_name&gt; using(apikey &lt;api-key-string&gt;)</code></p>
+                <p> <strong>IBM ID/비밀번호</strong></p>
+                <p> CLPPLUS 명령 프롬프트 또는 스크립트에서 다음 명령을 실행하여 IBM ID/비밀번호로 DSN 별명(<code>@&lt;data_source_name&gt;</code>)에 연결합니다.</p>
+                <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
+                <p> CLPPLUS를 사용하여 DSN 별명에 연결하는 데 대한 세부사항은 <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlus의 DSN 별명 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>을
+                  참조하십시오.</p>
+              </li>
+            </ul>
+          </section>
+          <section id="section-jdbc">
+            <h3 id="jdbc">JDBC</h3>
+            <p>IAM 인증에는 유형 4 JDBC 드라이버가 지원됩니다.</p>
+            <p>다음은 세 가지 방법에 대한 연결 스니펫을 보여주는 예입니다.</p>
+            <p><strong>액세스 토큰</strong></p>
+            <pre><code class="hljs">DB2SimpleDataSource dataSource;
+
+dataSource.setDriverType( 4 );
+dataSource.setDatabaseName( &quot;BLUDB&quot; );
+dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
+dataSource.setPortNumber( 50001 );
+dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
+dataSource.setPluginName( &quot;IBMIAMauth&quot; );
+dataSource.setAccessToken( &quot;&lt;access_token&gt;&quot; );
+Connection conn = dataSource.getConnection( );
+</code></pre>
+            <p><strong>API 키</strong></p>
+            <pre><code class="hljs">DB2SimpleDataSource dataSource;
+
+dataSource.setDriverType( 4 );
+dataSource.setDatabaseName( &quot;BLUDB&quot; );
+dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
+dataSource.setPortNumber( 50001 );
+dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
+dataSource.setPluginName( &quot;IBMIAMauth&quot; );
+dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
+Connection conn = dataSource.getConnection( );
+</code></pre>
+            <p><strong>IBM ID/비밀번호</strong></p>
+            <pre><code class="hljs">DB2SimpleDataSource dataSource;
+
+dataSource.setDriverType( 4 );
+dataSource.setDatabaseName( &quot;BLUDB&quot; );
+dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
+dataSource.setPortNumber( 50001 );
+dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
+dataSource.setPluginName( &quot;IBMIAMauth&quot; );
+Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&lt;password&gt;&quot; );
+</code></pre>
+          </section>
+        </section>
+        <section id="section-console-ux">
+          <h2 id="console-ux">콘솔 사용자 환경</h2>
+          <p>서비스 콘솔 로그인 페이지에는 IBM ID 및 비밀번호를 사용하여 로그인하는 옵션이 있습니다. <strong>IBM ID를 통해 로그인</strong> 단추를 클릭하면 사용자는 비밀번호가 입력되는 IAM 로그인 페이지로 이동합니다. 인증이 완료되면 사용자가 다시 콘솔로 리디렉션됩니다. 이러한 로그인이 성공하려면 먼저 데이터베이스 관리자가 콘솔 또는 REST API를 통해 IBM ID 사용자를 각 데이터베이스 서비스 인스턴스에 추가해야
+            합니다. 비IBM ID 사용자의 경우와 같이 IBM ID 사용자가 추가될 때 데이터베이스 서비스 인스턴스의 사용자 ID를 입력해야 합니다. 사용자 ID는 데이터베이스 서비스 인스턴스 내에서 고유해야 합니다. 또한 이 사용자 ID는 데이터베이스 내에서 권한 부여(AUTH) ID입니다. </p>
+        </section>
+        <section id="section-api">
+          <h2 id="api">REST API 환경</h2>
+          <p>Db2 on Cloud REST API는 이전에 데이터베이스 서비스 생성 액세스 토큰을 허용한 기능에 대해 IAM 액세스 토큰도 허용하도록 향상되었습니다.</p>
+          <ul>
+            <li>
+              <p>새 IBM ID 사용자를 추가하려면 다음 API 호출 예제를 실행하십시오.</p>
+              <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
+              <p><strong>참고</strong>: <code>&quot;id&quot;</code> 및 <code>&quot;ibmid&quot;</code>의 <code>&lt;userid&gt;</code> 값은 같을 필요가 없습니다. 두 개의 다른 ID는 어떠한 방법으로도 함께 링크되지 않습니다.</p>
+            </li>
+            <li>
+              <p>기존 비IBM ID 데이터베이스 사용자(예: <code>abcuser</code>)를 마이그레이션하여 IBM ID 사용자로 만들려면 먼저 다음 API 호출 예제를 실행하여 비IBM ID 사용자 ID를 삭제하십시오.</p>
+              <p><code>curl --tlsv1.2 -X DELETE &quot;https://&lt;IPaddress&gt;/dbapi/v3/users/abcuser&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot;</code></p>
+              <p>다음 API 호출 예제를 실행하여 이전 사용자 ID(<code>abcuser</code>)와 동일한 IBM ID로 사용자를 다시 추가하십시오.</p>
+              <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;abcuser&quot;,&quot;ibmid&quot;:&quot;abcuser@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
+              <p>사용자 ID(<code>abcuser</code>)는 해당 사용자의 새 IBM ID에 대해 동일하게 유지되므로 사용자에 대해 허용된 데이터베이스 권한은 변경되지 않고 그대로 유지됩니다. IBM ID 사용자로 만들기 위해 기존 비 IBM ID 데이터베이스 사용자 목록을 마이그레이션해야 하는 경우 각 사용자에 대한 이전 API 호출 쌍을 실행해야 합니다.</p>
+            </li>
+            <li>
+              <p>다수의 새 IBM ID 사용자를 한 번에 추가하려면 각 사용자에 대해 하나씩 다음 API 호출 예제를 나열하는 일괄처리 파일을 작성하십시오.</p>
+              <pre><code class="hljs">curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid1&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid1&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;
+curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid2&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid2&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;
+.
+.
+.
+</code></pre>
+            </li>
+          </ul>
+          <p>서비스 API에 대한 세부사항은 <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를 참조하십시오.</p>
+        </section>
+        <section id="section-fed">
+          <h2 id="fed">IBM ID 연합</h2>
+          <p>LDAP과 같은 사용자 고유의 ID 제공자를 사용하려면 먼저 LDAP 서버를 IBM ID와 연합해야 합니다. LDAP 서버를 IBM ID와 연합하는 데 대한 지시사항은 <a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc" target="_blank">IBM ID 엔터프라이즈 연합 채택 안내서 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를
+            참조하십시오. IBM ID 연합이 완료되고 데이터베이스 관리자가 허용된 사용자를 데이터베이스 서비스 인스턴스에 추가하면 해당 사용자가 회사 사용자 ID 및 비밀번호를 사용하여 콘솔에 로그인할 수 있습니다. 또는 해당 사용자는 사용자 ID를 나타내는 액세스 토큰 또는 API 키를 사용하여 지원되는 데이터베이스 클라이언트 인터페이스 중 하나를 통해 데이터베이스 서비스 인스턴스에 연결할 수 있습니다.</p>
+        </section>
+        <section id="section-restrictions">
+          <h2 id="restrictions">제한사항</h2>
+          <p>다음은 IAM 인증과 관련된 제한사항입니다.</p>
+          <ul>
+            <li>Db2 서버에 연결되는 Db2 클라이언트에 대한 IAM 인증은 SSL 연결을 통해서만 지원됩니다.</li>
+            <li>IBM ID 연합은 사용자 정의 사용자 관리 포털 또는 서버를 인증에 사용하기 위해 지원됩니다. 그룹 연합은 이러한 지원에 포함되지 않습니다.</li>
+            <li>데이터베이스 연합에 대한 IAM 인증은 지원되지 않습니다.</li>
+            <li>CLPPlus를 통한 IDA 및 사용자 정의 확장(UDX) 명령 실행은 지원되지 않습니다.</li>
+            <li>유형 2 JDBC 드라이버는 지원되지 않습니다.</li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
+</article>
+</main>
+</body>
+</html>

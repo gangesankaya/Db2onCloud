@@ -5,6 +5,7 @@
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
   <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <property name="path" value="services/Db2onCloud"/>
   <topic href="index.html#getting_started_db2oncloud" label="入门">
     <property name="navgroup" value="learn"/>
     <topic href="index.html#interfaces" label="界面">
@@ -14,6 +15,47 @@
       <topic href="index.html#data_src" label="使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源"></topic>
     </topic>
     <topic href="index.html#samples" label="样本">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#intro_vid" label="视频：介绍 Db2 on Cloud">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#vid_api" label="视频：使用 REST API 与 Db2 on Cloud 通信">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#cognos_vid" label="视频：集成 Jupyter 配置页">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="features_specs.html#overview" label="功能部件和规范">
+    <property name="navgroup" value="learn"/>
+  </topic>
+  <topic href="iam.html#iam" label="IBM Cloud 上的身份和访问权管理 (IAM)">
+    <property name="navgroup" value="learn"/>
+    <topic href="iam.html#enabled" label="实例上是否启用了 IAM？">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#features" label="IBM Cloud IAM 的功能">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#connect" label="客户机连接和用户登录">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#sup-if" label="受支持的接口">
+      <property name="type" value="anchor"/>
+      <topic href="iam.html#odbc-clpplus" label="ODBC 和 CLPPLUS"></topic>
+      <topic href="iam.html#jdbc" label="JDBC"></topic>
+    </topic>
+    <topic href="iam.html#console-ux" label="控制台用户体验">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#api" label="REST API 体验">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#fed" label="IBM 标识联合">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#restrictions" label="限制">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -30,9 +72,9 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic label="连接到其他 Db2 服务器">
+  <topic label="连接到其他 Db2 数据库">
     <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="连接到其他 Db2 服务器"/>
+    <property name="topicgroup" value="连接到其他 Db2 数据库"/>
     <topic href="federation.html#overview" label="数据虚拟化（联合）">
       <topic href="federation.html#use_cases" label="用例">
         <property name="type" value="anchor"/>
@@ -68,6 +110,9 @@
   </topic>
   <topic href="ha.html#ha" label="高可用性 (HA)">
     <property name="navgroup" value="learn"/>
+    <topic href="ha.html#rule_14" label="&lt;）MD:STRONG&gt;巴西：补充规定 14**（适用于为巴西联邦政府供应的系统）">
+      <property name="type" value="anchor"/>
+    </topic>
     <topic href="ha.html#add_dr" label="如何添加地理复制灾难恢复节点">
       <property name="type" value="anchor"/>
     </topic>
@@ -76,7 +121,7 @@
     </topic>
     <topic href="ha.html#faq" label="常见问题">
       <property name="type" value="anchor"/>
-      <topic href="ha.html#-db2-dr-dns-ip-" label="对于使用 Db2 来处理接管后 DR 恢复的应用程序，需要进行哪些更改？接管后 DNS 名称或 IP 地址会更改吗？"></topic>
+      <topic href="ha.html#-db2-dr-dns-ip-" label="对于使用 Db2 来处理接管后 DR 节点的应用程序，需要进行哪些更改？接管后 DNS 名称或 IP 地址会更改吗？"></topic>
     </topic>
   </topic>
   <topic label="装入数据">
@@ -130,17 +175,35 @@
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="常见问题">
     <property name="navgroup" value="learn"/>
   </topic>
+  <topic href="https://developer.ibm.com/answers/index.html" label="IBM 开发人员答案">
+    <property name="navgroup" value="learn"/>
+  </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="安全合规性">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
     <property name="navgroup" value="learn"/>
   </topic>
+  <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="步骤演示：通过 Web 控制台完成常见任务">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" label="教程：Time Travel Query 访问历史数据">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://www.ibm.com/cloud/garage/tutorials/ibm-db2-on-cloud/exploring-the-capabilities-of-db-2-on-cloud" label="教程：用 Jupyter 配置页和 REST API 开发应用程序">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://www.youtube.com/watch?v=PSNBDwgf9ts" label="视频：使用 RESTful API">
+    <property name="navgroup" value="howto"/>
+  </topic>
+  <topic href="https://www.youtube.com/watch?v=bNfH0Wzx3is" label="视频：集成 Jupyter 配置页">
+    <property name="navgroup" value="howto"/>
+  </topic>
   <topic href="http://ibm.biz/db2oc_api" label="REST API">
-    <property name="navgroup" value="reference"/>
+    <property name="navgroup" value="howto"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL 参考">
-    <property name="navgroup" value="reference"/>
+    <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="帮助和支持">
     <property name="navgroup" value="help"/>

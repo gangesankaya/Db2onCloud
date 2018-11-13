@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-07-19">
+  <meta name="dcterms.date" content="2018-10-22">
   <meta name="source.format" content="markdown">
 
 
@@ -27,11 +27,16 @@
       <section id="section-ha">
         <h1 id="ha">Alta disponibilidade (HA)</h1>
         <p class="shortdesc">Os planos de alta disponibilidade do Db2 on Cloud têm excelentes características de disponibilidade com um SLA de 99,99% . </p>
-        <p>Os planos de alta disponibilidade padrão sem um nó DR fornecem failover contínuo e atualizações contínuas. Eles são gerenciados para você usando nova rota do cliente automática (ACR) e IPs móveis.</p>
+        <p>Os planos de alta disponibilidade padrão sem um nó de recuperação de desastre (DR) fornecem failover e atualizações contínuos. Eles são gerenciados para você usando nova rota do cliente automática (ACR) e IPs móveis.</p>
         <p>Além disso, é possível incluir um Nó de recuperação de desastre geo-replicado. Essa opção de nó DR externo fornece a capacidade de sincronizar rapidamente seus dados em tempo real para um nó de banco de dados em um centro de dados externo do IBM
           Cloud de sua escolha. </p>
         <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">Lista de locais de datacenter nos quais os nós DR estão disponíveis. <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></p>
         <p>O Db2 on Cloud usa a tecnologia Db2 High Availability Disaster Recovery (HADR) no modo <code>ASYNC</code> para alcançar o recurso do nó DR externo e fornece <code>Leitura em espera</code> no nó DR.</p>
+        <section id="section--brasil-regra-suplementar-14-aplica-se-aos-sistemas-fornecidos-para-o-governo">
+          <h2 id="-brasil-regra-suplementar-14-aplica-se-aos-sistemas-fornecidos-para-o-governo"><strong>Brasil: Regra Suplementar 14</strong> (aplica-se aos sistemas fornecidos para o governo</h2>
+          <p id="rule_14">federal brasileiro)</p>
+          <p>Neste momento, a opção de recuperação de desastre (DR) para as ofertas do Db2 on Cloud não está disponível no Brasil para o governo federal devido à Regra Suplementar 14.</p>
+        </section>
         <section id="section-add_dr">
           <h2 id="add_dr">Como incluir um nó de recuperação de desastre geo-replicado</h2>
           <p>Para usuários existentes do Db2 on Cloud:</p>
@@ -58,8 +63,8 @@
         </section>
         <section id="section-faq">
           <h2 id="faq">FAQ</h2>
-          <section id="section-quais-s-o-as-mudan-as-requeridas-para-que-um-aplicativo-use-o-db2-para-trabalhar-com-a-recupera-o-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-">
-            <h3 id="quais-s-o-as-mudan-as-requeridas-para-que-um-aplicativo-use-o-db2-para-trabalhar-com-a-recupera-o-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-">Quais são as mudanças requeridas para que um aplicativo use o Db2 para trabalhar com a recuperação de DR após o controle? O nome DNS ou o endereço IP mudam após o controle?</h3>
+          <section id="section-quais-s-o-as-mudan-as-necess-rias-para-que-um-aplicativo-que-usa-o-db2-funcione-com-o-n-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-">
+            <h3 id="quais-s-o-as-mudan-as-necess-rias-para-que-um-aplicativo-que-usa-o-db2-funcione-com-o-n-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-">Quais são as mudanças necessárias para que um aplicativo que usa o Db2 funcione com o nó de DR após o controle? O nome DNS ou o endereço IP mudam após o controle?</h3>
             <p><strong>R</strong>: Não. Você tem dois nomes de host que podem ser resolvidos. Se seu app estiver configurado para usar o Db2 ACR (Active Connection Reroute), então, seu app será roteado novamente para o novo nó primário.</p>
             <p>Para obter mais informações sobre o Nó de recuperação de desastre geo-replicado, clique <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">aqui<img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</p>
           </section>
