@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-11-09">
+  <meta name="dcterms.date" content="2018-11-15">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/features_specs.md">
@@ -136,6 +136,30 @@
             </tr>
             <tr>
               <td></td>
+              <td>RPO: High Availability</td>
+              <td>0 s</td>
+              <td>HA is synchronous</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO: High Availability</td>
+              <td>Typically 0-10 min</td>
+              <td>With retry code, will appear as slowness with Db2 ACR</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO: Offsite node HADR</td>
+              <td>Typically &lt; 15 s</td>
+              <td>Offsite DR is asynchronous</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO: Offsite node HADR</td>
+              <td>&lt; 3 min</td>
+              <td>Must initiate with console button or API</td>
+            </tr>
+            <tr>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -144,7 +168,7 @@
               <td>System configurations</td>
               <td>Max RAM and cores</td>
               <td>1 TB RAM, 48 cores</td>
-              <td>Applies to Precise Performance XL plan.</td>
+              <td>Applies to Precise Performance XL plan</td>
             </tr>
             <tr>
               <td></td>
@@ -409,7 +433,7 @@
             <tr>
               <td></td>
               <td>Frankfurt &amp; London</td>
-              <td><strong>Deploy</strong>: &lt; 5 minutes. <strong>Scale</strong>: 2 hours.</td>
+              <td><strong>Deploy</strong>: &lt; 5 min. <strong>Scale</strong>: 2 hours.</td>
               <td>Flex plan only, depending on inventory</td>
             </tr>
             <tr>
