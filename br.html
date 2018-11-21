@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="dcterms.date" content="2018-11-21">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/br.md">
@@ -30,6 +30,18 @@
         <p>Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>          to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool.</p>
         <p>To store your backups offsite at a remote storage site, make a request to IBM Support.</p>
         <p>You can also use <a href="https://lift.ng.bluemix.net/" target="_blank">IBM Lift CLI</a> to import data into Db2 on Cloud.</p>
+        <section id="section-point-in-time">
+          <h2 id="point-in-time">Point-in-time restore</h2>
+          <p>Db2 on Cloud has added a point-in-time restore capability. You can restore to an exact point-in-time from your backups. </p>
+          <p>The following is an availability list of the point-in-time restore feature:</p>
+          <ul>
+            <li>Dallas data center: Available today on single server systems</li>
+            <li>Frankfurt, London data center (non-EU Cloud region): Available Nov 29, 2018 on single server systems</li>
+            <li>All other single server, baremetal, and HA or HADR systems (non-EU Cloud, non-IBM-Cloud Dedicated (formerly &quot;Bluemix Dedicated&quot;)): Available Dec 20, 2018</li>
+            <li>EU Cloud Region: By opening a support ticket, or self-serve starting Jan 30, 2019</li>
+            <li>IBM Cloud Dedicated: By opening a support ticket. Available only on request.</li>
+          </ul>
+        </section>
       </section>
     </article>
   </main>
