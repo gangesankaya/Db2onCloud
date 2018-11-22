@@ -8,22 +8,22 @@
   <property name="path" value="services/Db2onCloud"/>
   <topic href="index.html#getting_started_db2oncloud" label="Getting started" id="getting_started_db2oncloud">
     <property name="navgroup" value="learn"/>
-    <topic href="index.html#interfaces" label="Interfaces">
+    <topic href="index.html#interfaces" label="Interfaces" id="interfaces">
       <property name="type" value="anchor"/>
-      <topic href="index.html#web_console" label="Db2 on Cloud web console"></topic>
-      <topic href="index.html#connect_apps" label="Installing Db2 command line clients and drivers on your computer"></topic>
-      <topic href="index.html#data_src" label="Use Db2 on Cloud as a data source for your IBM Cloud apps or services"></topic>
+      <topic href="index.html#web_console" label="Db2 on Cloud web console" id="web_console"></topic>
+      <topic href="index.html#connect_apps" label="Installing Db2 command line clients and drivers on your computer" id="connect_apps"></topic>
+      <topic href="index.html#data_src" label="Use Db2 on Cloud as a data source for your IBM Cloud apps or services" id="data_src"></topic>
     </topic>
-    <topic href="index.html#samples" label="Samples">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="index.html#intro_vid" label="Video: Introducing Db2 on Cloud">
+    <topic href="index.html#samples" label="Samples" id="samples">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#vid_api" label="Video: Using REST API to communicate with Db2 on Cloud">
+    <topic href="index.html#intro_vid" label="Video: Introducing Db2 on Cloud" id="intro_vid">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#cognos_vid" label="Video: Integrating Jupyter notebooks">
+    <topic href="index.html#vid_api" label="Video: Using REST API to communicate with Db2 on Cloud" id="vid_api">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="index.html#cognos_vid" label="Video: Integrating Jupyter notebooks" id="cognos_vid">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -32,43 +32,43 @@
   </topic>
   <topic href="iam.html#iam" label="Identity and access management (IAM) on IBM Cloud" id="iam">
     <property name="navgroup" value="learn"/>
-    <topic href="iam.html#enabled" label="Is IAM enabled on your instance?">
+    <topic href="iam.html#enabled" label="Is IAM enabled on your instance?" id="enabled">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#features" label="Features of IBM Cloud IAM">
+    <topic href="iam.html#features" label="Features of IBM Cloud IAM" id="features">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#connect" label="Client connections and user logins">
+    <topic href="iam.html#connect" label="Client connections and user logins" id="connect">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#sup-if" label="Supported interfaces">
+    <topic href="iam.html#sup-if" label="Supported interfaces" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC and CLPPLUS"></topic>
-      <topic href="iam.html#jdbc" label="JDBC"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC and CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
-    <topic href="iam.html#console-ux" label="Console user experience">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="iam.html#api" label="REST API experience">
+    <topic href="iam.html#console-ux" label="Console user experience" id="console-ux">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="IBMid federation">
+    <topic href="iam.html#api" label="REST API experience" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#restrictions" label="Restrictions">
+    <topic href="iam.html#fed" label="IBMid federation" id="fed">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
   <topic href="connecting.html#connect" label="Connecting" id="connect">
     <property name="navgroup" value="learn"/>
-    <topic href="connecting.html#connect_prereq" label="Prerequisites">
+    <topic href="connecting.html#connect_prereq" label="Prerequisites" id="connect_prereq">
       <property name="type" value="anchor"/>
-      <topic href="connecting.html#cfg_env" label="Configuring your environment"></topic>
+      <topic href="connecting.html#cfg_env" label="Configuring your environment" id="cfg_env"></topic>
     </topic>
-    <topic href="connecting.html#conx_prgrm" label="Connecting programmatically">
+    <topic href="connecting.html#conx_prgrm" label="Connecting programmatically" id="conx_prgrm">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="connecting.html#conx_apps_tools" label="Connecting apps and tools">
+    <topic href="connecting.html#conx_apps_tools" label="Connecting apps and tools" id="conx_apps_tools">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -76,40 +76,40 @@
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="Connecting to another Db2 database"/>
     <topic href="federation.html#overview" label="Data virtualization (federation)" id="overview">
-      <topic href="federation.html#use_cases" label="Use Cases">
+      <topic href="federation.html#use_cases" label="Use Cases" id="use_cases">
         <property name="type" value="anchor"/>
-        <topic href="federation.html#consolidate-data-sources" label="Consolidate data sources"></topic>
-        <topic href="federation.html#attach-to-db2-warehouse-on-cloud" label="Attach to Db2 Warehouse on Cloud"></topic>
-        <topic href="federation.html#sharded-data-across-multiple-servers" label="Sharded data across multiple servers"></topic>
-        <topic href="federation.html#increase-database-capacity-beyond-fixed-limits" label="Increase database capacity beyond fixed limits"></topic>
+        <topic href="federation.html#consolidate-data-sources" label="Consolidate data sources" id="consolidate-data-sources"></topic>
+        <topic href="federation.html#attach-to-db2-warehouse-on-cloud" label="Attach to Db2 Warehouse on Cloud" id="attach-to-db2-warehouse-on-cloud"></topic>
+        <topic href="federation.html#sharded-data-across-multiple-servers" label="Sharded data across multiple servers" id="sharded-data-across-multiple-servers"></topic>
+        <topic href="federation.html#increase-database-capacity-beyond-fixed-limits" label="Increase database capacity beyond fixed limits" id="increase-database-capacity-beyond-fixed-limits"></topic>
       </topic>
-      <topic href="federation.html#getting_started" label="Getting started">
+      <topic href="federation.html#getting_started" label="Getting started" id="getting_started">
         <property name="type" value="anchor"/>
-        <topic href="federation.html#on-the-db2-on-cloud-target-machine" label="On the Db2 on Cloud target machine"></topic>
-        <topic href="federation.html#on-a-db2-on-cloud-machine-being-used-as-a-federation-source" label="On a Db2 on Cloud machine being used as a federation source"></topic>
+        <topic href="federation.html#on-the-db2-on-cloud-target-machine" label="On the Db2 on Cloud target machine" id="on-the-db2-on-cloud-target-machine"></topic>
+        <topic href="federation.html#on-a-db2-on-cloud-machine-being-used-as-a-federation-source" label="On a Db2 on Cloud machine being used as a federation source" id="on-a-db2-on-cloud-machine-being-used-as-a-federation-source"></topic>
       </topic>
-      <topic href="federation.html#additional-information" label="Additional information">
+      <topic href="federation.html#additional-information" label="Additional information" id="additional-information">
         <property name="type" value="anchor"/>
       </topic>
     </topic>
   </topic>
   <topic href="free_plan.html#free_plan" label="Free Lite plan" id="free_plan">
     <property name="navgroup" value="learn"/>
-    <topic href="free_plan.html#architecture" label="Architecture">
+    <topic href="free_plan.html#architecture" label="Architecture" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="Using the Lite plan outside continental North America">
+    <topic href="free_plan.html#outside_na" label="Using the Lite plan outside continental North America" id="outside_na">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
   <topic href="plans_pricing.html#plans_pricing" label="Plans and pricing" id="plans_pricing">
     <property name="navgroup" value="learn"/>
-    <topic href="plans_pricing.html#plans_cfgs" label="Plans and configurations">
+    <topic href="plans_pricing.html#plans_cfgs" label="Plans and configurations" id="plans_cfgs">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="plans_pricing.html#pricing" label="Pricing">
+    <topic href="plans_pricing.html#pricing" label="Pricing" id="pricing">
       <property name="type" value="anchor"/>
-      <topic href="plans_pricing.html#examples" label="Billing examples"></topic>
+      <topic href="plans_pricing.html#examples" label="Billing examples" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="Flexible scaling" id="scale">
@@ -117,24 +117,24 @@
   </topic>
   <topic href="br.html#br" label="Backup and restore" id="br">
     <property name="navgroup" value="learn"/>
-    <topic href="br.html#point-in-time" label="Point-in-time restore">
+    <topic href="br.html#point-in-time" label="Point-in-time restore" id="point-in-time">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
   <topic href="ha.html#ha" label="High availability (HA)" id="ha">
     <property name="navgroup" value="learn"/>
-    <topic href="ha.html#rule_14" label="Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)">
+    <topic href="ha.html#rule_14" label="Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)" id="rule_14">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="ha.html#add_dr" label="How to add a Geo-Replicated Disaster Recovery Node">
+    <topic href="ha.html#add_dr" label="How to add a Geo-Replicated Disaster Recovery Node" id="add_dr">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="ha.html#manage_ha_dr" label="Managing high availability and disaster recovery nodes">
+    <topic href="ha.html#manage_ha_dr" label="Managing high availability and disaster recovery nodes" id="manage_ha_dr">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="ha.html#faq" label="FAQ">
+    <topic href="ha.html#faq" label="FAQ" id="faq">
       <property name="type" value="anchor"/>
-      <topic href="ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-" label="What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?"></topic>
+      <topic href="ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-" label="What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?" id="what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-"></topic>
     </topic>
   </topic>
   <topic label="Loading your data">
@@ -142,13 +142,13 @@
     <property name="topicgroup" value="Loading your data"/>
     <topic href="dcw.html#dcw" label="Assessing your database compatibility" id="dcw"></topic>
     <topic href="migration.html#migration" label="Migrating data to IBM Cloud" id="migration">
-      <topic href="migration.html#cos" label="Loading data from object store">
+      <topic href="migration.html#cos" label="Loading data from object store" id="cos">
         <property name="type" value="anchor"/>
       </topic>
-      <topic href="migration.html#onprem" label="Migrating data from on-premises system">
+      <topic href="migration.html#onprem" label="Migrating data from on-premises system" id="onprem">
         <property name="type" value="anchor"/>
-        <topic href="migration.html#lift" label="Lift CLI"></topic>
-        <topic href="migration.html#mdms" label="IBM Cloud Mass Data Migration"></topic>
+        <topic href="migration.html#lift" label="Lift CLI" id="lift"></topic>
+        <topic href="migration.html#mdms" label="IBM Cloud Mass Data Migration" id="mdms"></topic>
       </topic>
     </topic>
   </topic>
@@ -160,10 +160,10 @@
   </topic>
   <topic href="maintenance.html#main_not_pol" label="Maintenance and notification policies" id="main_not_pol">
     <property name="navgroup" value="learn"/>
-    <topic href="maintenance.html#maintenance" label="Maintenance policy">
+    <topic href="maintenance.html#maintenance" label="Maintenance policy" id="maintenance">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="maintenance.html#notification" label="Notification policy">
+    <topic href="maintenance.html#notification" label="Notification policy" id="notification">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -217,7 +217,7 @@
   </topic>
   <topic href="help.html#help_support" label="Help and support" id="help_support">
     <property name="navgroup" value="help"/>
-    <topic href="help.html#gettinghelp" label="Getting help and support for Db2 on Cloud">
+    <topic href="help.html#gettinghelp" label="Getting help and support for Db2 on Cloud" id="gettinghelp">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
