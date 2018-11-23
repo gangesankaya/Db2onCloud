@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-11-22">
+  <meta name="dcterms.date" content="2018-11-23">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/br.md">
@@ -48,12 +48,33 @@
             <li>IBM Cloud Dedicated system (formerly Bluemix Dedicated): Only available by opening a support ticket.</li>
           </ul>
           <p>The following are a selected example of screenshots of the web console UI in which the point-in-time restore operation is initiated and its progress is indicated:</p>
-          <p><img src="images/pit_restore_1.png" alt="View of the highlighted selection of the point-in-time restore strategy"></p>
-          <p><img src="images/pit_restore_2.png" alt="View of the point-in-time restore confirmation dialog"></p>
-          <p><img src="images/pit_restore_3.png" alt="View of the point-in-time restore initialization"></p>
-          <p><img src="images/pit_restore_4.png" alt="View of the progress of the point-in-time restore"></p>
-          <p><img src="images/pit_restore_5.png" alt="View of the creation of the new backup point"></p>
-          <p><img src="images/pit_restore_6.png" alt="View of the successful completion of the restore operation"></p>
+          <ol>
+            <li>
+              <p>Select the <strong>Point in Time</strong> restore strategy and select a point-in-time date to which you want to restore the database. The point-in-time restore process selects the backup closest to your requested point-in-time date out of
+                the pool of retained backups made during the previous 14 days. <strong>Note</strong>: The point-in-time restore process invalidates any of the previously retained backups with dates after the selected point-in-time date because of a divergence
+                in the timeline.
+                <img src="images/pit_restore_1.png" alt="View of the highlighted selection of the point-in-time restore strategy"></p>
+            </li>
+            <li>
+              <p>Confirm that you want to continue with your restore selections. After initiating the restore operation, you cannot change the request.<br><img src="images/pit_restore_2.png" alt="View of the point-in-time restore confirmation dialog"></p>
+            </li>
+            <li>
+              <p>The restore process is initializing.
+                <img src="images/pit_restore_3.png" alt="View of the point-in-time restore initialization"></p>
+            </li>
+            <li>
+              <p>Restoring the database to the selected point in time.
+                <img src="images/pit_restore_4.png" alt="View of the progress of the point-in-time restore"></p>
+            </li>
+            <li>
+              <p>A new backup point is being created. The point-in-time restored database is ready to use.
+                <img src="images/pit_restore_5.png" alt="View of the creation of the new backup point"></p>
+            </li>
+            <li>
+              <p>The restore operation completed successfully.
+                <img src="images/pit_restore_6.png" alt="View of the successful completion of the restore operation"></p>
+            </li>
+          </ol>
         </section>
       </section>
     </article>
