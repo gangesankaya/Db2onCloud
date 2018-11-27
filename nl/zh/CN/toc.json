@@ -27,27 +27,27 @@
             {
                 "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
                 "label": "入门",
-                "id": "getting_started_db2oncloud",
+                "id": "services/Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/index.html#interfaces",
                         "label": "界面",
-                        "id": "interfaces",
+                        "id": "services/Db2onCloud-interfaces",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/index.html#web_console",
                                 "label": "Db2 on Cloud Web 控制台",
-                                "id": "web_console"
+                                "id": "services/Db2onCloud-web_console"
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#connect_apps",
                                 "label": "从本地计算机连接应用程序或喜爱的工具",
-                                "id": "connect_apps"
+                                "id": "services/Db2onCloud-connect_apps"
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#data_src",
                                 "label": "使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源",
-                                "id": "data_src"
+                                "id": "services/Db2onCloud-data_src"
                             }
                         ],
                         "properties": [
@@ -60,7 +60,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#samples",
                         "label": "样本",
-                        "id": "samples",
+                        "id": "services/Db2onCloud-samples",
                         "properties": [
                             {
                                 "name": "type",
@@ -71,7 +71,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#intro_vid",
                         "label": "视频：介绍 Db2 on Cloud",
-                        "id": "intro_vid",
+                        "id": "services/Db2onCloud-intro_vid",
                         "properties": [
                             {
                                 "name": "type",
@@ -82,7 +82,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#vid_api",
                         "label": "视频：使用 REST API 与 Db2 on Cloud 通信",
-                        "id": "vid_api",
+                        "id": "services/Db2onCloud-vid_api",
                         "properties": [
                             {
                                 "name": "type",
@@ -93,7 +93,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#cognos_vid",
                         "label": "视频：集成 Jupyter 配置页",
-                        "id": "cognos_vid",
+                        "id": "services/Db2onCloud-cognos_vid",
                         "properties": [
                             {
                                 "name": "type",
@@ -112,7 +112,7 @@
             {
                 "href": "services/Db2onCloud/features_specs.html#overview",
                 "label": "功能部件和规范",
-                "id": "overview",
+                "id": "services/Db2onCloud-overview",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -123,12 +123,12 @@
             {
                 "href": "services/Db2onCloud/iam.html#iam",
                 "label": "IBM Cloud 上的身份和访问权管理 (IAM)",
-                "id": "iam",
+                "id": "services/Db2onCloud-iam",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/iam.html#enabled",
                         "label": "实例上是否启用了 IAM？",
-                        "id": "enabled",
+                        "id": "services/Db2onCloud-enabled",
                         "properties": [
                             {
                                 "name": "type",
@@ -139,7 +139,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#features",
                         "label": "IBM Cloud IAM 的功能",
-                        "id": "features",
+                        "id": "services/Db2onCloud-features",
                         "properties": [
                             {
                                 "name": "type",
@@ -150,7 +150,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#connect",
                         "label": "客户机连接和用户登录",
-                        "id": "connect",
+                        "id": "services/Db2onCloud-connect",
                         "properties": [
                             {
                                 "name": "type",
@@ -161,17 +161,17 @@
                     {
                         "href": "services/Db2onCloud/iam.html#sup-if",
                         "label": "受支持的接口",
-                        "id": "sup-if",
+                        "id": "services/Db2onCloud-sup-if",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
                                 "label": "ODBC 和 CLPPLUS",
-                                "id": "odbc-clpplus"
+                                "id": "services/Db2onCloud-odbc-clpplus"
                             },
                             {
                                 "href": "services/Db2onCloud/iam.html#jdbc",
                                 "label": "JDBC",
-                                "id": "jdbc"
+                                "id": "services/Db2onCloud-jdbc"
                             }
                         ],
                         "properties": [
@@ -184,7 +184,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#console-ux",
                         "label": "控制台用户体验",
-                        "id": "console-ux",
+                        "id": "services/Db2onCloud-console-ux",
                         "properties": [
                             {
                                 "name": "type",
@@ -195,7 +195,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#api",
                         "label": "REST API 体验",
-                        "id": "api",
+                        "id": "services/Db2onCloud-api",
                         "properties": [
                             {
                                 "name": "type",
@@ -206,7 +206,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#fed",
                         "label": "IBM 标识联合",
-                        "id": "fed",
+                        "id": "services/Db2onCloud-fed",
                         "properties": [
                             {
                                 "name": "type",
@@ -217,7 +217,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#restrictions",
                         "label": "限制",
-                        "id": "restrictions",
+                        "id": "services/Db2onCloud-restrictions",
                         "properties": [
                             {
                                 "name": "type",
@@ -236,17 +236,17 @@
             {
                 "href": "services/Db2onCloud/connecting.html#connect",
                 "label": "连接",
-                "id": "connect",
+                "id": "services/Db2onCloud-connect",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/connecting.html#connect_prereq",
                         "label": "先决条件",
-                        "id": "connect_prereq",
+                        "id": "services/Db2onCloud-connect_prereq",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/connecting.html#cfg_env",
                                 "label": "配置环境",
-                                "id": "cfg_env"
+                                "id": "services/Db2onCloud-cfg_env"
                             }
                         ],
                         "properties": [
@@ -259,7 +259,7 @@
                     {
                         "href": "services/Db2onCloud/connecting.html#conx_prgrm",
                         "label": "以编程方式连接",
-                        "id": "conx_prgrm",
+                        "id": "services/Db2onCloud-conx_prgrm",
                         "properties": [
                             {
                                 "name": "type",
@@ -270,7 +270,7 @@
                     {
                         "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
                         "label": "连接应用程序和工具",
-                        "id": "conx_apps_tools",
+                        "id": "services/Db2onCloud-conx_apps_tools",
                         "properties": [
                             {
                                 "name": "type",
@@ -302,32 +302,32 @@
                     {
                         "href": "services/Db2onCloud/federation.html#overview",
                         "label": "数据虚拟化（联合）",
-                        "id": "overview",
+                        "id": "services/Db2onCloud-overview",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
                                 "label": "用例",
-                                "id": "use_cases",
+                                "id": "services/Db2onCloud-use_cases",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "合并数据源",
-                                        "id": "-"
+                                        "id": "services/Db2onCloud--"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-db2-warehouse-on-cloud",
                                         "label": "连接到 Db2 Warehouse on Cloud",
-                                        "id": "-db2-warehouse-on-cloud"
+                                        "id": "services/Db2onCloud--db2-warehouse-on-cloud"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "在多台服务器之间分片数据",
-                                        "id": "-"
+                                        "id": "services/Db2onCloud--"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "将数据库容量提高到超出固定限制",
-                                        "id": "-"
+                                        "id": "services/Db2onCloud--"
                                     }
                                 ],
                                 "properties": [
@@ -340,17 +340,17 @@
                             {
                                 "href": "services/Db2onCloud/federation.html#getting_started",
                                 "label": "入门",
-                                "id": "getting_started",
+                                "id": "services/Db2onCloud-getting_started",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#-db2-on-cloud-",
                                         "label": "在 Db2 on Cloud 目标机器上",
-                                        "id": "-db2-on-cloud-"
+                                        "id": "services/Db2onCloud--db2-on-cloud-"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-db2-on-cloud-",
                                         "label": "在将用作联合源的 Db2 on Cloud 机器上",
-                                        "id": "-db2-on-cloud-"
+                                        "id": "services/Db2onCloud--db2-on-cloud-"
                                     }
                                 ],
                                 "properties": [
@@ -363,7 +363,7 @@
                             {
                                 "href": "services/Db2onCloud/federation.html#-",
                                 "label": "其他信息",
-                                "id": "-",
+                                "id": "services/Db2onCloud--",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -378,12 +378,12 @@
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
                 "label": "免费轻量套餐",
-                "id": "free_plan",
+                "id": "services/Db2onCloud-free_plan",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/free_plan.html#architecture",
                         "label": "体系结构",
-                        "id": "architecture",
+                        "id": "services/Db2onCloud-architecture",
                         "properties": [
                             {
                                 "name": "type",
@@ -394,7 +394,7 @@
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
                         "label": "在北美大陆之外使用轻量套餐",
-                        "id": "outside_na",
+                        "id": "services/Db2onCloud-outside_na",
                         "properties": [
                             {
                                 "name": "type",
@@ -413,7 +413,7 @@
             {
                 "href": "services/Db2onCloud/flex_scaling.html#scale",
                 "label": "灵活扩展",
-                "id": "scale",
+                "id": "services/Db2onCloud-scale",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -424,7 +424,7 @@
             {
                 "href": "services/Db2onCloud/br.html#br",
                 "label": "备份和复原",
-                "id": "br",
+                "id": "services/Db2onCloud-br",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -435,12 +435,12 @@
             {
                 "href": "services/Db2onCloud/ha.html#ha",
                 "label": "高可用性 (HA)",
-                "id": "ha",
+                "id": "services/Db2onCloud-ha",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/ha.html#rule_14",
                         "label": "<）MD:STRONG>巴西：补充规定 14**（适用于为巴西联邦政府供应的系统）",
-                        "id": "rule_14",
+                        "id": "services/Db2onCloud-rule_14",
                         "properties": [
                             {
                                 "name": "type",
@@ -451,7 +451,7 @@
                     {
                         "href": "services/Db2onCloud/ha.html#add_dr",
                         "label": "如何添加地理复制灾难恢复节点",
-                        "id": "add_dr",
+                        "id": "services/Db2onCloud-add_dr",
                         "properties": [
                             {
                                 "name": "type",
@@ -462,7 +462,7 @@
                     {
                         "href": "services/Db2onCloud/ha.html#manage_ha_dr",
                         "label": "管理高可用性和灾难恢复节点",
-                        "id": "manage_ha_dr",
+                        "id": "services/Db2onCloud-manage_ha_dr",
                         "properties": [
                             {
                                 "name": "type",
@@ -473,12 +473,12 @@
                     {
                         "href": "services/Db2onCloud/ha.html#faq",
                         "label": "常见问题",
-                        "id": "faq",
+                        "id": "services/Db2onCloud-faq",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/ha.html#-db2-dr-dns-ip-",
                                 "label": "对于使用 Db2 来处理接管后 DR 节点的应用程序，需要进行哪些更改？接管后 DNS 名称或 IP 地址会更改吗？",
-                                "id": "-db2-dr-dns-ip-"
+                                "id": "services/Db2onCloud--db2-dr-dns-ip-"
                             }
                         ],
                         "properties": [
@@ -512,17 +512,17 @@
                     {
                         "href": "services/Db2onCloud/dcw.html#dcw",
                         "label": "评估数据库兼容性",
-                        "id": "dcw"
+                        "id": "services/Db2onCloud-dcw"
                     },
                     {
                         "href": "services/Db2onCloud/migration.html#migration",
                         "label": "将数据迁移至 IBM Cloud",
-                        "id": "migration",
+                        "id": "services/Db2onCloud-migration",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/migration.html#cos",
                                 "label": "从对象存储装入数据",
-                                "id": "cos",
+                                "id": "services/Db2onCloud-cos",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -533,17 +533,17 @@
                             {
                                 "href": "services/Db2onCloud/migration.html#onprem",
                                 "label": "从内部部署系统迁移数据",
-                                "id": "onprem",
+                                "id": "services/Db2onCloud-onprem",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/migration.html#lift",
                                         "label": "Lift CLI",
-                                        "id": "lift"
+                                        "id": "services/Db2onCloud-lift"
                                     },
                                     {
                                         "href": "services/Db2onCloud/migration.html#mdms",
                                         "label": "IBM Cloud Mass Data Migration",
-                                        "id": "mdms"
+                                        "id": "services/Db2onCloud-mdms"
                                     }
                                 ],
                                 "properties": [
@@ -560,7 +560,7 @@
             {
                 "href": "services/Db2onCloud/audit.html#audit",
                 "label": "审计",
-                "id": "audit",
+                "id": "services/Db2onCloud-audit",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -571,7 +571,7 @@
             {
                 "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
                 "label": "管理用户",
-                "id": "user_mgmt",
+                "id": "services/Db2onCloud-user_mgmt",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -582,7 +582,7 @@
             {
                 "href": "services/Db2onCloud/plans_cfgs.html#plans_cfgs",
                 "label": "套餐和配置",
-                "id": "plans_cfgs",
+                "id": "services/Db2onCloud-plans_cfgs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -593,12 +593,12 @@
             {
                 "href": "services/Db2onCloud/maintenance.html#-",
                 "label": "维护和通知策略",
-                "id": "-",
+                "id": "services/Db2onCloud--",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",
                         "label": "维护策略",
-                        "id": "maintenance",
+                        "id": "services/Db2onCloud-maintenance",
                         "properties": [
                             {
                                 "name": "type",
@@ -609,7 +609,7 @@
                     {
                         "href": "services/Db2onCloud/maintenance.html#notification",
                         "label": "通知策略",
-                        "id": "notification",
+                        "id": "services/Db2onCloud-notification",
                         "properties": [
                             {
                                 "name": "type",
@@ -628,7 +628,7 @@
             {
                 "href": "services/Db2onCloud/local_dev_env.html#local_dev",
                 "label": "本地开发环境",
-                "id": "local_dev",
+                "id": "services/Db2onCloud-local_dev",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -639,7 +639,7 @@
             {
                 "href": "services/Db2onCloud/communities.html#communities",
                 "label": "社区",
-                "id": "communities",
+                "id": "services/Db2onCloud-communities",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -790,12 +790,12 @@
             {
                 "href": "services/Db2onCloud/help.html#help_support",
                 "label": "帮助和支持",
-                "id": "help_support",
+                "id": "services/Db2onCloud-help_support",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/help.html#gettinghelp",
                         "label": "获取有关 Db2 on Cloud 的帮助和支持",
-                        "id": "gettinghelp",
+                        "id": "services/Db2onCloud-gettinghelp",
                         "properties": [
                             {
                                 "name": "type",
