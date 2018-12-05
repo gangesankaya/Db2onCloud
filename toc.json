@@ -377,7 +377,7 @@
             },
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
-                "label": "Free Lite plan",
+                "label": "Free plan",
                 "id": "services/Db2onCloud-free_plan",
                 "topics": [
                     {
@@ -393,8 +393,19 @@
                     },
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
-                        "label": "Using the Lite plan outside continental North America",
+                        "label": "Using the Free plan outside continental North America",
                         "id": "services/Db2onCloud-outside_na",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/free_plan.html#fp_restrictions",
+                        "label": "Free plan restrictions",
+                        "id": "services/Db2onCloud-fp_restrictions",
                         "properties": [
                             {
                                 "name": "type",

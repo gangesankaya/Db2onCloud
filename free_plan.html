@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-05-03">
+  <meta name="dcterms.date" content="2018-12-05">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/free_plan.md">
@@ -16,7 +16,7 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Free Lite plan</title>
+  <title>Free plan</title>
 </head>
 
 <body>
@@ -25,21 +25,94 @@
       <!-- Attribute definitions -->
 
       <section id="section-free_plan">
-        <h1 id="free_plan">Free Lite plan</h1>
-        <p class="shortdesc">The IBM&reg; Db2&reg; on Cloud free Lite plan provides basic resources to let you develop or learn about Db2 without charge.</p>
-        <p>There is no time limit on the free plan, but users must re-extend their free plan every 30 days.</p>
+        <h1 id="free_plan">Free plan</h1>
+        <p class="shortdesc">The IBM&reg; Db2&reg; on Cloud Free plan provides basic resources to let you develop or learn about Db2 without charge.</p>
+        <p>There is no time limit on the Free plan, but users must re-extend their Free plan every 30 days.</p>
         <p>Only community support is available. </p>
         <section id="section-architecture">
           <h2 id="architecture">Architecture</h2>
-          <p>Unlike other Db2 on Cloud plans, the Db2 on Cloud free Lite plan runs on a multi-tenant system. The Flex and Precise Performance plans run on their own single-tenant virtual machines or baremetal servers.</p>
-          <p>The free plan allows you to use one database schema.</p>
-          <p>For more information about the Db2 on Cloud free Lite plan, see the <a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">FAQ <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+          <p>Unlike other Db2 on Cloud plans, the Db2 on Cloud Free plan runs on a multi-tenant system. The Flex and Precise Performance plans run on their own single-tenant virtual machines or baremetal servers.</p>
+          <p>The Free plan allows you to use one database schema.</p>
+          <p>For more information about the Db2 on Cloud Free plan, see the <a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">FAQ <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
         </section>
         <section id="section-outside_na">
-          <h2 id="outside_na">Using the Lite plan outside continental North America</h2>
-          <p>The free Lite plan is currently accessible without a credit card for continental North America. Outside of continental North America, customers must add a credit card to their IBM Cloud account and then select the &quot;US South - Dallas&quot;
-            region for the free Lite plan to be visible for selection.</p>
-          <p>The Lite plan is always free and your credit card will not be charged.</p>
+          <h2 id="outside_na">Using the Free plan outside continental North America</h2>
+          <p>The Free plan is currently accessible without a credit card for continental North America. Outside of continental North America, customers must add a credit card to their IBM Cloud account and then select the &quot;US South - Dallas&quot; region
+            for the Free plan to be visible for selection.</p>
+          <p>The Free plan is always free and your credit card will not be charged.</p>
+        </section>
+        <section id="section-fp_restrictions">
+          <h2 id="fp_restrictions">Free plan restrictions</h2>
+          <p class="important">Do not run production workloads on a Db2 on Cloud Free plan system. If you choose to do so, there is a significant risk that required functionality is not available, or that another user&#39;s workload might negatively impact your workload on
+            the multi-tenant system. </p>
+          <p>The following is a table of Free plan restrictions:</p>
+          <table>
+            <caption caption-side="top">Table 1. Db2 on Cloud Free plan restrictions</caption>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Restriction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Connections</td>
+                <td>5 connections per user</td>
+              </tr>
+              <tr>
+                <td>EU General Data Protection Regulation (GDPR)</td>
+                <td>Not supported. Refer to your Service Description for restriction.</td>
+              </tr>
+              <tr>
+                <td>Federation</td>
+                <td>Not supported</td>
+              </tr>
+              <tr>
+                <td>Health Information Portability and Accountability Act of 1996 (HIPAA)</td>
+                <td>Not supported. Refer to your Service Description for restriction.</td>
+              </tr>
+              <tr>
+                <td>IBM InfoSphere Data Replication for use in loading data</td>
+                <td>Not supported</td>
+              </tr>
+              <tr>
+                <td>IBM Cloud Integrated Analytics</td>
+                <td>Not supported</td>
+              </tr>
+              <tr>
+                <td>IBM Cloud Dedicated</td>
+                <td>Not supported</td>
+              </tr>
+              <tr>
+                <td>Oracle compatibility</td>
+                <td>Not supported</td>
+              </tr>
+              <tr>
+                <td>Performance</td>
+                <td>Performance might fluctuate due to workloads run by other users on the multi-tenant system</td>
+              </tr>
+              <tr>
+                <td>Row and column access control (RCAC)</td>
+                <td>Not supported</td>
+              </tr>
+              <tr>
+                <td>Reactivation</td>
+                <td>Reactivation required every 30 days. Free plan services are deleted after 30 days of inactivity.</td>
+              </tr>
+              <tr>
+                <td>Storage</td>
+                <td>500 MB of storage per user</td>
+              </tr>
+              <tr>
+                <td>User-defined extensions (UDFs)</td>
+                <td>Not supported on any Db2 on Cloud plans, including the Free plan</td>
+              </tr>
+              <tr>
+                <td>User management</td>
+                <td>User not given administrative authority</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </section>
     </article>
