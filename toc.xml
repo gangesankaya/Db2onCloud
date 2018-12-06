@@ -93,12 +93,15 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="Free Lite plan" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="Free plan" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="Architecture" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="Using the Lite plan outside continental North America" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="Using the Free plan outside continental North America" id="outside_na">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="Free plan restrictions" id="fp_restrictions">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
