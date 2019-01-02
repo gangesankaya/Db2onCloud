@@ -5,8 +5,8 @@
 
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="dcterms.date" content="2019-01-02">
   <meta name="keywords" content="{{ metadata }}">
   <meta name="source.format" content="markdown">
 
@@ -17,24 +17,42 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Auditing</title>
+  <title>Auditing, logging, and monitoring</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="audit" role="article">
+    <article aria-labelledby="auditing-logging-and-monitoring" role="article">
       <!-- Attribute definitions -->
 
-      <section id="section-audit">
-        <h1 id="audit">Auditing</h1>
-        <p>The following are methods by which you can audit activity on the Db2 on Cloud database:</p>
-        <ul class="shortdesc">
-          <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">CHANGE HISTORY event monitor <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></li>
-          <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></li>
-        </ul>
-        <p>By creating a CHANGE HISTORY event monitor, you can query the event monitor table to determine what was done within the database and by whom. </p>
-        <p>The Time Travel Query makes it easy to store all of the changes to your data and even query your old data based on a selected point in time. To use this audit method, ensure that you first set up your tables to support Time Travel Query.</p>
-        <p>For more information about these audit methods, see <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">How do I audit or track changes? <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+      <!-- Rimas, please change page name to: Audit, Logs & Monitoring -->
+
+      <section id="section-auditing-logging-and-monitoring">
+        <h1 id="auditing-logging-and-monitoring">Auditing, logging, and monitoring</h1>
+        <section id="section-audit">
+          <h2 id="audit">Auditing</h2>
+          <p>The following are methods by which you can audit activity on the Db2 on Cloud database:</p>
+          <ul class="shortdesc">
+            <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">CHANGE HISTORY event monitor <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></li>
+            <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></li>
+          </ul>
+          <p>By creating a CHANGE HISTORY event monitor, you can query the event monitor table to determine what was done within the database and by whom. </p>
+          <p>The Time Travel Query makes it easy to store all of the changes to your data and even query your old data based on a selected point in time. To use this audit method, ensure that you first set up your tables to support Time Travel Query.</p>
+          <p>For more information about these audit methods, see <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">How do I audit or track changes? <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+        </section>
+        <section id="section-log_mon">
+          <h2 id="log_mon">Logging and monitoring</h2>
+          <p>Monitoring and logging is part of the service, however, it is not directly exposed to the end user. Instead the infrastructure is used by IBM operational staff to address issues. </p>
+          <!-- For availability of the Activity Monitor, see the roadmap.-->
+
+          <p>You can connect with a Db2 command line client, such as CLPPlus, to access detailed information and diagnostics.</p>
+          <section id="section-overview">
+            <h3 id="overview">A basic overview:</h3>
+            <p>There are 2 basic types of checking. External health/uptime checks and metric-based monitoring. IBM monitors hundreds of metrics and stores those metrics historically. Based on the values of these metrics, alerts are generated. These alerts
+              are sent to IBM operations staff to ensure the alerts are seen and addressed. In addition, IBM also sends archived operating system and diagnostic logs for rapid diagnosis. Db2 on Cloud complies with GDPR, and IBM EU Cloud options provide
+              an even higher level of adherence to GDPR, if needed.</p>
+          </section>
+        </section>
       </section>
     </article>
   </main>

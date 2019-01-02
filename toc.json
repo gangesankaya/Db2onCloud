@@ -624,9 +624,40 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/audit.html#audit",
-                "label": "Auditing",
-                "id": "services/Db2onCloud-audit",
+                "href": "services/Db2onCloud/audit.html#auditing-logging-and-monitoring",
+                "label": "Auditing, logging, and monitoring",
+                "id": "services/Db2onCloud-auditing-logging-and-monitoring",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/audit.html#audit",
+                        "label": "Auditing",
+                        "id": "services/Db2onCloud-audit",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/audit.html#log_mon",
+                        "label": "Logging and monitoring",
+                        "id": "services/Db2onCloud-log_mon",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/audit.html#overview",
+                                "label": "A basic overview:",
+                                "id": "services/Db2onCloud-overview"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
