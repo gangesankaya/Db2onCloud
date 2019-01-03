@@ -185,7 +185,7 @@ Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&
             <li>
               <p>To add a new IBMid user, run the following example API call:</p>
               <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
-              <p><strong>Note</strong>: The <code>&lt;userid&gt;</code> value for <code>&quot;id&quot;</code> and <code>&quot;ibmid&quot;</code> do not have to be the same. The two different IDs are not linked together in any way.</p>
+              <p class="note">The <code>&lt;userid&gt;</code> value for <code>&quot;id&quot;</code> and <code>&quot;ibmid&quot;</code> do not have to be the same. The two different IDs are not linked together in any way.</p>
             </li>
             <li>
               <p>To migrate an existing non-IBMid database user (for example, <code>abcuser</code>) and make them an IBMid user, first delete the non-IBMid user ID by running the following example API call:</p>
