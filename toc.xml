@@ -155,13 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="Auditing" id="audit">
+  <topic href="audit.html#auditing-logging-and-monitoring" label="Auditing, logging, and monitoring" id="auditing-logging-and-monitoring">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#audit" label="Auditing" id="audit">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="Logging and monitoring" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="A basic overview:" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="Managing users" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="maintenance.html#main_not_pol" label="Maintenance and notification policies" id="main_not_pol">
+  <topic href="maintenance.html#maintenance-and-notification-policies" label="Maintenance and notification policies" id="maintenance-and-notification-policies">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="Maintenance policy" id="maintenance">
       <property name="type" value="anchor"/>
