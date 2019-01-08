@@ -624,14 +624,14 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/audit.html#auditing-logging-and-monitoring",
+                "href": "services/Db2onCloud/audit.html#aud-log-mon",
                 "label": "Auditing, logging, and monitoring",
-                "id": "services/Db2onCloud-auditing-logging-and-monitoring",
+                "id": "services/Db2onCloud-aud-log-mon",
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/audit.html#audit",
+                        "href": "services/Db2onCloud/audit.html#auditing",
                         "label": "Auditing",
-                        "id": "services/Db2onCloud-audit",
+                        "id": "services/Db2onCloud-auditing",
                         "properties": [
                             {
                                 "name": "type",

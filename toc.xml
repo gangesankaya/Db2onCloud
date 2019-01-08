@@ -155,9 +155,9 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#auditing-logging-and-monitoring" label="Auditing, logging, and monitoring" id="auditing-logging-and-monitoring">
+  <topic href="audit.html#aud-log-mon" label="Auditing, logging, and monitoring" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
-    <topic href="audit.html#audit" label="Auditing" id="audit">
+    <topic href="audit.html#auditing" label="Auditing" id="auditing">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="audit.html#log_mon" label="Logging and monitoring" id="log_mon">
