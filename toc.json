@@ -165,7 +165,7 @@
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
-                                "label": "ODBC and CLPPLUS",
+                                "label": "ODBC, CLP, and CLPPLUS",
                                 "id": "services/Db2onCloud-odbc-clpplus"
                             },
                             {
