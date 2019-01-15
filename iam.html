@@ -6,7 +6,7 @@
   <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
-  <meta name="dcterms.date" content="2018-09-18">
+  <meta name="dcterms.date" content="2019-01-15">
   <meta name="keywords" content="{{ metadata }}">
   <meta name="source.format" content="markdown">
 
@@ -80,13 +80,14 @@
           <p>The following database client interfaces are supported:</p>
           <ul>
             <li><a href="#odbc-clpplus">ODBC</a></li>
+            <li><a href="#odbc-clpplus">CLP</a></li>
             <li><a href="#odbc-clpplus">CLPPLUS</a></li>
             <li><a href="#jdbc">JDBC</a></li>
           </ul>
           <section id="section-odbc-clpplus">
-            <h3 id="odbc-clpplus">ODBC and CLPPLUS</h3>
-            <p>For an ODBC application or a command line client (CLPPLUS) to connect to a Db2 server using IAM authentication, a data source name (DSN) needs to be configured first in a <code>db2dsdriver.cfg</code> configuration file by running the following
-              command:</p>
+            <h3 id="odbc-clpplus">ODBC, CLP, and CLPPLUS</h3>
+            <p>For an ODBC application or a command line client (CLP, CLPPLUS) to connect to a Db2 server using IAM authentication, a data source name (DSN) needs to be configured first in a <code>db2dsdriver.cfg</code> configuration file by running the
+              following command:</p>
             <p><code>db2cli writecfg add -dsn &lt;dsn_alias&gt; -database &lt;database_name&gt; -host &lt;host_name_or_IP_address&gt; -port 50001 -parameter &quot;Authentication=GSSPLUGIN;SecurityTransportMode=SSL&quot;</code></p>
             <p>The <code>db2dsdriver.cfg</code> configuration file is an XML file, typically located in the <code>sqllib/cfg</code> directory, that contains a list of DSN aliases and their properties.</p>
             <p>The following example of a <code>db2dsdriver.cfg</code> configuration file shows the configurations that are used to establish a connection to a database service instance. The configuration file provides the DSN alias, the database name, the
@@ -116,15 +117,15 @@
                 <p> For ODBC, the <strong>AUTHENTICATION=GSSPLUGIN</strong> can be specified in either the <code>db2dsdriver.cfg</code> configuration file or in the application’s connection string.</p>
               </li>
               <li>
-                <p>The CLPPLUS connect command can contain one of the following:</p>
+                <p>The CLP and CLPPLUS <strong>connect</strong> command can contain one of the following:</p>
                 <p> <strong>Access token</strong></p>
-                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) and pass the access token by running the following command at the CLPPLUS command prompt or script:</p>
+                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) and pass the access token by running the following command at the CLP or CLPPLUS command prompt or script:</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
                 <p> <strong>API key</strong></p>
-                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an API key by running the following command at the CLPPLUS command prompt or script:</p>
+                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an API key by running the following command at the CLP or CLPPLUS command prompt or script:</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(apikey &lt;api-key-string&gt;)</code></p>
                 <p> <strong>IBMid/password</strong></p>
-                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an IBMid/password by running the following command at the CLPPLUS command prompt or script:</p>
+                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an IBMid/password by running the following command at the CLP or CLPPLUS command prompt or script:</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
                 <p> For more details about connecting to DSN aliases with CLPPLUS, see: <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
               </li>
