@@ -188,10 +188,10 @@ dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
 dataSource.setPortNumber( 50001 );
 dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
 dataSource.setPluginName( &quot;IBMIAMauth&quot; );
-Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&lt;password&gt;&quot; );
+Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt;password&gt;&quot; );
 </code></pre>
             <p>or</p>
-            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:user=&lt;user_ID&gt;;password=&lt;password&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:user=&lt;IBMid&gt;;password=&lt;password&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
           </section>
         </section>
