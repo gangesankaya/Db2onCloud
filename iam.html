@@ -3,11 +3,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2018">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2018">
+  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
+  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
   <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
-  <meta name="dcterms.date" content="2019-01-15">
+  <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ metadata }}">
+  <meta name="scope" content="{{ scope }}">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/iam.md">
@@ -117,15 +118,29 @@
                 <p> For ODBC, the <strong>AUTHENTICATION=GSSPLUGIN</strong> can be specified in either the <code>db2dsdriver.cfg</code> configuration file or in the application’s connection string.</p>
               </li>
               <li>
-                <p>The CLP and CLPPLUS <strong>connect</strong> command can contain one of the following:</p>
+                <p>The CLP CONNECT statement can contain one of the following:</p>
                 <p> <strong>Access token</strong></p>
-                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) and pass the access token by running the following command at the CLP or CLPPLUS command prompt or script:</p>
+                <p> Connect to the database server <code>&lt;database_server_name&gt;</code> and pass the access token by running the following command at the CLP command prompt or script:</p>
+                <p> <code>CONNECT TO &lt;database_server_name&gt; ACCESSTOKEN &lt;access_token_string&gt;</code></p>
+                <p> <strong>API key</strong></p>
+                <p> Connect to the database server <code>&lt;database_server_name&gt;</code> with an API key by running the following command at the CLP command prompt or script:</p>
+                <p> <code>CONNECT TO &lt;database_server_name&gt; APIKEY &lt;api-key-string&gt;</code></p>
+                <p> <strong>IBMid/password</strong></p>
+                <p> Connect to the database server <code>&lt;database_server_name&gt;</code> with an IBMid/password by running the following command at the CLP command prompt or script:</p>
+                <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
+                <p> For more details about connecting to a database server with CLP, see: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.
+                  </p>
+              </li>
+              <li>
+                <p>The CLPPLUS CONNECT statement can contain one of the following:</p>
+                <p> <strong>Access token</strong></p>
+                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) and pass the access token by running the following command at the CLPPLUS command prompt or script:</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
                 <p> <strong>API key</strong></p>
-                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an API key by running the following command at the CLP or CLPPLUS command prompt or script:</p>
+                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an API key by running the following command at the CLPPLUS command prompt or script:</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(apikey &lt;api-key-string&gt;)</code></p>
                 <p> <strong>IBMid/password</strong></p>
-                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an IBMid/password by running the following command at the CLP or CLPPLUS command prompt or script:</p>
+                <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an IBMid/password by running the following command at the CLPPLUS command prompt or script:</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
                 <p> For more details about connecting to DSN aliases with CLPPLUS, see: <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
               </li>
@@ -147,6 +162,9 @@ dataSource.setPluginName( &quot;IBMIAMauth&quot; );
 dataSource.setAccessToken( &quot;&lt;access_token&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
+            <p>or</p>
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:accessToken=&lt;access_token&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+</code></pre>
             <p><strong>API key</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
 
@@ -159,6 +177,9 @@ dataSource.setPluginName( &quot;IBMIAMauth&quot; );
 dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
+            <p>or</p>
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apikey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+</code></pre>
             <p><strong>IBMid/password</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
 
@@ -168,7 +189,10 @@ dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
 dataSource.setPortNumber( 50001 );
 dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
 dataSource.setPluginName( &quot;IBMIAMauth&quot; );
-Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&lt;password&gt;&quot; );
+Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt;password&gt;&quot; );
+</code></pre>
+            <p>or</p>
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:user=&lt;IBMid&gt;;password=&lt;password&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
           </section>
         </section>

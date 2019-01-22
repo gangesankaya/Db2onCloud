@@ -27,27 +27,27 @@
             {
                 "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
                 "label": "시작하기",
-                "id": "services/Db2onCloud-getting_started_db2oncloud",
+                "id": "Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/index.html#interfaces",
                         "label": "인터페이스",
-                        "id": "services/Db2onCloud-interfaces",
+                        "id": "Db2onCloud-interfaces",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/index.html#web_console",
                                 "label": "Db2 on Cloud 웹 콘솔",
-                                "id": "services/Db2onCloud-web_console"
+                                "id": "Db2onCloud-web_console"
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#connect_apps",
                                 "label": "로컬 컴퓨터에서 애플리케이션 또는 선호하는 도구 연결",
-                                "id": "services/Db2onCloud-connect_apps"
+                                "id": "Db2onCloud-connect_apps"
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#data_src",
                                 "label": "IBM Cloud 앱 또는 서비스의 데이터 소스로 Db2 on Cloud 사용",
-                                "id": "services/Db2onCloud-data_src"
+                                "id": "Db2onCloud-data_src"
                             }
                         ],
                         "properties": [
@@ -60,7 +60,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#samples",
                         "label": "샘플",
-                        "id": "services/Db2onCloud-samples",
+                        "id": "Db2onCloud-samples",
                         "properties": [
                             {
                                 "name": "type",
@@ -71,7 +71,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#intro_vid",
                         "label": "동영상: Db2 on Cloud 소개",
-                        "id": "services/Db2onCloud-intro_vid",
+                        "id": "Db2onCloud-intro_vid",
                         "properties": [
                             {
                                 "name": "type",
@@ -82,7 +82,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#vid_api",
                         "label": "동영상: REST API를 사용하여 Db2 on Cloud와 통신",
-                        "id": "services/Db2onCloud-vid_api",
+                        "id": "Db2onCloud-vid_api",
                         "properties": [
                             {
                                 "name": "type",
@@ -93,7 +93,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#cognos_vid",
                         "label": "동영상: Jupyter Notebook 통합",
-                        "id": "services/Db2onCloud-cognos_vid",
+                        "id": "Db2onCloud-cognos_vid",
                         "properties": [
                             {
                                 "name": "type",
@@ -112,7 +112,7 @@
             {
                 "href": "services/Db2onCloud/features_specs.html#overview",
                 "label": "기능 & 사양",
-                "id": "services/Db2onCloud-overview",
+                "id": "Db2onCloud-overview",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -123,12 +123,12 @@
             {
                 "href": "services/Db2onCloud/iam.html#iam",
                 "label": "IBM Cloud의 IAM(Identity and Access Management)",
-                "id": "services/Db2onCloud-iam",
+                "id": "Db2onCloud-iam",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/iam.html#enabled",
                         "label": "인스턴스에서 IAM을 사용하도록 설정되어 있습니까?",
-                        "id": "services/Db2onCloud-enabled",
+                        "id": "Db2onCloud-enabled",
                         "properties": [
                             {
                                 "name": "type",
@@ -139,7 +139,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#features",
                         "label": "IBM Cloud IAM의 기능",
-                        "id": "services/Db2onCloud-features",
+                        "id": "Db2onCloud-features",
                         "properties": [
                             {
                                 "name": "type",
@@ -150,7 +150,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#connect",
                         "label": "클라이언트 연결 및 사용자 로그인",
-                        "id": "services/Db2onCloud-connect",
+                        "id": "Db2onCloud-connect",
                         "properties": [
                             {
                                 "name": "type",
@@ -161,17 +161,17 @@
                     {
                         "href": "services/Db2onCloud/iam.html#sup-if",
                         "label": "지원되는 인터페이스",
-                        "id": "services/Db2onCloud-sup-if",
+                        "id": "Db2onCloud-sup-if",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
                                 "label": "ODBC 및 CLPPLUS",
-                                "id": "services/Db2onCloud-odbc-clpplus"
+                                "id": "Db2onCloud-odbc-clpplus"
                             },
                             {
                                 "href": "services/Db2onCloud/iam.html#jdbc",
                                 "label": "JDBC",
-                                "id": "services/Db2onCloud-jdbc"
+                                "id": "Db2onCloud-jdbc"
                             }
                         ],
                         "properties": [
@@ -184,7 +184,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#console-ux",
                         "label": "콘솔 사용자 환경",
-                        "id": "services/Db2onCloud-console-ux",
+                        "id": "Db2onCloud-console-ux",
                         "properties": [
                             {
                                 "name": "type",
@@ -195,7 +195,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#api",
                         "label": "REST API 환경",
-                        "id": "services/Db2onCloud-api",
+                        "id": "Db2onCloud-api",
                         "properties": [
                             {
                                 "name": "type",
@@ -206,7 +206,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#fed",
                         "label": "IBM ID 연합",
-                        "id": "services/Db2onCloud-fed",
+                        "id": "Db2onCloud-fed",
                         "properties": [
                             {
                                 "name": "type",
@@ -217,7 +217,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#restrictions",
                         "label": "제한사항",
-                        "id": "services/Db2onCloud-restrictions",
+                        "id": "Db2onCloud-restrictions",
                         "properties": [
                             {
                                 "name": "type",
@@ -236,17 +236,17 @@
             {
                 "href": "services/Db2onCloud/connecting.html#connect",
                 "label": "연결",
-                "id": "services/Db2onCloud-connect",
+                "id": "Db2onCloud-connect",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/connecting.html#connect_prereq",
                         "label": "전제조건",
-                        "id": "services/Db2onCloud-connect_prereq",
+                        "id": "Db2onCloud-connect_prereq",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/connecting.html#cfg_env",
                                 "label": "환경 구성",
-                                "id": "services/Db2onCloud-cfg_env"
+                                "id": "Db2onCloud-cfg_env"
                             }
                         ],
                         "properties": [
@@ -259,7 +259,7 @@
                     {
                         "href": "services/Db2onCloud/connecting.html#conx_prgrm",
                         "label": "프로그래밍 방식으로 연결",
-                        "id": "services/Db2onCloud-conx_prgrm",
+                        "id": "Db2onCloud-conx_prgrm",
                         "properties": [
                             {
                                 "name": "type",
@@ -270,7 +270,7 @@
                     {
                         "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
                         "label": "앱 및 도구 연결",
-                        "id": "services/Db2onCloud-conx_apps_tools",
+                        "id": "Db2onCloud-conx_apps_tools",
                         "properties": [
                             {
                                 "name": "type",
@@ -302,32 +302,32 @@
                     {
                         "href": "services/Db2onCloud/federation.html#overview",
                         "label": "데이터 가상화(연합)",
-                        "id": "services/Db2onCloud-overview",
+                        "id": "Db2onCloud-overview",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
                                 "label": "유스 케이스",
-                                "id": "services/Db2onCloud-use_cases",
+                                "id": "Db2onCloud-use_cases",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "데이터 소스 통합",
-                                        "id": "services/Db2onCloud--"
+                                        "id": "Db2onCloud--"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#db2-warehouse-on-cloud-",
                                         "label": "Db2 Warehouse on Cloud에 연결",
-                                        "id": "services/Db2onCloud-db2-warehouse-on-cloud-"
+                                        "id": "Db2onCloud-db2-warehouse-on-cloud-"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "다중 서버의 샤드된 데이터",
-                                        "id": "services/Db2onCloud--"
+                                        "id": "Db2onCloud--"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "고정된 한계를 초과하여 데이터베이스 용량 증가",
-                                        "id": "services/Db2onCloud--"
+                                        "id": "Db2onCloud--"
                                     }
                                 ],
                                 "properties": [
@@ -340,17 +340,17 @@
                             {
                                 "href": "services/Db2onCloud/federation.html#getting_started",
                                 "label": "시작하기",
-                                "id": "services/Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#db2-on-cloud-",
                                         "label": "Db2 on Cloud 대상 시스템의 경우",
-                                        "id": "services/Db2onCloud-db2-on-cloud-"
+                                        "id": "Db2onCloud-db2-on-cloud-"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-db2-on-cloud-",
                                         "label": "연합 소스로 사용 중인 Db2 on Cloud 시스템의 경우",
-                                        "id": "services/Db2onCloud--db2-on-cloud-"
+                                        "id": "Db2onCloud--db2-on-cloud-"
                                     }
                                 ],
                                 "properties": [
@@ -363,7 +363,7 @@
                             {
                                 "href": "services/Db2onCloud/federation.html#-",
                                 "label": "추가 정보",
-                                "id": "services/Db2onCloud--",
+                                "id": "Db2onCloud--",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -378,12 +378,12 @@
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
                 "label": "무료 라이트 플랜",
-                "id": "services/Db2onCloud-free_plan",
+                "id": "Db2onCloud-free_plan",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/free_plan.html#architecture",
                         "label": "아키텍처",
-                        "id": "services/Db2onCloud-architecture",
+                        "id": "Db2onCloud-architecture",
                         "properties": [
                             {
                                 "name": "type",
@@ -394,7 +394,7 @@
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
                         "label": "북아메리카 대륙 이외의 지역에서 라이트 플랜 사용",
-                        "id": "services/Db2onCloud-outside_na",
+                        "id": "Db2onCloud-outside_na",
                         "properties": [
                             {
                                 "name": "type",
@@ -413,7 +413,7 @@
             {
                 "href": "services/Db2onCloud/flex_scaling.html#scale",
                 "label": "유연한 스케일링",
-                "id": "services/Db2onCloud-scale",
+                "id": "Db2onCloud-scale",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -424,7 +424,7 @@
             {
                 "href": "services/Db2onCloud/br.html#br",
                 "label": "백업 및 복원",
-                "id": "services/Db2onCloud-br",
+                "id": "Db2onCloud-br",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -435,12 +435,12 @@
             {
                 "href": "services/Db2onCloud/ha.html#ha",
                 "label": "고가용성(HA)",
-                "id": "services/Db2onCloud-ha",
+                "id": "Db2onCloud-ha",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/ha.html#rule_14",
                         "label": "브라질: 보충 규칙 14(브라질 연방 정부를 위해 프로비저닝되는 시스템에 적용됨)",
-                        "id": "services/Db2onCloud-rule_14",
+                        "id": "Db2onCloud-rule_14",
                         "properties": [
                             {
                                 "name": "type",
@@ -451,7 +451,7 @@
                     {
                         "href": "services/Db2onCloud/ha.html#add_dr",
                         "label": "Geo-Replicated Disaster Recovery 노드 추가 방법",
-                        "id": "services/Db2onCloud-add_dr",
+                        "id": "Db2onCloud-add_dr",
                         "properties": [
                             {
                                 "name": "type",
@@ -462,7 +462,7 @@
                     {
                         "href": "services/Db2onCloud/ha.html#manage_ha_dr",
                         "label": "고가용성 및 재해 복구 노드 관리",
-                        "id": "services/Db2onCloud-manage_ha_dr",
+                        "id": "Db2onCloud-manage_ha_dr",
                         "properties": [
                             {
                                 "name": "type",
@@ -473,12 +473,12 @@
                     {
                         "href": "services/Db2onCloud/ha.html#faq",
                         "label": "FAQ",
-                        "id": "services/Db2onCloud-faq",
+                        "id": "Db2onCloud-faq",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/ha.html#-dr-db2-dns-ip-",
                                 "label": "인계 후 DR 노드에 대한 작업을 위해 Db2를 사용하는 애플리케이션에 필요한 변경사항은 무엇입니까? 인계 후 DNS 이름 또는 IP 주소가 변경됩니까?",
-                                "id": "services/Db2onCloud--dr-db2-dns-ip-"
+                                "id": "Db2onCloud--dr-db2-dns-ip-"
                             }
                         ],
                         "properties": [
@@ -512,17 +512,17 @@
                     {
                         "href": "services/Db2onCloud/dcw.html#dcw",
                         "label": "데이터베이스 호환성 평가",
-                        "id": "services/Db2onCloud-dcw"
+                        "id": "Db2onCloud-dcw"
                     },
                     {
                         "href": "services/Db2onCloud/migration.html#migration",
                         "label": "IBM Cloud로 데이터 마이그레이션",
-                        "id": "services/Db2onCloud-migration",
+                        "id": "Db2onCloud-migration",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/migration.html#cos",
                                 "label": "오브젝트 저장소에서 데이터 로드",
-                                "id": "services/Db2onCloud-cos",
+                                "id": "Db2onCloud-cos",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -533,17 +533,17 @@
                             {
                                 "href": "services/Db2onCloud/migration.html#onprem",
                                 "label": "온프레미스 시스템에서 데이터 마이그레이션",
-                                "id": "services/Db2onCloud-onprem",
+                                "id": "Db2onCloud-onprem",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/migration.html#lift",
                                         "label": "Lift CLI",
-                                        "id": "services/Db2onCloud-lift"
+                                        "id": "Db2onCloud-lift"
                                     },
                                     {
                                         "href": "services/Db2onCloud/migration.html#mdms",
                                         "label": "IBM Cloud Mass Data Migration",
-                                        "id": "services/Db2onCloud-mdms"
+                                        "id": "Db2onCloud-mdms"
                                     }
                                 ],
                                 "properties": [
@@ -560,7 +560,7 @@
             {
                 "href": "services/Db2onCloud/audit.html#audit",
                 "label": "감사",
-                "id": "services/Db2onCloud-audit",
+                "id": "Db2onCloud-audit",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -571,7 +571,7 @@
             {
                 "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
                 "label": "사용자 관리",
-                "id": "services/Db2onCloud-user_mgmt",
+                "id": "Db2onCloud-user_mgmt",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -582,7 +582,7 @@
             {
                 "href": "services/Db2onCloud/plans_cfgs.html#plans_cfgs",
                 "label": "플랜 및 구성",
-                "id": "services/Db2onCloud-plans_cfgs",
+                "id": "Db2onCloud-plans_cfgs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -593,12 +593,12 @@
             {
                 "href": "services/Db2onCloud/maintenance.html#-",
                 "label": "유지보수 및 알림 정책",
-                "id": "services/Db2onCloud--",
+                "id": "Db2onCloud--",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",
                         "label": "유지보수 정책",
-                        "id": "services/Db2onCloud-maintenance",
+                        "id": "Db2onCloud-maintenance",
                         "properties": [
                             {
                                 "name": "type",
@@ -609,7 +609,7 @@
                     {
                         "href": "services/Db2onCloud/maintenance.html#notification",
                         "label": "알림 정책",
-                        "id": "services/Db2onCloud-notification",
+                        "id": "Db2onCloud-notification",
                         "properties": [
                             {
                                 "name": "type",
@@ -628,7 +628,7 @@
             {
                 "href": "services/Db2onCloud/local_dev_env.html#local_dev",
                 "label": "로컬 개발 환경",
-                "id": "services/Db2onCloud-local_dev",
+                "id": "Db2onCloud-local_dev",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -639,7 +639,7 @@
             {
                 "href": "services/Db2onCloud/communities.html#communities",
                 "label": "커뮤니티",
-                "id": "services/Db2onCloud-communities",
+                "id": "Db2onCloud-communities",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -790,12 +790,12 @@
             {
                 "href": "services/Db2onCloud/help.html#help_support",
                 "label": "도움 및 지원",
-                "id": "services/Db2onCloud-help_support",
+                "id": "Db2onCloud-help_support",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/help.html#gettinghelp",
                         "label": "Db2 on Cloud에 대한 도움 및 지원 받기",
-                        "id": "services/Db2onCloud-gettinghelp",
+                        "id": "Db2onCloud-gettinghelp",
                         "properties": [
                             {
                                 "name": "type",

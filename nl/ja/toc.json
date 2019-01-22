@@ -27,27 +27,27 @@
             {
                 "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
                 "label": "概説",
-                "id": "services/Db2onCloud-getting_started_db2oncloud",
+                "id": "Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/index.html#interfaces",
                         "label": "インターフェース",
-                        "id": "services/Db2onCloud-interfaces",
+                        "id": "Db2onCloud-interfaces",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/index.html#web_console",
                                 "label": "Db2 on Cloud Web コンソール",
-                                "id": "services/Db2onCloud-web_console"
+                                "id": "Db2onCloud-web_console"
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#connect_apps",
                                 "label": "ローカル・コンピューターからアプリケーションまたは任意のツールを接続する",
-                                "id": "services/Db2onCloud-connect_apps"
+                                "id": "Db2onCloud-connect_apps"
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#data_src",
                                 "label": "IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する",
-                                "id": "services/Db2onCloud-data_src"
+                                "id": "Db2onCloud-data_src"
                             }
                         ],
                         "properties": [
@@ -60,7 +60,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#samples",
                         "label": "例",
-                        "id": "services/Db2onCloud-samples",
+                        "id": "Db2onCloud-samples",
                         "properties": [
                             {
                                 "name": "type",
@@ -71,7 +71,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#intro_vid",
                         "label": "ビデオ: Db2 on Cloud の紹介",
-                        "id": "services/Db2onCloud-intro_vid",
+                        "id": "Db2onCloud-intro_vid",
                         "properties": [
                             {
                                 "name": "type",
@@ -82,7 +82,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#vid_api",
                         "label": "ビデオ: REST API を使用した Db2 on Cloud との通信",
-                        "id": "services/Db2onCloud-vid_api",
+                        "id": "Db2onCloud-vid_api",
                         "properties": [
                             {
                                 "name": "type",
@@ -93,7 +93,7 @@
                     {
                         "href": "services/Db2onCloud/index.html#cognos_vid",
                         "label": "ビデオ: Jupyter ノートブックの統合",
-                        "id": "services/Db2onCloud-cognos_vid",
+                        "id": "Db2onCloud-cognos_vid",
                         "properties": [
                             {
                                 "name": "type",
@@ -112,7 +112,7 @@
             {
                 "href": "services/Db2onCloud/features_specs.html#overview",
                 "label": "フィーチャーおよび仕様",
-                "id": "services/Db2onCloud-overview",
+                "id": "Db2onCloud-overview",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -123,12 +123,12 @@
             {
                 "href": "services/Db2onCloud/iam.html#iam",
                 "label": "IBM Cloud での ID およびアクセス管理 (IAM)",
-                "id": "services/Db2onCloud-iam",
+                "id": "Db2onCloud-iam",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/iam.html#enabled",
                         "label": "インスタンスで IAM が使用可能かどうか",
-                        "id": "services/Db2onCloud-enabled",
+                        "id": "Db2onCloud-enabled",
                         "properties": [
                             {
                                 "name": "type",
@@ -139,7 +139,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#features",
                         "label": "IBM Cloud IAM のフィーチャー",
-                        "id": "services/Db2onCloud-features",
+                        "id": "Db2onCloud-features",
                         "properties": [
                             {
                                 "name": "type",
@@ -150,7 +150,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#connect",
                         "label": "クライアント接続およびユーザー・ログイン",
-                        "id": "services/Db2onCloud-connect",
+                        "id": "Db2onCloud-connect",
                         "properties": [
                             {
                                 "name": "type",
@@ -161,17 +161,17 @@
                     {
                         "href": "services/Db2onCloud/iam.html#sup-if",
                         "label": "サポートされるインターフェース",
-                        "id": "services/Db2onCloud-sup-if",
+                        "id": "Db2onCloud-sup-if",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
                                 "label": "ODBC および CLPPLUS",
-                                "id": "services/Db2onCloud-odbc-clpplus"
+                                "id": "Db2onCloud-odbc-clpplus"
                             },
                             {
                                 "href": "services/Db2onCloud/iam.html#jdbc",
                                 "label": "JDBC",
-                                "id": "services/Db2onCloud-jdbc"
+                                "id": "Db2onCloud-jdbc"
                             }
                         ],
                         "properties": [
@@ -184,7 +184,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#console-ux",
                         "label": "コンソール・ユーザー・エクスペリエンス",
-                        "id": "services/Db2onCloud-console-ux",
+                        "id": "Db2onCloud-console-ux",
                         "properties": [
                             {
                                 "name": "type",
@@ -195,7 +195,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#api",
                         "label": "REST API エクスペリエンス",
-                        "id": "services/Db2onCloud-api",
+                        "id": "Db2onCloud-api",
                         "properties": [
                             {
                                 "name": "type",
@@ -206,7 +206,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#fed",
                         "label": "IBM ID 統合",
-                        "id": "services/Db2onCloud-fed",
+                        "id": "Db2onCloud-fed",
                         "properties": [
                             {
                                 "name": "type",
@@ -217,7 +217,7 @@
                     {
                         "href": "services/Db2onCloud/iam.html#restrictions",
                         "label": "制約事項",
-                        "id": "services/Db2onCloud-restrictions",
+                        "id": "Db2onCloud-restrictions",
                         "properties": [
                             {
                                 "name": "type",
@@ -236,17 +236,17 @@
             {
                 "href": "services/Db2onCloud/connecting.html#connect",
                 "label": "接続",
-                "id": "services/Db2onCloud-connect",
+                "id": "Db2onCloud-connect",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/connecting.html#connect_prereq",
                         "label": "前提条件",
-                        "id": "services/Db2onCloud-connect_prereq",
+                        "id": "Db2onCloud-connect_prereq",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/connecting.html#cfg_env",
                                 "label": "環境の構成",
-                                "id": "services/Db2onCloud-cfg_env"
+                                "id": "Db2onCloud-cfg_env"
                             }
                         ],
                         "properties": [
@@ -259,7 +259,7 @@
                     {
                         "href": "services/Db2onCloud/connecting.html#conx_prgrm",
                         "label": "プログラムによる接続",
-                        "id": "services/Db2onCloud-conx_prgrm",
+                        "id": "Db2onCloud-conx_prgrm",
                         "properties": [
                             {
                                 "name": "type",
@@ -270,7 +270,7 @@
                     {
                         "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
                         "label": "アプリケーションとツールの接続",
-                        "id": "services/Db2onCloud-conx_apps_tools",
+                        "id": "Db2onCloud-conx_apps_tools",
                         "properties": [
                             {
                                 "name": "type",
@@ -302,32 +302,32 @@
                     {
                         "href": "services/Db2onCloud/federation.html#overview",
                         "label": "データ仮想化 (フェデレーション)",
-                        "id": "services/Db2onCloud-overview",
+                        "id": "Db2onCloud-overview",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
                                 "label": "ユース・ケース",
-                                "id": "services/Db2onCloud-use_cases",
+                                "id": "Db2onCloud-use_cases",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "データ・ソースの統合",
-                                        "id": "services/Db2onCloud--"
+                                        "id": "Db2onCloud--"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#db2-warehouse-on-cloud-",
                                         "label": "Db2 Warehouse on Cloud への接続",
-                                        "id": "services/Db2onCloud-db2-warehouse-on-cloud-"
+                                        "id": "Db2onCloud-db2-warehouse-on-cloud-"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "複数サーバーでのデータ・シャード",
-                                        "id": "services/Db2onCloud--"
+                                        "id": "Db2onCloud--"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-",
                                         "label": "制限を超えたデータベース容量の拡張",
-                                        "id": "services/Db2onCloud--"
+                                        "id": "Db2onCloud--"
                                     }
                                 ],
                                 "properties": [
@@ -340,17 +340,17 @@
                             {
                                 "href": "services/Db2onCloud/federation.html#getting_started",
                                 "label": "概説",
-                                "id": "services/Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#db2-on-cloud-",
                                         "label": "Db2 on Cloud ターゲット・マシン上:",
-                                        "id": "services/Db2onCloud-db2-on-cloud-"
+                                        "id": "Db2onCloud-db2-on-cloud-"
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#-db2-on-cloud-",
                                         "label": "フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:",
-                                        "id": "services/Db2onCloud--db2-on-cloud-"
+                                        "id": "Db2onCloud--db2-on-cloud-"
                                     }
                                 ],
                                 "properties": [
@@ -363,7 +363,7 @@
                             {
                                 "href": "services/Db2onCloud/federation.html#-",
                                 "label": "追加情報",
-                                "id": "services/Db2onCloud--",
+                                "id": "Db2onCloud--",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -378,12 +378,12 @@
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
                 "label": "無料 Lite プラン",
-                "id": "services/Db2onCloud-free_plan",
+                "id": "Db2onCloud-free_plan",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/free_plan.html#architecture",
                         "label": "アーキテクチャー",
-                        "id": "services/Db2onCloud-architecture",
+                        "id": "Db2onCloud-architecture",
                         "properties": [
                             {
                                 "name": "type",
@@ -394,7 +394,7 @@
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
                         "label": "北アメリカ大陸以外での Lite プランの利用",
-                        "id": "services/Db2onCloud-outside_na",
+                        "id": "Db2onCloud-outside_na",
                         "properties": [
                             {
                                 "name": "type",
@@ -413,7 +413,7 @@
             {
                 "href": "services/Db2onCloud/flex_scaling.html#scale",
                 "label": "柔軟なスケーリング",
-                "id": "services/Db2onCloud-scale",
+                "id": "Db2onCloud-scale",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -424,7 +424,7 @@
             {
                 "href": "services/Db2onCloud/br.html#br",
                 "label": "バックアップとリストア",
-                "id": "services/Db2onCloud-br",
+                "id": "Db2onCloud-br",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -435,12 +435,12 @@
             {
                 "href": "services/Db2onCloud/ha.html#ha",
                 "label": "高可用性 (HA)",
-                "id": "services/Db2onCloud-ha",
+                "id": "Db2onCloud-ha",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/ha.html#rule_14",
                         "label": "ブラジル: 補足ルール 14 (ブラジル連邦政府向けにプロビジョンされたシステムに適用されます)",
-                        "id": "services/Db2onCloud-rule_14",
+                        "id": "Db2onCloud-rule_14",
                         "properties": [
                             {
                                 "name": "type",
@@ -451,7 +451,7 @@
                     {
                         "href": "services/Db2onCloud/ha.html#add_dr",
                         "label": "Geo レプリケートされた災害復旧ノードの追加方法",
-                        "id": "services/Db2onCloud-add_dr",
+                        "id": "Db2onCloud-add_dr",
                         "properties": [
                             {
                                 "name": "type",
@@ -462,7 +462,7 @@
                     {
                         "href": "services/Db2onCloud/ha.html#manage_ha_dr",
                         "label": "高可用性および災害復旧ノードの管理",
-                        "id": "services/Db2onCloud-manage_ha_dr",
+                        "id": "Db2onCloud-manage_ha_dr",
                         "properties": [
                             {
                                 "name": "type",
@@ -473,12 +473,12 @@
                     {
                         "href": "services/Db2onCloud/ha.html#faq",
                         "label": "FAQ",
-                        "id": "services/Db2onCloud-faq",
+                        "id": "Db2onCloud-faq",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/ha.html#db2-dr-dns-ip-",
                                 "label": "DB2 を使用しているアプリケーションがテークオーバー後に DR ノードと連動するためには、何を変更する必要がありますか? テークオーバー後、DNS 名や IP アドレスは変更されますか?",
-                                "id": "services/Db2onCloud-db2-dr-dns-ip-"
+                                "id": "Db2onCloud-db2-dr-dns-ip-"
                             }
                         ],
                         "properties": [
@@ -512,17 +512,17 @@
                     {
                         "href": "services/Db2onCloud/dcw.html#dcw",
                         "label": "データベース互換性の評価",
-                        "id": "services/Db2onCloud-dcw"
+                        "id": "Db2onCloud-dcw"
                     },
                     {
                         "href": "services/Db2onCloud/migration.html#migration",
                         "label": "IBM Cloud へのデータ・マイグレーション",
-                        "id": "services/Db2onCloud-migration",
+                        "id": "Db2onCloud-migration",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/migration.html#cos",
                                 "label": "オブジェクト・ストアからのデータのロード",
-                                "id": "services/Db2onCloud-cos",
+                                "id": "Db2onCloud-cos",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -533,17 +533,17 @@
                             {
                                 "href": "services/Db2onCloud/migration.html#onprem",
                                 "label": "オンプレミス・システムからのデータのマイグレーション",
-                                "id": "services/Db2onCloud-onprem",
+                                "id": "Db2onCloud-onprem",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/migration.html#lift",
                                         "label": "Lift CLI",
-                                        "id": "services/Db2onCloud-lift"
+                                        "id": "Db2onCloud-lift"
                                     },
                                     {
                                         "href": "services/Db2onCloud/migration.html#mdms",
                                         "label": "IBM Cloud Mass Data Migration",
-                                        "id": "services/Db2onCloud-mdms"
+                                        "id": "Db2onCloud-mdms"
                                     }
                                 ],
                                 "properties": [
@@ -560,7 +560,7 @@
             {
                 "href": "services/Db2onCloud/audit.html#audit",
                 "label": "監査",
-                "id": "services/Db2onCloud-audit",
+                "id": "Db2onCloud-audit",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -571,7 +571,7 @@
             {
                 "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
                 "label": "ユーザーの管理",
-                "id": "services/Db2onCloud-user_mgmt",
+                "id": "Db2onCloud-user_mgmt",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -582,7 +582,7 @@
             {
                 "href": "services/Db2onCloud/plans_cfgs.html#plans_cfgs",
                 "label": "プランおよび構成",
-                "id": "services/Db2onCloud-plans_cfgs",
+                "id": "Db2onCloud-plans_cfgs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -593,12 +593,12 @@
             {
                 "href": "services/Db2onCloud/maintenance.html#-",
                 "label": "保守と通知に関するポリシー",
-                "id": "services/Db2onCloud--",
+                "id": "Db2onCloud--",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",
                         "label": "保守ポリシー",
-                        "id": "services/Db2onCloud-maintenance",
+                        "id": "Db2onCloud-maintenance",
                         "properties": [
                             {
                                 "name": "type",
@@ -609,7 +609,7 @@
                     {
                         "href": "services/Db2onCloud/maintenance.html#notification",
                         "label": "通知ポリシー",
-                        "id": "services/Db2onCloud-notification",
+                        "id": "Db2onCloud-notification",
                         "properties": [
                             {
                                 "name": "type",
@@ -628,7 +628,7 @@
             {
                 "href": "services/Db2onCloud/local_dev_env.html#local_dev",
                 "label": "ローカル開発環境",
-                "id": "services/Db2onCloud-local_dev",
+                "id": "Db2onCloud-local_dev",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -639,7 +639,7 @@
             {
                 "href": "services/Db2onCloud/communities.html#communities",
                 "label": "コミュニティー",
-                "id": "services/Db2onCloud-communities",
+                "id": "Db2onCloud-communities",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -790,12 +790,12 @@
             {
                 "href": "services/Db2onCloud/help.html#help_support",
                 "label": "ヘルプおよびサポート",
-                "id": "services/Db2onCloud-help_support",
+                "id": "Db2onCloud-help_support",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/help.html#gettinghelp",
                         "label": "Db2 on Cloud のヘルプおよびサポートの利用",
-                        "id": "services/Db2onCloud-gettinghelp",
+                        "id": "Db2onCloud-gettinghelp",
                         "properties": [
                             {
                                 "name": "type",
