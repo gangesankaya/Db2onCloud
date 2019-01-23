@@ -110,9 +110,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/features_specs.html#overview",
+                "href": "services/Db2onCloud/features_specs.html#fs",
                 "label": "Features & specs",
-                "id": "Db2onCloud-overview",
+                "id": "Db2onCloud-fs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -300,9 +300,9 @@
                 ],
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/federation.html#overview",
+                        "href": "services/Db2onCloud/federation.html#fed",
                         "label": "Data virtualization (federation)",
-                        "id": "Db2onCloud-overview",
+                        "id": "Db2onCloud-fed",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
@@ -677,9 +677,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/maintenance.html#maintenance-and-notification-policies",
+                "href": "services/Db2onCloud/maintenance.html#maint_note_pol",
                 "label": "Maintenance and notification policies",
-                "id": "Db2onCloud-maintenance-and-notification-policies",
+                "id": "Db2onCloud-maint_note_pol",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",
