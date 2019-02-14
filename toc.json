@@ -204,9 +204,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#fed",
+                        "href": "services/Db2onCloud/iam.html#fed_ibmid",
                         "label": "IBMid federation",
-                        "id": "Db2onCloud-fed",
+                        "id": "Db2onCloud-fed_ibmid",
                         "properties": [
                             {
                                 "name": "type",
@@ -475,9 +475,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/br.html#br",
+                "href": "services/Db2onCloud/br.html#bnr",
                 "label": "Backup and restore",
-                "id": "Db2onCloud-br",
+                "id": "Db2onCloud-bnr",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/br.html#point-in-time",

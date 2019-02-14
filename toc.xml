@@ -52,7 +52,7 @@
     <topic href="iam.html#api" label="REST API experience" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="IBMid federation" id="fed">
+    <topic href="iam.html#fed_ibmid" label="IBMid federation" id="fed_ibmid">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
@@ -118,7 +118,7 @@
   <topic href="flex_scaling.html#scale" label="Flexible scaling" id="scale">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="br.html#br" label="Backup and restore" id="br">
+  <topic href="br.html#bnr" label="Backup and restore" id="bnr">
     <property name="navgroup" value="learn"/>
     <topic href="br.html#point-in-time" label="Point-in-time restore" id="point-in-time">
       <property name="type" value="anchor"/>
