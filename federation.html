@@ -3,12 +3,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-10-26">
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/federation.md">
@@ -25,7 +26,6 @@
   <main role="main">
     <article aria-labelledby="fed" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-fed">
         <h1 id="fed">Data virtualization (federation)</h1>
         <p class="shortdesc">Db2 data virtualization (also known as federation) is supported by Db2 on Cloud. Data virtualization gives you single-query access to all of your data that is on multiple distributed databases anywhere in your organization. You can access data
@@ -40,21 +40,18 @@
             <!-- A company may have started their operations with an on-premises Db2 server. As cloud technology becomes more widespread and companies start to operate on cloud in a cost-effective fashion, there will be continued Cloud growth. However, the organization’s data on both sources remain as a critical component to their decision-making processes. By way of example, a client operating in retail industry needs to be able to access all data, say customer information, to run further analysis on their customers’ consumption behaviors. They need to be able to identify customers, match their records on cloud with already existing ones from an on-premises database and compose them as if the data is being retrieved from a single source. Federation capability here prevents the burdensome data migration process and allows the user to access the data without moving the data.
 
 located in the cloud and on-premises -->
-
           </section>
           <section id="section-attach-to-db2-warehouse-on-cloud">
             <h3 id="attach-to-db2-warehouse-on-cloud">Attach to Db2 Warehouse on Cloud</h3>
             <p>Users of products in the Db2 family can federate data from Db2 on Cloud and Db2 Warehouse on Cloud databases. From a common interface to access the data, you can easily add, query, and analyze your data without complex ETL processes and without
               any additional code.</p>
             <!-- Db2 family users would now be able to federate data between Db2 on Cloud and Db2 Warehouse on Cloud. By being provided a common interface for accessing the data, a user can now easily add or query data from or to the Warehouse without complex ETL processes or any additional code. -->
-
           </section>
           <section id="section-sharded-data-across-multiple-servers">
             <h3 id="sharded-data-across-multiple-servers">Sharded data across multiple servers</h3>
             <p>At times, you might choose to partition (shard) your data. With federation capabilities, sharded data can be queried with a unified interface. Federation gives you the ability to better balance your workloads, scale specific parts of an app,
               and create microservices that work together. </p>
             <!-- At times, users may choose to partition (shard). With federation capabilities, data can be queried with a unified interface and this lets the user better balance the workload, scale specific parts of an app or create microservices that work together. -->
-
           </section>
           <section id="section-increase-database-capacity-beyond-fixed-limits">
             <h3 id="increase-database-capacity-beyond-fixed-limits">Increase database capacity beyond fixed limits</h3>
@@ -62,7 +59,6 @@ located in the cloud and on-premises -->
               the capacity of a database with federation is useful for new development because developers don&#39;t need to change a database already in production. You can also federate between two Db2 on Cloud databases to increase the database capacity
               beyond the current limits of the Flex plan.</p>
             <!-- By using federation, users can increase capacity of an on premises database by federating to or from the cloud. This is a great option if your on premises database is running out of storage. Increased capacity will also be useful for new development as our users no longer need to change a database in production. You can also use this feature to federate between two Db2 on Cloud databases to increase the capacity beyond the current limits of the Flex plan. -->
-
           </section>
         </section>
         <section id="section-getting_started">
@@ -128,7 +124,6 @@ located in the cloud and on-premises -->
    For example:<br/>
    `db2 "select * from ntest1"`
 -->
-
           </section>
           <section id="section-on-a-db2-on-cloud-machine-being-used-as-a-federation-source">
             <h3 id="on-a-db2-on-cloud-machine-being-used-as-a-federation-source">On a Db2 on Cloud machine being used as a federation source</h3>

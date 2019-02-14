@@ -3,12 +3,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-21">
   <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/iam.md">
@@ -25,7 +26,6 @@
   <main role="main">
     <article aria-labelledby="iam" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-iam">
         <h1 id="iam">Identity and access management (IAM) on IBM Cloud</h1>
         <p class="shortdesc">Identity and access management (IAM) enables you to securely authenticate users for platform services and control access to resources consistently across the IBM Cloud platform. For example, with only a single login to IBM Cloud with your IBMid,
@@ -64,7 +64,6 @@
   &quot;https://iam.bluemix.net/identity/token&quot;
 </code></pre>
           <!-- `curl -k -X POST \ --header "Content-Type:application/x-www-form-urlencoded" \ --header "Accept: application/json" \ --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \ --data-urlencode "apikey=<apikey>" \ "https://iam.bluemix.net/identity/token"` -->
-
           <p>An access token identifies an IBMid user or a service ID to the database. The database server verifies the validity of the access token before accepting it. This is the best method if the application needs to connect to more than one database
             service instance or other IBM Cloud service instances because it minimizes the communication to the IAM service to validate the access token.</p>
           <p><strong>API key</strong></p>
