@@ -41,7 +41,7 @@
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#connect_apps",
-                                "label": "Connetti le applicazioni o i tuoi strumenti preferiti dal tuo computer locale",
+                                "label": "Installazione dei driver e dei client della riga di comando Db2 sul tuo computer",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
@@ -110,9 +110,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/features_specs.html#overview",
+                "href": "services/Db2onCloud/features_specs.html#fs",
                 "label": "Funzioni e specifiche",
-                "id": "Db2onCloud-overview",
+                "id": "Db2onCloud-fs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -165,7 +165,7 @@
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
-                                "label": "ODBC e CLPPLUS",
+                                "label": "ODBC, CLP e CLPPLUS",
                                 "id": "Db2onCloud-odbc-clpplus"
                             },
                             {
@@ -300,9 +300,9 @@
                 ],
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/federation.html#overview",
+                        "href": "services/Db2onCloud/federation.html#fed",
                         "label": "Virtualizzazione dei dati (federazione)",
-                        "id": "Db2onCloud-overview",
+                        "id": "Db2onCloud-fed",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
@@ -377,7 +377,7 @@
             },
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
-                "label": "Piano Lite gratuito",
+                "label": "Piano gratuito",
                 "id": "Db2onCloud-free_plan",
                 "topics": [
                     {
@@ -393,8 +393,61 @@
                     },
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
-                        "label": "Utilizzo del piano Lite al di fuori del Nord America continentale",
+                        "label": "Utilizzo del piano gratuito al di fuori del Nord America continentale",
                         "id": "Db2onCloud-outside_na",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/free_plan.html#fp_restrictions",
+                        "label": "Limitazioni del piano gratuito",
+                        "id": "Db2onCloud-fp_restrictions",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/plans_pricing.html#plans_pricing",
+                "label": "Piani e prezzi",
+                "id": "Db2onCloud-plans_pricing",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#plans_cfgs",
+                        "label": "Piani e configurazioni",
+                        "id": "Db2onCloud-plans_cfgs",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#pricing",
+                        "label": "Prezzi",
+                        "id": "Db2onCloud-pricing",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/plans_pricing.html#examples",
+                                "label": "Esempi di fatturazione",
+                                "id": "Db2onCloud-examples"
+                            }
+                        ],
                         "properties": [
                             {
                                 "name": "type",
@@ -425,6 +478,19 @@
                 "href": "services/Db2onCloud/br.html#br",
                 "label": "Backup e ripristino",
                 "id": "Db2onCloud-br",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/br.html#point-in-time",
+                        "label": "Ripristino del punto temporale",
+                        "id": "Db2onCloud-point-in-time",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
@@ -558,9 +624,40 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/audit.html#audit",
-                "label": "Controllo",
-                "id": "Db2onCloud-audit",
+                "href": "services/Db2onCloud/audit.html#aud-log-mon",
+                "label": "Controllo, registrazione e monitoraggio",
+                "id": "Db2onCloud-aud-log-mon",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/audit.html#auditing",
+                        "label": "Controllo",
+                        "id": "Db2onCloud-auditing",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/audit.html#log_mon",
+                        "label": "Registrazione e monitoraggio",
+                        "id": "Db2onCloud-log_mon",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/audit.html#overview",
+                                "label": "Una panoramica di base:",
+                                "id": "Db2onCloud-overview"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
@@ -580,20 +677,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/plans_cfgs.html#plans_cfgs",
-                "label": "Piani e configurazioni",
-                "id": "Db2onCloud-plans_cfgs",
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/maintenance.html#politiche-di-manutenzione-e-di-notifica",
+                "href": "services/Db2onCloud/maintenance.html#maint_note_pol",
                 "label": "Politiche di manutenzione e di notifica",
-                "id": "Db2onCloud-politiche-di-manutenzione-e-di-notifica",
+                "id": "Db2onCloud-maint_note_pol",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",

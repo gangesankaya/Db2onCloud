@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-09-18">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-21">
+  <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,7 +27,6 @@
   <main role="main">
     <article aria-labelledby="iam" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-iam">
         <h1 id="iam">Identity and access management (IAM) su IBM Cloud</h1>
         <p class="shortdesc">Identity and access management (IAM) ti abilita ad autenticare in modo sicuro gli utenti per i servizi della piattaforma e controllare l&#39;accesso alle risorse in modo coerente alla piattaforma IBM Cloud. Ad esempio, con un solo accesso a IBM
@@ -83,17 +84,18 @@
           <p>Sono supportate le seguenti interfacce client del database:</p>
           <ul>
             <li><a href="#odbc-clpplus">ODBC</a></li>
+            <li><a href="#odbc-clpplus">CLP</a></li>
             <li><a href="#odbc-clpplus">CLPPLUS</a></li>
             <li><a href="#jdbc">JDBC</a></li>
           </ul>
           <section id="section-odbc-clpplus">
-            <h3 id="odbc-clpplus">ODBC e CLPPLUS</h3>
-            <p>Per un&#39;applicazione ODBC o un client riga di comando (CLPPLUS) per connettersi a un server Db2 utilizzando l&#39;autenticazione IAM, deve essere prima configurato un nome dell&#39;origine dati (DSN) in un file di configurazione <code>db2dsdriver.cfg</code>,
-              immettendo il seguente comando:</p>
+            <h3 id="odbc-clpplus">ODBC, CLP e CLPPLUS</h3>
+            <p>Per un&#39;applicazione ODBC o un client riga di comando (CLP, CLPPLUS) per connettersi a un server Db2 utilizzando l&#39;autenticazione IAM, deve essere prima configurato un nome dell&#39;origine dati (DSN) in un file di configurazione <code>db2dsdriver.cfg</code>,
+              immettendo il seguente comando: </p>
             <p><code>db2cli writecfg add -dsn &lt;dsn_alias&gt; -database &lt;database_name&gt; -host &lt;host_name_or_IP_address&gt; -port 50001 -parameter &quot;Authentication=GSSPLUGIN;SecurityTransportMode=SSL&quot;</code></p>
             <p>Il file di configurazione <code>db2dsdriver.cfg</code> è un file XML, normalmente ubicato nella directory <code>sqllib/cfg</code>, che contiene un elenco di alias DSN e le relative proprietà.</p>
             <p>Il seguente esempio di un file di configurazione di <code>db2dsdriver.cfg</code> mostra le configurazioni utilizzate per stabilire una connessione a un&#39;istanza del servizio database. Il file di configurazione fornisce l&#39;alias DSN,
-              il nome del database, il nome host (o l&#39;indirizzo IP) e il tipo <strong>Authentication</strong> e i valori del parametro <strong>SecurityTransportMode</strong>: </p>
+              il nome del database, il nome host (o l&#39;indirizzo IP) e il tipo <strong>Authentication</strong> e i valori del parametro <strong>SecurityTransportMode</strong>:</p>
             <pre><code class="hljs">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot; ?&gt;
 &lt;configuration&gt;
         &lt;dsncollection&gt;
@@ -119,7 +121,21 @@
                 <p> Per ODBC, può essere specificato <strong>AUTHENTICATION=GSSPLUGIN</strong> nel file di configurazione <code>db2dsdriver.cfg</code> o nella stringa di connessione dell&#39;applicazione.</p>
               </li>
               <li>
-                <p>Il comando di connessione CLPPLUS può contenere uno dei seguenti:</p>
+                <p>L&#39;istruzione CLP CONNECT può contenere uno dei seguenti: </p>
+                <p> <strong>Token di accesso</strong></p>
+                <p> Collegati al server database <code>&lt;database_server_name&gt;</code> e passa il token di accesso immettendo il seguente comando allo script o prompt del comando CLP:</p>
+                <p> <code>CONNECT TO &lt;database_server_name&gt; ACCESSTOKEN &lt;access_token_string&gt;</code></p>
+                <p> <strong>Chiave API</strong></p>
+                <p> Collegati al server database <code>&lt;database_server_name&gt;</code> con una chiave API immettendo il seguente comando allo script o prompt del comando CLP:</p>
+                <p> <code>CONNECT TO &lt;database_server_name&gt; APIKEY &lt;api-key-string&gt;</code></p>
+                <p> <strong>ID IBM/password</strong></p>
+                <p> Collegati al server database <code>&lt;database_server_name&gt;</code> con un ID IBM/password immettendo il seguente comando allo script o prompt del comando CLP:</p>
+                <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
+                <p> Per ulteriori dettagli sulla connessione a un server database con CLP, consulta: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.
+                  </p>
+              </li>
+              <li>
+                <p>L&#39;istruzione CLPPLUS CONNECT può contenere uno dei seguenti: </p>
                 <p> <strong>Token di accesso</strong></p>
                 <p> Connettiti all&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) e passa il token di accesso immettendo il seguente comando allo script o prompt del comando CLPPLUS:</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
@@ -149,6 +165,9 @@ dataSource.setPluginName( &quot;IBMIAMauth&quot; );
 dataSource.setAccessToken( &quot;&lt;access_token&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
+            <p>o</p>
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:accessToken=&lt;access_token&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+</code></pre>
             <p><strong>Chiave API</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
 
@@ -161,6 +180,9 @@ dataSource.setPluginName( &quot;IBMIAMauth&quot; );
 dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
+            <p>o</p>
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apikey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+</code></pre>
             <p><strong>ID IBM/password</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
 
@@ -170,7 +192,10 @@ dataSource.setServerName( &quot;&lt;host_name_or_IP_address&gt;&quot; );
 dataSource.setPortNumber( 50001 );
 dataSource.setSecurityMechanism( com.ibm.db2.jcc.DB2BaseDataSource.PLUGIN_SECURITY );
 dataSource.setPluginName( &quot;IBMIAMauth&quot; );
-Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&lt;password&gt;&quot; );
+Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt;password&gt;&quot; );
+</code></pre>
+            <p>o</p>
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:user=&lt;IBMid&gt;;password=&lt;password&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
           </section>
         </section>
@@ -179,7 +204,7 @@ Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&
           <p>La pagina di accesso della console di servizio ha l&#39;opzione di accedere con i tuoi ID IBM e password. Dopo aver fatto clic sul pulsante <strong>Sign In via IBMid</strong>, l&#39;utente viene indirizzato alla pagina di accesso IAM, su cui
             viene immessa la password. Quando l&#39;autenticazione è stata completata, l&#39;utente viene reindirizzato nuovamente alla console. Prima di eseguire correttamente l&#39;accesso, l&#39;ID IBM deve essere aggiunto a ogni istanza del servizio
             database dall&#39;amministratore del database tramite la console o l&#39;API REST. Proprio come per un utente non ID IBM, un ID utente per l&#39;istanza del servizio database deve essere immesso nello stesso momento in cui viene aggiunto l&#39;utente
-            ID IBM. L&#39;ID utente deve essere univoco all&#39;interno dell&#39;istanza del servizio database. Questo ID utente è anche l&#39;ID di autorizzazione (AUTH) all&#39;interno del database. </p>
+            ID IBM. L&#39;ID utente deve essere univoco all&#39;interno dell&#39;istanza del servizio database. Questo ID utente è anche l&#39;ID di autorizzazione (AUTH) all&#39;interno del database.</p>
         </section>
         <section id="section-api">
           <h2 id="api">Esperienza API REST</h2>
@@ -188,7 +213,7 @@ Connection conn = dataSource.getConnection( &quot;&lt;user_ID&gt;&quot;, &quot;&
             <li>
               <p>Per aggiungere un nuovo utente ID IBM, esegui la seguente chiamata API di esempio:</p>
               <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
-              <p><strong>Nota</strong>: il valore <code>&lt;userid&gt;</code> per <code>&quot;id&quot;</code> e <code>&quot;ibmid&quot;</code> non deve essere lo stesso. I due ID diversi non sono collegati in alcun modo.</p>
+              <p class="note">Il valore <code>&lt;userid&gt;</code> per <code>&quot;id&quot;</code> e <code>&quot;ibmid&quot;</code> non deve essere lo stesso. I due ID diversi non sono collegati in alcun modo.</p>
             </li>
             <li>
               <p>Per migrare un utente del database non ID IBM esistente (ad esempio, <code>abcuser</code>) e farne un utente ID IBM, elimina prima l&#39;ID utente non ID IBM eseguendo la seguente chiamata API di esempio:</p>
@@ -231,9 +256,5 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

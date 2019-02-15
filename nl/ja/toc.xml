@@ -11,7 +11,7 @@
     <topic href="index.html#interfaces" label="インターフェース" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="index.html#web_console" label="Db2 on Cloud Web コンソール" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="ローカル・コンピューターからアプリケーションまたは任意のツールを接続する" id="connect_apps"></topic>
+      <topic href="index.html#connect_apps" label="ご使用のコンピューターへの Db2 コマンド・ライン・クライアントおよびドライバーのインストール" id="connect_apps"></topic>
       <topic href="index.html#data_src" label="IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する" id="data_src"></topic>
     </topic>
     <topic href="index.html#samples" label="例" id="samples">
@@ -27,7 +27,7 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#overview" label="フィーチャーおよび仕様" id="overview">
+  <topic href="features_specs.html#fs" label="フィーチャーおよび仕様" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="iam.html#iam" label="IBM Cloud での ID およびアクセス管理 (IAM)" id="iam">
@@ -43,7 +43,7 @@
     </topic>
     <topic href="iam.html#sup-if" label="サポートされるインターフェース" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC および CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC、CLP、および CLPPLUS" id="odbc-clpplus"></topic>
       <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
     <topic href="iam.html#console-ux" label="コンソール・ユーザー・エクスペリエンス" id="console-ux">
@@ -75,7 +75,7 @@
   <topic label="別の Db2 データベースへの接続">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="別の Db2 データベースへの接続"/>
-    <topic href="federation.html#overview" label="データ仮想化 (フェデレーション)" id="overview">
+    <topic href="federation.html#fed" label="データ仮想化 (フェデレーション)" id="fed">
       <topic href="federation.html#use_cases" label="ユース・ケース" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#-" label="データ・ソースの統合" id="-"></topic>
@@ -93,13 +93,26 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="無料 Lite プラン" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="無料プラン" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="アーキテクチャー" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="北アメリカ大陸以外での Lite プランの利用" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="北アメリカ大陸以外での無料プランの使用" id="outside_na">
       <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="無料プランの制約事項" id="fp_restrictions">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="plans_pricing.html#plans_pricing" label="プランと料金" id="plans_pricing">
+    <property name="navgroup" value="learn"/>
+    <topic href="plans_pricing.html#plans_cfgs" label="プランおよび構成" id="plans_cfgs">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="plans_pricing.html#pricing" label="料金" id="pricing">
+      <property name="type" value="anchor"/>
+      <topic href="plans_pricing.html#examples" label="請求例" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="柔軟なスケーリング" id="scale">
@@ -107,6 +120,9 @@
   </topic>
   <topic href="br.html#br" label="バックアップとリストア" id="br">
     <property name="navgroup" value="learn"/>
+    <topic href="br.html#point-in-time" label="ポイント・イン・タイム・リストア" id="point-in-time">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="ha.html#ha" label="高可用性 (HA)" id="ha">
     <property name="navgroup" value="learn"/>
@@ -139,16 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="監査" id="audit">
+  <topic href="audit.html#aud-log-mon" label="監査、ロギング、およびモニタリング" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#auditing" label="監査" id="auditing">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="ロギングとモニタリング" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="基本的概要" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="ユーザーの管理" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="plans_cfgs.html#plans_cfgs" label="プランおよび構成" id="plans_cfgs">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="maintenance.html#-" label="保守と通知に関するポリシー" id="-">
+  <topic href="maintenance.html#maint_note_pol" label="保守と通知に関するポリシー" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="保守ポリシー" id="maintenance">
       <property name="type" value="anchor"/>
@@ -202,13 +222,12 @@
   <topic href="http://ibm.biz/db2oc_api" label="REST API">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL リファレンス">
-    <property name="navgroup" value="howto"/>
-  </topic>
+</toc>
+<topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL リファレンス">
   <topic href="help.html#help_support" label="ヘルプおよびサポート" id="help_support">
     <property name="navgroup" value="help"/>
     <topic href="help.html#gettinghelp" label="Db2 on Cloud のヘルプおよびサポートの利用" id="gettinghelp">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-</toc>
+</topic>

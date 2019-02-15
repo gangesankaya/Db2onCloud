@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-02">
   <meta name="dcterms.date" content="2019-01-02">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
   <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/index.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,7 +27,6 @@
   <main role="main">
     <article aria-labelledby="getting_started_db2oncloud" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-getting_started_db2oncloud">
         <h1 id="getting_started_db2oncloud">Getting started</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud is an SQL database provisioned for you in the cloud. You can use Db2 on Cloud just as you would use any database software, but without the overhead and expense of hardware setup or software installation and maintenance.
@@ -37,7 +38,6 @@
         <!-- ## Free trial
 
 You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
-
         <section id="section-interfaces">
           <h2 id="interfaces">Interfaces</h2>
           <p class="shortdesc">You can work with your Db2 on Cloud database in the following ways:</p>
@@ -52,9 +52,7 @@ You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days o
             <p class="shortdesc">The web console provides a graphical interface for everything that you need to use your database, including: load facilities, an SQL editor, driver downloads, and more.</p>
             <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
             <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
-
             <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
-
             <p>You can access your Db2 on Cloud web console in the following ways:</p>
             <ul>
               <li>From your IBM Cloud dashboard - You can open the web console from the Service Details page for your IBM Db2 on Cloud service.</li>
@@ -64,14 +62,12 @@ You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days o
 
 With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
 {: shortdesc} -->
-
           </section>
           <section id="section-connect_apps">
             <h3 id="connect_apps">Installing Db2 command line clients and drivers on your computer</h3>
             <p class="shortdesc">Most users can skip this step. In most cases, users tend to use only the REST API, or install drivers for a framework, for example, with Python&#39;s <code>pip</code> command. However, power users might want to use the Db2 command line client
               to administer their database and use Db2 commands. Also, certain ODBC or JDBC applications can benefit from a general installation of Db2 drivers. If so, complete the following steps:</p>
             <!-- Drivers on site are broken so taking out this one -Simon. 1. Download the [driver package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html){:new_window} from the Connection info page of the Db2 on Cloud web console.-->
-
             <ol>
               <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">Install the driver package <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>                on the computer where your apps or tools are running.</li>
               <li><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">Configure the driver files <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>                for your Db2 on Cloud database.</li>
@@ -136,32 +132,27 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
             <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank">PHP <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
               <!-- * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:new_window} -->
               <!-- * [Db2 on Cloud samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld){:new_window} -->
-
             </li>
           </ul>
         </section>
         <section id="section-intro_vid">
           <h2 id="intro_vid">Video: Introducing Db2 on Cloud</h2>
           <p>Watch this video to see an introduction to Db2 on Cloud.</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer1" title="Introduction to Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/F_ylk44_WOg?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer1" title="Introduction to Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/F_ylk44_WOg?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
         <section id="section-vid_api">
           <h2 id="vid_api">Video: Using REST API to communicate with Db2 on Cloud</h2>
           <p>Watch this video to see the steps required to use a RESTful API to communicate with Db2 on Cloud.</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer2" title="Using RESTful API to communicate with Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/PSNBDwgf9ts?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
+          <iframe class="embed-responsive-item" id="youtubeplayer2" title="Using RESTful API to communicate with Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/PSNBDwgf9ts?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen
             allowfullscreen> </iframe>
         </section>
         <section id="section-cognos_vid">
           <h2 id="cognos_vid">Video: Integrating Jupyter notebooks</h2>
           <p>Watch this video to see how to integrate Jupyter notebooks with Db2 on Cloud.</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer3" title="Integrating Jupyter notebooks" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer3" title="Integrating Jupyter notebooks" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

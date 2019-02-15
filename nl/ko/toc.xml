@@ -11,7 +11,7 @@
     <topic href="index.html#interfaces" label="인터페이스" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="index.html#web_console" label="Db2 on Cloud 웹 콘솔" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="로컬 컴퓨터에서 애플리케이션 또는 선호하는 도구 연결" id="connect_apps"></topic>
+      <topic href="index.html#connect_apps" label="컴퓨터에 Db2 명령행 클라이언트 및 드라이버 설치" id="connect_apps"></topic>
       <topic href="index.html#data_src" label="IBM Cloud 앱 또는 서비스의 데이터 소스로 Db2 on Cloud 사용" id="data_src"></topic>
     </topic>
     <topic href="index.html#samples" label="샘플" id="samples">
@@ -27,7 +27,7 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#overview" label="기능 &amp; 사양" id="overview">
+  <topic href="features_specs.html#fs" label="기능 &amp; 사양" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="iam.html#iam" label="IBM Cloud의 IAM(Identity and Access Management)" id="iam">
@@ -43,7 +43,7 @@
     </topic>
     <topic href="iam.html#sup-if" label="지원되는 인터페이스" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC 및 CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC, CLP 및 CLPPLUS" id="odbc-clpplus"></topic>
       <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
     <topic href="iam.html#console-ux" label="콘솔 사용자 환경" id="console-ux">
@@ -75,7 +75,7 @@
   <topic label="다른 Db2 데이터베이스에 연결">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="다른 Db2 데이터베이스에 연결"/>
-    <topic href="federation.html#overview" label="데이터 가상화(연합)" id="overview">
+    <topic href="federation.html#fed" label="데이터 가상화(연합)" id="fed">
       <topic href="federation.html#use_cases" label="유스 케이스" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#-" label="데이터 소스 통합" id="-"></topic>
@@ -93,13 +93,26 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="무료 라이트 플랜" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="무료 플랜" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="아키텍처" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="북아메리카 대륙 이외의 지역에서 라이트 플랜 사용" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="북아메리카 대륙 이외의 지역에서 무료 플랜 사용" id="outside_na">
       <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="무료 플랜 제한사항" id="fp_restrictions">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="plans_pricing.html#plans_pricing" label="플랜 및 가격" id="plans_pricing">
+    <property name="navgroup" value="learn"/>
+    <topic href="plans_pricing.html#plans_cfgs" label="플랜 및 구성" id="plans_cfgs">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="plans_pricing.html#pricing" label="가격" id="pricing">
+      <property name="type" value="anchor"/>
+      <topic href="plans_pricing.html#examples" label="청구 예" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="유연한 스케일링" id="scale">
@@ -107,6 +120,9 @@
   </topic>
   <topic href="br.html#br" label="백업 및 복원" id="br">
     <property name="navgroup" value="learn"/>
+    <topic href="br.html#point-in-time" label="특정 시점 복원" id="point-in-time">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="ha.html#ha" label="고가용성(HA)" id="ha">
     <property name="navgroup" value="learn"/>
@@ -139,16 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="감사" id="audit">
+  <topic href="audit.html#aud-log-mon" label="감사, 로깅 및 모니터링" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#auditing" label="감사" id="auditing">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="로깅 및 모니터링" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="기본 개요:" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="사용자 관리" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="plans_cfgs.html#plans_cfgs" label="플랜 및 구성" id="plans_cfgs">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="maintenance.html#-" label="유지보수 및 알림 정책" id="-">
+  <topic href="maintenance.html#maint_note_pol" label="유지보수 및 알림 정책" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="유지보수 정책" id="maintenance">
       <property name="type" value="anchor"/>

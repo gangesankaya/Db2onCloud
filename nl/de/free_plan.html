@@ -3,53 +3,154 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-05-03">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-12-07">
+  <meta name="dcterms.date" content="2018-12-07">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Kostenfreier Lite-Plan</title>
+  <title>Kostenfreier Plan</title>
 </head>
 
 <body>
   <main role="main">
     <article aria-labelledby="free_plan" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-free_plan">
-        <h1 id="free_plan">Kostenfreier Lite-Plan</h1>
-        <p class="shortdesc">Mit dem kostenfreien Lite-Plan für IBM&reg; Db2&reg; on Cloud stehen Basisressourcen zur Verfügung, die Sie kostenfrei nutzen können, um sich mit Db2 vertraut zu machen und Entwicklungsaufgaben durchzuführen.</p>
+        <h1 id="free_plan">Kostenfreier Plan</h1>
+        <p class="shortdesc">Mit dem kostenfreien Plan für IBM&reg; Db2&reg; on Cloud stehen Basisressourcen zur Verfügung, die Sie kostenfrei nutzen können, um sich mit Db2 vertraut zu machen und Entwicklungsaufgaben durchzuführen.</p>
         <p>Für den kostenfreien Plan gilt kein Zeitlimit, die Benutzer müssen den kostenfreien Plan jedoch alle 30 Tage verlängern.</p>
         <p>Es steht lediglich Community-Unterstützung zur Verfügung. </p>
         <section id="section-architecture">
           <h2 id="architecture">Architektur</h2>
-          <p>Im Gegensatz zu anderen Db2 on Cloud-Plänen wird der kostenfreie Lite-Plan von Db2 on Cloud mit einem Multi-Tenant-System ausgeführt. Der Flex-Plan und der Precise Performance-Plan werden auf eigenen virtuellen Einzeltenantmaschinen oder Bare-Metal-Servern
+          <p>Im Gegensatz zu anderen Db2 on Cloud-Plänen wird der kostenfreie Plan von Db2 on Cloud mit einem Multi-Tenant-System ausgeführt. Der Flex-Plan und der Precise Performance-Plan werden auf eigenen virtuellen Einzeltenantmaschinen oder Bare-Metal-Servern
             ausgeführt.</p>
-          <p>Der kostenfreie Plan ermöglicht die Verwendung eines einzelnen Datenbankschemas.</p>
-          <p>Weitere Informationen zum kostenfreien Lite-Plan für Db2 on Cloud finden Sie im Abschnitt mit <a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">häufigen Fragen<img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.</p>
+          <p>Der kostenfreie Plan ermöglicht die Verwendung eines einzelnen Datenbankschemas. </p>
+          <p>Weitere Informationen zum kostenfreien Db2 on Cloud-Plan finden Sie auf der Seite mit den <a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">häufig gestellten Fragen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.
+            </p>
         </section>
         <section id="section-outside_na">
-          <h2 id="outside_na">Lite-Plan außerhalb des nordamerikanischen Festlands verwenden</h2>
-          <p>Der kostenfreie Lite-Plan ist zurzeit ohne Kreditkarte für das nordamerikanische Festland verfügbar. Außerhalb des nordamerikanischen Festlands müssen Kunden eine Kreditkarte zu ihrem IBM Cloud-Konto hinzufügen und dann die Region &quot;USA
-            (Süden) - Dallas&quot; auswählen, damit der kostenfreie Lite-Plan ausgewählt werden kann.</p>
-          <p>Der Lite-Plan ist stets kostenfrei und die Kreditkarte wird nicht belastet.</p>
+          <h2 id="outside_na">Den kostenfreien Plan außerhalb des nordamerikanischen Festlands verwenden</h2>
+          <p>Der kostenfreie Plan ist zurzeit ohne Kreditkarte für das nordamerikanische Festland verfügbar. Außerhalb des nordamerikanischen Festlands müssen Kunden eine Kreditkarte zu ihrem IBM Cloud-Konto hinzufügen und dann die Region &quot;USA (Süden)
+            - Dallas&quot; auswählen, damit der kostenfreie Plan ausgewählt werden kann.</p>
+          <p>Für den kostenfreien Plan fallen keine Gebühren an und die Kreditkarte wird nicht belastet.</p>
+        </section>
+        <section id="section-fp_restrictions">
+          <h2 id="fp_restrictions">Einschränkungen des kostenfreien Plans</h2>
+          <p class="important">Für geschäftskritische oder leistungskritische Workloads wird die Verwendung eines auf das Unternehmen abgestimmten Serviceplans anstelle eines kostenfreien Serviceplans unbedingt empfohlen.</p>
+          <p>In der folgenden Tabelle sind die Einschränkungen des kostenfreien Db2 on Cloud-Plans aufgeführt: </p>
+          <table>
+            <caption caption-side="top">Tabelle 1. Einschränkungen des Db2 on Cloud-Einstiegsplans</caption>
+            <thead>
+              <tr>
+                <th>Kategorie</th>
+                <th>Element</th>
+                <th>Einschränkung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ressourcen</td>
+                <td>Speicher</td>
+                <td>200 MB Speicher pro Benutzer</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Verbindungen</td>
+                <td>5 Verbindungen pro Benutzer</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Leistung</td>
+                <td>Die Leistung kann aufgrund von Workloads, die von anderen Benutzern im Multi-Tenant-System ausgeführt werden, fluktuieren.</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Features &amp; Funktionen</td>
+                <td>Föderierung</td>
+                <td>Nicht unterstützt</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Oracle-Kompatibilität</td>
+                <td>Nicht unterstützt</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Benutzerdefinierte Erweiterungen (UDFs)</td>
+                <td>In keinem der Db2 on Cloud-Pläne unterstützt, auch nicht im kostenfreien Plan</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Benutzerverwaltung</td>
+                <td>Benutzer erhält keine Administratorberechtigung</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Zugriffssteuerung für Zeilen und Spalten (RCAC)</td>
+                <td>Nicht unterstützt</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>IBM InfoSphere Data Replication zur Verwendung beim Laden von Daten</td>
+                <td>Nicht unterstützt</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Netzumgebung</td>
+                <td>IBM Cloud Integrated Analytics</td>
+                <td>Nicht unterstützt</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>IBM Cloud Dedicated</td>
+                <td>Nicht unterstützt</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Einhaltung von Sicherheitsbestimmungen</td>
+                <td>Health Information Portability and Accountability Act von 1996 (HIPAA)</td>
+                <td>Nicht unterstützt. Siehe Servicebeschreibung.</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Datenschutz-Grundverordnung der EU (DSGVO)</td>
+                <td>Nicht unterstützt. Siehe Servicebeschreibung.</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Kontoverwaltung</td>
+                <td>Reaktivierung</td>
+                <td>Reaktivierung alle 30 Tage erforderlich. Wird keine Reaktivierung vorgenommen, werden die Services des kostenfreien Plans 60 Tage später gelöscht.</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

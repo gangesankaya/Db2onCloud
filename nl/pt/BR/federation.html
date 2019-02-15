@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-10-26">
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -23,11 +25,10 @@
 
 <body>
   <main role="main">
-    <article aria-labelledby="overview" role="article">
+    <article aria-labelledby="fed" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-overview">
-        <h1 id="overview">Virtualização de dados (federação)</h1>
+      <section id="section-fed">
+        <h1 id="fed">Virtualização de dados (federação)</h1>
         <p class="shortdesc">A virtualização de dados do Db2 (também conhecida como federação) é suportada pelo Db2 on Cloud. A virtualização de dados fornece acesso de consulta única a todos os seus dados que estão em múltiplos bancos de dados distribuídos em qualquer lugar
           em sua organização. É possível acessar dados que estão em qualquer uma das origens de dados Db2 ou Informix, tanto na nuvem quanto no local. </p>
         <p>Essa função é suportada em todas as versões do Db2 on Cloud, exceto para o plano Lite grátis. No entanto, é possível usar o plano Lite como um destino do qual é possível puxar dados.</p>
@@ -40,21 +41,18 @@
             <!-- A company may have started their operations with an on-premises Db2 server. As cloud technology becomes more widespread and companies start to operate on cloud in a cost-effective fashion, there will be continued Cloud growth. However, the organization’s data on both sources remain as a critical component to their decision-making processes. By way of example, a client operating in retail industry needs to be able to access all data, say customer information, to run further analysis on their customers’ consumption behaviors. They need to be able to identify customers, match their records on cloud with already existing ones from an on-premises database and compose them as if the data is being retrieved from a single source. Federation capability here prevents the burdensome data migration process and allows the user to access the data without moving the data.
 
 located in the cloud and on-premises -->
-
           </section>
           <section id="section-conectar-ao-db2-warehouse-on-cloud">
             <h3 id="conectar-ao-db2-warehouse-on-cloud">Conectar ao Db2 Warehouse on Cloud</h3>
             <p>Os usuários de produtos da família Db2 podem federar dados dos bancos de dados Db2 on Cloud e Db2 Warehouse on Cloud. Em uma interface comum para acessar os dados, é possível incluir, consultar e analisar facilmente seus dados sem processos
               ETL complexos e sem qualquer código adicional.</p>
             <!-- Db2 family users would now be able to federate data between Db2 on Cloud and Db2 Warehouse on Cloud. By being provided a common interface for accessing the data, a user can now easily add or query data from or to the Warehouse without complex ETL processes or any additional code. -->
-
           </section>
           <section id="section-dados-compartilhados-entre-m-ltiplos-servidores">
             <h3 id="dados-compartilhados-entre-m-ltiplos-servidores">Dados compartilhados entre múltiplos servidores</h3>
             <p>Talvez você escolha particionar (shard) seus dados algumas vezes. Com os recursos de federação, os dados em shard podem ser consultados com uma interface unificada. A federação fornece a capacidade de equilibrar melhor suas cargas de trabalho,
               escalar partes específicas de um app e criar microsserviços que funcionem juntos. </p>
             <!-- At times, users may choose to partition (shard). With federation capabilities, data can be queried with a unified interface and this lets the user better balance the workload, scale specific parts of an app or create microservices that work together. -->
-
           </section>
           <section id="section-aumentar-a-capacidade-do-banco-de-dados-al-m-dos-limites-fixos">
             <h3 id="aumentar-a-capacidade-do-banco-de-dados-al-m-dos-limites-fixos">Aumentar a capacidade do banco de dados além dos limites fixos</h3>
@@ -62,7 +60,6 @@ located in the cloud and on-premises -->
               do armazenamento. Aumentar a capacidade de um banco de dados com federação é útil para o novo desenvolvimento porque os desenvolvedores não precisam mudar um banco de dados já em produção. Também é possível federar entre dois bancos de dados
               Db2 on Cloud para aumentar a capacidade do banco de dados além dos limites atuais do plano Flex.</p>
             <!-- By using federation, users can increase capacity of an on premises database by federating to or from the cloud. This is a great option if your on premises database is running out of storage. Increased capacity will also be useful for new development as our users no longer need to change a database in production. You can also use this feature to federate between two Db2 on Cloud databases to increase the capacity beyond the current limits of the Flex plan. -->
-
           </section>
         </section>
         <section id="section-getting_started">
@@ -128,7 +125,6 @@ located in the cloud and on-premises -->
    For example:<br/>
    `db2 "select * from ntest1"`
 -->
-
           </section>
           <section id="section-em-uma-m-quina-do-db2-on-cloud-sendo-usada-como-uma-origem-de-federa-o">
             <h3 id="em-uma-m-quina-do-db2-on-cloud-sendo-usada-como-uma-origem-de-federa-o">Em uma máquina do Db2 on Cloud sendo usada como uma origem de federação</h3>
@@ -170,9 +166,5 @@ located in the cloud and on-premises -->
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <topic href="index.html#interfaces" label="Interfaces" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="index.html#web_console" label="Console Web Db2 on Cloud" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="Connectez des applications ou vos outils préférés depuis votre ordinateur local" id="connect_apps"></topic>
+      <topic href="index.html#connect_apps" label="Installation des pilotes et des clients de ligne de commande Db2 sur votre ordinateur" id="connect_apps"></topic>
       <topic href="index.html#data_src" label="Utilisez Db2 on Cloud comme source de données pour vos applications ou services IBM Cloud" id="data_src"></topic>
     </topic>
     <topic href="index.html#samples" label="Exemples" id="samples">
@@ -27,7 +27,7 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#overview" label="Fonctions &amp; spécifications" id="overview">
+  <topic href="features_specs.html#fs" label="Fonctions et spécifications" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="iam.html#iam" label="Identity and Access management (IAM) sur IBM Cloud" id="iam">
@@ -43,7 +43,7 @@
     </topic>
     <topic href="iam.html#sup-if" label="Interfaces prises en charge" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC et CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC, CLP et CLPPLUS" id="odbc-clpplus"></topic>
       <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
     <topic href="iam.html#console-ux" label="Expérience utilisateur sur la console" id="console-ux">
@@ -52,7 +52,7 @@
     <topic href="iam.html#api" label="Expérience API REST" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="Fédération IBMid" id="fed">
+    <topic href="iam.html#fed" label="Fédération avec IBMid" id="fed">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
@@ -75,7 +75,7 @@
   <topic label="Connexion à une autre base de données Db2">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="Connexion à une autre base de données Db2"/>
-    <topic href="federation.html#overview" label="Virtualisation de données (fédération)" id="overview">
+    <topic href="federation.html#fed" label="Virtualisation de données (fédération)" id="fed">
       <topic href="federation.html#use_cases" label="Cas d&#39;utilisation" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#consolidation-des-sources-de-donn-es" label="Consolidation des sources de données" id="consolidation-des-sources-de-donn-es"></topic>
@@ -93,13 +93,26 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="Plan Lite gratuit" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="Plan gratuit" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="Architecture" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="Utilisation du plan Lite en dehors de l&#39;Amérique du Nord continentale" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="Utilisation du plan gratuit en dehors de l&#39;Amérique du Nord continentale" id="outside_na">
       <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="Restrictions du plan gratuit" id="fp_restrictions">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="plans_pricing.html#plans_pricing" label="Plans et tarifications" id="plans_pricing">
+    <property name="navgroup" value="learn"/>
+    <topic href="plans_pricing.html#plans_cfgs" label="Plans et configurations" id="plans_cfgs">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="plans_pricing.html#pricing" label="Tarification" id="pricing">
+      <property name="type" value="anchor"/>
+      <topic href="plans_pricing.html#examples" label="Exemples de facturation" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="Mise à l&#39;échelle flexible" id="scale">
@@ -107,10 +120,13 @@
   </topic>
   <topic href="br.html#br" label="Sauvegarde et restauration" id="br">
     <property name="navgroup" value="learn"/>
+    <topic href="br.html#point-in-time" label="Restauration avec point de cohérence" id="point-in-time">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="ha.html#ha" label="Haute disponibilité (HA)" id="ha">
     <property name="navgroup" value="learn"/>
-    <topic href="ha.html#rule_14" label="Brésil : Règle 14 supplémentaire  (concerne les systèmes mis à disposition pour le gouvernement fédéral brésilien)" id="rule_14">
+    <topic href="ha.html#rule_14" label="Brésil : Règle supplémentaire 14 (concerne les systèmes mis à disposition pour le gouvernement fédéral brésilien)" id="rule_14">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="ha.html#add_dr" label="Ajout d&#39;un noeud de reprise après incident géorépliqué" id="add_dr">
@@ -139,16 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="Audit" id="audit">
+  <topic href="audit.html#aud-log-mon" label="Audit, consignation et surveillance" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#auditing" label="Audit" id="auditing">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="Consignation et surveillance" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="Présentation générale" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="Gestion des utilisateurs" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="plans_cfgs.html#plans_cfgs" label="Plans et configurations" id="plans_cfgs">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="maintenance.html#politiques-de-maintenance-et-de-notification" label="Politiques de maintenance et de notification" id="politiques-de-maintenance-et-de-notification">
+  <topic href="maintenance.html#maint_note_pol" label="Politiques de maintenance et de notification" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="Politique de maintenance" id="maintenance">
       <property name="type" value="anchor"/>
@@ -175,7 +195,7 @@
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Questions fréquemment posées">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://developer.ibm.com/answers/index.html" label="Réponses de développeur IBM">
+  <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="Conformités à la sécurité">

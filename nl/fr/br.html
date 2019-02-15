@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-02">
+  <meta name="dcterms.date" content="2019-01-02">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,21 +27,61 @@
   <main role="main">
     <article aria-labelledby="br" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-br">
         <h1 id="br">Sauvegarde et restauration</h1>
         <p class="shortdesc">Dans le cas de plans payants, des sauvegardes chiffrées de la base de données sont effectuées quotidiennement. Une sauvegarde quotidienne est conservée pour chacun des 14 derniers jours.</p>
-        <p>Les sauvegardes conservées sont utilisées par IBM à des fins de restauration du système en cas d&#39;incident ou de perte de données. Reportez-vous à l&#39;article <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html"
-            target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a> si vous souhaitez conserver des données d&#39;historique pour vous-même. Vous pouvez également effectuer
-          vos propres exportations à l&#39;aide d&#39;IBM Data Studio ou en utilisant n&#39;importe quel outil Db2.</p>
-        <p>Pour stocker vos sauvegardes hors site dans un site de stockage distant, soumettez une demande au support IBM.</p>
-        <p>Vous pouvez aussi utiliser l&#39;<a href="https://lift.ng.bluemix.net/" target="_blank">interface de ligne de commande d&#39;IBM Lift</a> pour importer des données dans Db2 on Cloud.</p>
+        <p>En supplément des sauvegardes standard, vous pouvez utiliser <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>          pour conserver les données historiques à d&#39;autres fins, comme l&#39;interrogation instantanée d&#39;anciennes données ou l&#39;audit simplifié. Vous pouvez également effectuer vos propres exportations en utilisant IBM Data Studio ou tout
+          autre outil Db2.</p>
+        <p>Pour plus d&#39;informations sur les restaurations avec point de cohérence, voir <a href="#point-in-time">Restauration avec point de cohérence</a>.</p>
+        <p>Tous les plans payants utilisent généralement IBM Cloud Object Storage (COS) pour conserver les sauvegardes hors site dans trois différents centres de données. Toutefois, Sydney et certains centres de données de plus petite taille peuvent ne pas
+          prendre en charge actuellement la réplication hors site avec IBM COS. Consultez la <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">documentation IBM COS</a> correspondant à votre région afin de
+          déterminer quelles régions prennent en charge la réplication hors site.</p>
+        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
+        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
+        <p>Vous pouvez également utiliser l&#39;<a href="https://lift.ng.bluemix.net/" target="_blank">interface de ligne de commande IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a> pour importer
+          des données dans Db2 on Cloud.</p>
+        <section id="section-point-in-time">
+          <h2 id="point-in-time">Restauration avec point de cohérence</h2>
+          <p>Db2 on Cloud inclut désormais une fonction de restauration avec point de cohérence. A partir de vos sauvegardes, vous pouvez effectuer une restauration à un point temporel précis. Actuellement, pour la plupart des clients, vous devez demander
+            au support d&#39;activer cette fonction. Voir le calendrier de mise en oeuvre suivant.</p>
+          <p>Vous trouverez ci-dessous une liste présentant la disponibilité de la fonction de restauration avec point de cohérence :</p>
+          <ul>
+            <li>Centre de données Dallas - Fonction disponible actuellement dans les systèmes à serveur unique</li>
+            <li>Tous les autres cas, notamment Europe et systèmes à haute disponibilité à Dallas - Demande d&#39;activation de la fonction auprès du support. La mise en oeuvre complète dans tous les systèmes sera effective le 28 février 2019.</li>
+            <li>Système IBM Cloud Dedicated (auparavant Bluemix Dedicated) - Fonction disponible uniquement en ouvrant un ticket de demande de service.</li>
+          </ul>
+          <p>Vous trouverez ci-dessous des exemples sélectionnés de capture d&#39;écran concernant l&#39;interface utilisateur de la console Web dans lesquels l&#39;opération de restauration avec point de cohérence est exécutée et sa progression est indiquée
+            :</p>
+          <ol>
+            <li>
+              <p>Sélectionnez la stratégie de restauration avec <strong>point de cohérence</strong> puis sélectionnez une date de point de cohérence à laquelle restaurer la base de données. Le processus de restauration avec point de cohérence sélectionne
+                la sauvegarde la plus proche de la date de point de cohérence demandée parmi les sauvegardes effectuées au cours des deux dernières semaines. </p>
+              <p class="note">Le processus de restauration avec point de cohérence invalide les sauvegardes précédemment conservées dont la date est ultérieure à la date de point de cohérence en raison d&#39;une divergence dans la chronologie.</p>
+              <p><img src="images/pit_restore_1.png" alt="Vue de la sélection mise en évidence de la stratégie de restauration avec point de cohérence"></p>
+            </li>
+            <li>
+              <p>Confirmez que vous souhaitez continuer en utilisant vos sélections de restauration. Une fois l&#39;opération de restauration commencée, vous ne pouvez pas changer la demande.<br><img src="images/pit_restore_2.png" alt="Vue de la boîte de dialogue de confirmation de restauration avec point de cohérence"></p>
+            </li>
+            <li>
+              <p>Le processus de restauration est en cours d&#39;initialisation.
+                <img src="images/pit_restore_3.png" alt="Vue de l&#39;initialisation de la restauration avec point de cohérence"></p>
+            </li>
+            <li>
+              <p>Restauration de la base de données au niveau du point de cohérence sélectionné.
+                <img src="images/pit_restore_4.png" alt="Vue de la progression de la restauration avec point de cohérence"></p>
+            </li>
+            <li>
+              <p>Un nouveau point de sauvegarde est en cours de création. La base de données restaurée avec un point de cohérence est prête à être utilisée.
+                <img src="images/pit_restore_5.png" alt="Vue de la création du nouveau point de sauvegarde"></p>
+            </li>
+            <li>
+              <p>L&#39;opération de restauration a abouti.
+                <img src="images/pit_restore_6.png" alt="Vue de l&#39;opération de restauration terminée"></p>
+            </li>
+          </ol>
+        </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

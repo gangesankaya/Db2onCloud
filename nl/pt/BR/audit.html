@@ -3,46 +3,59 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-10">
+  <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Auditando</title>
+  <title>Auditoria, criação de log e monitoramento</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="audit" role="article">
+    <article aria-labelledby="aud-log-mon" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-audit">
-        <h1 id="audit">Auditando</h1>
-        <p>A seguir estão os métodos pelos quais é possível auditar a atividade no banco de dados Db2 on Cloud:</p>
-        <ul class="shortdesc">
-          <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">Monitor de eventos CHANGE HISTORY <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></li>
-          <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></li>
-        </ul>
-        <p>Ao criar um monitor de eventos CHANGE HISTORY, é possível consultar a tabela do monitor de eventos para determinar o que foi feito dentro do banco de dados e por quem. </p>
-        <p>O Time Travel Query facilita o armazenamento de todas as mudanças em seus dados e até mesmo consulta seus dados antigos com base em um momento selecionado. Para usar esse método de auditoria, assegure-se de primeiro configurar suas tabelas para
-          suportar o Time Travel Query.</p>
-        <p>Para obter mais informações sobre esses métodos de auditoria, consulte <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">Como auditar ou controlar mudanças? <img src="../../icons/launch-glyph.svg" alt="Ícone de linkexterno" title="Ícone de link externo"></a>.</p>
+      <section id="section-aud-log-mon">
+        <h1 id="aud-log-mon">Auditoria, criação de log e monitoramento</h1>
+        <section id="section-auditing">
+          <h2 id="auditing">Auditando</h2>
+          <p>É possível criar uma política de auditoria de banco de dados que fornece a capacidade de auditar várias categorias de eventos que são armazenados em tabelas de eventos de auditoria em seu banco de dados. Para obter mais informações, consulte
+            <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank">Diretrizes de política de auditoria <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</p>
+          <p>Também é possível auditar e rastrear mudanças em seu banco de dados usando os métodos a seguir:</p>
+          <ul>
+            <li>Ao criar um monitor de eventos <code>CHANGE HISTORY</code>, é possível consultar a tabela de monitor de eventos para determinar o que foi feito dentro do banco de dados e quem fez isso. Para obter mais informações, consulte <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html"
+                target="_blank">Monitor de eventos <code>CHANGE HISTORY</code> <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</li>
+            <li>O Time Travel Query facilita o armazenamento de todas as mudanças em seus dados e até mesmo consulta seus dados antigos com base em um momento selecionado. Para usar esse método de auditoria, assegure-se de primeiro configurar suas tabelas
+              para suportar o Time Travel Query. Para obter mais informações, consulte <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></li>
+          </ul>
+          <p>Para obter mais informações sobre como auditar e rastrear as mudanças do banco de dados, consulte <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">Como auditar ou rastrear mudanças? <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</p>
+        </section>
+        <section id="section-log_mon">
+          <h2 id="log_mon">Criando log e monitorando</h2>
+          <p>O monitoramento e a criação de log fazem parte do serviço, no entanto, não são expostos diretamente para o usuário final. Em vez disso, a infraestrutura é usada pela equipe operacional da IBM para tratar de problemas. </p>
+          <p>Para ver a disponibilidade do Activity Tracker, consulte o <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">roteiro <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</p>
+          <p>É possível se conectar a um cliente da linha de comando do Db2, como o CLPPlus, para acessar informações detalhadas e diagnósticos.</p>
+          <section id="section-overview">
+            <h3 id="overview">Uma visão geral básica:</h3>
+            <p>Há dois tipos básicos de verificação. Verificações externas de funcionamento/tempo de atividade e monitoramento baseado em métricas. A IBM monitora centenas de métricas e as armazena historicamente. Com base nos valores dessas métricas, os
+              alertas são gerados. Esses alertas são enviados para a equipe de operações da IBM para assegurar que eles sejam vistos e abordados. Além disso, a IBM também envia os logs de diagnósticos e do sistema operacional arquivados para diagnóstico
+              rápido. O Db2 on Cloud está em conformidade com o GDPR e as opções do IBM EU Cloud fornecem um nível ainda mais alto de comprometimento com o GDPR, se necessário.</p>
+          </section>
+        </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

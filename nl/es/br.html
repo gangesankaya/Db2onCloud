@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-02">
+  <meta name="dcterms.date" content="2019-01-02">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,21 +27,58 @@
   <main role="main">
     <article aria-labelledby="br" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-br">
         <h1 id="br">Copia de seguridad y restauración</h1>
         <p class="shortdesc">Para los planes de pago, se realizan copias de seguridad cifradas de la base de datos a diario. Se conserva una copia de seguridad diaria para cada uno de los últimos 14 días.</p>
-        <p>IBM utiliza las copias de seguridad que se conservan para realizar una recuperación del sistema en el caso de que se produzca un error grave o una pérdida de datos del sistema. Utilice <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html"
-            target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> para conservar datos históricos para sus propios fines. También puede realizar sus propias exportaciones
-          mediante IBM Data Studio o cualquier herramienta de Db2.</p>
-        <p>Para guardar sus copias de seguridad en un sitio de almacenamiento remoto, realice una solicitud al equipo de soporte de IBM.</p>
-        <p>También puede utilizar la <a href="https://lift.ng.bluemix.net/" target="_blank">CLI de IBM Lift</a> para importar datos en Db2 on Cloud.</p>
+        <p>Además de las copias de seguridad estándar, puede utilizar <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>          para conservar datos históricos para sus propios fines. También puede realizar sus propias exportaciones mediante IBM Data Studio o cualquier herramienta de Db2.</p>
+        <p>Para obtener información sobre restauraciones en un punto en el tiempo, consulte <a href="#point-in-time">Restauración en un punto en el tiempo</a>.</p>
+        <p>Normalmente, todos los planes de pago hacen uso de IBM Cloud Object Storage (COS) para mantener las copias de seguridad externas en tres centros de datos distintos. Sin embargo, es posible que Sídney y ciertos centros de datos más pequeños no
+          den soporte a la replicación externa con IBM COS en este momento. Consulte la <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">documentación de IBM COS</a> de su región para determinar qué regiones
+          dan soporte a la replicación externa.</p>
+        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
+        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
+        <p>También puede utilizar la <a href="https://lift.ng.bluemix.net/" target="_blank">CLI de IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> para importar datos a Db2 on Cloud.</p>
+        <section id="section-point-in-time">
+          <h2 id="point-in-time">Restauración de punto en el tiempo</h2>
+          <p>Db2 on Cloud ha añadido la capacidad de restaurar a un punto en el tiempo. Puede restaurar desde sus copias de seguridad a un punto exacto en el tiempo. A día de hoy, para la mayoría de clientes, tiene que solicitar soporte para activar esta
+            característica. Consulte la siguiente planificación de despliegue.</p>
+          <p>A continuación se ofrece una lista de disponibilidad de la característica de restauración a punto en el tiempo:</p>
+          <ul>
+            <li>Centro de datos de Dallas: Disponible actualmente en sistemas de servidor único</li>
+            <li>En el resto de casos, incluida Europa y los sistemas de alta disponibilidad en Dallas: Solicite la activación de la característica al soporte técnico. El despliegue total en todos los sistemas se completará el 28 de febrero de 2019.</li>
+            <li>Sistema dedicado IBM Cloud (anteriormente conocido como Bluemix dedicado): Disponible solamente abriendo una incidencia de soporte.</li>
+          </ul>
+          <p>Lo siguiente es un ejemplo seleccionado de capturas de pantalla de la interfaz de usuario de la consola web donde se ha iniciado la operación de restauración a un punto en el tiempo y se indica su progreso:</p>
+          <ol>
+            <li>
+              <p>Seleccione la estrategia de restauración de <strong>Punto en el tiempo</strong> y seleccione un punto en el tiempo al que desea restaurar la base de datos. El proceso de restauración a un punto en el tiempo selecciona la copia de seguridad
+                más cercana al punto en el tiempo que ha solicitado, de entre la agrupación de copias de seguridad retenidas que se han hecho durante los 14 días anteriores. </p>
+              <p class="note">El proceso de restauración a un punto en el tiempo invalida cualquier copia de seguridad retenida anteriormente con fechas posteriores al punto en el tiempo seleccionado debido a la divergencia resultante en la línea de tiempo.</p>
+              <p><img src="images/pit_restore_1.png" alt="Vista de la selección resaltada de la estrategia de restauración de punto en el tiempo"></p>
+            </li>
+            <li>
+              <p>Confirme que desea continuar con sus selecciones de restauración. Después de iniciar la operación de restauración, no podrá cambiar la solicitud.<br><img src="images/pit_restore_2.png" alt="Vista del diálogo de confirmación de restauración a un punto en el tiempo"></p>
+            </li>
+            <li>
+              <p>Se está inicializando el proceso de restauración.
+                <img src="images/pit_restore_3.png" alt="Vista de la inicialización de la restauración a un punto en el tiempo"></p>
+            </li>
+            <li>
+              <p>Restaurando la base de datos al punto en el tiempo seleccionado.
+                <img src="images/pit_restore_4.png" alt="Vista del progreso de la restauración a un punto en el tiempo"></p>
+            </li>
+            <li>
+              <p>Se está creando un nuevo punto de copia de seguridad. La base de datos restaurada a un punto en el tiempo está lista para ser utilizada.
+                <img src="images/pit_restore_5.png" alt="Vista de la creación del nuevo punto de copia de seguridad"></p>
+            </li>
+            <li>
+              <p>La operación de restauración se ha completado con éxito.
+                <img src="images/pit_restore_6.png" alt="Vista de la finalización satisfactoria de la operación de restauración"></p>
+            </li>
+          </ol>
+        </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

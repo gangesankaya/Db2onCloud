@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-10-26">
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,7 +27,6 @@
   <main role="main">
     <article aria-labelledby="getting_started_db2oncloud" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-getting_started_db2oncloud">
         <h1 id="getting_started_db2oncloud">開始使用</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 是在雲端中為您所佈建的 SQL Database。您就像使用任何資料庫軟體一般的使用 Db2 on Cloud，但沒有硬體設置或軟體安裝及維護的額外負荷與費用。</p>
@@ -34,7 +35,6 @@
         <!-- ## Free trial
 
 You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
-
         <section id="section-interfaces">
           <h2 id="interfaces">介面</h2>
           <p class="shortdesc">您可以透過下列方式來使用 Db2 on Cloud 資料庫：</p>
@@ -49,9 +49,7 @@ You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days o
             <p class="shortdesc">Web 主控台為您使用資料庫所需的所有項目提供一個圖形介面，包括：負載機能、SQL 編輯器、驅動程式下載等等。</p>
             <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
             <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
-
             <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
-
             <p>您可以透過下列方式來存取 Db2 on Cloud Web 主控台：</p>
             <ul>
               <li>從 IBM Cloud 儀表板 - 您可以從 IBM Db2 on Cloud 服務的「服務詳細資料」頁面中開啟 Web 主控台。</li>
@@ -61,7 +59,6 @@ You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days o
 
 With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
 {: shortdesc} -->
-
           </section>
           <section id="section-connect_apps">
             <h3 id="connect_apps">連接本端電腦的應用程式或您最愛的工具</h3>
@@ -141,25 +138,21 @@ $conn        = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
         <section id="section-intro_vid">
           <h2 id="intro_vid">視訊：Introducing Db2 on Cloud</h2>
           <p>請觀看此視訊來查看 Db2 on Cloud 簡介。</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer" title="Introduction to Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/F_ylk44_WOg?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer" title="Introduction to Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/F_ylk44_WOg?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
         <section id="section-vid_api">
           <h2 id="vid_api">視訊：Using REST API to communicate with Db2 on Cloud</h2>
           <p>請觀看此視訊，來查看使用 RESTful API 以與 Db2 on Cloud 進行通訊所需的步驟。</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer" title="Using RESTful API to communicate with Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/PSNBDwgf9ts?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
+          <iframe class="embed-responsive-item" id="youtubeplayer" title="Using RESTful API to communicate with Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/PSNBDwgf9ts?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen
             allowfullscreen> </iframe>
         </section>
         <section id="section-cognos_vid">
           <h2 id="cognos_vid">視訊：Integrating Jupyter notebooks</h2>
           <p>請觀看此視訊，來查看如何整合 Jupyter Notebook 與 Db2 on Cloud。</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer" title="Integrating Jupyter notebooks" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer" title="Integrating Jupyter notebooks" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

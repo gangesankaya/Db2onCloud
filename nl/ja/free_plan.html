@@ -3,55 +3,151 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-05-03">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-12-07">
+  <meta name="dcterms.date" content="2018-12-07">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>無料 Lite プラン</title>
+  <title>無料プラン</title>
 </head>
 
 <body>
   <main role="main">
     <article aria-labelledby="free_plan" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-free_plan">
-        <h1 id="free_plan">無料 Lite プラン</h1>
-        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 無料 プランでは、DB2 の開発や学習を行うことができる基本的なリソースを無料で提供します。</p>
-        <p>無料プランに使用日数の制限はありませんが、ユーザーは 30 日ごとに無料プランを再延長する必要があります。</p>
+        <h1 id="free_plan">無料プラン</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 無料プランでは、Db2 の開発や学習を行える基本的なリソースが無料で提供されます。</p>
+        <p>無料プランに時間制限はありませんが、ユーザーは 30 日ごとに無料プランを再延長する必要があります。</p>
         <p>コミュニティーのサポートのみ利用できます。 </p>
         <section id="section-architecture">
           <h2 id="architecture">アーキテクチャー</h2>
-          <p>他の Db2 on Cloud プランとは異なり、 Db2 on Cloud 無料 Lite プランはマルチテナント・システム上で実 行されます。 Flex プランと Precise Performance プランは、独自のシングル・テナント仮想マシンまたはベア・メタル・サーバー上で実行されます。</p>
+          <p>他の Db2 on Cloud プランとは異なり、Db2 on Cloud 無料プランはマルチテナント・システム上で実行されます。Flex プランと Precise Performance プランは、独自のシングル・テナント仮想マシンまたはベア・メタル・サーバー上で実行されます。</p>
           <p>無料プランでは、1 つのデータベース・スキーマを使用できます。</p>
-          <p>Db2 on Cloud 無料 Lite プラットフォームについて詳し くは、
-            <a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">FAQ
-<img src="../../icons/launch-glyph.svg" alt="外部リンク・ア
-イコン" title="外部リンク・アイコン"></a> を参照してください。</p>
+          <p>Db2 on Cloud 無料プランについて詳しくは、<a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">FAQ <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
         </section>
         <section id="section-outside_na">
-          <h2 id="outside_na">北アメリカ大陸以外での Lite プランの利用</h2>
-          <p>現在、北アメリカ大陸では無料 Lite プランをクレジットカードなしでご利用いただけます。 北アメリカ大陸以外では、クレジットカー ドを IBM Cloud アカウントに追加し、「南アメリカ - ダラス」地域を選択して、無料 Lite プランを選 択肢に 表示する必要があります。
-          </p>
-          <p>Lite プランは常に無料で提供され、お客様のクレジットカードに課金されることはありません。</p>
+          <h2 id="outside_na">北アメリカ大陸以外での無料プランの使用</h2>
+          <p>北アメリカ大陸では現在、クレジット・カードなしで無料プランをご利用いただけます。北アメリカ大陸以外では、無料プランを選択肢として表示するためには、IBM Cloud アカウントにクレジット・カードを追加し、「米国南部 - ダラス」地域を選択する必要があります。</p>
+          <p>無料プランは常に無料で提供され、お客様のクレジット・カードに課金されることはありません。</p>
+        </section>
+        <section id="section-fp_restrictions">
+          <h2 id="fp_restrictions">無料プランの制約事項</h2>
+          <p class="important">基幹業務のワークロードやパフォーマンスに依存するワークロードには、無料サービス・プランではなく、エンタープライズ・レベルのサービス・プランを使用することを強くお勧めします。</p>
+          <p>以下は、Db2 on Cloud 無料プランの制約事項の表です。</p>
+          <table>
+            <caption caption-side="top">表 1. Db2 on Cloud 無料プランの制約事項</caption>
+            <thead>
+              <tr>
+                <th>カテゴリー</th>
+                <th>項目</th>
+                <th>制約</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>リソース</td>
+                <td>ストレージ</td>
+                <td>ユーザー当たり 200 MB のストレージ</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>接続数</td>
+                <td>ユーザー当たり 5 接続</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>パフォーマンス</td>
+                <td>マルチテナント・システム上の他のユーザーによって実行されるワークロードが原因でパフォーマンスが変動する可能性がある</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>フィーチャーおよび機能</td>
+                <td>フェデレーション</td>
+                <td>サポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Oracle 互換性</td>
+                <td>サポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>ユーザー定義拡張 (UDF)</td>
+                <td>無料プランを含め、どの Db2 on Cloud プランでもサポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>ユーザー管理</td>
+                <td>ユーザーに管理権限が与えられない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>行/列アクセス制御 (RCAC)</td>
+                <td>サポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>データのロードで使用する IBM InfoSphere Data Replication</td>
+                <td>サポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>ネットワーキング環境</td>
+                <td>IBM Cloud Integrated Analytics</td>
+                <td>サポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>IBM Cloud Dedicated</td>
+                <td>サポートされない</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>セキュリティー・コンプライアンス</td>
+                <td>Health Information Portability and Accountability Act of 1996 (HIPAA)</td>
+                <td>サポートされない。サービス記述書を参照してください。</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>EU 一般データ保護規則 (GDPR)</td>
+                <td>サポートされない。サービス記述書を参照してください。</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>アカウント管理</td>
+                <td>再アクティブ化</td>
+                <td>30 日ごとに再アクティブ化が必要。再アクティブ化されない場合、無料プラン・サービスは 60 日後に削除されます。</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

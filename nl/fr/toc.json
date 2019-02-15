@@ -41,7 +41,7 @@
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#connect_apps",
-                                "label": "Connectez des applications ou vos outils préférés depuis votre ordinateur local",
+                                "label": "Installation des pilotes et des clients de ligne de commande Db2 sur votre ordinateur",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
@@ -110,9 +110,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/features_specs.html#overview",
-                "label": "Fonctions & spécifications",
-                "id": "Db2onCloud-overview",
+                "href": "services/Db2onCloud/features_specs.html#fs",
+                "label": "Fonctions et spécifications",
+                "id": "Db2onCloud-fs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -165,7 +165,7 @@
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
-                                "label": "ODBC et CLPPLUS",
+                                "label": "ODBC, CLP et CLPPLUS",
                                 "id": "Db2onCloud-odbc-clpplus"
                             },
                             {
@@ -205,7 +205,7 @@
                     },
                     {
                         "href": "services/Db2onCloud/iam.html#fed",
-                        "label": "Fédération IBMid",
+                        "label": "Fédération avec IBMid",
                         "id": "Db2onCloud-fed",
                         "properties": [
                             {
@@ -300,9 +300,9 @@
                 ],
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/federation.html#overview",
+                        "href": "services/Db2onCloud/federation.html#fed",
                         "label": "Virtualisation de données (fédération)",
-                        "id": "Db2onCloud-overview",
+                        "id": "Db2onCloud-fed",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
@@ -377,7 +377,7 @@
             },
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
-                "label": "Plan Lite gratuit",
+                "label": "Plan gratuit",
                 "id": "Db2onCloud-free_plan",
                 "topics": [
                     {
@@ -393,8 +393,61 @@
                     },
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
-                        "label": "Utilisation du plan Lite en dehors de l'Amérique du Nord continentale",
+                        "label": "Utilisation du plan gratuit en dehors de l'Amérique du Nord continentale",
                         "id": "Db2onCloud-outside_na",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/free_plan.html#fp_restrictions",
+                        "label": "Restrictions du plan gratuit",
+                        "id": "Db2onCloud-fp_restrictions",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/plans_pricing.html#plans_pricing",
+                "label": "Plans et tarifications",
+                "id": "Db2onCloud-plans_pricing",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#plans_cfgs",
+                        "label": "Plans et configurations",
+                        "id": "Db2onCloud-plans_cfgs",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#pricing",
+                        "label": "Tarification",
+                        "id": "Db2onCloud-pricing",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/plans_pricing.html#examples",
+                                "label": "Exemples de facturation",
+                                "id": "Db2onCloud-examples"
+                            }
+                        ],
                         "properties": [
                             {
                                 "name": "type",
@@ -425,6 +478,19 @@
                 "href": "services/Db2onCloud/br.html#br",
                 "label": "Sauvegarde et restauration",
                 "id": "Db2onCloud-br",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/br.html#point-in-time",
+                        "label": "Restauration avec point de cohérence",
+                        "id": "Db2onCloud-point-in-time",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
@@ -439,7 +505,7 @@
                 "topics": [
                     {
                         "href": "services/Db2onCloud/ha.html#rule_14",
-                        "label": "Brésil : Règle 14 supplémentaire  (concerne les systèmes mis à disposition pour le gouvernement fédéral brésilien)",
+                        "label": "Brésil : Règle supplémentaire 14 (concerne les systèmes mis à disposition pour le gouvernement fédéral brésilien)",
                         "id": "Db2onCloud-rule_14",
                         "properties": [
                             {
@@ -558,9 +624,40 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/audit.html#audit",
-                "label": "Audit",
-                "id": "Db2onCloud-audit",
+                "href": "services/Db2onCloud/audit.html#aud-log-mon",
+                "label": "Audit, consignation et surveillance",
+                "id": "Db2onCloud-aud-log-mon",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/audit.html#auditing",
+                        "label": "Audit",
+                        "id": "Db2onCloud-auditing",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/audit.html#log_mon",
+                        "label": "Consignation et surveillance",
+                        "id": "Db2onCloud-log_mon",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/audit.html#overview",
+                                "label": "Présentation générale",
+                                "id": "Db2onCloud-overview"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
@@ -580,20 +677,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/plans_cfgs.html#plans_cfgs",
-                "label": "Plans et configurations",
-                "id": "Db2onCloud-plans_cfgs",
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/maintenance.html#politiques-de-maintenance-et-de-notification",
+                "href": "services/Db2onCloud/maintenance.html#maint_note_pol",
                 "label": "Politiques de maintenance et de notification",
-                "id": "Db2onCloud-politiques-de-maintenance-et-de-notification",
+                "id": "Db2onCloud-maint_note_pol",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",
@@ -689,7 +775,7 @@
             },
             {
                 "href": "https://developer.ibm.com/answers/index.html",
-                "label": "Réponses de développeur IBM",
+                "label": "IBM Developer Answers",
                 "properties": [
                     {
                         "name": "navgroup",

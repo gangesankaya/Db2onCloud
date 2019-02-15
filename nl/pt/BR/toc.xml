@@ -11,7 +11,7 @@
     <topic href="index.html#interfaces" label="Interfaces" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="index.html#web_console" label="Console da web do Db2 on Cloud" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="Conecte aplicativos ou suas ferramentas favoritas por meio do seu computador local" id="connect_apps"></topic>
+      <topic href="index.html#connect_apps" label="Instalando clientes da linha de comando e drivers do Db2 no computador" id="connect_apps"></topic>
       <topic href="index.html#data_src" label="Use o Db2 on Cloud como uma origem de dados para os seus apps ou serviços do IBM Cloud" id="data_src"></topic>
     </topic>
     <topic href="index.html#samples" label="Amostra" id="samples">
@@ -27,7 +27,7 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#overview" label="Recursos e especificações" id="overview">
+  <topic href="features_specs.html#fs" label="Recursos e especificações" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="iam.html#iam" label="Identity and Access Management (IAM) no IBM Cloud" id="iam">
@@ -43,7 +43,7 @@
     </topic>
     <topic href="iam.html#sup-if" label="Interfaces suportadas" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC e CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC, CLP e CLPPLUS" id="odbc-clpplus"></topic>
       <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
     <topic href="iam.html#console-ux" label="Experiência do usuário do console" id="console-ux">
@@ -75,7 +75,7 @@
   <topic label="Conectando-se a outro banco de dados Db2">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="Conectando-se a outro banco de dados Db2"/>
-    <topic href="federation.html#overview" label="Virtualização de dados (federação)" id="overview">
+    <topic href="federation.html#fed" label="Virtualização de dados (federação)" id="fed">
       <topic href="federation.html#use_cases" label="Casos de Uso" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#consolidar-origens-de-dados" label="Consolidar origens de dados" id="consolidar-origens-de-dados"></topic>
@@ -93,13 +93,26 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="Plano Lite grátis" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="Plano grátis" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="Software" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="Usando o plano Lite fora da América do Norte continental" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="Usando o plano Grátis fora da América do Norte continental" id="outside_na">
       <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="Restrições do plano Grátis" id="fp_restrictions">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="plans_pricing.html#plans_pricing" label="Planos e precificação" id="plans_pricing">
+    <property name="navgroup" value="learn"/>
+    <topic href="plans_pricing.html#plans_cfgs" label="Planos e configurações" id="plans_cfgs">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="plans_pricing.html#pricing" label="Venda" id="pricing">
+      <property name="type" value="anchor"/>
+      <topic href="plans_pricing.html#examples" label="Exemplos de faturamento" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="Ajuste de escala flexível" id="scale">
@@ -107,6 +120,9 @@
   </topic>
   <topic href="br.html#br" label="Backup e restauração" id="br">
     <property name="navgroup" value="learn"/>
+    <topic href="br.html#point-in-time" label="Restauração point-in-time" id="point-in-time">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="ha.html#ha" label="Alta disponibilidade (HA)" id="ha">
     <property name="navgroup" value="learn"/>
@@ -139,16 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="Auditando" id="audit">
+  <topic href="audit.html#aud-log-mon" label="Auditoria, criação de log e monitoramento" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#auditing" label="Auditando" id="auditing">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="Criando log e monitorando" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="Uma visão geral básica:" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="Como gerenciar usuários" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="plans_cfgs.html#plans_cfgs" label="Planos e configurações" id="plans_cfgs">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="maintenance.html#pol-ticas-de-manuten-o-e-notifica-o" label="Políticas de manutenção e notificação" id="pol-ticas-de-manuten-o-e-notifica-o">
+  <topic href="maintenance.html#maint_note_pol" label="Políticas de manutenção e notificação" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="Política de manutenção" id="maintenance">
       <property name="type" value="anchor"/>
@@ -200,10 +220,10 @@
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="http://ibm.biz/db2oc_api" label="API do REST">
-    <property name="navgroup" value="reference"/>
+    <property name="navgroup" value="howto"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="Referência de SQL">
-    <property name="navgroup" value="reference"/>
+    <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="Assistência e suporte" id="help_support">
     <property name="navgroup" value="help"/>

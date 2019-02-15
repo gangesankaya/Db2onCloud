@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-02">
+  <meta name="dcterms.date" content="2019-01-02">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,22 +27,57 @@
   <main role="main">
     <article aria-labelledby="br" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-br">
         <h1 id="br">Backup e restauração</h1>
         <p class="shortdesc">Para planos pagos, backups criptografados do banco de dados são feitos diariamente. Um backup diário é mantido para cada um dos últimos 14 dias.</p>
-        <p>Os backups retidos são usados pela IBM para fins de recuperação do sistema no caso de um desastre ou perda do sistema. Use o
-          <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel
-Query <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a> para manter dados históricos para suas próprias finalidades. Além disso, também é possível executar as suas próprias exportações usando
-          o IBM Data Studio ou qualquer ferramenta DB2.</p>
-        <p>Para armazenar seus backups externos em um site de armazenamento remoto, faça uma solicitação ao suporte IBM.</p>
-        <p>Também é possível usar o <a href="https://lift.ng.bluemix.net/" target="_blank">IBM Lift CLI</a> para importar dados para o Db2 on Cloud.</p>
+        <p>Além dos backups padrão, é possível usar a <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>          para manter dados históricos para outros propósitos, como para consultar instantaneamente dados antigos ou para auditoria simplificada. Também é possível executar suas próprias exportações usando o IBM Data Studio ou qualquer ferramenta do Db2.</p>
+        <p>Para obter informações sobre restaurações point-in-time, consulte <a href="#point-in-time">Restauração point-in-time</a>.</p>
+        <p>Todos os planos pagos geralmente fazem uso do IBM Cloud Object Storage (COS) para manter os backups externos em três diferentes data centers. No entanto, Sydney e determinados data centers menores podem não suportar a replicação externa com o
+          IBM COS neste momento. Consulte a <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">Documentação do IBM COS</a> da sua região para determinar quais regiões suportam replicação externa.</p>
+        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
+        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
+        <p>Também é possível usar a <a href="https://lift.ng.bluemix.net/" target="_blank">CLI do IBM Lift <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a> para importar dados no Db2 on Cloud.</p>
+        <section id="section-point-in-time">
+          <h2 id="point-in-time">Restauração point-in-time</h2>
+          <p>O Db2 on Cloud incluiu um recurso de restauração point-in-time. É possível restaurar para um momento exato por meio de seus backups. Atualmente, para a maioria dos clientes, deve-se solicitar suporte para ativar esse recurso. Consulte o planejamento
+            de lançamento a seguir.</p>
+          <p>A seguir está uma lista de disponibilidade do recurso de restauração point-in-time:</p>
+          <ul>
+            <li>Data center de Dallas: disponível hoje em sistemas de servidor único</li>
+            <li>Todos os outros casos, incluindo sistemas de alta disponibilidade e da Europa em Dallas: solicitar ao suporte a ativação do recurso. O lançamento integral para todos os sistemas será concluído até 28 de fevereiro de 2019.</li>
+            <li>Sistema IBM Cloud Dedicated (anteriormente Bluemix Dedicated): disponível apenas abrindo um chamado de suporte.</li>
+          </ul>
+          <p>A seguir está um exemplo selecionado de capturas de tela da IU do console da web no qual a operação de restauração point-in-time é iniciada e seu progresso é indicado:</p>
+          <ol>
+            <li>
+              <p>Selecione a estratégia de restauração <strong>Point-in-time</strong> e selecione uma data específica para a qual deseja restaurar o banco de dados. O processo de restauração point-in-time seleciona o backup mais próximo à data específica
+                solicitada do conjunto de backups retidos feitos durante os 14 dias anteriores. </p>
+              <p class="note">O processo de restauração point-in-time invalida qualquer backup retido anteriormente com datas após a data específica selecionada devido a uma divergência resultante na linha de tempo.</p>
+              <p><img src="images/pit_restore_1.png" alt="Visualização da seleção destacada da estratégia de restauração point-in-time"></p>
+            </li>
+            <li>
+              <p>Confirme que você deseja continuar com as suas seleções de restauração. Depois de iniciar a operação de restauração, não é possível mudar a solicitação.<br><img src="images/pit_restore_2.png" alt="Visualização do diálogo de confirmação da restauração point-in-time"></p>
+            </li>
+            <li>
+              <p>O processo de restauração está inicializando.
+                <img src="images/pit_restore_3.png" alt="Visualização da inicialização da restauração point-in-time"></p>
+            </li>
+            <li>
+              <p>Restaurando o banco de dados para o momento selecionado.
+                <img src="images/pit_restore_4.png" alt="Visualização do progresso da restauração point-in-time"></p>
+            </li>
+            <li>
+              <p>Um novo ponto de backup está sendo criado. O banco de dados restaurado para o momento está pronto para uso.
+                <img src="images/pit_restore_5.png" alt="Visualização da criação do novo ponto de backup"></p>
+            </li>
+            <li>
+              <p>A operação de restauração foi concluída com êxito.
+                <img src="images/pit_restore_6.png" alt="Visualização da conclusão bem-sucedida da operação de restauração"></p>
+            </li>
+          </ol>
+        </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

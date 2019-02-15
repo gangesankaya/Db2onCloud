@@ -3,39 +3,40 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-12-05">
+  <meta name="dcterms.date" content="2018-12-05">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Fonctions &amp; spécifications</title>
+  <title>Fonctions et spécifications</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="overview" role="article">
+    <article aria-labelledby="fs" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-overview">
-        <h1 id="overview">Fonctions &amp; spécifications</h1>
-        <p class="shortdesc">Les fonctions et spécifications IBM&reg; Db2&reg; on Cloud sont répertoriées ici pour votre commodité.</p>
+      <section id="section-fs">
+        <h1 id="fs">Fonctions et spécifications</h1>
+        <p class="shortdesc">Les fonctions et spécifications d&#39;IBM&reg; Db2&reg; on Cloud sont répertoriées ici pour votre commodité.</p>
         <table>
           <caption caption-side="top">Table 1. Fonctions et spécifications prises en charge dans Db2 on Cloud</caption>
           <thead>
             <tr>
               <th>Catégorie</th>
               <th>Fonction</th>
-              <th>Pris en charge ?</th>
+              <th>Prise en charge ?</th>
               <th>Commentaires</th>
             </tr>
           </thead>
@@ -50,13 +51,13 @@
               <td></td>
               <td>Lecture en veille</td>
               <td>O</td>
-              <td>Noeud DR hors site seulement</td>
+              <td>Noeud de reprise après incident hors site seulement</td>
             </tr>
             <tr>
               <td></td>
               <td>Mises à jour en continu automatiques</td>
               <td>O</td>
-              <td>Avec plans haute disponibilité</td>
+              <td>Avec plans de haute disponibilité</td>
             </tr>
             <tr>
               <td></td>
@@ -89,8 +90,8 @@
               <td></td>
             </tr>
             <tr>
-              <td>Haute disponibilité &amp; réplication</td>
-              <td>DR hors site</td>
+              <td>Haute disponibilité et réplication</td>
+              <td>Reprise après incident hors site</td>
               <td>O</td>
               <td>-</td>
             </tr>
@@ -98,23 +99,23 @@
               <td></td>
               <td>Haute disponibilité (2 noeuds dans 1 zone)</td>
               <td>O</td>
-              <td>99,99 % disponibilité SLA</td>
+              <td>SLA de disponibilité à 99,99 %</td>
             </tr>
             <tr>
               <td></td>
-              <td>Différentes zones dans même centre de données</td>
+              <td>Différentes zones dans un même centre de données</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
-              <td>-</td>
+              <td><strong>Remarque</strong> : La fonction de reprise à haut niveau de disponibilité après incident (HADR) hors site est disponible</td>
             </tr>
             <tr>
               <td></td>
-              <td>Cache de données de calcul (CDC)</td>
+              <td>Capture de données de changement (CDC)</td>
               <td>O</td>
               <td>-</td>
             </tr>
             <tr>
               <td></td>
-              <td>Utilisation en tant que fonction de reprise sur sinistre haute disponibilité sur site</td>
+              <td>Utilisation en tant que reprise à haut niveau de disponibilité après incident sur site</td>
               <td>N</td>
               <td>Utiliser CDC. Pour plus de détails, voir <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank">How can I migrate or sync data from Db2 to Db2 on Cloud? <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
             </tr>
@@ -126,7 +127,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>Basculement autonome - DR hors site</td>
+              <td>Basculement autonome - Reprise après incident hors site</td>
               <td>N</td>
               <td>Utiliser bouton ou API</td>
             </tr>
@@ -138,13 +139,73 @@
             </tr>
             <tr>
               <td></td>
+              <td>Objectif de point de reprise : Haute disponibilité</td>
+              <td>0 s</td>
+              <td>La haute disponibilité est synchrone</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Objectif de temps de reprise : Haute disponibilité</td>
+              <td>Généralement, 0 à 10 minutes</td>
+              <td>Avec le code de relance, ralentissement lors de l&#39;utilisation de la redirection automatique du client (ACR) Db2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Objectif de point de reprise : Reprise à haut niveau de disponibilité après incident de noeud hors site</td>
+              <td>Généralement &lt; 15 s</td>
+              <td>La reprise après incident est asynchrone</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Objectif de temps de reprise : Reprise à haut niveau de disponibilité après incident de noeud hors site</td>
+              <td>&lt; 3 min</td>
+              <td>A exécuter à l&#39;aide de l&#39;API ou de bouton de console</td>
+            </tr>
+            <tr>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
-              <td>Règles de maintenance &amp; SLA</td>
-              <td>Plans à haute disponibilité</td>
+              <td>Configurations système</td>
+              <td>RAM max et nombre max de coeurs</td>
+              <td>1 To RAM, 48 coeurs</td>
+              <td>S&#39;applique au plan Precise Performance XL</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Stockage maximal</td>
+              <td>11 To</td>
+              <td>S&#39;applique au plan Precise Performance XL. Disque à la fois pour les données et les journaux.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex : plan de base</td>
+              <td>4 Go de RAM, 1 coeur, 2 Go de disque</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex : RAM max et nombre max de coeurs</td>
+              <td>128 Go de RAM, 32 coeurs</td>
+              <td>Vous avez besoin de spécifications plus élevées ? Utilisez le plan Precise Performance ou contactez l&#39;équipe de support IBM.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex : Stockage maximal</td>
+              <td>4 To</td>
+              <td>Disque à la fois pour les données et les journaux. Vous avez besoin de spécifications plus élevées ? Utilisez le plan Precise Performance ou contactez l&#39;équipe de support IBM.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Règles de maintenance et SLA</td>
+              <td>Plans de haute disponibilité</td>
               <td>99,99 %</td>
               <td>-</td>
             </tr>
@@ -156,7 +217,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>Noeud DR hors site</td>
+              <td>Noeud de reprise après incident hors site</td>
               <td>99,5 %</td>
               <td>Doit utiliser une haute disponibilité supplémentaire pour atteindre 99,99 %</td>
             </tr>
@@ -200,7 +261,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>GDPR</td>
+              <td>RGPD</td>
               <td>O</td>
               <td>-</td>
             </tr>
@@ -232,7 +293,7 @@
               <td></td>
               <td>Reprise en libre service ponctuelle</td>
               <td>Disponible le 15 nov 2018</td>
-              <td>-</td>
+              <td><a href="br.html#point-in-time">Restauration avec point de cohérence</a></td>
             </tr>
             <tr>
               <td></td>
@@ -296,7 +357,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>KeyProtect (Bring your own key)</td>
+              <td>Protection de clé (utilisation de votre propre clé)</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">Dans la feuille de route <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
               <td>-</td>
             </tr>
@@ -308,6 +369,18 @@
             </tr>
             <tr>
               <td></td>
+              <td>Nombre maximal de connexions simultanées : <strong>Plan gratuit</strong></td>
+              <td>O</td>
+              <td>Max : 5 connexions</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Nombre maximal de connexions simultanées : <strong>Plans payants</strong></td>
+              <td>N</td>
+              <td>Nombre illimité de connexions</td>
+            </tr>
+            <tr>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -316,19 +389,25 @@
               <td>Tarification &amp; achat</td>
               <td>Remises BYOL</td>
               <td>O</td>
-              <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank">Annonce <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank">Annonce <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
             </tr>
             <tr>
               <td></td>
-              <td>Disponible via IBM Cloud</td>
+              <td>Disponible sur IBM Cloud</td>
               <td>O</td>
               <td>A la fois Abonnement et Paiement à la carte</td>
             </tr>
             <tr>
               <td></td>
-              <td>Disponible via commande devis logiciel</td>
+              <td>Disponible avec la demande de devis de logiciel</td>
               <td>O</td>
-              <td>Tous les plans y compris Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Parts &amp; details. <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+              <td>Tous les plans y compris Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Composants &amp; détails <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Disponible sur la plateforme HDMP (Hybrid Data Management Platform)</td>
+              <td>O</td>
+              <td>Plan Flex uniquement. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank">Détails sur la plateforme HDMP <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a></td>
             </tr>
             <tr>
               <td></td>
@@ -370,7 +449,7 @@
             <tr>
               <td></td>
               <td>Francfort &amp; Londres</td>
-              <td><strong>Déploiement </strong>: &lt; 5 minutes. <strong>Mise à l&#39;échelle </strong>: 2 heures.</td>
+              <td><strong>Déploiement</strong>: &lt; 5 min. <strong>Mise à l&#39;échelle </strong>: 2 heures.</td>
               <td>Plan Flex seulement, selon le stock</td>
             </tr>
             <tr>
@@ -396,9 +475,5 @@
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

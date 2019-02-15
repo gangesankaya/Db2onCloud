@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-12-05">
+  <meta name="dcterms.date" content="2018-12-05">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -23,11 +25,10 @@
 
 <body>
   <main role="main">
-    <article aria-labelledby="overview" role="article">
+    <article aria-labelledby="fs" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-overview">
-        <h1 id="overview">Recursos e especificações</h1>
+      <section id="section-fs">
+        <h1 id="fs">Recursos e especificações</h1>
         <p class="shortdesc">Os recursos e as especificações do IBM&reg; Db2&reg; on Cloud são resumidos aqui para sua conveniência.</p>
         <table>
           <caption caption-side="top">Tabela 1. Recursos e especificações suportados no Db2 on Cloud</caption>
@@ -104,7 +105,7 @@
               <td></td>
               <td>Diferentes zonas no mesmo data center</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">No roteiro <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></td>
-              <td>-</td>
+              <td><strong>Nota</strong>: o HADR externo está disponível</td>
             </tr>
             <tr>
               <td></td>
@@ -135,6 +136,66 @@
               <td>O IP se move com o failover</td>
               <td>S</td>
               <td>Apenas HA local; não HADR externo</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO: alta disponibilidade</td>
+              <td>0 s</td>
+              <td>HA é síncrona</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO: alta disponibilidade</td>
+              <td>Geralmente de 0 a 10 minutos</td>
+              <td>Com o código de nova tentativa, aparecerá como lentidão com o Db2 ACR</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO: HADR do nó externo</td>
+              <td>Geralmente &lt; 15 s</td>
+              <td>A DR externa é assíncrona</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO: HADR do nó externo</td>
+              <td>&lt; 3 minutos</td>
+              <td>É necessário iniciar com o botão do console ou a API</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Configurações do sistema</td>
+              <td>Máximo de RAM e núcleos</td>
+              <td>1 TB de RAM, 48 núcleos</td>
+              <td>Aplica-se ao plano Precise Performance XL</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Armazenamento máximo</td>
+              <td>11 TB</td>
+              <td>Aplica-se ao plano Precise Performance XL. Disco para dados e logs.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex: plano básico</td>
+              <td>4 GB de RAM, 1 núcleo, 2 GB de disco</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex: máximo de RAM e núcleos</td>
+              <td>RAM de 128 GB, 32 núcleos</td>
+              <td>Precisa de especificações mais altas? Use o plano Precise Performance ou contate o suporte IBM.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex: armazenamento máximo</td>
+              <td>4 TB</td>
+              <td>Disco para dados e logs. Precisa de especificações mais altas? Use o plano Precise Performance ou contate o suporte IBM.</td>
             </tr>
             <tr>
               <td></td>
@@ -176,7 +237,9 @@
               <td>Conformidades de segurança</td>
               <td>Pronto para o HIPAA</td>
               <td>S</td>
-              <td>Todos os planos pagos, incluindo o Flex. Deve-se solicitar o modo HIPAA do suporte IBM.</td>
+              <td>Todos os planos pagos, incluindo o Flex. Deve-se solicitar o modo HIPAA do suporte IBM.
+                <!--For Db2 Warehouse on Cloud [see docs here ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/Db2whc/index.html#getting_started){:new_window}.-->
+              </td>
             </tr>
             <tr>
               <td></td>
@@ -230,7 +293,7 @@
               <td></td>
               <td>Recuperação self-serve point-in-time</td>
               <td>Disponível em 15 de novembro de 2018</td>
-              <td>-</td>
+              <td><a href="br.html#point-in-time">Restauração point-in-time</a></td>
             </tr>
             <tr>
               <td></td>
@@ -294,7 +357,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>KeyProtect (traga a sua própria chave)</td>
+              <td>Key Protect (bring your own key)</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">No roteiro <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></td>
               <td>-</td>
             </tr>
@@ -303,6 +366,18 @@
               <td>Serviço MIS/interconectado</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">No roteiro <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></td>
               <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Limite máximo de conexões simultâneas: <strong>plano Grátis</strong></td>
+              <td>S</td>
+              <td>Máximo: 5 conexões</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Limite máximo de conexões simultâneas: <strong>planos pagos</strong></td>
+              <td>N</td>
+              <td>Número ilimitado de conexões</td>
             </tr>
             <tr>
               <td></td>
@@ -318,15 +393,21 @@
             </tr>
             <tr>
               <td></td>
-              <td>Disponível por meio do IBM Cloud</td>
+              <td>Disponível no IBM Cloud</td>
               <td>S</td>
               <td>Assinatura e pré-pago</td>
             </tr>
             <tr>
               <td></td>
-              <td>Disponível por meio de pedido de cotação de software</td>
+              <td>Disponível com o pedido de cotação de software</td>
               <td>S</td>
-              <td>Todos os planos, incluindo o Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Peças e detalhes. <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></td>
+              <td>Todos os planos, incluindo o Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Peças e detalhes <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Disponível no Hybrid Data Management Platform (HDMP)</td>
+              <td>S</td>
+              <td>Somente o plano Flex. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank">Detalhes sobre o HDMP <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></td>
             </tr>
             <tr>
               <td></td>
@@ -393,9 +474,5 @@
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

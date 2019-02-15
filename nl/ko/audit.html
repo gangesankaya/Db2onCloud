@@ -3,46 +3,59 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-10">
+  <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>감사</title>
+  <title>감사, 로깅 및 모니터링</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="audit" role="article">
+    <article aria-labelledby="aud-log-mon" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-audit">
-        <h1 id="audit">감사</h1>
-        <p>다음은 Db2 on Cloud 데이터베이스에서 활동을 감사하는 데 사용할 수 있는 방법입니다.</p>
-        <ul class="shortdesc">
-          <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">CHANGE HISTORY 이벤트 모니터 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></li>
-          <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query<img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></li>
-        </ul>
-        <p>CHANGE HISTORY 이벤트 모니터를 작성하면 이벤트 모니터 테이블을 조회하여 데이터베이스 내에서 수행한 작업 및 수행한 사용자를 판별할 수 있습니다. </p>
-        <p>Time Travel Query를 사용하면 쉽게 데이터의 모든 변경사항을 저장하고 선택한 시점을 기준으로 이전 데이터를 조회할 수 있습니다. 이 감사 방법을 사용하려면 처음에 Time Travel Query를 지원하도록 테이블을 설정하십시오.</p>
-        <p>이러한 감사 방법에 대한 자세한 정보는 <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">How do I audit or track changes?<img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>의
-          내용을 참조하십시오.</p>
+      <section id="section-aud-log-mon">
+        <h1 id="aud-log-mon">감사, 로깅 및 모니터링</h1>
+        <section id="section-auditing">
+          <h2 id="auditing">감사</h2>
+          <p>데이터베이스의 감사 이벤트 테이블에 저장된 다양한 이벤트 카테고리를 감사하는 기능을 제공하는 데이터베이스 감사 정책을 작성할 수 있습니다. 자세한 정보는 <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank">감사 정책 가이드라인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>을
+            참조하십시오.</p>
+          <p>또한 다음과 같은 방법을 사용하여 데이터베이스의 변경사항을 감사하고 추적할 수 있습니다.</p>
+          <ul>
+            <li><code>CHANGE HISTORY</code> 이벤트 모니터를 작성하면 이벤트 모니터 테이블을 조회하여 데이터베이스 내에서 수행한 작업 및 수행한 사용자를 판별할 수 있습니다. 자세한 정보는 <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank"><code>CHANGE HISTORY</code> 이벤트 모니터 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를
+              참조하십시오.</li>
+            <li>Time Travel Query를 사용하면 쉽게 데이터의 모든 변경사항을 저장하고 선택한 시점을 기준으로 이전 데이터를 조회할 수 있습니다. 이 감사 방법을 사용하려면 처음에 Time Travel Query를 지원하도록 테이블을 설정하십시오. 자세한 정보는 <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/"
+                target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를 참조하십시오.</li>
+          </ul>
+          <p>데이터베이스 변경사항 감사 및 추적에 관한 자세한 정보는 <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">변경사항을 감사하거나 추적하는 방법 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>을
+            참조하십시오.</p>
+        </section>
+        <section id="section-log_mon">
+          <h2 id="log_mon">로깅 및 모니터링</h2>
+          <p>모니터링과 로깅은 서비스의 일부이지만 일반 사용자에게 직접 노출되지 않습니다. IBM 운영 직원은 인프라를 사용하여 문제를 처리합니다. </p>
+          <p>활동 트래커의 가용성은 <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>을 참조하십시오.</p>
+          <p>자세한 정보와 진단에 액세스하기 위해 CLPPlus와 같은 Db2 명령행 클라이언트를 사용하여 연결할 수 있습니다.</p>
+          <section id="section-overview">
+            <h3 id="overview">기본 개요:</h3>
+            <p>검사의 기본 유형은 두 가지가 있습니다. 즉, 외부 상태/가동 시간 검사 및 메트릭 기반 모니터링입니다. IBM에서는 수백 개의 메트릭을 모니터하고 해당 메트릭을 히스토리별로 저장합니다. 해당 메트릭 값을 기반으로 경보가 생성됩니다. 경보를 보고 처리할 수 있도록 이 경보는 IBM 운영 직원에게 전송됩니다. 또한 IBM에서는 신속한 진단을 위해 아카이브된 운영 체제와 진단 로그를 전송합니다. Db2 on Cloud는 GDPR을
+              준수하고 필요한 경우 IBM EU Cloud 옵션을 통해 더 높은 수준으로 GDPR을 준수할 수 있습니다.</p>
+          </section>
+        </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

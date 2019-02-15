@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-10-26">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-02">
+  <meta name="dcterms.date" content="2019-01-02">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,17 +27,17 @@
   <main role="main">
     <article aria-labelledby="getting_started_db2oncloud" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-getting_started_db2oncloud">
         <h1 id="getting_started_db2oncloud">Introduzione</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud è un database SQL di cui viene eseguito il provisioning nel cloud per te. Puoi utilizzare Db2 on Cloud come useresti qualsiasi software database ma senza dover sostenere il carico di lavoro e i costi necessari per la
           configurazione dell&#39;hardware o l&#39;installazione e la manutenzione del software. </p>
+        <p class="important">Crea le credenziali. Per chi non ha esperienza con IBM Cloud, dopo la creazione del servizio è necessario creare un nome utente e una password facendo clic sul pulsante <strong>Create Credentials</strong> quando si avvia il servizio. Tecnicamente,
+          puoi accedere alla console web senza credenziali, ma avrai bisogno di nome utente e password per utilizzare molti degli strumenti Db2.</p>
         <p>Puoi anche installare un database db2 locale utilizzando il <a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions" target="_blank">download di Db2 Developer Edition gratuito <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.
           Installa rapidamente una Developer Edition di Db2 pronta per l&#39;uso all&#39;interno di un contenitore Docker (Docker non richiesto; installerà automaticamente qualsiasi componente necessario). </p>
         <!-- ## Free trial
 
 You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
-
         <section id="section-interfaces">
           <h2 id="interfaces">Interfacce</h2>
           <p class="shortdesc">Puoi lavorare con il tuo database Db2 on Cloud nei seguenti modi:</p>
@@ -50,9 +52,7 @@ You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days o
             <p class="shortdesc">La console web fornisce un&#39;interfaccia grafica per tutto quello che ti serve per utilizzare il tuo database, tra cui: funzionalità di carico, un editor SQL, dei download di driver e altro ancora.</p>
             <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
             <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
-
             <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
-
             <p>Puoi accedere alla tua console web Db2 on Cloud nei seguenti modi:</p>
             <ul>
               <li>Dal tuo dashboard IBM Cloud - puoi aprire la console web dalla pagina Dettagli del servizio per il tuo servizio IBM Db2 on Cloud.</li>
@@ -62,13 +62,14 @@ You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days o
 
 With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
 {: shortdesc} -->
-
           </section>
           <section id="section-connect_apps">
-            <h3 id="connect_apps">Connetti le applicazioni o i tuoi strumenti preferiti dal tuo computer locale</h3>
-            <p class="shortdesc">Configura il tuo ambiente locale per stabilire una connessione al tuo database Db2 on Cloud completando la seguente procedura:</p>
+            <h3 id="connect_apps">Installazione dei driver e dei client della riga di comando Db2 sul tuo computer</h3>
+            <p class="shortdesc">La maggior parte degli utenti può ignorare questo passo. Nella maggior parte dei casi, gli utenti tendono ad utilizzare solo l&#39;API REST o a installare i driver per un framework, ad esempio con il comando <code>pip</code> di Python. Tuttavia,
+              gli utenti più esperti vogliono utilizzare il client della riga di comando Db2 per gestire i propri database e utilizzare i comandi Db2. Inoltre, alcune applicazioni ODBC o JDBC possono trarre vantaggio da un&#39;installazione generale dei
+              driver Db2. In questo caso, effettua le operazioni riportate di seguito:</p>
+            <!-- Drivers on site are broken so taking out this one -Simon. 1. Download the [driver package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html){:new_window} from the Connection info page of the Db2 on Cloud web console.-->
             <ol>
-              <li>Scarica il <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html" target="_blank">pacchetto di driver <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>                dalla pagina di informazioni sulla connessione della console web Db2 on Cloud.</li>
               <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">Installa il pacchetto di driver <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>                sul computer dove sono in esecuzione le tue applicazioni e i tuoi strumenti.</li>
               <li><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">Configura i file di driver <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>                per il tuo database Db2 on Cloud.</li>
             </ol>
@@ -131,33 +132,28 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
             </li>
             <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank">PHP <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>
               <!-- * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:new_window} -->
+              <!-- * [Db2 on Cloud samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld){:new_window} -->
             </li>
-            <li><a href="https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld" target="_blank">Esempi Db2 on Cloud su GitHub <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a></li>
           </ul>
         </section>
         <section id="section-intro_vid">
           <h2 id="intro_vid">Video: Introduzione a Db2 on Cloud</h2>
           <p>Guarda questo video per vedere un&#39;introduzione a Db2 on Cloud.</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer" title="Introduzione a Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/F_ylk44_WOg?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer1" title="Introduzione a Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/F_ylk44_WOg?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
         <section id="section-vid_api">
           <h2 id="vid_api">Video: utilizzo dell&#39;API REST per comunicare con Db2 on Cloud</h2>
           <p>Guarda questo video per vedere i passi necessari per utilizzare un&#39;API RESTful per comunicare con Db2 on Cloud.</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer" title="Utilizzo dell'API RESTful per comunicare con Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/PSNBDwgf9ts?rel=0" frameborder="0" webkitallowfullscreen=""
-            mozallowfullscreen="" allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer2" title="Utilizzo dell'API RESTful per comunicare con Db2 on Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/PSNBDwgf9ts?rel=0" frameborder="0" webkitallowfullscreen
+            mozallowfullscreen allowfullscreen> </iframe>
         </section>
         <section id="section-cognos_vid">
           <h2 id="cognos_vid">Video: integrazione coni notebook Jupyter</h2>
           <p>Guarda questo video per vedere come integrare i notebook Jupyter con Db2 on Cloud.</p>
-          <iframe class="embed-responsive-item" id="youtubeplayer" title="Integrazione dei notebook Jupyter" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
-            allowfullscreen> </iframe>
+          <iframe class="embed-responsive-item" id="youtubeplayer3" title="Integrazione dei notebook Jupyter" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

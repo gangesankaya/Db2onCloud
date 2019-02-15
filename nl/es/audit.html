@@ -3,46 +3,59 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-01-10">
+  <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Auditoría</title>
+  <title>Auditoría, registro y supervisión</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="audit" role="article">
+    <article aria-labelledby="aud-log-mon" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-audit">
-        <h1 id="audit">Auditoría</h1>
-        <p>A continuación se muestran los métodos con los que puede auditar la actividad de la base de datos Db2 on Cloud:</p>
-        <ul class="shortdesc">
-          <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">Supervisor de sucesos del HISTORIAL DE CAMBIOS <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
-          <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
-        </ul>
-        <p>Mediante la creación de un supervisor de sucesos del HISTORIAL DE CAMBIOS, puede consultar la tabla del supervisor de sucesos para determinar lo que se ha hecho dentro de la base de datos y quién lo ha hecho. </p>
-        <p>Time Travel Query facilita la tarea de almacenar todos los cambios en los datos y de consultar los datos antiguos en función de un punto en el tiempo seleccionado. Para utilizar este método de auditoría, asegúrese de configurar primero las tablas
-          para que den soporte a Time Travel Query.</p>
-        <p>Para obtener más información sobre estos métodos de auditoría, consulte <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">Cómo puedo auditar y efectuar un seguimiento de los cambios <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+      <section id="section-aud-log-mon">
+        <h1 id="aud-log-mon">Auditoría, registro y supervisión</h1>
+        <section id="section-auditing">
+          <h2 id="auditing">Auditoría</h2>
+          <p>Puede crear una política de auditoría de base de datos que le dé la capacidad de auditar diferentes categorías de sucesos almacenados en las tablas de auditoría de sucesos de la base de datos. Para obtener más información, consulte <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html"
+              target="_blank">Directrices de políticas de auditoría <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+          <p>También puede auditar y realizar el seguimiento de cambios a la base de datos utilizando los métodos siguientes:</p>
+          <ul>
+            <li>Mediante la creación de un supervisor de sucesos de <code>CHANGE HISTORY</code>, puede consultar la tabla del supervisor de sucesos para determinar lo que se ha hecho dentro de la base de datos y quién lo ha hecho. Para obtener más información,
+              consulte <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">Supervisor de sucesos <code>CHANGE HISTORY</code> <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</li>
+            <li>Time Travel Query facilita la tarea de almacenar todos los cambios en los datos y de consultar los datos antiguos en función de un punto en el tiempo seleccionado. Para utilizar este método de auditoría, asegúrese de configurar primero las
+              tablas para que den soporte a Time Travel Query. Para obtener más información, consulte <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Consulta de viaje en el tiempo <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
+          </ul>
+          <p>Para obtener más información sobre auditar y rastrear cambios en la base de datos, consulte <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">Cómo puedo auditar y efectuar un seguimiento de los cambios <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+        </section>
+        <section id="section-log_mon">
+          <h2 id="log_mon">Registro y supervisión</h2>
+          <p>La supervisión y el registro son parte del servicio; sin embargo, no están expuestos directamente al usuario final. En lugar de eso, el personal operativo de IBM utiliza la infraestructura para resolver problemas. </p>
+          <p>Para consultar la disponibilidad del Rastreador de disponibilidad, consulte la <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+          <p>Puede conectarse mediante un cliente de línea de mandatos de Db2, como CLPPlus, para acceder a información detallada y diagnósticos.</p>
+          <section id="section-overview">
+            <h3 id="overview">Una visión general básica:</h3>
+            <p>Hay 2 tipos de comprobación. Las comprobaciones de salud/tiempo de funcionamiento y las supervisiones basadas en métricas. IBM supervisa cientos de métricas y las almacena históricamente. Basándose en los valores de estas métricas, se generan
+              alertas. Estas alertas se envían al personal de operaciones de IBM para asegurarse de que se ven y se responde a ellas. Además, IBM también envía registros del sistema operativo y de diagnóstico para una diagnosis rápida. Db2 on Cloud cumple
+              con el Reglamento general de protección de datos, y las opciones de IBM Cloud de IBM EU proporcionan un cumplimiento aún mayor de la normativa GDPR si es necesario.</p>
+          </section>
+        </section>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

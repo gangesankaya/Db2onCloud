@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-05-11">
   <meta name="dcterms.date" content="2018-05-11">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -25,7 +27,6 @@
   <main role="main">
     <article aria-labelledby="migration" role="article">
       <!-- Attribute definitions -->
-
       <section id="section-migration">
         <h1 id="migration">IBM Cloud へのデータ・マイグレーション</h1>
         <p class="shortdesc">ローカル・ネットワーク上またはオブジェクト・ストア内 (Amazon S3 または IBM Cloud Object Storage) にある、区切り文字で区切られた形式 (CSV または TXT) のデータ・ファイルから IBM&reg; Db2&reg; on Cloud にデータをロードできます。 オンプレミス・システムからデータをマ イグレーションすることもできます。
@@ -56,8 +57,7 @@
      )
   )
 </code></pre>
-          <p><strong>注:</strong> IBM Cloud Object Storage の場合、HMAC 資格情報を作成するために、 新規サービス資格情報を作成する際、
-            <em>「インラインの構成パラメーターの追加」</em>フィールド に {&quot;HMAC:true&quot;} を指定してください。</p>
+          <p class="note">IBM Cloud Object Storage の場合、HMAC 資格情報を作成するために、新規サービス資格情報を作成する際、<em>「インラインの構成パラメーターの追加」</em>フィールドに {&quot;HMAC:true&quot;} を指定してください。</p>
         </section>
         <section id="section-onprem">
           <h2 id="onprem">オンプレミス・システムからのデータのマイグレーション</h2>
@@ -98,15 +98,9 @@ Migration</a></li>
                 </tr>
               </tbody>
             </table>
-            <p>Lift CLI のダウンロードとインストールについては、
-              <a href="https://lift.ng.bluemix.net/#download" target="_blank">Lift CLI のダウンロード
-<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン
-" title="外部リンク・アイコン"></a> を参照してください。</p>
-            <p>Lift CLI を使用して IBM Cloud にデータをマイグレーションする手順 については、
-              <a href="https://lift.ng.bluemix.net/#docs" target="_blank">IBM Db2 on Cloud へのデータ・マイグレーション
-<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン
-" title="外部リンク・アイコン
-"></a> を参照してください。</p>
+            <p>Lift CLI のダウンロードとインストールについては、<a href="https://lift.ng.bluemix.net/#download" target="_blank">Lift CLI のダウンロード<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
+            <p>Lift CLI を使用して IBM Cloud にデータをマイグレーションする手順については、<a href="https://lift.ng.bluemix.net/#docs" target="_blank">IBM Db2 on Cloud へのデータ・マイグレーション
+<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
           </section>
           <section id="section-mdms">
             <h3 id="mdms">IBM Cloud Mass Data Migration</h3>
@@ -121,9 +115,5 @@ Cloud Mass Data Migration 入門</a> を参照してください。</p>
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>

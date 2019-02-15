@@ -3,15 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="copyright" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 2016, 2019">
-  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
-  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-12-05">
+  <meta name="dcterms.date" content="2018-12-05">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="scope" content="{{ scope }}">
+  <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
 
 
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
 
   <!-- Licensed Materials - Property of IBM -->
   <!-- US Government Users Restricted Rights -->
@@ -23,11 +25,10 @@
 
 <body>
   <main role="main">
-    <article aria-labelledby="overview" role="article">
+    <article aria-labelledby="fs" role="article">
       <!-- Attribute definitions -->
-
-      <section id="section-overview">
-        <h1 id="overview">Features &amp; und Spezifikationen</h1>
+      <section id="section-fs">
+        <h1 id="fs">Features &amp; und Spezifikationen</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud-Features und -Spezifikationen sind zur besseren Übersichtlichkeit im Folgenden zusammengefasst.</p>
         <table>
           <caption caption-side="top">Tabelle 1. In Db2 on Cloud unterstützte Features und Spezifikationen</caption>
@@ -104,7 +105,7 @@
               <td></td>
               <td>Unterschiedliche Zonen im selben Rechenzentrum</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">In Roadmap <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a></td>
-              <td>-</td>
+              <td><strong>Hinweis</strong>: HADR an einem anderen Standort wird unterstützt.</td>
             </tr>
             <tr>
               <td></td>
@@ -135,6 +136,66 @@
               <td>IP-Wechsel bei Funktionsübernahme</td>
               <td>J</td>
               <td>Nur lokale HA; keine ausgelagerte HADR</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO: Hohe Verfügbarkeit</td>
+              <td>0 s</td>
+              <td>HA ist synchron</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO: Hohe Verfügbarkeit</td>
+              <td>Normalerweise 0 - 10 min</td>
+              <td>Mit Wiederholungscode, stellt sich als Verzögerung bei Db2 ACR dar</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO: HADR auf einem ausgelagerten Knoten</td>
+              <td>Normalerweise &lt; 15 s</td>
+              <td>Ausgelagerte DR ist asynchron</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO: HADR auf einem ausgelagerten Knoten</td>
+              <td>&lt; 3 min</td>
+              <td>Initiierung mit Konsolenschaltfläche oder API erforderlich</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Systemkonfigurationen</td>
+              <td>Max. RAM und Cores</td>
+              <td>1 TB RAM, 48 Cores</td>
+              <td>Für Precise Performance XL-Plan gültig.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Max. Speicher</td>
+              <td>11 TB</td>
+              <td>Für Precise Performance XL-Plan gültig. Plattenspeicher für Daten und Protokolle.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex: Basisplan</td>
+              <td>4 GB RAM, 1 Core, 2 GB Plattenspeicher</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex: Max. RAM und Cores</td>
+              <td>128 GB RAM, 32 Cores</td>
+              <td>Höhere Spezifikationen erforderlich? Precise Performance-Plan verwenden oder IBM Support kontaktieren.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex: Max. Speicher</td>
+              <td>4 TB</td>
+              <td>Plattenspeicher für Daten und Protokolle. Höhere Spezifikationen erforderlich? Precise Performance-Plan verwenden oder IBM Support kontaktieren.</td>
             </tr>
             <tr>
               <td></td>
@@ -230,9 +291,9 @@
             </tr>
             <tr>
               <td></td>
-              <td>Punktuelle Recovery (Self-Service)</td>
+              <td>Zeitpunktgesteuerte Recovery (Self-Service)</td>
               <td>Verfügbar ab 15. Nov. 2018</td>
-              <td>-</td>
+              <td><a href="br.html#point-in-time">Zeitpunktgesteuerte Wiederherstellung</a></td>
             </tr>
             <tr>
               <td></td>
@@ -296,7 +357,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>KeyProtect (BYOK)</td>
+              <td>Key Protect (BYOK)</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">In Roadmap <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a></td>
               <td>-</td>
             </tr>
@@ -305,6 +366,18 @@
               <td>MIS/vernetzter Service</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">In Roadmap <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a></td>
               <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Grenzwert für maximale Anzahl gleichzeitiger Verbindungen: <strong>Kostenfreier Plan</strong></td>
+              <td>J</td>
+              <td>Maximal 5 Verbindungen</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Grenzwert für maximale Anzahl gleichzeitiger Verbindungen: <strong>Kostenpflichtige Pläne</strong></td>
+              <td>N</td>
+              <td>Unbegrenzte Anzahl von Verbindungen</td>
             </tr>
             <tr>
               <td></td>
@@ -320,15 +393,21 @@
             </tr>
             <tr>
               <td></td>
-              <td>Über IBM Cloud verfügbar</td>
+              <td>In IBM Cloud verfügbar</td>
               <td>J</td>
               <td>Sowohl Abonnement als auch nutzungsabhängig</td>
             </tr>
             <tr>
               <td></td>
-              <td>Über Bestellung eines Softwareangebots verfügbar</td>
+              <td>Mit Bestellung eines Softwareangebots verfügbar</td>
               <td>J</td>
               <td>Alle Pläne einschließlich Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">Komponenten &amp; Details <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>In Hybrid Data Management Platform (HDMP) verfügbar</td>
+              <td>J</td>
+              <td>Nur Flex-Plan. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank">Details zu HDMP <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a></td>
             </tr>
             <tr>
               <td></td>
@@ -371,7 +450,7 @@
               <td></td>
               <td>Frankfurt &amp; London</td>
               <td><strong>Bereitstellung</strong>: &lt; 5 Minuten. <strong>Skalierung</strong>: 2 Stunden.</td>
-              <td>Nur Flex-Plan, abhängig vom Bestand.</td>
+              <td>Nur Flex-Plan, abhängig vom Bestand</td>
             </tr>
             <tr>
               <td></td>
@@ -383,7 +462,7 @@
               <td></td>
               <td>Sydney</td>
               <td><strong>Bereitstellung</strong>: &lt; 1 Stunde. <strong>Skalierung</strong>: 2 Stunden.</td>
-              <td>Nur Flex-Plan, abhängig vom Bestand.</td>
+              <td>Nur Flex-Plan, abhängig vom Bestand</td>
             </tr>
             <tr>
               <td></td>
@@ -396,9 +475,5 @@
       </section>
     </article>
   </main>
-</body>
-</html>
-</article>
-</main>
 </body>
 </html>
