@@ -38,7 +38,7 @@
     <topic href="iam.html#features" label="Features of IBM Cloud IAM" id="features">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#connect" label="Client connections and user logins" id="connect">
+    <topic href="iam.html#connect_user" label="Client connections and user logins" id="connect_user">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#sup-if" label="Supported interfaces" id="sup-if">
@@ -52,7 +52,7 @@
     <topic href="iam.html#api" label="REST API experience" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="IBMid federation" id="fed">
+    <topic href="iam.html#fed_ibmid" label="IBMid federation" id="fed_ibmid">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
@@ -85,10 +85,10 @@
       </topic>
       <topic href="federation.html#getting_started" label="Getting started" id="getting_started">
         <property name="type" value="anchor"/>
-        <topic href="federation.html#on-the-db2-on-cloud-target-machine" label="On the Db2 on Cloud target machine" id="on-the-db2-on-cloud-target-machine"></topic>
-        <topic href="federation.html#on-a-db2-on-cloud-machine-being-used-as-a-federation-source" label="On a Db2 on Cloud machine being used as a federation source" id="on-a-db2-on-cloud-machine-being-used-as-a-federation-source"></topic>
+        <topic href="federation.html#targ" label="On the Db2 on Cloud target machine" id="targ"></topic>
+        <topic href="federation.html#fed_src" label="On a Db2 on Cloud machine being used as a federation source" id="fed_src"></topic>
       </topic>
-      <topic href="federation.html#additional-information" label="Additional information" id="additional-information">
+      <topic href="federation.html#more_info" label="Additional information" id="more_info">
         <property name="type" value="anchor"/>
       </topic>
     </topic>
@@ -118,7 +118,7 @@
   <topic href="flex_scaling.html#scale" label="Flexible scaling" id="scale">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="br.html#br" label="Backup and restore" id="br">
+  <topic href="br.html#bnr" label="Backup and restore" id="bnr">
     <property name="navgroup" value="learn"/>
     <topic href="br.html#point-in-time" label="Point-in-time restore" id="point-in-time">
       <property name="type" value="anchor"/>

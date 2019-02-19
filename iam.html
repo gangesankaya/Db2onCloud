@@ -49,8 +49,8 @@
             owning IBMid. Therefore, different authorities and permissions can be granted specific to the service ID within the database. Service IDs do not have passwords. An API key must be created for each service ID for the service ID to connect to
             the database service instance. For more information about service IDs, see: <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
         </section>
-        <section id="section-connect">
-          <h2 id="connect">Client connections and user logins</h2>
+        <section id="section-connect_user">
+          <h2 id="connect_user">Client connections and user logins</h2>
           <p><strong>Prerequisite</strong>: Db2 Client V11.1 FP3 and later.</p>
           <p>The following methods can be used for IAM authentication:</p>
           <p><strong>Access token</strong></p>
@@ -232,8 +232,8 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
           </ul>
           <p>For more details about your service&#39;s API, see: <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
         </section>
-        <section id="section-fed">
-          <h2 id="fed">IBMid federation</h2>
+        <section id="section-fed_ibmid">
+          <h2 id="fed_ibmid">IBMid federation</h2>
           <p>To use your own identity provider such as LDAP, you must first federate your LDAP server with IBMid. For instructions about federating your LDAP server with IBMid, see: <a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc"
               target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. After IBMid federation is completed and the allowed users are added to the database
             service instance by the database administrator, these users can log in to the console with their company user ID and password. Alternatively, these users can use an access token or API key that represents their user ID to connect to the database

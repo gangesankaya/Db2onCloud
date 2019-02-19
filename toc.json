@@ -148,9 +148,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#connect",
+                        "href": "services/Db2onCloud/iam.html#connect_user",
                         "label": "Client connections and user logins",
-                        "id": "Db2onCloud-connect",
+                        "id": "Db2onCloud-connect_user",
                         "properties": [
                             {
                                 "name": "type",
@@ -204,9 +204,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#fed",
+                        "href": "services/Db2onCloud/iam.html#fed_ibmid",
                         "label": "IBMid federation",
-                        "id": "Db2onCloud-fed",
+                        "id": "Db2onCloud-fed_ibmid",
                         "properties": [
                             {
                                 "name": "type",
@@ -343,14 +343,14 @@
                                 "id": "Db2onCloud-getting_started",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/federation.html#on-the-db2-on-cloud-target-machine",
+                                        "href": "services/Db2onCloud/federation.html#targ",
                                         "label": "On the Db2 on Cloud target machine",
-                                        "id": "Db2onCloud-on-the-db2-on-cloud-target-machine"
+                                        "id": "Db2onCloud-targ"
                                     },
                                     {
-                                        "href": "services/Db2onCloud/federation.html#on-a-db2-on-cloud-machine-being-used-as-a-federation-source",
+                                        "href": "services/Db2onCloud/federation.html#fed_src",
                                         "label": "On a Db2 on Cloud machine being used as a federation source",
-                                        "id": "Db2onCloud-on-a-db2-on-cloud-machine-being-used-as-a-federation-source"
+                                        "id": "Db2onCloud-fed_src"
                                     }
                                 ],
                                 "properties": [
@@ -361,9 +361,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#additional-information",
+                                "href": "services/Db2onCloud/federation.html#more_info",
                                 "label": "Additional information",
-                                "id": "Db2onCloud-additional-information",
+                                "id": "Db2onCloud-more_info",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -475,9 +475,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/br.html#br",
+                "href": "services/Db2onCloud/br.html#bnr",
                 "label": "Backup and restore",
-                "id": "Db2onCloud-br",
+                "id": "Db2onCloud-bnr",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/br.html#point-in-time",
