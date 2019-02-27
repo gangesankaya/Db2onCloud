@@ -645,9 +645,9 @@
                         "id": "Db2onCloud-log_mon",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/audit.html#overview",
+                                "href": "services/Db2onCloud/audit.html#basic_overview",
                                 "label": "A basic overview:",
-                                "id": "Db2onCloud-overview"
+                                "id": "Db2onCloud-basic_overview"
                             }
                         ],
                         "properties": [
