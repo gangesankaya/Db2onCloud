@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="DC.Publisher" content="IBM Corporation">
-  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-05-03">
-  <meta name="dcterms.date" content="2018-05-03">
+  <meta name="DC.date" content="2018-12-07">
+  <meta name="dcterms.date" content="2018-12-07">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
@@ -20,7 +20,7 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>免费轻量套餐</title>
+  <title>免费套餐</title>
 </head>
 
 <body>
@@ -28,20 +28,123 @@
     <article aria-labelledby="free_plan" role="article">
       <!-- Attribute definitions -->
       <section id="section-free_plan">
-        <h1 id="free_plan">免费轻量套餐</h1>
-        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 免费轻量套餐提供基本资源，以供开发或了解 Db2，而无需任何费用。</p>
-        <p>免费套餐无时间限制，但是用户必须每 30 天重新延长其免费套餐。</p>
+        <h1 id="free_plan">免费套餐</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 免费套餐提供了基本资源，可用于开发或了解 Db2，无需任何费用。</p>
+        <p>免费套餐无时间限制，但用户必须每 30 天重新延长其免费套餐。</p>
         <p>仅提供社区支持。 </p>
         <section id="section-architecture">
           <h2 id="architecture">体系结构</h2>
-          <p>与其他 Db2 on Cloud 套餐不同，Db2 on Cloud 免费轻量套餐在多租户系统上运行。Flex 和 Precise Performance 套餐在其自己的单租户虚拟机或裸机服务器上运行。</p>
+          <p>与其他 Db2 on Cloud 套餐不同，Db2 on Cloud 免费套餐在多租户系统上运行。Flex 和 Precise Performance 套餐在其自己的单租户虚拟机或裸机服务器上运行。</p>
           <p>免费套餐允许使用一个数据库模式。</p>
-          <p>有关 Db2 on Cloud 免费轻量套餐的更多信息，请参阅<a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">常见问题 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+          <p>有关 Db2 on Cloud 免费套餐的更多信息，请参阅<a href="https://ibm.biz/db2oc_free_plan_faq" target="_blank">常见问题 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
         </section>
         <section id="section-outside_na">
-          <h2 id="outside_na">在北美大陆之外使用轻量套餐</h2>
-          <p>对于北美大陆，当前无需信用卡即可访问免费轻量套餐。在北美大陆之外，客户必须向其 IBM Cloud 帐户添加信用卡，然后选择“美国南部 - 达拉斯”区域才能显示免费轻量套餐以供选择。</p>
-          <p>轻量套餐始终免费且不会向信用卡收取费用。</p>
+          <h2 id="outside_na">在北美大陆之外使用免费套餐</h2>
+          <p>对于北美大陆，目前无需信用卡也可以访问免费套餐。在北美大陆之外，客户必须向其 IBM Cloud 帐户添加信用卡，然后选择“美国南部 - 达拉斯”区域，才能查看和选择免费套餐。</p>
+          <p>免费套餐始终免费且不会向信用卡收取费用。</p>
+        </section>
+        <section id="section-fp_restrictions">
+          <h2 id="fp_restrictions">免费套餐限制</h2>
+          <p class="important">对于任务关键型或性能敏感型工作负载，强烈建议您使用企业级服务套餐，而不是免费服务套餐。</p>
+          <p>下表显示了 Db2 on Cloud 免费套餐限制：</p>
+          <table>
+            <caption caption-side="top">表 1. Db2 on Cloud 免费套餐限制</caption>
+            <thead>
+              <tr>
+                <th>类别</th>
+                <th>项目</th>
+                <th>限制</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>资源</td>
+                <td>存储空间</td>
+                <td>每个用户 200 MB 的存储空间</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>连接数</td>
+                <td>每个用户 5 个连接</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>性能</td>
+                <td>由于多租户系统上其他用户运行的工作负载，性能可能会出现波动</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>特性和功能</td>
+                <td>联合</td>
+                <td>不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Oracle 兼容性</td>
+                <td>不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>用户定义的扩展 (UDF)</td>
+                <td>任何 Db2 on Cloud 套餐（包括免费套餐）都不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>用户管理</td>
+                <td>未授予用户管理权限</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>行和列访问控制 (RCAC)</td>
+                <td>不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>使用 IBM InfoSphere Data Replication 装入数据</td>
+                <td>不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>联网环境</td>
+                <td>IBM Cloud Integrated Analytics</td>
+                <td>不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>IBM Cloud Dedicated</td>
+                <td>不支持</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>安全合规性</td>
+                <td>1996 年颁布的健康保险可移植性和责任法案 (HIPAA)</td>
+                <td>不支持。请参阅“服务描述”。</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>欧盟一般数据保护条例 (GDPR)</td>
+                <td>不支持。请参阅“服务描述”。</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>帐户管理</td>
+                <td>重新激活</td>
+                <td>每 30 天需要重新激活一次。如果不重新激活，那么会在 60 天后删除免费套餐服务。</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </section>
     </article>

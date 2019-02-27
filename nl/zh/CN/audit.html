@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="DC.Publisher" content="IBM Corporation">
-  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-03-14">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.date" content="2019-01-10">
+  <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
@@ -20,23 +20,35 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>审计</title>
+  <title>审计、日志记录和监视</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="audit" role="article">
+    <article aria-labelledby="aud-log-mon" role="article">
       <!-- Attribute definitions -->
-      <section id="section-audit">
-        <h1 id="audit">审计</h1>
-        <p>以下方法可用于审计 Db2 on Cloud 数据库上的活动：</p>
-        <ul class="shortdesc">
-          <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">CHANGE HISTORY 事件监视器 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
-          <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
-        </ul>
-        <p>通过创建 CHANGE HISTORY 事件监视器，您可以查询事件监视器表以确定数据库中已完成的操作以及操作人员。 </p>
-        <p>Time Travel Query 可轻松存储所有数据更改，甚至可基于选中的时间点查询旧数据。要使用此审计方法，请确保首先设置表以支持 Time Travel Query。</p>
-        <p>有关这些审计方法的更多信息，请参阅<a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">如何审计或跟踪更改？<img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+      <section id="section-aud-log-mon">
+        <h1 id="aud-log-mon">审计、日志记录和监视</h1>
+        <section id="section-auditing">
+          <h2 id="auditing">审计</h2>
+          <p>您可以创建数据库审计策略来审计数据库中审计事件表内存储的各类事件。有关更多信息，请参阅 <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank">Audit policy guidelines <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+          <p>此外，还可以使用以下方法来审计和跟踪数据库更改：</p>
+          <ul>
+            <li>通过创建 <code>CHANGE HISTORY</code> 事件监视器，您可以查询事件监视器表以确定数据库中已完成的操作以及操作人员。有关更多信息，请参阅 <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank"><code>CHANGE HISTORY</code> 事件监视器 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</li>
+            <li>Time Travel Query 可轻松存储所有数据更改，甚至可基于选中的时间点查询旧数据。要使用此审计方法，请确保首先设置表以支持 Time Travel Query。有关更多信息，请参阅 <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
+          </ul>
+          <p>有关审计和跟踪数据库更改的详细信息，请参阅<a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">如何审计或跟踪更改？<img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+        </section>
+        <section id="section-log_mon">
+          <h2 id="log_mon">日志记录和监视</h2>
+          <p>日志记录和监视是服务的一部分，但不直接公开给最终用户。通常，由 IBM 操作人员使用基础架构来解决问题。 </p>
+          <p>有关 Activity Tracker 的可用性信息，请参阅<a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">路线图 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+          <p>您可以使用 Db2 命令行客户机（例如 CLPPlus）进行连接以访问详细信息和诊断。</p>
+          <section id="section-overview">
+            <h3 id="overview">基本概述：</h3>
+            <p>有 2 种基本类型的检查。外部运行状况/正常运行时间检查和基于度量值的监视。IBM 会监视数百个度量值，并存储这些度量值的历史记录。根据这些度量值来生成警报。将这些警报发送给 IBM 操作人员，以确保他们能够及时查看和解决警报。此外，IBM 还会发送归档的操作系统和诊断日志，以便进行快速诊断。Db2 on Cloud 符合 GDPR，如果需要，可以通过 IBM EU Cloud 选项来获得更高级别的 GDPR 遵从性。</p>
+          </section>
+        </section>
       </section>
     </article>
   </main>

@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="DC.Publisher" content="IBM Corporation">
-  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-11-01">
-  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="DC.date" content="2018-12-05">
+  <meta name="dcterms.date" content="2018-12-05">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
@@ -25,10 +25,10 @@
 
 <body>
   <main role="main">
-    <article aria-labelledby="overview" role="article">
+    <article aria-labelledby="fs" role="article">
       <!-- Attribute definitions -->
-      <section id="section-overview">
-        <h1 id="overview">功能部件和规范</h1>
+      <section id="section-fs">
+        <h1 id="fs">功能部件和规范</h1>
         <p class="shortdesc">此处提供 IBM&reg; Db2&reg; on Cloud 功能部件和规范的摘要，以便于您参考。</p>
         <table>
           <caption caption-side="top">表 1. Db2 on Cloud 中支持的功能部件和规范</caption>
@@ -105,7 +105,7 @@
               <td></td>
               <td>不同区域在同一个数据中心内</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">在路线图中 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></td>
-              <td>-</td>
+              <td><strong>注</strong>：非现场 HADR 可用</td>
             </tr>
             <tr>
               <td></td>
@@ -136,6 +136,66 @@
               <td>IP 随故障转移移动</td>
               <td>是</td>
               <td>仅限本地 HA；不支持非现场 HADR</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO：高可用性</td>
+              <td>0 秒</td>
+              <td>HA 是同步的</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO：高可用性</td>
+              <td>通常，0-10 分钟</td>
+              <td>使用重试代码时，Db2 ACR 的速度会变慢</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO：非现场节点 HADR</td>
+              <td>通常，&lt; 15 秒</td>
+              <td>非现场 DR 是异步的</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO：非现场节点 HADR</td>
+              <td>&lt; 3 分钟</td>
+              <td>必须通过控制台按钮或 API 启动</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>系统配置</td>
+              <td>最大 RAM 和核心数</td>
+              <td>1 TB RAM，48 个核心</td>
+              <td>适用于 Precise Performance XL 套餐</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>最大存储</td>
+              <td>11 TB</td>
+              <td>适用于 Precise Performance XL 套餐。用于存储数据和日志的磁盘。</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex：基本套餐</td>
+              <td>4 GB RAM，1 个核心，2 GB 磁盘</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex：最大 RAM 和核心数</td>
+              <td>128 GB RAM，32 个核心</td>
+              <td>需要更高的规格？使用 Precise Performance 套餐或联系 IBM 支持人员。</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Flex：最大存储</td>
+              <td>4 TB</td>
+              <td>用于存储数据和日志的磁盘。需要更高的规格？使用 Precise Performance 套餐或联系 IBM 支持人员。</td>
             </tr>
             <tr>
               <td></td>
@@ -233,7 +293,7 @@
               <td></td>
               <td>时间点自服务恢复</td>
               <td>2018 年 11 月 15 日起可用</td>
-              <td>-</td>
+              <td><a href="br.html#point-in-time">时间点复原</a></td>
             </tr>
             <tr>
               <td></td>
@@ -297,7 +357,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>KeyProtect（带自己的密钥）</td>
+              <td>Key Protect（自带密钥）</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">在路线图中 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></td>
               <td>-</td>
             </tr>
@@ -306,6 +366,18 @@
               <td>MIS / 互连服务</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">在路线图中 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></td>
               <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>最大并发连接限制：<strong>免费套餐</strong></td>
+              <td>是</td>
+              <td>最大：5 个连接</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>最大并发连接限制：<strong>付费套餐</strong></td>
+              <td>否</td>
+              <td>无限数量的连接</td>
             </tr>
             <tr>
               <td></td>
@@ -321,15 +393,21 @@
             </tr>
             <tr>
               <td></td>
-              <td>通过 IBM Cloud 提供</td>
+              <td>在 IBM Cloud 上提供</td>
               <td>是</td>
-              <td>预订和现买现付均可</td>
+              <td>预订和现收现付均可</td>
             </tr>
             <tr>
               <td></td>
               <td>通过软件报价单提供</td>
               <td>是</td>
-              <td>包括 Flex 在内的所有套餐。<a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">部件和详细信息。<img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></td>
+              <td>包括 Flex 在内的所有套餐。<a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">部件和详细信息 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>在 Hybrid Data Management Platform (HDMP) 上提供</td>
+              <td>是</td>
+              <td>仅限 Flex 套餐。<a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank">有关 HDMP 的详细信息 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></td>
             </tr>
             <tr>
               <td></td>

@@ -11,7 +11,7 @@
     <topic href="index.html#interfaces" label="界面" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="index.html#web_console" label="Db2 on Cloud Web 控制台" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="从本地计算机连接应用程序或喜爱的工具" id="connect_apps"></topic>
+      <topic href="index.html#connect_apps" label="在计算机上安装 Db2 命令行客户机和驱动程序" id="connect_apps"></topic>
       <topic href="index.html#data_src" label="使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源" id="data_src"></topic>
     </topic>
     <topic href="index.html#samples" label="样本" id="samples">
@@ -27,7 +27,7 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#overview" label="功能部件和规范" id="overview">
+  <topic href="features_specs.html#fs" label="功能部件和规范" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="iam.html#iam" label="IBM Cloud 上的身份和访问权管理 (IAM)" id="iam">
@@ -43,7 +43,7 @@
     </topic>
     <topic href="iam.html#sup-if" label="受支持的接口" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC 和 CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC、CLP 和 CLPPLUS" id="odbc-clpplus"></topic>
       <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
     <topic href="iam.html#console-ux" label="控制台用户体验" id="console-ux">
@@ -75,7 +75,7 @@
   <topic label="连接到其他 Db2 数据库">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="连接到其他 Db2 数据库"/>
-    <topic href="federation.html#overview" label="数据虚拟化（联合）" id="overview">
+    <topic href="federation.html#fed" label="数据虚拟化（联合）" id="fed">
       <topic href="federation.html#use_cases" label="用例" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#-" label="合并数据源" id="-"></topic>
@@ -93,13 +93,26 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="免费轻量套餐" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="免费套餐" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="体系结构" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="在北美大陆之外使用轻量套餐" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="在北美大陆之外使用免费套餐" id="outside_na">
       <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="免费套餐限制" id="fp_restrictions">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="plans_pricing.html#plans_pricing" label="套餐和定价" id="plans_pricing">
+    <property name="navgroup" value="learn"/>
+    <topic href="plans_pricing.html#plans_cfgs" label="套餐和配置" id="plans_cfgs">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="plans_pricing.html#pricing" label="定价" id="pricing">
+      <property name="type" value="anchor"/>
+      <topic href="plans_pricing.html#examples" label="计费示例" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="灵活扩展" id="scale">
@@ -107,6 +120,9 @@
   </topic>
   <topic href="br.html#br" label="备份和复原" id="br">
     <property name="navgroup" value="learn"/>
+    <topic href="br.html#point-in-time" label="时间点复原" id="point-in-time">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="ha.html#ha" label="高可用性 (HA)" id="ha">
     <property name="navgroup" value="learn"/>
@@ -139,16 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="审计" id="audit">
+  <topic href="audit.html#aud-log-mon" label="审计、日志记录和监视" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#auditing" label="审计" id="auditing">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="日志记录和监视" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="基本概述：" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="管理用户" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="plans_cfgs.html#plans_cfgs" label="套餐和配置" id="plans_cfgs">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="maintenance.html#-" label="维护和通知策略" id="-">
+  <topic href="maintenance.html#maint_note_pol" label="维护和通知策略" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="维护策略" id="maintenance">
       <property name="type" value="anchor"/>
@@ -175,7 +195,7 @@
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="常见问题">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://developer.ibm.com/answers/index.html" label="IBM 开发人员答案">
+  <topic href="https://developer.ibm.com/answers/index.html" label="IBM 开发者答案">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="安全合规性">
