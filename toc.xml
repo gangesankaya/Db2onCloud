@@ -162,7 +162,7 @@
     </topic>
     <topic href="audit.html#log_mon" label="Logging and monitoring" id="log_mon">
       <property name="type" value="anchor"/>
-      <topic href="audit.html#overview" label="A basic overview:" id="overview"></topic>
+      <topic href="audit.html#basic_overview" label="A basic overview:" id="basic_overview"></topic>
     </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="Managing users" id="user_mgmt">
