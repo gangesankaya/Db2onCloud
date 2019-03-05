@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="DC.Publisher" content="IBM Corporation">
-  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-03-14">
-  <meta name="dcterms.date" content="2018-03-14">
+  <meta name="DC.date" content="2019-01-10">
+  <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
@@ -20,23 +20,35 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>審核</title>
+  <title>審核、記載及監視</title>
 </head>
 
 <body>
   <main role="main">
-    <article aria-labelledby="audit" role="article">
+    <article aria-labelledby="aud-log-mon" role="article">
       <!-- Attribute definitions -->
-      <section id="section-audit">
-        <h1 id="audit">審核</h1>
-        <p>以下是您可以用來在 Db2 on Cloud 資料庫上審核活動的方法：</p>
-        <ul class="shortdesc">
-          <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">CHANGE HISTORY 事件監視器 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></li>
-          <li><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></li>
-        </ul>
-        <p>藉由建立 CHANGE HISTORY 事件監視器，您可以查詢事件監視器表格來判斷誰在資料庫裡做了什麼。 </p>
-        <p>Time Travel Query 讓您能輕鬆儲存所有資料變更，甚至根據選取的時間點來查詢您的舊資料。若要使用這個審核方法，請確定您先設定表格，以支援 Time Travel Query。</p>
-        <p>如需這些審核方法的相關資訊，請參閱 <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">How do I audit or track changes? <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+      <section id="section-aud-log-mon">
+        <h1 id="aud-log-mon">審核、記載及監視</h1>
+        <section id="section-auditing">
+          <h2 id="auditing">審核</h2>
+          <p>您可以建立資料庫審核原則，它讓您能審核儲存在您資料庫審核事件表格中的各種種類事件。如需相關資訊，請參閱 <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank">Audit policy guidelines <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+          <p>您也可以使用下列方法審核且追蹤資料庫的變更：</p>
+          <ul>
+            <li>藉由建立 <code>CHANGE HISTORY</code> 事件監視器，您可以查詢事件監視器表格來判斷誰在資料庫裡做了什麼。如需相關資訊，請參閱 <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank"><code>CHANGE HISTORY</code> event monitor <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</li>
+            <li>Time Travel Query 讓您能輕鬆儲存所有資料變更，甚至根據選取的時間點來查詢您的舊資料。若要使用這個審核方法，請確定您先設定表格，以支援 Time Travel Query。如需相關資訊，請參閱 <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></li>
+          </ul>
+          <p>如需審核及追蹤資料庫變更的相關資訊，請參閱 <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">How do I audit or track changes? <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+        </section>
+        <section id="section-log_mon">
+          <h2 id="log_mon">記載及監視</h2>
+          <p>監視及記載是服務的一部分，不過它並不直接公開給一般使用者。IBM 作業人員會改為使用基礎架構來解決問題。 </p>
+          <p>如需 Activity Tracker 的可用性，請參閱 <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">roadmap <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+          <p>您可以使用 Db2 指令行用戶端（例如 CLPPlus）進行連線，以存取詳細資訊及診斷程式。</p>
+          <section id="section-overview">
+            <h3 id="overview">基本觀念：</h3>
+            <p>有 2 種基本類型的檢查。外部性能/執行時間檢查，及以度量值為基礎的監視。IBM 會監視數以百計的度量值，並儲存那些度量值作為歷程。警示會根據這些度量值的值而產生。這些警示會傳送給 IBM 作業人員，以確保看到並解決這些警示。此外，IBM 也會傳送保存的作業系統及診斷日誌以便快速進行診斷。Db2 on Cloud 遵守 GDPR，且 IBM EU Cloud 選項視需要提供更高層次的 GDPR 遵循。</p>
+          </section>
+        </section>
       </section>
     </article>
   </main>

@@ -11,7 +11,7 @@
     <topic href="index.html#interfaces" label="介面" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="index.html#web_console" label="Db2 on Cloud Web 主控台" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="連接本端電腦的應用程式或您最愛的工具" id="connect_apps"></topic>
+      <topic href="index.html#connect_apps" label="在電腦上安裝 Db2 指令行用戶端及驅動程式" id="connect_apps"></topic>
       <topic href="index.html#data_src" label="將 Db2 on Cloud 用作 IBM Cloud 應用程式或服務的資料來源" id="data_src"></topic>
     </topic>
     <topic href="index.html#samples" label="範例" id="samples">
@@ -27,7 +27,7 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#overview" label="特性及規格" id="overview">
+  <topic href="features_specs.html#fs" label="特性及規格" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="iam.html#iam" label="IBM Cloud 上的 Identity and Access Management (IAM)" id="iam">
@@ -43,7 +43,7 @@
     </topic>
     <topic href="iam.html#sup-if" label="支援的介面" id="sup-if">
       <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC 及 CLPPLUS" id="odbc-clpplus"></topic>
+      <topic href="iam.html#odbc-clpplus" label="ODBC、CLP 及 CLPPLUS" id="odbc-clpplus"></topic>
       <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
     </topic>
     <topic href="iam.html#console-ux" label="主控台使用者體驗" id="console-ux">
@@ -75,7 +75,7 @@
   <topic label="連接至另一個 Db2 資料庫">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="連接至另一個 Db2 資料庫"/>
-    <topic href="federation.html#overview" label="資料虛擬化（聯合）" id="overview">
+    <topic href="federation.html#fed" label="資料虛擬化（聯合）" id="fed">
       <topic href="federation.html#use_cases" label="使用案例" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#-" label="合併資料來源" id="-"></topic>
@@ -93,13 +93,26 @@
       </topic>
     </topic>
   </topic>
-  <topic href="free_plan.html#free_plan" label="免費精簡方案" id="free_plan">
+  <topic href="free_plan.html#free_plan" label="免費方案" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="架構" id="architecture">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="free_plan.html#outside_na" label="在北美洲大陸以外使用精簡方案" id="outside_na">
+    <topic href="free_plan.html#outside_na" label="在北美洲大陸以外使用免費方案" id="outside_na">
       <property name="type" value="anchor"/>
+    </topic>
+    <topic href="free_plan.html#fp_restrictions" label="免費方案限制" id="fp_restrictions">
+      <property name="type" value="anchor"/>
+    </topic>
+  </topic>
+  <topic href="plans_pricing.html#plans_pricing" label="方案及定價" id="plans_pricing">
+    <property name="navgroup" value="learn"/>
+    <topic href="plans_pricing.html#plans_cfgs" label="方案及配置" id="plans_cfgs">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="plans_pricing.html#pricing" label="定價" id="pricing">
+      <property name="type" value="anchor"/>
+      <topic href="plans_pricing.html#examples" label="計費範例" id="examples"></topic>
     </topic>
   </topic>
   <topic href="flex_scaling.html#scale" label="彈性調整" id="scale">
@@ -107,6 +120,9 @@
   </topic>
   <topic href="br.html#br" label="備份及還原" id="br">
     <property name="navgroup" value="learn"/>
+    <topic href="br.html#point-in-time" label="復原點還原" id="point-in-time">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="ha.html#ha" label="高可用性 (HA)" id="ha">
     <property name="navgroup" value="learn"/>
@@ -127,7 +143,7 @@
   <topic label="載入資料">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="載入資料"/>
-    <topic href="dcw.html#dcw" label="評量資料庫相容性" id="dcw"></topic>
+    <topic href="dcw.html#dcw" label="評量您的資料庫相容性" id="dcw"></topic>
     <topic href="migration.html#migration" label="將資料移轉至 IBM Cloud" id="migration">
       <topic href="migration.html#cos" label="從物件儲存庫載入資料" id="cos">
         <property name="type" value="anchor"/>
@@ -139,16 +155,20 @@
       </topic>
     </topic>
   </topic>
-  <topic href="audit.html#audit" label="審核" id="audit">
+  <topic href="audit.html#aud-log-mon" label="審核、記載及監視" id="aud-log-mon">
     <property name="navgroup" value="learn"/>
+    <topic href="audit.html#auditing" label="審核" id="auditing">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="audit.html#log_mon" label="記載及監視" id="log_mon">
+      <property name="type" value="anchor"/>
+      <topic href="audit.html#overview" label="基本觀念：" id="overview"></topic>
+    </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="管理使用者" id="user_mgmt">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="plans_cfgs.html#plans_cfgs" label="方案及配置" id="plans_cfgs">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="maintenance.html#-" label="維護及通知原則" id="-">
+  <topic href="maintenance.html#maint_note_pol" label="維護及通知原則" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
     <topic href="maintenance.html#maintenance" label="維護原則" id="maintenance">
       <property name="type" value="anchor"/>

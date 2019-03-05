@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="DC.Publisher" content="IBM Corporation">
-  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2018">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-11-01">
-  <meta name="dcterms.date" content="2018-11-01">
+  <meta name="DC.date" content="2018-12-05">
+  <meta name="dcterms.date" content="2018-12-05">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="{{ subcollection }}">
   <meta name="source.format" content="markdown">
@@ -25,10 +25,10 @@
 
 <body>
   <main role="main">
-    <article aria-labelledby="overview" role="article">
+    <article aria-labelledby="fs" role="article">
       <!-- Attribute definitions -->
-      <section id="section-overview">
-        <h1 id="overview">特性及規格</h1>
+      <section id="section-fs">
+        <h1 id="fs">特性及規格</h1>
         <p class="shortdesc">為了方便您使用，IBM&reg; Db2&reg; on Cloud 特性與規格彙總如下。</p>
         <table>
           <caption caption-side="top">表 1. Db2 on Cloud 中支援的特性及規格</caption>
@@ -105,7 +105,7 @@
               <td></td>
               <td>相同資料中心的不同區域</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">在導覽圖中 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></td>
-              <td>-</td>
+              <td><strong>附註：</strong>可以使用異地 HADR</td>
             </tr>
             <tr>
               <td></td>
@@ -136,6 +136,66 @@
               <td>使用失效接手的 IP 移動</td>
               <td>是</td>
               <td>僅限於本端 HA；而非異地 HADR</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO：高可用性</td>
+              <td>0 秒</td>
+              <td>HA 同步</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO：高可用性</td>
+              <td>一般為 0-10 分鐘</td>
+              <td>具有重試代碼，將出現為 Db2 ACR 緩慢</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RPO：異地節點 HADR</td>
+              <td>一般為 &lt; 15 秒</td>
+              <td>異地 DR 非同步</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>RTO：異地節點 HADR</td>
+              <td>&lt; 3 分鐘</td>
+              <td>必須使用主控台按鈕或 API 起始</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>系統配置</td>
+              <td>最大 RAM 及核心數</td>
+              <td>1 TB RAM、48 個核心</td>
+              <td>適用於精確效能 XL 方案</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>最大儲存空間</td>
+              <td>11 TB</td>
+              <td>適用於精確效能 XL 方案。磁碟同時適用於資料及日誌。</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>彈性：基礎方案</td>
+              <td>4 GB RAM、1 個核心、2 GB 磁碟</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>彈性：最大 RAM 及核心數</td>
+              <td>128 GB RAM、32 個核心</td>
+              <td>需要更高的規格？請使用精確效能方案或與 IBM 支援中心聯絡。</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>彈性：最大儲存空間</td>
+              <td>4 TB</td>
+              <td>磁碟同時適用於資料及日誌。需要更高的規格？請使用精確效能方案或與 IBM 支援中心聯絡。</td>
             </tr>
             <tr>
               <td></td>
@@ -233,7 +293,7 @@
               <td></td>
               <td>時間點自助式回復</td>
               <td>2018 年 11 月 15 日推出</td>
-              <td>-</td>
+              <td><a href="br.html#point-in-time">復原點還原</a></td>
             </tr>
             <tr>
               <td></td>
@@ -297,7 +357,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>KeyProtect（自帶金鑰）</td>
+              <td>Key Protect（自帶金鑰）</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">在導覽圖中 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></td>
               <td>-</td>
             </tr>
@@ -306,6 +366,18 @@
               <td>MIS / 交互連接服務</td>
               <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">在導覽圖中 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></td>
               <td>-</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>並行連線數上限：<strong>免費方案</strong></td>
+              <td>是</td>
+              <td>上限：5 個連線</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>並行連線數上限：<strong>付費方案</strong></td>
+              <td>否</td>
+              <td>連線數無限制</td>
             </tr>
             <tr>
               <td></td>
@@ -321,7 +393,7 @@
             </tr>
             <tr>
               <td></td>
-              <td>透過 IBM Cloud 取得</td>
+              <td>可透過 IBM Cloud 取得</td>
               <td>是</td>
               <td>訂閱以及隨收隨付制</td>
             </tr>
@@ -329,7 +401,13 @@
               <td></td>
               <td>可透過軟體報價單取得</td>
               <td>是</td>
-              <td>包括「彈性」的所有方案。<a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">組件及詳細資料。 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></td>
+              <td>包括「彈性」的所有方案。<a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">組件及詳細資料 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>可透過混合式資料管理平台 (HDMP) 取得</td>
+              <td>是</td>
+              <td>僅限於「彈性」方案。<a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank">HDMP 相關詳細資料 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a></td>
             </tr>
             <tr>
               <td></td>

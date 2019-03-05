@@ -41,7 +41,7 @@
                             },
                             {
                                 "href": "services/Db2onCloud/index.html#connect_apps",
-                                "label": "連接本端電腦的應用程式或您最愛的工具",
+                                "label": "在電腦上安裝 Db2 指令行用戶端及驅動程式",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
@@ -110,9 +110,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/features_specs.html#overview",
+                "href": "services/Db2onCloud/features_specs.html#fs",
                 "label": "特性及規格",
-                "id": "Db2onCloud-overview",
+                "id": "Db2onCloud-fs",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -165,7 +165,7 @@
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/iam.html#odbc-clpplus",
-                                "label": "ODBC 及 CLPPLUS",
+                                "label": "ODBC、CLP 及 CLPPLUS",
                                 "id": "Db2onCloud-odbc-clpplus"
                             },
                             {
@@ -300,9 +300,9 @@
                 ],
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/federation.html#overview",
+                        "href": "services/Db2onCloud/federation.html#fed",
                         "label": "資料虛擬化（聯合）",
-                        "id": "Db2onCloud-overview",
+                        "id": "Db2onCloud-fed",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
@@ -377,7 +377,7 @@
             },
             {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
-                "label": "免費精簡方案",
+                "label": "免費方案",
                 "id": "Db2onCloud-free_plan",
                 "topics": [
                     {
@@ -393,8 +393,61 @@
                     },
                     {
                         "href": "services/Db2onCloud/free_plan.html#outside_na",
-                        "label": "在北美洲大陸以外使用精簡方案",
+                        "label": "在北美洲大陸以外使用免費方案",
                         "id": "Db2onCloud-outside_na",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/free_plan.html#fp_restrictions",
+                        "label": "免費方案限制",
+                        "id": "Db2onCloud-fp_restrictions",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
+                "href": "services/Db2onCloud/plans_pricing.html#plans_pricing",
+                "label": "方案及定價",
+                "id": "Db2onCloud-plans_pricing",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#plans_cfgs",
+                        "label": "方案及配置",
+                        "id": "Db2onCloud-plans_cfgs",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/plans_pricing.html#pricing",
+                        "label": "定價",
+                        "id": "Db2onCloud-pricing",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/plans_pricing.html#examples",
+                                "label": "計費範例",
+                                "id": "Db2onCloud-examples"
+                            }
+                        ],
                         "properties": [
                             {
                                 "name": "type",
@@ -425,6 +478,19 @@
                 "href": "services/Db2onCloud/br.html#br",
                 "label": "備份及還原",
                 "id": "Db2onCloud-br",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/br.html#point-in-time",
+                        "label": "復原點還原",
+                        "id": "Db2onCloud-point-in-time",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
@@ -511,7 +577,7 @@
                 "topics": [
                     {
                         "href": "services/Db2onCloud/dcw.html#dcw",
-                        "label": "評量資料庫相容性",
+                        "label": "評量您的資料庫相容性",
                         "id": "Db2onCloud-dcw"
                     },
                     {
@@ -558,9 +624,40 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/audit.html#audit",
-                "label": "審核",
-                "id": "Db2onCloud-audit",
+                "href": "services/Db2onCloud/audit.html#aud-log-mon",
+                "label": "審核、記載及監視",
+                "id": "Db2onCloud-aud-log-mon",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/audit.html#auditing",
+                        "label": "審核",
+                        "id": "Db2onCloud-auditing",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/audit.html#log_mon",
+                        "label": "記載及監視",
+                        "id": "Db2onCloud-log_mon",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/audit.html#overview",
+                                "label": "基本觀念：",
+                                "id": "Db2onCloud-overview"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
                 "properties": [
                     {
                         "name": "navgroup",
@@ -580,20 +677,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/plans_cfgs.html#plans_cfgs",
-                "label": "方案及配置",
-                "id": "Db2onCloud-plans_cfgs",
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/maintenance.html#-",
+                "href": "services/Db2onCloud/maintenance.html#maint_note_pol",
                 "label": "維護及通知原則",
-                "id": "Db2onCloud--",
+                "id": "Db2onCloud-maint_note_pol",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/maintenance.html#maintenance",
