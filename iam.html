@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -178,7 +178,7 @@ dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
             <p>or</p>
-            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apikey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apiKey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
             <p><strong>IBMid/password</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
