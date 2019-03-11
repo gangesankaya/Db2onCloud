@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2018-10-26">
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -65,8 +65,8 @@ located in the cloud and on-premises -->
           <h2 id="getting_started">概説</h2>
           <p>以下の手順では、分散したデータ・ソースを統合し、あたかも 1 つのデータ・ソースからデー タを取得しているように見せる方法を例示します。 2 つの Db2 on Cloud データベースをフェデレーションする例を以下に示し ます。
           </p>
-          <section id="section-db2-on-cloud-">
-            <h3 id="db2-on-cloud-">Db2 on Cloud ターゲット・マシン上:</h3>
+          <section id="section-targ">
+            <h3 id="targ">Db2 on Cloud ターゲット・マシン上:</h3>
             <p>ホスト名: targetdotcom</p>
             <ol>
               <li>
@@ -126,8 +126,8 @@ located in the cloud and on-premises -->
    `db2 "select * from ntest1"`
 -->
           </section>
-          <section id="section--db2-on-cloud-">
-            <h3 id="-db2-on-cloud-">フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:</h3>
+          <section id="section-fed_src">
+            <h3 id="fed_src">フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:</h3>
             <p>Db2 on Cloud コンソールから、以下を行います。</p>
             <ol>
               <li>
@@ -157,8 +157,8 @@ located in the cloud and on-premises -->
             </ol>
           </section>
         </section>
-        <section id="section--">
-          <h2 id="-">追加情報</h2>
+        <section id="section-more_info">
+          <h2 id="more_info">追加情報</h2>
           <p>データ仮想化 (フェデレーション) について詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/fcontainer.html" target="_blank">フェデレーション <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
           <p>デフォルトでは、Db2 on Cloud は Informix および Db2 (オンプレミス Db2 および Db2 Warehouse を含む) をサポートします。 特定のデータ・ソースのサポートを IBM サポートが要求に応じてインストールしなければならない場合があります。 フェデレーションでサポートされるデータ・ソースについて詳しくは、
             <a href="https://www.ibm.com/support/docview.wss?uid=swg27050561" target="_blank">フェデレーションでサポートされるデータ・ソース <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>

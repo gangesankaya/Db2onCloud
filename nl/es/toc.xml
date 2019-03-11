@@ -38,7 +38,7 @@
     <topic href="iam.html#features" label="Características de IBM Cloud IAM" id="features">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#connect" label="Conexiones de cliente e inicios de sesión de usuario" id="connect">
+    <topic href="iam.html#connect_user" label="Conexiones de cliente e inicios de sesión de usuario" id="connect_user">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#sup-if" label="Interfaces soportadas" id="sup-if">
@@ -52,7 +52,7 @@
     <topic href="iam.html#api" label="Experiencia de API REST" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="Federación de IBMid" id="fed">
+    <topic href="iam.html#fed_ibmid" label="Federación de IBMid" id="fed_ibmid">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="Restricciones" id="restrictions">
@@ -85,10 +85,10 @@
       </topic>
       <topic href="federation.html#getting_started" label="Cómo empezar" id="getting_started">
         <property name="type" value="anchor"/>
-        <topic href="federation.html#en-la-m-quina-de-destino-de-db2-on-cloud" label="En la máquina de destino de Db2 on Cloud" id="en-la-m-quina-de-destino-de-db2-on-cloud"></topic>
-        <topic href="federation.html#en-una-m-quina-de-db2-on-cloud-utilizada-como-origen-de-federaci-n" label="En una máquina de Db2 on Cloud utilizada como origen de federación" id="en-una-m-quina-de-db2-on-cloud-utilizada-como-origen-de-federaci-n"></topic>
+        <topic href="federation.html#targ" label="En la máquina de destino de Db2 on Cloud" id="targ"></topic>
+        <topic href="federation.html#fed_src" label="En una máquina de Db2 on Cloud utilizada como origen de federación" id="fed_src"></topic>
       </topic>
-      <topic href="federation.html#informaci-n-adicional" label="Información adicional" id="informaci-n-adicional">
+      <topic href="federation.html#more_info" label="Información adicional" id="more_info">
         <property name="type" value="anchor"/>
       </topic>
     </topic>
@@ -118,7 +118,7 @@
   <topic href="flex_scaling.html#scale" label="Escalado flexible" id="scale">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="br.html#br" label="Copia de seguridad y restauración" id="br">
+  <topic href="br.html#bnr" label="Copia de seguridad y restauración" id="bnr">
     <property name="navgroup" value="learn"/>
     <topic href="br.html#point-in-time" label="Restauración de punto en el tiempo" id="point-in-time">
       <property name="type" value="anchor"/>
@@ -162,7 +162,7 @@
     </topic>
     <topic href="audit.html#log_mon" label="Registro y supervisión" id="log_mon">
       <property name="type" value="anchor"/>
-      <topic href="audit.html#overview" label="Una visión general básica:" id="overview"></topic>
+      <topic href="audit.html#basic_overview" label="Una visión general básica:" id="basic_overview"></topic>
     </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="Gestión de usuarios" id="user_mgmt">

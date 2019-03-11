@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2018-10-26">
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -65,8 +65,8 @@ located in the cloud and on-premises -->
         <section id="section-getting_started">
           <h2 id="getting_started">Cómo empezar</h2>
           <p>En los pasos siguientes se muestra un ejemplo del proceso de federar orígenes de datos dispares para que parezca que los datos se recuperan de un solo origen. En el siguiente ejemplo se muestra la federación de dos bases de datos Db2 on Cloud:</p>
-          <section id="section-en-la-m-quina-de-destino-de-db2-on-cloud">
-            <h3 id="en-la-m-quina-de-destino-de-db2-on-cloud">En la máquina de destino de Db2 on Cloud</h3>
+          <section id="section-targ">
+            <h3 id="targ">En la máquina de destino de Db2 on Cloud</h3>
             <p>Nombre de host: targetdotcom</p>
             <ol>
               <li>
@@ -126,8 +126,8 @@ located in the cloud and on-premises -->
    `db2 "select * from ntest1"`
 -->
           </section>
-          <section id="section-en-una-m-quina-de-db2-on-cloud-utilizada-como-origen-de-federaci-n">
-            <h3 id="en-una-m-quina-de-db2-on-cloud-utilizada-como-origen-de-federaci-n">En una máquina de Db2 on Cloud utilizada como origen de federación</h3>
+          <section id="section-fed_src">
+            <h3 id="fed_src">En una máquina de Db2 on Cloud utilizada como origen de federación</h3>
             <p>Desde la consola de Db2 on Cloud:</p>
             <ol>
               <li>
@@ -157,8 +157,8 @@ located in the cloud and on-premises -->
             </ol>
           </section>
         </section>
-        <section id="section-informaci-n-adicional">
-          <h2 id="informaci-n-adicional">Información adicional</h2>
+        <section id="section-more_info">
+          <h2 id="more_info">Información adicional</h2>
           <p>Para obtener más información sobre la virtualización de datos (federación), consulte: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/fcontainer.html" target="_blank">Federación <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
           <p>De forma predeterminada, Db2 on Cloud admite Informix y Db2 (incluidos Db2 local y Db2 Warehouse). Es posible que el soporte a ciertos orígenes de datos deba instalarlo IBM Support bajo solicitud. Para obtener información sobre los orígenes
             de datos que reciben soporte de la federación, consulte: <a href="https://www.ibm.com/support/docview.wss?uid=swg27050561" target="_blank">Orígenes de datos soportados de federación <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>

@@ -38,7 +38,7 @@
     <topic href="iam.html#features" label="IBM Cloud IAM 的特性" id="features">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#connect" label="用戶端連線及使用者登入" id="connect">
+    <topic href="iam.html#connect_user" label="用戶端連線及使用者登入" id="connect_user">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#sup-if" label="支援的介面" id="sup-if">
@@ -52,7 +52,7 @@
     <topic href="iam.html#api" label="REST API 體驗" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="IBM ID 聯合" id="fed">
+    <topic href="iam.html#fed_ibmid" label="IBM ID 聯合" id="fed_ibmid">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="限制" id="restrictions">
@@ -85,10 +85,10 @@
       </topic>
       <topic href="federation.html#getting_started" label="開始使用" id="getting_started">
         <property name="type" value="anchor"/>
-        <topic href="federation.html#-db2-on-cloud-" label="在 Db2 on Cloud 目標機器上" id="-db2-on-cloud-"></topic>
-        <topic href="federation.html#-db2-on-cloud-" label="在用來作為聯合來源的 Db2 on Cloud 機器上" id="-db2-on-cloud-"></topic>
+        <topic href="federation.html#targ" label="在 Db2 on Cloud 目標機器上" id="targ"></topic>
+        <topic href="federation.html#fed_src" label="在用來作為聯合來源的 Db2 on Cloud 機器上" id="fed_src"></topic>
       </topic>
-      <topic href="federation.html#-" label="其他資訊" id="-">
+      <topic href="federation.html#more_info" label="其他資訊" id="more_info">
         <property name="type" value="anchor"/>
       </topic>
     </topic>
@@ -118,7 +118,7 @@
   <topic href="flex_scaling.html#scale" label="彈性調整" id="scale">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="br.html#br" label="備份及還原" id="br">
+  <topic href="br.html#bnr" label="備份及還原" id="bnr">
     <property name="navgroup" value="learn"/>
     <topic href="br.html#point-in-time" label="復原點還原" id="point-in-time">
       <property name="type" value="anchor"/>
@@ -162,7 +162,7 @@
     </topic>
     <topic href="audit.html#log_mon" label="記載及監視" id="log_mon">
       <property name="type" value="anchor"/>
-      <topic href="audit.html#overview" label="基本觀念：" id="overview"></topic>
+      <topic href="audit.html#basic_overview" label="基本觀念：" id="basic_overview"></topic>
     </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="管理使用者" id="user_mgmt">

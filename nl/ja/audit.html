@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2019-01-10">
   <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -31,24 +31,24 @@
         <h1 id="aud-log-mon">監査、ロギング、およびモニタリング</h1>
         <section id="section-auditing">
           <h2 id="auditing">監査</h2>
-          <p>データベース内の監査イベント・テーブルに保管されるさまざまなカテゴリーのイベントを監査できるようにするためのデータベース監査ポリシーを作成できます。詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank">監査ポリシーのガイドライン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>            を参照してください。</p>
+          <p>データベース内の監査イベント・テーブルに保管されるさまざまなカテゴリーのイベントを監査できるようにするためのデータベース監査ポリシーを作成できます。 詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank">監査ポリシーのガイドライン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>            を参照してください。</p>
           <p>データベースに加えられた変更の監査と追跡は、以下の方法でも行えます。</p>
           <ul>
-            <li><code>CHANGE HISTORY</code> イベント・モニターを作成することによって、イベント・モニター・テーブルに照会を実行し、データベース内で誰によって何が行われたかを判別できます。詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank"><code>CHANGE HISTORY</code> イベント・モニター <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>              を参照してください。</li>
-            <li>タイム・トラベル照会を使用すると、データに対するすべての変更を簡単に保存し、選択した時点を基にして、それよりも古いデータを照会することもできます。 この監査方式を使用するには、まず、タイム・トラベル照会をサポートするようにテーブルを設定してください。詳しくは、<a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/"
+            <li><code>CHANGE HISTORY</code> イベント・モニターを作成することによって、イベント・モニター・テーブルに照会を実行し、データベース内で誰によって何が行われたかを判別できます。 詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank"><code>CHANGE HISTORY</code> イベント・モニター <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>              を参照してください。</li>
+            <li>タイム・トラベル照会を使用すると、データに対するすべての変更を簡単に保存し、選択した時点を基にして、それよりも古いデータを照会することもできます。 この監査方式を使用するには、まず、タイム・トラベル照会をサポートするようにテーブルを設定してください。 詳しくは、<a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/"
                 target="_blank">タイム・トラベル照会 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください</li>
           </ul>
           <p>データベース変更の監査とトラッキングについて詳しくは、<a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">変更を監査または追跡する方法 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>            を参照してください。</p>
         </section>
         <section id="section-log_mon">
           <h2 id="log_mon">ロギングとモニタリング</h2>
-          <p>モニタリングとロギングはサービスの一部ですが、エンド・ユーザーに直接公開されるわけではありません。このインフラストラクチャーは、問題に対処するために IBM 運用スタッフ側で使用されます。 </p>
+          <p>モニタリングとロギングはサービスの一部ですが、エンド・ユーザーに直接公開されるわけではありません。 このインフラストラクチャーは、問題に対処するために IBM 運用スタッフ側で使用されます。 </p>
           <p>Activity Tracker のアベイラビリティーについては、<a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">ロードマップ <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
           <p>CLPPlus などの Db2 コマンド・ライン・クライアントと接続して、詳細な情報と診断情報にアクセスできます。</p>
-          <section id="section-overview">
-            <h3 id="overview">基本的概要</h3>
-            <p>検査には 2 つの基本タイプがあります。外部ヘルス/アップタイム検査とメトリック・ベースのモニタリングです。IBM は何百ものメトリックをモニターし、それらのメトリックを履歴として保管します。これらのメトリックの値に基づいて、アラートが生成されます。これらのアラートは IBM 運用スタッフに送信され、アラートが表示されて対処されます。さらに IBM は、迅速に診断するために、アーカイブされたオペレーティング・システムと診断ログも送信します。Db2 on Cloud は GDPR
-              に準拠しており、必要な場合は、より高い GDPR 順守レベルも IBM EU Cloud オプションとして用意されています。</p>
+          <section id="section-basic_overview">
+            <h3 id="basic_overview">基本的概要</h3>
+            <p>検査には 2 つの基本タイプがあります。 外部ヘルス/アップタイム検査とメトリック・ベースのモニタリングです。 IBM は何百ものメトリックをモニターし、それらのメトリックを履歴として保管します。 これらのメトリックの値に基づいて、アラートが生成されます。 これらのアラートは IBM 運用スタッフに送信され、アラートが表示されて対処されます。 さらに IBM は、迅速に診断するために、アーカイブされたオペレーティング・システムと診断ログも送信します。 Db2 on Cloud
+              は GDPR に準拠しており、必要な場合は、より高い GDPR 順守レベルも IBM EU Cloud オプションとして用意されています。</p>
           </section>
         </section>
       </section>

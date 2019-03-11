@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2018-10-26">
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -66,8 +66,8 @@ located in the cloud and on-premises -->
           <h2 id="getting_started">Einführung</h2>
           <p>In den folgenden Schritten wird anhand eines Beispiels veranschaulicht, wie unterschiedliche, verteilte Datenquellen föderiert werden können, damit Daten so abgerufen werden können, als ob sie aus einer einzelnen Quelle stammen. Das folgende
             Beispiel stellt die Föderierung zweier Db2 on Cloud-Datenbank dar:</p>
-          <section id="section-auf-der-db2-on-cloud-zielmaschine">
-            <h3 id="auf-der-db2-on-cloud-zielmaschine">Auf der Db2 on Cloud-Zielmaschine</h3>
+          <section id="section-targ">
+            <h3 id="targ">Auf der Db2 on Cloud-Zielmaschine</h3>
             <p>Hostname: targetdotcom</p>
             <ol>
               <li>
@@ -127,8 +127,8 @@ located in the cloud and on-premises -->
    `db2 "select * from ntest1"`
 -->
           </section>
-          <section id="section-auf-einer-db2-on-cloud-maschine-die-als-f-derierungsquelle-verwendet-wird">
-            <h3 id="auf-einer-db2-on-cloud-maschine-die-als-f-derierungsquelle-verwendet-wird">Auf einer Db2 on Cloud-Maschine, die als Föderierungsquelle verwendet wird</h3>
+          <section id="section-fed_src">
+            <h3 id="fed_src">Auf einer Db2 on Cloud-Maschine, die als Föderierungsquelle verwendet wird</h3>
             <p>Führen Sie in der Db2 on Cloud-Konsole die folgenden Schritte aus:</p>
             <ol>
               <li>
@@ -158,8 +158,8 @@ located in the cloud and on-premises -->
             </ol>
           </section>
         </section>
-        <section id="section-zus-tzliche-informationen">
-          <h2 id="zus-tzliche-informationen">Zusätzliche Informationen</h2>
+        <section id="section-more_info">
+          <h2 id="more_info">Zusätzliche Informationen</h2>
           <p>Weitere Informationen zur Datenvirtualisierung (Föderierung) finden Sie in <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/fcontainer.html" target="_blank">Föderierung<img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.</p>
           <p>Standardmäßig unterstützt Db2 on Cloud Informix und Db2 (einschließlich der lokalen Version von Db2 und Db2 Warehouse). Die Unterstützung für bestimmte Datenquellen muss möglicherweise von IBM Support auf Anforderung installiert werden. Informationen
             zu den Datenquellen, die durch die Föderierung unterstützt werden, finden Sie in <a href="https://www.ibm.com/support/docview.wss?uid=swg27050561" target="_blank">Durch die Föderierung unterstützte Datenquellen<img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>.</p>

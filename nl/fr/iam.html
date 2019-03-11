@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2019-01-21">
   <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -52,8 +52,8 @@
             n&#39;ont pas de mots de passe. Une clé d&#39;interface de programmation doit être créée pour chaque ID de service afin que ce dernier puisse se connecter à l&#39;instance de service de base de données. Pour plus d&#39;informations sur les
             ID de service, voir : <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
         </section>
-        <section id="section-connect">
-          <h2 id="connect">Connexions client et connexions utilisateur</h2>
+        <section id="section-connect_user">
+          <h2 id="connect_user">Connexions client et connexions utilisateur</h2>
           <p><strong>Prérequis </strong>: Db2 Client version 11.1 groupe de correctifs 3 et suivants.</p>
           <p>Les méthodes suivantes peuvent être utilisées pour l&#39;authentification IAM :</p>
           <p><strong>Jeton d&#39;accès</strong></p>
@@ -239,8 +239,8 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
           </ul>
           <p>Pour plus de détails sur l&#39;API de votre service, voir : <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
         </section>
-        <section id="section-fed">
-          <h2 id="fed">Fédération avec IBMid</h2>
+        <section id="section-fed_ibmid">
+          <h2 id="fed_ibmid">Fédération avec IBMid</h2>
           <p>Pour utiliser votre propre fournisseur d&#39;identité, tel que LDAP, vous devez d&#39;abord fédérer votre serveur LDAP avec IBMid. Pour les instructions relatives à la fédération de votre serveur LDAP avec IBMid, voir <a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc"
               target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>. Une fois la fédération avec IBMid effectuée et dès lors que les utilisateurs
             autorisés sont ajoutés à l&#39;instance de service de base de données par l&#39;administrateur de base de données, ces utilisateurs peuvent se connecter à la console à l&#39;aide de leurs ID utilisateur et mot de passe d&#39;entreprise. Ces

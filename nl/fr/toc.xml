@@ -38,7 +38,7 @@
     <topic href="iam.html#features" label="Fonctions d&#39;IBM Cloud IAM" id="features">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#connect" label="Connexions client et connexions utilisateur" id="connect">
+    <topic href="iam.html#connect_user" label="Connexions client et connexions utilisateur" id="connect_user">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#sup-if" label="Interfaces prises en charge" id="sup-if">
@@ -52,7 +52,7 @@
     <topic href="iam.html#api" label="Expérience API REST" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed" label="Fédération avec IBMid" id="fed">
+    <topic href="iam.html#fed_ibmid" label="Fédération avec IBMid" id="fed_ibmid">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
@@ -85,10 +85,10 @@
       </topic>
       <topic href="federation.html#getting_started" label="Initiation" id="getting_started">
         <property name="type" value="anchor"/>
-        <topic href="federation.html#sur-la-machine-cible-db2-on-cloud" label="Sur la machine cible Db2 on Cloud" id="sur-la-machine-cible-db2-on-cloud"></topic>
-        <topic href="federation.html#sur-une-machine-db2-on-cloud-utilis-e-en-tant-que-source-de-la-f-d-ration" label="Sur une machine Db2 on Cloud utilisée en tant que source de la fédération" id="sur-une-machine-db2-on-cloud-utilis-e-en-tant-que-source-de-la-f-d-ration"></topic>
+        <topic href="federation.html#targ" label="Sur la machine cible Db2 on Cloud" id="targ"></topic>
+        <topic href="federation.html#fed_src" label="Sur une machine Db2 on Cloud utilisée en tant que source de la fédération" id="fed_src"></topic>
       </topic>
-      <topic href="federation.html#informations-compl-mentaires" label="Informations complémentaires" id="informations-compl-mentaires">
+      <topic href="federation.html#more_info" label="Informations complémentaires" id="more_info">
         <property name="type" value="anchor"/>
       </topic>
     </topic>
@@ -118,7 +118,7 @@
   <topic href="flex_scaling.html#scale" label="Mise à l&#39;échelle flexible" id="scale">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="br.html#br" label="Sauvegarde et restauration" id="br">
+  <topic href="br.html#bnr" label="Sauvegarde et restauration" id="bnr">
     <property name="navgroup" value="learn"/>
     <topic href="br.html#point-in-time" label="Restauration avec point de cohérence" id="point-in-time">
       <property name="type" value="anchor"/>
@@ -162,7 +162,7 @@
     </topic>
     <topic href="audit.html#log_mon" label="Consignation et surveillance" id="log_mon">
       <property name="type" value="anchor"/>
-      <topic href="audit.html#overview" label="Présentation générale" id="overview"></topic>
+      <topic href="audit.html#basic_overview" label="Présentation générale" id="basic_overview"></topic>
     </topic>
   </topic>
   <topic href="user_mgmt.html#user_mgmt" label="Gestion des utilisateurs" id="user_mgmt">

@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2019-01-21">
   <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -50,8 +50,8 @@
             password. Deve essere creata una chiave API per ogni ID servizio per l&#39;ID da collegare all&#39;istanza del servizio database. Per ulteriori informazioni sugli ID servizio, consulta: <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/"
               target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
         </section>
-        <section id="section-connect">
-          <h2 id="connect">Connessioni client e accessi utente</h2>
+        <section id="section-connect_user">
+          <h2 id="connect_user">Connessioni client e accessi utente</h2>
           <p><strong>Prerequisito</strong>: Client Db2 V11.1 FP3 e successive.</p>
           <p>I seguenti metodi possono essere utilizzati per l&#39;autenticazione IAM:</p>
           <p><strong>Token di accesso</strong></p>
@@ -91,7 +91,7 @@
           <section id="section-odbc-clpplus">
             <h3 id="odbc-clpplus">ODBC, CLP e CLPPLUS</h3>
             <p>Per un&#39;applicazione ODBC o un client riga di comando (CLP, CLPPLUS) per connettersi a un server Db2 utilizzando l&#39;autenticazione IAM, deve essere prima configurato un nome dell&#39;origine dati (DSN) in un file di configurazione <code>db2dsdriver.cfg</code>,
-              immettendo il seguente comando: </p>
+              immettendo il seguente comando:</p>
             <p><code>db2cli writecfg add -dsn &lt;dsn_alias&gt; -database &lt;database_name&gt; -host &lt;host_name_or_IP_address&gt; -port 50001 -parameter &quot;Authentication=GSSPLUGIN;SecurityTransportMode=SSL&quot;</code></p>
             <p>Il file di configurazione <code>db2dsdriver.cfg</code> è un file XML, normalmente ubicato nella directory <code>sqllib/cfg</code>, che contiene un elenco di alias DSN e le relative proprietà.</p>
             <p>Il seguente esempio di un file di configurazione di <code>db2dsdriver.cfg</code> mostra le configurazioni utilizzate per stabilire una connessione a un&#39;istanza del servizio database. Il file di configurazione fornisce l&#39;alias DSN,
@@ -121,7 +121,7 @@
                 <p> Per ODBC, può essere specificato <strong>AUTHENTICATION=GSSPLUGIN</strong> nel file di configurazione <code>db2dsdriver.cfg</code> o nella stringa di connessione dell&#39;applicazione.</p>
               </li>
               <li>
-                <p>L&#39;istruzione CLP CONNECT può contenere uno dei seguenti: </p>
+                <p>L&#39;istruzione CLP CONNECT può contenere uno dei seguenti:</p>
                 <p> <strong>Token di accesso</strong></p>
                 <p> Collegati al server database <code>&lt;database_server_name&gt;</code> e passa il token di accesso immettendo il seguente comando allo script o prompt del comando CLP:</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; ACCESSTOKEN &lt;access_token_string&gt;</code></p>
@@ -135,7 +135,7 @@
                   </p>
               </li>
               <li>
-                <p>L&#39;istruzione CLPPLUS CONNECT può contenere uno dei seguenti: </p>
+                <p>L&#39;istruzione CLPPLUS CONNECT può contenere uno dei seguenti:</p>
                 <p> <strong>Token di accesso</strong></p>
                 <p> Connettiti all&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) e passa il token di accesso immettendo il seguente comando allo script o prompt del comando CLPPLUS:</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
@@ -235,8 +235,8 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
           </ul>
           <p>Per ulteriori dettagli sull&#39;API del tuo servizio, consulta: <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
         </section>
-        <section id="section-fed">
-          <h2 id="fed">Federazione ID IBM</h2>
+        <section id="section-fed_ibmid">
+          <h2 id="fed_ibmid">Federazione ID IBM</h2>
           <p>Per utilizzare il tuo provider di identità come ad esempio LDAP, devi prima federare il tuo server LDAP con l&#39;ID IBM. Per istruzioni su come federare il server LDAP con l&#39;ID IBM, consulta: <a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc"
               target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>. Dopo che la federazione dell&#39;ID IBM è stata completata e gli utenti consentiti
             sono stati aggiunti all&#39;istanza del servizio database dall&#39;amministratore del database, questi utenti possono accedere alla console con i loro ID utente e password aziendali. In alternativa, questi utenti possono utilizzare un token

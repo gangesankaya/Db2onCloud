@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2019-01-21">
   <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -45,8 +45,8 @@
           <p>服務 ID 識別服務或應用程式的方式，與使用者 ID 識別使用者的方式類似。服務 ID 是應用程式可用來向 IBM Cloud 服務進行鑑別的 ID。服務 ID 代表有別於擁有之 IBM ID 的實體。因此，可以授與資料庫內服務 ID 特有的不同權限及許可權。服務 ID 沒有密碼。您必須為每個服務 ID 建立 API 金鑰，才能讓服務 ID 連接至資料庫服務實例。如需服務 ID 的相關資訊，請參閱：<a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/"
               target="_blank">IBM Cloud IAM 服務 ID 及 API 金鑰簡介 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
         </section>
-        <section id="section-connect">
-          <h2 id="connect">用戶端連線及使用者登入</h2>
+        <section id="section-connect_user">
+          <h2 id="connect_user">用戶端連線及使用者登入</h2>
           <p><strong>必備項目</strong>：Db2 Client 11.1 版 FP3 以及更新版本。</p>
           <p>下列方法可用於 IAM 鑑別：</p>
           <p><strong>存取記號</strong></p>
@@ -217,8 +217,8 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
           </ul>
           <p>如需服務 API 的詳細資料，請參閱：<a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
         </section>
-        <section id="section-fed">
-          <h2 id="fed">IBM ID 聯合</h2>
+        <section id="section-fed_ibmid">
+          <h2 id="fed_ibmid">IBM ID 聯合</h2>
           <p>若要使用您自己的身分提供者（例如 LDAP），您必須先使用 IBM ID 聯合 LDAP 伺服器。如需使用 IBM ID 聯合 LDAP 伺服器的指示，請參閱：<a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。在
             IBM ID 聯合完成且資料庫管理者將容許的使用者新增至資料庫服務實例之後，這些使用者就可以使用他們的公司使用者 ID 和密碼登入主控台。或者，這些使用者可以使用代表其使用者 ID 的存取記號或 API 金鑰，透過其中一個支援的資料庫用戶端介面連接至資料庫服務實例。</p>
         </section>

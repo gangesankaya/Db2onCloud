@@ -148,9 +148,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#connect",
+                        "href": "services/Db2onCloud/iam.html#connect_user",
                         "label": "Connexions client et connexions utilisateur",
-                        "id": "Db2onCloud-connect",
+                        "id": "Db2onCloud-connect_user",
                         "properties": [
                             {
                                 "name": "type",
@@ -204,9 +204,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#fed",
+                        "href": "services/Db2onCloud/iam.html#fed_ibmid",
                         "label": "Fédération avec IBMid",
-                        "id": "Db2onCloud-fed",
+                        "id": "Db2onCloud-fed_ibmid",
                         "properties": [
                             {
                                 "name": "type",
@@ -343,14 +343,14 @@
                                 "id": "Db2onCloud-getting_started",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/federation.html#sur-la-machine-cible-db2-on-cloud",
+                                        "href": "services/Db2onCloud/federation.html#targ",
                                         "label": "Sur la machine cible Db2 on Cloud",
-                                        "id": "Db2onCloud-sur-la-machine-cible-db2-on-cloud"
+                                        "id": "Db2onCloud-targ"
                                     },
                                     {
-                                        "href": "services/Db2onCloud/federation.html#sur-une-machine-db2-on-cloud-utilis-e-en-tant-que-source-de-la-f-d-ration",
+                                        "href": "services/Db2onCloud/federation.html#fed_src",
                                         "label": "Sur une machine Db2 on Cloud utilisée en tant que source de la fédération",
-                                        "id": "Db2onCloud-sur-une-machine-db2-on-cloud-utilis-e-en-tant-que-source-de-la-f-d-ration"
+                                        "id": "Db2onCloud-fed_src"
                                     }
                                 ],
                                 "properties": [
@@ -361,9 +361,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#informations-compl-mentaires",
+                                "href": "services/Db2onCloud/federation.html#more_info",
                                 "label": "Informations complémentaires",
-                                "id": "Db2onCloud-informations-compl-mentaires",
+                                "id": "Db2onCloud-more_info",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -475,9 +475,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/br.html#br",
+                "href": "services/Db2onCloud/br.html#bnr",
                 "label": "Sauvegarde et restauration",
-                "id": "Db2onCloud-br",
+                "id": "Db2onCloud-bnr",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/br.html#point-in-time",
@@ -645,9 +645,9 @@
                         "id": "Db2onCloud-log_mon",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/audit.html#overview",
+                                "href": "services/Db2onCloud/audit.html#basic_overview",
                                 "label": "Présentation générale",
-                                "id": "Db2onCloud-overview"
+                                "id": "Db2onCloud-basic_overview"
                             }
                         ],
                         "properties": [

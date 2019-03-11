@@ -148,9 +148,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#connect",
+                        "href": "services/Db2onCloud/iam.html#connect_user",
                         "label": "用戶端連線及使用者登入",
-                        "id": "Db2onCloud-connect",
+                        "id": "Db2onCloud-connect_user",
                         "properties": [
                             {
                                 "name": "type",
@@ -204,9 +204,9 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/iam.html#fed",
+                        "href": "services/Db2onCloud/iam.html#fed_ibmid",
                         "label": "IBM ID 聯合",
-                        "id": "Db2onCloud-fed",
+                        "id": "Db2onCloud-fed_ibmid",
                         "properties": [
                             {
                                 "name": "type",
@@ -343,14 +343,14 @@
                                 "id": "Db2onCloud-getting_started",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/federation.html#-db2-on-cloud-",
+                                        "href": "services/Db2onCloud/federation.html#targ",
                                         "label": "在 Db2 on Cloud 目標機器上",
-                                        "id": "Db2onCloud--db2-on-cloud-"
+                                        "id": "Db2onCloud-targ"
                                     },
                                     {
-                                        "href": "services/Db2onCloud/federation.html#-db2-on-cloud-",
+                                        "href": "services/Db2onCloud/federation.html#fed_src",
                                         "label": "在用來作為聯合來源的 Db2 on Cloud 機器上",
-                                        "id": "Db2onCloud--db2-on-cloud-"
+                                        "id": "Db2onCloud-fed_src"
                                     }
                                 ],
                                 "properties": [
@@ -361,9 +361,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#-",
+                                "href": "services/Db2onCloud/federation.html#more_info",
                                 "label": "其他資訊",
-                                "id": "Db2onCloud--",
+                                "id": "Db2onCloud-more_info",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -475,9 +475,9 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/br.html#br",
+                "href": "services/Db2onCloud/br.html#bnr",
                 "label": "備份及還原",
-                "id": "Db2onCloud-br",
+                "id": "Db2onCloud-bnr",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/br.html#point-in-time",
@@ -645,9 +645,9 @@
                         "id": "Db2onCloud-log_mon",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/audit.html#overview",
+                                "href": "services/Db2onCloud/audit.html#basic_overview",
                                 "label": "基本觀念：",
-                                "id": "Db2onCloud-overview"
+                                "id": "Db2onCloud-basic_overview"
                             }
                         ],
                         "properties": [

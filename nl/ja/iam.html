@@ -9,7 +9,7 @@
   <meta name="DC.date" content="2019-01-21">
   <meta name="dcterms.date" content="2019-01-21">
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="subcollection" content="{{ subcollection }}">
+  <meta name="subcollection" content="Db2onCloud">
   <meta name="source.format" content="markdown">
 
 
@@ -46,8 +46,8 @@
           <p>ユーザー ID がユーザーを識別するように、サービス ID はサービスまたはアプリケーションを識別します。 サービス ID は、アプリケーションが IBM Cloud サービスでの認証に使用できる ID です。 サービス ID は、所有している IBM ID とは分離したエンティティーを表します。 したがって、異なる権限および許可をデータベース内のサービス ID に固有に付与できます。 サービス ID にはパスワードはありません。 サービス ID がデータベース・サービス・インスタンスに接続するためには、サービス
             ID ごとに API キーが作成される必要があります。 サービス ID について詳しくは、<a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>            を参照してください。</p>
         </section>
-        <section id="section-connect">
-          <h2 id="connect">クライアント接続およびユーザー・ログイン</h2>
+        <section id="section-connect_user">
+          <h2 id="connect_user">クライアント接続およびユーザー・ログイン</h2>
           <p><strong>前提条件</strong>: Db2 Client V11.1 FP3 以降。</p>
           <p>IAM 認証のために以下の方式を使用できます。</p>
           <p><strong>アクセス・トークン</strong></p>
@@ -195,7 +195,7 @@ Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt
             <li>
               <p>新規 IBM ID ユーザーを追加するには、以下の例のような API 呼び出しを実行します。</p>
               <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
-              <p class="note"><code>&quot;id&quot;</code> と <code>&quot;ibmid&quot;</code> の <code>&lt;userid&gt;</code> 値が同じである必要はありません。この 2 つの異なる ID がリンクされることはありません。</p>
+              <p class="note"><code>&quot;id&quot;</code> と <code>&quot;ibmid&quot;</code> の <code>&lt;userid&gt;</code> 値が同じである必要はありません。 この 2 つの異なる ID がリンクされることはありません。</p>
             </li>
             <li>
               <p>既存の非 IBM ID データベース・ユーザー (例えば、<code>abcuser</code>) をマイグレーションして IBM ID ユーザーにするには、最初に、以下の例のような API 呼び出しを実行して、非 IBM ID ユーザー ID を削除します。</p>
@@ -216,8 +216,8 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
           </ul>
           <p>サービスの API について詳しくは、<a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
         </section>
-        <section id="section-fed">
-          <h2 id="fed">IBM ID 統合</h2>
+        <section id="section-fed_ibmid">
+          <h2 id="fed_ibmid">IBM ID 統合</h2>
           <p>LDAP などの独自の ID プロバイダーを使用するには、まず LDAP サーバーを IBM ID と統合する必要があります。 LDAP サーバーと IBM ID の統合の手順については、<a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>            を参照してください。 IBM ID 統合が完了し、許可されるユーザーがデータベース管理者によってデータベース・サービス・インスタンスに追加された後、これらのユーザーは会社のユーザー ID とパスワードを使用してコンソールにログインできます。 あるいは、これらのユーザーは、ユーザー ID を表すアクセス・トークンまたは API キーを使用して、サポートされるデータベース・クライアント・インターフェースの 1 つを介してデータベース・サービス・インスタンスに接続できます。</p>
         </section>
         <section id="section-restrictions">
