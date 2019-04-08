@@ -59,9 +59,9 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic label="Connecting">
+  <topic label="Connections">
     <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Connecting"/>
+    <property name="topicgroup" value="Connections"/>
     <topic href="connecting.html#connect" label="Connecting" id="connect">
       <topic href="connecting.html#connect_prereq" label="Prerequisites" id="connect_prereq">
         <property name="type" value="anchor"/>

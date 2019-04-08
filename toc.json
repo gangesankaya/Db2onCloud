@@ -234,11 +234,11 @@
                 ]
             },
             {
-                "label": "Connecting",
+                "label": "Connections",
                 "properties": [
                     {
                         "name": "topicgroup",
-                        "value": "Connecting"
+                        "value": "Connections"
                     },
                     {
                         "name": "navgroup",
