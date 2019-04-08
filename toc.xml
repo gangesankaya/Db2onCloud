@@ -59,17 +59,34 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="connecting.html#connect" label="Connecting" id="connect">
+  <topic label="Connecting">
     <property name="navgroup" value="learn"/>
-    <topic href="connecting.html#connect_prereq" label="Prerequisites" id="connect_prereq">
-      <property name="type" value="anchor"/>
-      <topic href="connecting.html#cfg_env" label="Configuring your environment" id="cfg_env"></topic>
+    <property name="topicgroup" value="Connecting"/>
+    <topic href="connecting.html#connect" label="Connecting" id="connect">
+      <topic href="connecting.html#connect_prereq" label="Prerequisites" id="connect_prereq">
+        <property name="type" value="anchor"/>
+        <topic href="connecting.html#cfg_env" label="Configuring your environment" id="cfg_env"></topic>
+      </topic>
+      <topic href="connecting.html#conx_prgrm" label="Connecting programmatically" id="conx_prgrm">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting.html#conx_apps_tools" label="Connecting apps and tools" id="conx_apps_tools">
+        <property name="type" value="anchor"/>
+      </topic>
     </topic>
-    <topic href="connecting.html#conx_prgrm" label="Connecting programmatically" id="conx_prgrm">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="connecting.html#conx_apps_tools" label="Connecting apps and tools" id="conx_apps_tools">
-      <property name="type" value="anchor"/>
+    <topic href="connectivity_options.html#connect_options" label="Connectivity options" id="connect_options">
+      <topic href="connectivity_options.html#pub_endpt" label="Connecting to a public endpoint (default option)" id="pub_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#pub_endpt_steps" label="How to connect to a public endpoint:" id="pub_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#priv_endpt" label="Connecting to a private endpoint: IBM Cloud Service Endpoint" id="priv_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_steps" label="How to connect to a private endpoint with IBM Cloud Service Endpoint" id="priv_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#vpn" label="Connecting to a private endpoint: virtual private network (VPN)" id="vpn">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_vpn_steps" label="How to connect to a private endpoint with a VPN" id="priv_endpt_vpn_steps"></topic>
+      </topic>
     </topic>
   </topic>
   <topic label="Connecting to another Db2 database">

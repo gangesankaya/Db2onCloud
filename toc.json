@@ -234,55 +234,125 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/connecting.html#connect",
                 "label": "Connecting",
-                "id": "Db2onCloud-connect",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/connecting.html#connect_prereq",
-                        "label": "Prerequisites",
-                        "id": "Db2onCloud-connect_prereq",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/connecting.html#cfg_env",
-                                "label": "Configuring your environment",
-                                "id": "Db2onCloud-cfg_env"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_prgrm",
-                        "label": "Connecting programmatically",
-                        "id": "Db2onCloud-conx_prgrm",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
-                        "label": "Connecting apps and tools",
-                        "id": "Db2onCloud-conx_apps_tools",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Connecting"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting.html#connect",
+                        "label": "Connecting",
+                        "id": "Db2onCloud-connect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-connect_prereq",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                        "label": "Configuring your environment",
+                                        "id": "Db2onCloud-cfg_env"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                                "label": "Connecting programmatically",
+                                "id": "Db2onCloud-conx_prgrm",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
+                                "label": "Connecting apps and tools",
+                                "id": "Db2onCloud-conx_apps_tools",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connectivity_options.html#connect_options",
+                        "label": "Connectivity options",
+                        "id": "Db2onCloud-connect_options",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#pub_endpt",
+                                "label": "Connecting to a public endpoint (default option)",
+                                "id": "Db2onCloud-pub_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#pub_endpt_steps",
+                                        "label": "How to connect to a public endpoint:",
+                                        "id": "Db2onCloud-pub_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#priv_endpt",
+                                "label": "Connecting to a private endpoint: IBM Cloud Service Endpoint",
+                                "id": "Db2onCloud-priv_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_steps",
+                                        "label": "How to connect to a private endpoint with IBM Cloud Service Endpoint",
+                                        "id": "Db2onCloud-priv_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#vpn",
+                                "label": "Connecting to a private endpoint: virtual private network (VPN)",
+                                "id": "Db2onCloud-vpn",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_vpn_steps",
+                                        "label": "How to connect to a private endpoint with a VPN",
+                                        "id": "Db2onCloud-priv_endpt_vpn_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
