@@ -25,6 +25,91 @@
         ],
         "topics": [
             {
+                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "label": "Getting started",
+                "id": "Db2onCloud-getting_started_db2oncloud",
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/getting-started.html#interfaces",
+                        "label": "Interfaces",
+                        "id": "Db2onCloud-interfaces",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/getting-started.html#web_console",
+                                "label": "Db2 on Cloud web console",
+                                "id": "Db2onCloud-web_console"
+                            },
+                            {
+                                "href": "services/Db2onCloud/getting-started.html#connect_apps",
+                                "label": "Installing Db2 command line clients and drivers on your computer",
+                                "id": "Db2onCloud-connect_apps"
+                            },
+                            {
+                                "href": "services/Db2onCloud/getting-started.html#data_src",
+                                "label": "Use Db2 on Cloud as a data source for your IBM Cloud apps or services",
+                                "id": "Db2onCloud-data_src"
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/getting-started.html#samples",
+                        "label": "Samples",
+                        "id": "Db2onCloud-samples",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/getting-started.html#intro_vid",
+                        "label": "Video: Introducing Db2 on Cloud",
+                        "id": "Db2onCloud-intro_vid",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/getting-started.html#vid_api",
+                        "label": "Video: Using REST API to communicate with Db2 on Cloud",
+                        "id": "Db2onCloud-vid_api",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/getting-started.html#cognos_vid",
+                        "label": "Video: Integrating Jupyter notebooks",
+                        "id": "Db2onCloud-cognos_vid",
+                        "properties": [
+                            {
+                                "name": "type",
+                                "value": "anchor"
+                            }
+                        ]
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ]
+            },
+            {
                 "href": "services/Db2onCloud/features_specs.html#fs",
                 "label": "Features & specs",
                 "id": "Db2onCloud-fs",
