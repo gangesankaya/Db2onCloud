@@ -6,12 +6,12 @@
   <property name="arm" value="1920570"/>
   <property name="href" value="/docs/services/Db2onCloud/index.html"/>
   <property name="path" value="services/Db2onCloud"/>
-  <topic href="getting-started.html#getting_started_db2oncloud" label="Getting started" id="getting_started_db2oncloud">
+  <topic href="getting-started.html#getting_started_db2oncloud" label="Getting started tutorial" id="getting_started_db2oncloud">
     <property name="navgroup" value="learn"/>
     <topic href="getting-started.html#interfaces" label="Interfaces" id="interfaces">
       <property name="type" value="anchor"/>
       <topic href="getting-started.html#web_console" label="Db2 on Cloud web console" id="web_console"></topic>
-      <topic href="getting-started.html#connect_apps" label="Installing Db2 command line clients and drivers on your computer" id="connect_apps"></topic>
+      <topic href="getting-started.html#connect_apps" label="Installing Db2 command-line clients and drivers on your computer" id="connect_apps"></topic>
       <topic href="getting-started.html#data_src" label="Use Db2 on Cloud as a data source for your IBM Cloud apps or services" id="data_src"></topic>
     </topic>
     <topic href="getting-started.html#samples" label="Samples" id="samples">
@@ -23,7 +23,7 @@
     <topic href="getting-started.html#vid_api" label="Video: Using REST API to communicate with Db2 on Cloud" id="vid_api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="getting-started.html#cognos_vid" label="Video: Integrating Jupyter notebooks" id="cognos_vid">
+    <topic href="getting-started.html#cognos_vid" label="Video: Integrating Jupyter Notebooks" id="cognos_vid">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
