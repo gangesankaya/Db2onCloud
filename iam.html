@@ -65,7 +65,6 @@
   --data-urlencode &quot;apikey=&lt;apikey&gt;&quot; \
   &quot;https://iam.bluemix.net/identity/token&quot;
 </code></pre>
-          <!-- `curl -k -X POST \ --header "Content-Type:application/x-www-form-urlencoded" \ --header "Accept: application/json" \ --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \ --data-urlencode "apikey=<apikey>" \ "https://iam.bluemix.net/identity/token"` -->
           <p>An access token identifies an IBMid user or a service ID to the database. The database server verifies the validity of the access token before accepting it. This is the best method if the application needs to connect to more than one database
             service instance or other IBM Cloud service instances because it minimizes the communication to the IAM service to validate the access token.</p>
           <p><strong>API key</strong></p>

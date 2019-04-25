@@ -4,7 +4,7 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"/>
   <property name="path" value="services/Db2onCloud"/>
   <topic href="getting-started.html#getting_started_db2oncloud" label="Getting started tutorial" id="getting_started_db2oncloud">
     <property name="navgroup" value="learn"/>
@@ -100,7 +100,7 @@
         <topic href="federation.html#sharded-data-across-multiple-servers" label="Sharded data across multiple servers" id="sharded-data-across-multiple-servers"></topic>
         <topic href="federation.html#increase-database-capacity-beyond-fixed-limits" label="Increase database capacity beyond fixed limits" id="increase-database-capacity-beyond-fixed-limits"></topic>
       </topic>
-      <topic href="federation.html#getting_started" label="Getting started" id="getting_started">
+      <topic href="federation.html#getting_started_fed" label="Getting started" id="getting_started_fed">
         <property name="type" value="anchor"/>
         <topic href="federation.html#targ" label="On the Db2 on Cloud target machine" id="targ"></topic>
         <topic href="federation.html#fed_src" label="On a Db2 on Cloud machine being used as a federation source" id="fed_src"></topic>
