@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud/index.html"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"
             },
             {
                 "name": "path",
@@ -25,9 +25,9 @@
         ],
         "topics": [
             {
-                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "href": "services/Db2onCloud/getting-started.html#getting-started",
                 "label": "Getting started tutorial",
-                "id": "Db2onCloud-getting_started_db2oncloud",
+                "id": "Db2onCloud-getting-started",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/getting-started.html#interfaces",
@@ -408,9 +408,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#getting_started",
+                                "href": "services/Db2onCloud/federation.html#getting_started_fed",
                                 "label": "Getting started",
-                                "id": "Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started_fed",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#targ",
