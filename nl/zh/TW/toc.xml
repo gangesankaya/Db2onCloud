@@ -4,26 +4,26 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"/>
   <property name="path" value="services/Db2onCloud"/>
-  <topic href="index.html#getting_started_db2oncloud" label="開始使用" id="getting_started_db2oncloud">
+  <topic href="getting-started.html#getting_started_db2oncloud" label="入門指導教學" id="getting_started_db2oncloud">
     <property name="navgroup" value="learn"/>
-    <topic href="index.html#interfaces" label="介面" id="interfaces">
+    <topic href="getting-started.html#interfaces" label="介面" id="interfaces">
       <property name="type" value="anchor"/>
-      <topic href="index.html#web_console" label="Db2 on Cloud Web 主控台" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="在電腦上安裝 Db2 指令行用戶端及驅動程式" id="connect_apps"></topic>
-      <topic href="index.html#data_src" label="將 Db2 on Cloud 用作 IBM Cloud 應用程式或服務的資料來源" id="data_src"></topic>
+      <topic href="getting-started.html#web_console" label="Db2 on Cloud Web 主控台" id="web_console"></topic>
+      <topic href="getting-started.html#connect_apps" label="在電腦上安裝 Db2 指令行用戶端及驅動程式" id="connect_apps"></topic>
+      <topic href="getting-started.html#data_src" label="將 Db2 on Cloud 用作 IBM Cloud 應用程式或服務的資料來源" id="data_src"></topic>
     </topic>
-    <topic href="index.html#samples" label="範例" id="samples">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="index.html#intro_vid" label="視訊：Introducing Db2 on Cloud" id="intro_vid">
+    <topic href="getting-started.html#samples" label="範例" id="samples">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#vid_api" label="視訊：Using REST API to communicate with Db2 on Cloud" id="vid_api">
+    <topic href="getting-started.html#intro_vid" label="視訊：Introducing Db2 on Cloud" id="intro_vid">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#cognos_vid" label="視訊：Integrating Jupyter notebooks" id="cognos_vid">
+    <topic href="getting-started.html#vid_api" label="視訊：Using REST API to communicate with Db2 on Cloud" id="vid_api">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="getting-started.html#cognos_vid" label="視訊：Integrating Jupyter Notebooks" id="cognos_vid">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -59,17 +59,34 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="connecting.html#connect" label="連接" id="connect">
+  <topic label="連線">
     <property name="navgroup" value="learn"/>
-    <topic href="connecting.html#connect_prereq" label="必要條件" id="connect_prereq">
-      <property name="type" value="anchor"/>
-      <topic href="connecting.html#cfg_env" label="配置環境" id="cfg_env"></topic>
+    <property name="topicgroup" value="連線"/>
+    <topic href="connecting.html#connect" label="連接" id="connect">
+      <topic href="connecting.html#connect_prereq" label="必要條件" id="connect_prereq">
+        <property name="type" value="anchor"/>
+        <topic href="connecting.html#cfg_env" label="配置環境" id="cfg_env"></topic>
+      </topic>
+      <topic href="connecting.html#conx_prgrm" label="以程式設計方式連接" id="conx_prgrm">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting.html#conx_apps_tools" label="連接應用程式及工具" id="conx_apps_tools">
+        <property name="type" value="anchor"/>
+      </topic>
     </topic>
-    <topic href="connecting.html#conx_prgrm" label="以程式設計方式連接" id="conx_prgrm">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="connecting.html#conx_apps_tools" label="連接應用程式及工具" id="conx_apps_tools">
-      <property name="type" value="anchor"/>
+    <topic href="connectivity_options.html#connect_options" label="連線功能選項" id="connect_options">
+      <topic href="connectivity_options.html#pub_endpt" label="連接至公用端點（預設選項）" id="pub_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#pub_endpt_steps" label="如何連接至公用端點：" id="pub_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#priv_endpt" label="連接至專用端點：IBM Cloud Service Endpoint" id="priv_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_steps" label="如何使用 IBM Cloud Service Endpoint 連接至專用端點" id="priv_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#vpn" label="連接至專用端點：虛擬專用網路 (VPN)" id="vpn">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_vpn_steps" label="如何使用 VPN 連接至專用端點" id="priv_endpt_vpn_steps"></topic>
+      </topic>
     </topic>
   </topic>
   <topic label="連接至另一個 Db2 資料庫">
@@ -83,7 +100,7 @@
         <topic href="federation.html#-shard-" label="多台伺服器的 Shard 資料" id="-shard-"></topic>
         <topic href="federation.html#-" label="將資料庫容量提高超越固定限制" id="-"></topic>
       </topic>
-      <topic href="federation.html#getting_started" label="開始使用" id="getting_started">
+      <topic href="federation.html#getting_started_fed" label="開始使用" id="getting_started_fed">
         <property name="type" value="anchor"/>
         <topic href="federation.html#targ" label="在 Db2 on Cloud 目標機器上" id="targ"></topic>
         <topic href="federation.html#fed_src" label="在用來作為聯合來源的 Db2 on Cloud 機器上" id="fed_src"></topic>
@@ -198,7 +215,7 @@
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="安全規範">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="安全規範">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">

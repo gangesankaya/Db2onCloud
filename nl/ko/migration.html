@@ -35,9 +35,9 @@
           <h2 id="cos">오브젝트 저장소에서 데이터 로드</h2>
           <p>Amazon S3에서 데이터를 로드하려면 다음 방법 중 하나를 선택하십시오.</p>
           <ul>
-            <li>Db2 on Cloud 웹 콘솔 사용. <strong>로드 &gt; Amazon S3</strong>. </li>
+            <li>Db2 on Cloud 웹 콘솔 사용. <strong>로드 &gt; Amazon S3</strong>를 선택하십시오. </li>
             <li>
-              <p>외부 테이블 직접 사용. 다음은 SQL문의 예제입니다.</p>
+              <p>외부 테이블에서 직접 로드. 다음은 SQL문의 예제입니다.</p>
               <pre><code class="hljs">  INSERT INTO &lt;table-name&gt; SELECT * FROM EXTERNAL &#39;&lt;mys3file.txt&gt;&#39; USING
     (CCSID 1208 s3(&#39;s3.amazonaws.com&#39;, 
     &#39;&lt;S3-access-key-ID&gt;&#39;,
@@ -70,7 +70,7 @@
             <h3 id="lift">Lift CLI</h3>
             <p>Lift CLI는 표 1에 나열된 다양한 데이터 소스에서 IBM Cloud로 데이터를 마이그레이션할때 무료로 사용할 수 있는 애플리케이션입니다. </p>
             <table>
-              <caption caption-side="top">표 1. 데이터 소스 마이그레이션</caption>
+              <caption caption-side="top">표 1. 마이그레이션 데이터 소스</caption>
               <thead>
                 <tr>
                   <th>IBM Cloud의 대상 데이터베이스</th>
@@ -84,7 +84,7 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>Oracle Database</td>
+                  <td>Oracle 데이터베이스</td>
                 </tr>
                 <tr>
                   <td></td>
@@ -96,15 +96,15 @@
                 </tr>
               </tbody>
             </table>
-            <p>Lift CLI를 다운로드하고 설치하려면 <a href="https://lift.ng.bluemix.net/#download" target="_blank">Lift CLI 다운로드 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를 참조하십시오.</p>
-            <p>Lift CLI를 사용하여 IBM Cloud로 사용자의 데이터를 마이그레이션하는 방법에 관한 단계별 지시사항은 <a href="https://lift.ng.bluemix.net/#docs" target="_blank">Migrate data to IBM Db2 on Cloud <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>의 내용을
-              참조하십시오.</p>
+            <p>Lift CLI를 다운로드하고 설치하려면 <a href="https://www.lift-cli.cloud.ibm.com/#download" target="_blank">Lift CLI 다운로드 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를 참조하십시오.</p>
+            <p>Lift CLI를 사용하여 IBM Cloud로 사용자의 데이터를 마이그레이션하는 방법에 관한 단계별 지시사항은 <a href="https://www.lift-cli.cloud.ibm.com/#docs" target="_blank">Migrate data to IBM Db2 on Cloud <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>의
+              내용을 참조하십시오.</p>
           </section>
           <section id="section-mdms">
             <h3 id="mdms">IBM Cloud Mass Data Migration</h3>
             <p>실제로 테라바이트부터 페타바이트까지의 데이터를 IBM Cloud로 전송하는 빠르고 단순하며 안전한 방법입니다. Mass Data Migration은 IBM Cloud로 데이터 이동을 가속화하는, 120TB의 스토리지 용량이 사용 가능한 모바일 스토리지 디바이스입니다. 단일 서비스의 고비용, 긴 전송 시간 및 보안 문제와 같은 일반적인 전송 문제를 해결합니다.</p>
             <p><img src="images/mdms.svg" alt="Mass Data Migration 디바이스 보기"></p>
-            <p>Mass Data Migration 디바이스에 대한 자세한 정보는 <a href="/docs/infrastructure/mass-data-migration/getting-started.html#getting-started-with-ibm-cloud-mass-data-migration" target="_blank">IBM Cloud Mass Data Migration 시작하기</a>를 참조하십시오.</p>
+            <p>Mass Data Migration 디바이스에 대한 자세한 정보는 <a href="/docs/infrastructure/mass-data-migration?topic=mass-data-migration-getting-started-tutorial#getting-started-with-ibm-cloud-mass-data-migration" target="_blank">시작하기 튜토리얼</a>을 참조하십시오. </p>
           </section>
         </section>
       </section>

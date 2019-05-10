@@ -34,11 +34,9 @@
         <p>Además de las copias de seguridad estándar, puede utilizar <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>          para conservar datos históricos para sus propios fines. También puede realizar sus propias exportaciones mediante IBM Data Studio o cualquier herramienta de Db2.</p>
         <p>Para obtener información sobre restauraciones en un punto en el tiempo, consulte <a href="#point-in-time">Restauración en un punto en el tiempo</a>.</p>
         <p>Normalmente, todos los planes de pago hacen uso de IBM Cloud Object Storage (COS) para mantener las copias de seguridad externas en tres centros de datos distintos. Sin embargo, es posible que Sídney y ciertos centros de datos más pequeños no
-          den soporte a la replicación externa con IBM COS en este momento. Consulte la <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">documentación de IBM COS</a> de su región para determinar qué regiones
+          den soporte a la replicación externa con IBM COS en este momento. Consulte la <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">documentación de IBM COS</a> de su región para determinar qué regiones
           dan soporte a la replicación externa.</p>
-        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
-        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
-        <p>También puede utilizar la <a href="https://lift.ng.bluemix.net/" target="_blank">CLI de IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> para importar datos a Db2 on Cloud.</p>
+        <p>También puede utilizar la <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">CLI de IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> para importar datos a Db2 on Cloud.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Restauración de punto en el tiempo</h2>
           <p>Db2 on Cloud ha añadido la capacidad de restaurar a un punto en el tiempo. Puede restaurar desde sus copias de seguridad a un punto exacto en el tiempo. A día de hoy, para la mayoría de clientes, tiene que solicitar soporte para activar esta
@@ -47,7 +45,7 @@
           <ul>
             <li>Centro de datos de Dallas: Disponible actualmente en sistemas de servidor único</li>
             <li>En el resto de casos, incluida Europa y los sistemas de alta disponibilidad en Dallas: Solicite la activación de la característica al soporte técnico. El despliegue total en todos los sistemas se completará el 28 de febrero de 2019.</li>
-            <li>Sistema dedicado IBM Cloud (anteriormente conocido como Bluemix dedicado): Disponible solamente abriendo una incidencia de soporte.</li>
+            <li>Sistema dedicado IBM Cloud: Disponible solamente abriendo una incidencia de soporte.</li>
           </ul>
           <p>Lo siguiente es un ejemplo seleccionado de capturas de pantalla de la interfaz de usuario de la consola web donde se ha iniciado la operación de restauración a un punto en el tiempo y se indica su progreso:</p>
           <ol>

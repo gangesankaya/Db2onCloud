@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-04-08">
+  <meta name="dcterms.date" content="2019-04-08">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud ofrece diversas opciones de conectividad segura que dependen de los requisitos de conexión de la aplicación.  ">
+  <meta name="source.format" content="markdown">
+
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Opciones de conectividad</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="connect_options" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-connect_options">
+        <h1 id="connect_options">Opciones de conectividad</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud ofrece diversas opciones de conectividad segura que dependen de los requisitos de conexión de la aplicación. </p>
+        <section id="section-pub_endpt">
+          <h2 id="pub_endpt">Conexión a un punto final público (opción predeterminada)</h2>
+          <p>Al igual que sucede con cualquier servicio de nube público, puede conectar la aplicación mediante un nombre de host público que se proporciona en el momento en que se suministra el servicio. El acceso a los datos se protege mediante una autenticación
+            fuerte, opciones de autorización de DB2 y controles de acceso, cifrado sobre cableado y sobre conexión en reposo y prácticas de conformidad y de seguridad de IBM para el desarrollo y para las operaciones. También se ofrece una lista blanca
+            opcional de direcciones IP. Cree un caso de soporte de IBM si desea habilitar una lista blanca de direcciones IP.</p>
+          <section id="section-pub_endpt_steps">
+            <h3 id="pub_endpt_steps">Cómo conectar con un punto final público:</h3>
+            <p>La forma más sencilla de conectar los datos es mediante el nombre de host público que se proporciona en la carta de bienvenida. También puede obtener el nombre de host y las credenciales del siguiente modo:</p>
+            <ol>
+              <li>Inicie una sesión en Db2 on Cloud y pulse la instancia de servicio.</li>
+              <li>Pulse <strong>Credenciales de servicio</strong>.</li>
+              <li>Pulse <strong>Nueva credencial</strong> y luego pulse <strong>Añadir</strong>.</li>
+              <li>Una vez creadas las credenciales, bajo la columna <code>Acciones</code> pulse <strong>Ver credenciales</strong>.</li>
+              <li>
+                <p>En el siguiente ejemplo de documento JSON, anote el contenido de los campos de nombre de host, contraseña y nombre de usuario. Utilizará estos tres componentes para establecer una conexión de punto final público:</p>
+                <pre><code class="hljs">{
+  &quot;hostname&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;password&quot;: &quot;DTPY7KXxhp_pKtjLSt&quot;,
+  &quot;https_url&quot;: &quot;https://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;port&quot;: 50000,
+  &quot;ssldsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxx.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPY7KXWxhp_pKtjLSt;Security=SSL;&quot;,
+  &quot;host&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;jdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;uri&quot;: &quot;db2://bluadmin:DTPY7KXx1p_pKtjLSt@dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;db&quot;: &quot;BLUDB&quot;,
+  &quot;dsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxxx.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPYZunlWxhp_pKtjLSt;&quot;,
+  &quot;username&quot;: &quot;bluadmin&quot;,
+  &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
+}
+</code></pre>
+                <p><img src="images/public_connection.png" alt="Acceso de red pública a IBM Cloud"></p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-priv_endpt">
+          <h2 id="priv_endpt">Conexión a un punto final privado: punto final de servicio de IBM Cloud</h2>
+          <p>Si tiene una aplicación desplegada en la cuenta de IBM Cloud y desea conectarla a la base de datos sin que el tráfico de la base de datos fluya por redes públicas, puede utilizar la opción de <strong>punto final de servicio de IBM Cloud</strong>            cuando solicite la base de datos. Se le suministrará un nombre de host privado en el momento en que se suministre el servicio y solo puede conectarlo desde dentro de la cuenta de IBM Cloud. </p>
+          <p>Para obtener más información sobre la opción Punto final de servicio de IBM Cloud, consulte <a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">Punto final de servicio: acerca de</a>.</p>
+          <section id="section-priv_endpt_steps">
+            <h3 id="priv_endpt_steps">Cómo conectar con un punto final privado con el punto final de servicio de IBM Cloud</h3>
+            <p>La comunicación de red privada y de punto final se realiza mediante el servicio Punto final de servicio de IBM Cloud. El Punto final de servicio facilita un tráfico de red rápido y seguro entre distintos servicios de IBM Cloud y la base de
+              datos del depósito a través de la placa posterior de red privada de IBM Cloud. Este direccionamiento de red garantiza que los datos nunca pasan por internet pública. </p>
+            <p>Para empezar a utilizar el punto final de servicio, la cuenta de IBM Cloud debe estar habilitada para reenvío y direccionamiento virtual (VRF). Para habilitar la cuenta, consulte <a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">Habilitación de la cuenta para que utilice el punto final de servicio mediante la CLI de IBM Cloud</a>.</p>
+            <p>Cuando la cuenta esté habilitada para VRF y el punto final de servicio esté habilitado, siga las instrucciones proporcionadas en la carta de bienvenida.</p>
+            <p>Ha llegado el momento de conectar la instancia de Db2 on Cloud desde dentro de la cuenta de IBM Cloud mediante el uso de la dirección de red privada proporcionada en la carta de bienvenida.</p>
+          </section>
+        </section>
+        <section id="section-vpn">
+          <h2 id="vpn">Conexión a un punto final privado: red privada virtual (VPN)</h2>
+          <p>Si tiene una aplicación desplegada en una red privada que está fuera de IBM Cloud sin acceso a internet pública y desea conectarla a la base de datos sobre una conexión de red privada virtual (VPN), puede realizar la solicitud en el momento
+            de solicitar el servicio o mediante la apertura de un caso de soporte de IBM. Los ingenieros de red de IBM ayudarán a sus ingenieros de red a configurar el túnel VPN entre su red privada e IBM Cloud.</p>
+          <section id="section-priv_endpt_vpn_steps">
+            <h3 id="priv_endpt_vpn_steps">Cómo conectar con un punto final privado con una VPN</h3>
+            <p>Para establecer una conexión VPN con la base de datos en la nube detrás de un punto final público, <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">cree un caso de soporte de IBM Cloud <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>              que incluya estos detalles:</p>
+            <ul>
+              <li><strong>Tipo de soporte</strong>: Técnico </li>
+              <li><strong>Categoría</strong>: Bases de datos </li>
+              <li><strong>Oferta</strong>: seleccione su instancia de Db2 on Cloud </li>
+              <li><strong>Asunto</strong>: Solicitud de conexión VPN </li>
+              <li>
+                <p><strong>Descripción</strong>: especifique la siguiente información necesaria</p>
+                <ul>
+                  <li><strong>Dirección de igual VPN del lado del cliente</strong> (su punto final de VPN): <code>&lt;IP Address&gt;</code></li>
+                  <li><strong>Dominio de cifrado del lado del cliente</strong> (sea específico – 10.0.0.0/8 no funciona porque el direccionamiento 10 también se utiliza dentro de IBM Cloud para servicios de fondo): <code>&lt;Domain&gt;</code></li>
+                  <li><strong>Versión y hardware de VPN del lado del cliente</strong>: <code>&lt;Hardware and Version number&gt;</code></li>
+                  <li><strong>Contacto de VPN del lado del cliente</strong> (nombre y dirección de correo electrónico del contacto técnico):
+                    <ul>
+                      <li><code>&lt;Name&gt;</code> </li>
+                      <li><code>&lt;Title&gt;</code> </li>
+                      <li><code>&lt;Email Address&gt;</code></li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><strong>Opcional</strong> (cambie los valores únicamente si los valores predeterminados no resultan adecuados):</p>
+                <p><em>Parámetros de IKE/ISAKMP (Fase I)</em></p>
+                <ul>
+                  <li><strong>Método de cifrado</strong>: IKEv1</li>
+                  <li><strong>Cifrado de IKE / Algoritmo de cifrado</strong>: AES-256</li>
+                  <li><strong>Algoritmo de autenticación</strong>: SHA1</li>
+                  <li><strong>Grupo de DH</strong>: Grupo 5</li>
+                  <li><strong>Tiempo de vida de asociación de seguridad (segundos)</strong>: 1d (86400 segundos)</li>
+                </ul>
+                <p><em>Parámetros de IPSEC (Fase II)</em></p>
+                <ul>
+                  <li><strong>Cifrado de IPsec / Algoritmo de cifrado</strong>: AES-256</li>
+                  <li><strong>Algoritmo de autenticación</strong>: SHA1</li>
+                  <li><strong>Grupo de DH</strong> (si se utiliza PF-Secrecy): Grupo 5</li>
+                  <li><strong>Tiempo de vida de asociación de seguridad (segundos)</strong>: 3600 segundos</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Cuando reciban su solicitud, los técnicos de IBM Cloud abrirán los puertos de cortafuegos adecuados y colocarán en la lista blanca la dirección IP proporcionada. La comunicación y la resolución de la solicitud se realizarán mediante una incidencia
+              de caso de soporte de IBM Cloud.</p>
+            <p><img src="images/public_connection_vpn.png" alt="Acceso de red pública a IBM Cloud"></p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

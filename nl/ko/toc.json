@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud/index.html"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"
             },
             {
                 "name": "path",
@@ -25,27 +25,27 @@
         ],
         "topics": [
             {
-                "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
-                "label": "시작하기",
+                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "label": "시작하기 튜토리얼",
                 "id": "Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/index.html#interfaces",
+                        "href": "services/Db2onCloud/getting-started.html#interfaces",
                         "label": "인터페이스",
                         "id": "Db2onCloud-interfaces",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/index.html#web_console",
+                                "href": "services/Db2onCloud/getting-started.html#web_console",
                                 "label": "Db2 on Cloud 웹 콘솔",
                                 "id": "Db2onCloud-web_console"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#connect_apps",
+                                "href": "services/Db2onCloud/getting-started.html#connect_apps",
                                 "label": "컴퓨터에 Db2 명령행 클라이언트 및 드라이버 설치",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#data_src",
+                                "href": "services/Db2onCloud/getting-started.html#data_src",
                                 "label": "IBM Cloud 앱 또는 서비스의 데이터 소스로 Db2 on Cloud 사용",
                                 "id": "Db2onCloud-data_src"
                             }
@@ -58,7 +58,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#samples",
+                        "href": "services/Db2onCloud/getting-started.html#samples",
                         "label": "샘플",
                         "id": "Db2onCloud-samples",
                         "properties": [
@@ -69,7 +69,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#intro_vid",
+                        "href": "services/Db2onCloud/getting-started.html#intro_vid",
                         "label": "동영상: Db2 on Cloud 소개",
                         "id": "Db2onCloud-intro_vid",
                         "properties": [
@@ -80,7 +80,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#vid_api",
+                        "href": "services/Db2onCloud/getting-started.html#vid_api",
                         "label": "동영상: REST API를 사용하여 Db2 on Cloud와 통신",
                         "id": "Db2onCloud-vid_api",
                         "properties": [
@@ -91,7 +91,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#cognos_vid",
+                        "href": "services/Db2onCloud/getting-started.html#cognos_vid",
                         "label": "동영상: Jupyter Notebook 통합",
                         "id": "Db2onCloud-cognos_vid",
                         "properties": [
@@ -234,55 +234,125 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/connecting.html#connect",
                 "label": "연결",
-                "id": "Db2onCloud-connect",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/connecting.html#connect_prereq",
-                        "label": "전제조건",
-                        "id": "Db2onCloud-connect_prereq",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/connecting.html#cfg_env",
-                                "label": "환경 구성",
-                                "id": "Db2onCloud-cfg_env"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_prgrm",
-                        "label": "프로그래밍 방식으로 연결",
-                        "id": "Db2onCloud-conx_prgrm",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
-                        "label": "앱 및 도구 연결",
-                        "id": "Db2onCloud-conx_apps_tools",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "연결"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting.html#connect",
+                        "label": "연결",
+                        "id": "Db2onCloud-connect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                                "label": "전제조건",
+                                "id": "Db2onCloud-connect_prereq",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                        "label": "환경 구성",
+                                        "id": "Db2onCloud-cfg_env"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                                "label": "프로그래밍 방식으로 연결",
+                                "id": "Db2onCloud-conx_prgrm",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
+                                "label": "앱 및 도구 연결",
+                                "id": "Db2onCloud-conx_apps_tools",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connectivity_options.html#connect_options",
+                        "label": "연결 옵션",
+                        "id": "Db2onCloud-connect_options",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#pub_endpt",
+                                "label": "공용 엔드포인트에 연결(기본 옵션)",
+                                "id": "Db2onCloud-pub_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#pub_endpt_steps",
+                                        "label": "공용 엔드포인트에 연결하는 방법",
+                                        "id": "Db2onCloud-pub_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#priv_endpt",
+                                "label": "사설 엔드포인트에 연결: IBM Cloud Service Endpoint",
+                                "id": "Db2onCloud-priv_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_steps",
+                                        "label": "IBM Cloud Service Endpoint를 통해 사설 엔드포인트에 연결하는 방법",
+                                        "id": "Db2onCloud-priv_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#vpn",
+                                "label": "사설 엔드포인트에 연결: 가상 사설망(VPN)",
+                                "id": "Db2onCloud-vpn",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_vpn_steps",
+                                        "label": "VPN을 통해 사설 엔드포인트에 연결하는 방법",
+                                        "id": "Db2onCloud-priv_endpt_vpn_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -338,9 +408,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#getting_started",
+                                "href": "services/Db2onCloud/federation.html#getting_started_fed",
                                 "label": "시작하기",
-                                "id": "Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started_fed",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#targ",
@@ -563,11 +633,11 @@
                 ]
             },
             {
-                "label": "데이터 로드",
+                "label": "사용자 데이터 로드",
                 "properties": [
                     {
                         "name": "topicgroup",
-                        "value": "데이터 로드"
+                        "value": "사용자 데이터 로드"
                     },
                     {
                         "name": "navgroup",
@@ -755,7 +825,7 @@
             },
             {
                 "href": "https://www.ibm.com/support/docview.wss?uid=swg21961758",
-                "label": "What's new",
+                "label": "새로운 기능",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -765,7 +835,7 @@
             },
             {
                 "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html",
-                "label": "Frequently asked questions",
+                "label": "자주 묻는 질문(FAQ)",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -784,8 +854,8 @@
                 ]
             },
             {
-                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
-                "label": "Security compliances",
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
+                "label": "보안 준수",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -805,7 +875,7 @@
             },
             {
                 "href": "https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud",
-                "label": "가이드 데모: 웹 콘솔을 통해 공통 태스크 완료",
+                "label": "안내 데모: 웹 콘솔을 통해 공통 태스크 완료",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -865,7 +935,7 @@
             },
             {
                 "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html",
-                "label": "SQL 참조",
+                "label": "SQL 참조서",
                 "properties": [
                     {
                         "name": "navgroup",

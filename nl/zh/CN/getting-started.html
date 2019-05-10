@@ -6,11 +6,11 @@
   <meta name="DC.Publisher" content="IBM Corporation">
   <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2019-01-02">
-  <meta name="dcterms.date" content="2019-01-02">
+  <meta name="DC.date" content="2019-04-30">
+  <meta name="dcterms.date" content="2019-04-30">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
-  <meta name="description" content="IBM&reg; Db2&reg; on Cloud 是在云中为您供应的 SQL 数据库。您可以像使用任何数据库软件一样使用 Db2 on Cloud，但是却没有硬件设置或软件安装和维护的开销和费用。">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud 是在云中为您供应的 SQL 数据库。您可以像使用任何数据库软件一样来使用 Db2 on Cloud，但是却无需耗费时间和费用来设置硬件或进行软件安装和维护。">
   <meta name="source.format" content="markdown">
 
 
@@ -21,7 +21,7 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>入门</title>
+  <title>入门教程</title>
 </head>
 
 <body>
@@ -29,14 +29,11 @@
     <article aria-labelledby="getting_started_db2oncloud" role="article">
       <!-- Attribute definitions -->
       <section id="section-getting_started_db2oncloud">
-        <h1 id="getting_started_db2oncloud">入门</h1>
-        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 是在云中为您供应的 SQL 数据库。您可以像使用任何数据库软件一样使用 Db2 on Cloud，但是却没有硬件设置或软件安装和维护的开销和费用。</p>
-        <p class="important">创建凭证。对于 IBM Cloud 新手，在创建服务后，必须创建用户名和密码，方法是在启动服务时单击<strong>创建凭证</strong>按钮。从技术上讲，可以在没有凭证的情况下登录到 Web 控制台，但许多 Db2 工具都需要用户提供用户名和密码。</p>
-        <p>您还可以使用<a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions" target="_blank">免费下载的 Db2 Developer Edition <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a> 来安装本地 Db2 数据库。这样会快速安装随时可用的开发者版本的 Db2
-          以及 Docker 容器内的工具（不需要 Docker，它将自动安装任何必要的组件）。 </p>
-        <!-- ## Free trial
-
-You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
+        <h1 id="getting_started_db2oncloud">入门教程</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 是在云中为您供应的 SQL 数据库。您可以像使用任何数据库软件一样来使用 Db2 on Cloud，但是却无需耗费时间和费用来设置硬件或进行软件安装和维护。</p>
+        <p class="important">创建凭证。对于那些刚接触 IBM Cloud 的人来说，在创建服务后还必须创建用户名和密码，方法是在启动服务时单击<strong>创建凭证</strong>按钮。从技术层面上讲，您可以在没有凭证的情况下登录到 Web 控制台，但是如果要使用一些 Db2 工具，就需要提供您的用户名和密码。</p>
+        <p>您还可以通过<a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions" target="_blank">免费的 Db2 Developer Edition 下载 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a> 来安装本地 Db2 数据库。这样可以快速安装随时可用的开发者版本的
+          Db2，其中 Db2 工具会包含在 Docker 容器中（无需安装 Docker，因为它会自动安装任何必要的组件）。 </p>
         <section id="section-interfaces">
           <h2 id="interfaces">界面</h2>
           <p class="shortdesc">您可以通过以下方法来使用 Db2 on Cloud 数据库：</p>
@@ -64,8 +61,20 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
           </section>
           <section id="section-connect_apps">
             <h3 id="connect_apps">在计算机上安装 Db2 命令行客户机和驱动程序</h3>
-            <p class="shortdesc">大多数用户都可以跳过此步骤。在大多数情况下，用户都会倾向于仅使用 REST API，或者安装框架的驱动程序，例如使用 Python 的 <code>pip</code> 命令。但是，高级用户可能希望使用 Db2 命令行客户机来管理其数据库和使用 Db2 命令。此外，某些 ODBC 或 JDBC 应用程序也可以从 Db2 驱动程序的常规安装中受益。要安装 Db2 命令行客户机和驱动程序，请完成以下步骤：</p>
+            <p class="shortdesc">在大多数情况下，用户都会倾向于仅使用 REST API，或者安装框架的驱动程序，例如使用 Python 的 <code>pip</code> 命令。</p>
+            <p class="note">要安装 MacOS 的 Python 驱动程序包，您必须使用带 <code>--no-cache-dir</code> 选项的 <code>pip</code> 命令。有关详细的指示信息，请参阅：<a href="https://ibm.biz/db2-drivers-python" target="_blank">Python support for IBM DB2 and IBM Informix <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></p>
             <!-- Drivers on site are broken so taking out this one -Simon. 1. Download the [driver package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html){:new_window} from the Connection info page of the Db2 on Cloud web console.-->
+            <p>要安装 Python 或 Node.js 框架驱动程序，请单击以下其中一个链接：</p>
+            <ul>
+              <li><a href="https://ibm.biz/db2-drivers-python" target="_blank">Python 驱动程序 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
+              <li><a href="https://ibm.biz/db2-drivers-node" target="_blank">Node.js 驱动程序 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
+            </ul>
+            <p class="note">要安装名为 Sequelize 的 Node.js ORM，请单击以下链接：<a href="https://github.com/ibmdb/sequelize" target="_blank">Sequelize <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></p>
+            <p>有关驱动程序安装选项（包括 Java、Go、Jupyter 配置页、Ruby、PHP 等）的更多信息，请单击以下链接： </p>
+            <ul>
+              <li><a href="https://github.com/ibmdb" target="_blank">ibmdb <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a></li>
+            </ul>
+            <p>假定您已安装了框架驱动程序，那么可以跳过以下步骤。但是，高级用户可能还希望通过使用 Db2 命令行客户机来管理他们的数据库并使用 Db2 命令。此外，某些 ODBC 或 JDBC 应用程序也可以从 Db2 驱动程序的常规安装中受益。如果是这种情况，请完成以下步骤：</p>
             <ol>
               <li>在运行应用程序和工具的计算机上<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">安装驱动程序包 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</li>
               <li>为 Db2 on Cloud 数据库<a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">配置驱动程序文件 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</li>
@@ -73,7 +82,7 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
           </section>
           <section id="section-data_src">
             <h3 id="data_src">使用 Db2 on Cloud 作为 IBM Cloud 应用程序或服务的数据源</h3>
-            <p class="shortdesc">在 IBM Cloud 上托管的应用程序可以使用与本地应用程序连接到 Db2 on Cloud 数据库完全相同的方法，连接到 Db2 on Cloud 数据库。</p>
+            <p class="shortdesc">可以使用与本地应用程序连接到 Db2 on Cloud 数据库的相同方法，将在 IBM Cloud 上托管的应用程序连接到 Db2 on Cloud 数据库。</p>
             <p>当应用程序使用 IBM Cloud 平台时，您可以利用 <code>VCAP _SERVICES</code> 环境变量来简化指定数据库详细信息和凭证的任务：</p>
             <ol>
               <li>在 IBM Cloud 仪表板上，在 IBM Db2 on Cloud 服务的“服务详细信息”页面的<strong>连接</strong>选项卡上，单击<strong>创建连接</strong>按钮。</li>
@@ -81,55 +90,45 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
               <li>
                 <p>更新应用程序代码以从 <code>VCAP_SERVICES</code> 环境变量检索数据库详细信息和凭证：</p>
                 <p> <strong>没有 <code>VCAP_SERVICES</code> 的示例</strong></p>
-                <p> ```php &lt;?php $driver = &quot;DRIVER={IBM DB2 ODBC DRIVER};&quot;;</p>
+                <pre><code class="lang-php hljs"> <span class="hljs-meta">&lt;?php</span>
+ $driver      = <span class="hljs-string">"DRIVER={IBM DB2 ODBC DRIVER};"</span>;
+
+ $database    = <span class="hljs-string">"BLUDB"</span>;         <span class="hljs-comment"># Get these database details from</span>
+ $hostname    = <span class="hljs-string">"&lt;Host-name&gt;"</span>;   <span class="hljs-comment"># the Connect page of the Db2 on Cloud</span>
+ $port        = <span class="hljs-number">50000</span>;           <span class="hljs-comment"># web console.</span>
+ $user        = <span class="hljs-string">"&lt;User-ID &gt;"</span>;    <span class="hljs-comment">#</span>
+ $password    = <span class="hljs-string">"&lt;Password&gt;"</span>;    <span class="hljs-comment">#</span>
+ $dsn         = <span class="hljs-string">"DATABASE=$database;"</span> .
+                <span class="hljs-string">"HOSTNAME=$hostname;"</span> .
+                <span class="hljs-string">"PORT=$port;"</span> .
+                <span class="hljs-string">"PROTOCOL=TCPIP;"</span> .
+                <span class="hljs-string">"UID=$user;"</span> .
+                <span class="hljs-string">"PWD=$password;"</span>;
+
+ $conn_string = $driver . $dsn;
+
+ $conn        = db2_connect( $conn_string, <span class="hljs-string">""</span>, <span class="hljs-string">""</span> );
+ <span class="hljs-meta">?&gt;</span>
+</code></pre>
+                <p> <strong>具有 <code>VCAP_SERVICES</code> 的示例</strong></p>
+                <pre><code class="lang-php hljs"> <span class="hljs-meta">&lt;?php</span>
+ $driver      = <span class="hljs-string">"DRIVER={IBM DB2 ODBC DRIVER};"</span>;
+
+ $vcap        = json_decode( getenv( <span class="hljs-string">"VCAP_SERVICES"</span> ), <span class="hljs-keyword">true</span> );
+ $dsn         = $vcap[ <span class="hljs-string">"dashDB"</span> ][<span class="hljs-number">0</span>][ <span class="hljs-string">"credentials"</span> ][ <span class="hljs-string">"dsn"</span> ];
+
+ $conn_string = $driver . $dsn;
+
+ $conn        = db2_connect( $conn_string, <span class="hljs-string">""</span>, <span class="hljs-string">""</span> );
+ <span class="hljs-meta">?&gt;</span>
+</code></pre>
               </li>
             </ol>
-            <pre><code class="hljs">$database    = &quot;BLUDB&quot;;         # Get these database details from
-$hostname    = &quot;&lt;Host-name&gt;&quot;;   # the Connect page of the Db2 on Cloud
-$port        = 50000;           # web console.
-$user        = &quot;&lt;User-ID &gt;&quot;;    #
-$password    = &quot;&lt;Password&gt;&quot;;    #
-$dsn         = &quot;DATABASE=$database;&quot; .
-               &quot;HOSTNAME=$hostname;&quot; .
-               &quot;PORT=$port;&quot; .
-               &quot;PROTOCOL=TCPIP;&quot; .
-               &quot;UID=$user;&quot; .
-               &quot;PWD=$password;&quot;;
-
-
-
-$conn_string = $driver . $dsn;
-
-
-
-$conn        = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
-?&gt;
-```
-
-**具有 `VCAP_SERVICES` 的示例**
-
-```php
-&lt;?php
-$driver      = &quot;DRIVER={IBM DB2 ODBC DRIVER};&quot;;
-
-
-
-$vcap        = json_decode( getenv( &quot;VCAP_SERVICES&quot; ), true );
-$dsn         = $vcap[ &quot;dashDB&quot; ][0][ &quot;credentials&quot; ][ &quot;dsn&quot; ];
-
-$conn_string = $driver . $dsn;
-
-
-
-$conn        = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
-?&gt;
-```
-</code></pre>
           </section>
         </section>
         <section id="section-samples">
           <h2 id="samples">样本</h2>
-          <p class="shortdesc">以下链接是演示在不同的语言中，如何从应用程序连接到 Db2 on Cloud 数据库的样本：</p>
+          <p class="shortdesc">以下是示例的链接，这些示例演示了在不同的语言中，如何从应用程序连接到 Db2 on Cloud 数据库：</p>
           <ul>
             <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting__net_applications.html" target="_blank">.NET <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>
               <!-- * [JAVA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_java.html){:new_window} -->
@@ -155,7 +154,7 @@ $conn        = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
         </section>
         <section id="section-cognos_vid">
           <h2 id="cognos_vid">视频：集成 Jupyter 配置页</h2>
-          <p>观看此视频，了解如何将 Jupyter 配置页与 Db2 on Cloud 集成。</p>
+          <p>观看此视频，了解如何将 Jupyter 配置页与 Db2 on Cloud 相集成。</p>
           <iframe class="embed-responsive-item" id="youtubeplayer3" title="集成 Jupyter 配置页" type="text/html" width="640" height="390" src="//www.youtube.com/embed/bNfH0Wzx3is?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
         </section>
       </section>

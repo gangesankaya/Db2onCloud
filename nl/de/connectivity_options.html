@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-04-08">
+  <meta name="dcterms.date" content="2019-04-08">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud bietet abhängig von den Anforderungen Ihrer Anwendungsverbindung mehrere sichere Konnektivitätsoptionen.  ">
+  <meta name="source.format" content="markdown">
+
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Konnektivitätsoptionen</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="connect_options" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-connect_options">
+        <h1 id="connect_options">Konnektivitätsoptionen</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud bietet abhängig von den Anforderungen Ihrer Anwendungsverbindung mehrere sichere Konnektivitätsoptionen. </p>
+        <section id="section-pub_endpt">
+          <h2 id="pub_endpt">Verbindung zu einem öffentlichen Endpunkt herstellen (Standardoption)</h2>
+          <p>Wie bei jedem öffentlichen Cloud-Service können Sie Ihre Anwendung über einen öffentlichen Hostnamen verbinden, der dann angegeben wird, wenn Ihr Service bereitgestellt wird. Der Zugriff auf Ihre Daten wird durch strikte Authentifizierung, umfangreiche
+            Db2-Berechtigungsoptionen und Zugriffssteuerung, Verschlüsselung für die Datenübertragung und für ruhende Daten sowie durch Verfahren zur Sicherheit und Konformität von IBM für Entwicklung und Betrieb geschützt. Optionales IP-Whitelisting
+            wird angeboten. Erstellen Sie einen IBM Supportfall, wenn Sie IP-Whitelisting aktivieren möchten. </p>
+          <section id="section-pub_endpt_steps">
+            <h3 id="pub_endpt_steps">Verbindung zu einem öffentlichen Endpunkt herstellen:</h3>
+            <p>Der einfachste Weg, um eine Verbindung zu Ihren Daten herzustellen, besteht darin, den Namen des öffentlichen Hosts zu verwenden, der in Ihrem Begrüßungsschreiben angegeben wurde. Sie können Ihren Hostnamen und die Berechtigungsnachweise auch
+              auf die folgende Weise erhalten: </p>
+            <ol>
+              <li>Melden Sie sich bei Db2 on Cloud an und klicken Sie auf Ihre Serviceinstanz.</li>
+              <li>Klicken Sie auf <strong>Serviceberechtigungsnachweise</strong>.</li>
+              <li>Klicken Sie auf <strong>Neuer Berechtigungsnachweis</strong> und anschließend auf <strong>Hinzufügen</strong>.</li>
+              <li>Nachdem die Berechtigungsnachweise erstellt wurden, klicken Sie unter der Spalte <code>Aktionen</code> auf <strong>Berechtigungsnachweise anzeigen</strong>.</li>
+              <li>
+                <p>Notieren Sie in dem folgenden JSON-Dokumentbeispiel den Inhalt der Felder für Hostname, Kennwort und Benutzername. Sie verwenden diese drei Komponenten bei der Herstellung der Verbindung zum öffentlichen Endpunkt: </p>
+                <pre><code class="hljs">{
+  &quot;hostname&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;password&quot;: &quot;DTPY7KXxhp_pKtjLSt&quot;,
+  &quot;https_url&quot;: &quot;https://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;port&quot;: 50000,
+  &quot;ssldsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxx.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPY7KXWxhp_pKtjLSt;Security=SSL;&quot;,
+  &quot;host&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;jdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;uri&quot;: &quot;db2://bluadmin:DTPY7KXx1p_pKtjLSt@dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;db&quot;: &quot;BLUDB&quot;,
+  &quot;dsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxxx.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPYZunlWxhp_pKtjLSt;&quot;,
+  &quot;username&quot;: &quot;bluadmin&quot;,
+  &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
+}
+</code></pre>
+                <p><img src="images/public_connection.png" alt="Zugriff durch das öffentliches Netz auf IBM Cloud"></p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-priv_endpt">
+          <h2 id="priv_endpt">Verbindung zu einem privaten Endpunkt herstellen: IBM Cloud-Serviceendpunkt</h2>
+          <p>Wenn Sie in Ihrem IBM Cloud-Konto eine Anwendung bereitgestellt haben und diese mit Ihrer Datenbank verbinden möchten, ohne dass der Datenverkehr über öffentliche Netze fließt, können Sie die Option <strong>IBM Cloud-Serviceendpunkt</strong>            beim Bestellen Ihrer Datenbank verwenden. Wenn der Service bereitgestellt wird, wird Ihnen ein privater Hostname angegeben, zu dem Sie nur innerhalb Ihres IBM Cloud-Kontos eine Verbindung herstellen können. </p>
+          <p>Weitere Informationen zur Option des IBM Cloud-Serviceendpunkts finden Sie in <a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">Serviceendpunkt: Produktinformationen</a>. </p>
+          <section id="section-priv_endpt_steps">
+            <h3 id="priv_endpt_steps">Verbindung zu einem privaten Endpunkt mit IBM Cloud-Serviceendpunkt herstellen</h3>
+            <p>Die Kommunikation mit privaten Netzen und Endpunkten erfolgt über den IBM Cloud-Serviceendpunktservice. Der Serviceendpunktservice erleichtert eine schnelle und sichere Weiterleitung des Datenverkehrs im Netz zwischen unterschiedlichen IBM
+              Cloud-Services und Ihrer Datenbank über das private Netzbackplane von IBM Cloud. Diese Weiterleitung im Netz gewährleistet, dass Ihre Daten niemals in das öffentliche Internet gelangen. </p>
+            <p>Voraussetzung für den Einstieg in die Nutzung des Serviceendpunkts ist, dass Ihr IBM Cloud-Konto für VRF (Virtual Routing and Forwarding) aktiviert ist. Informationen dazu, wie Sie Ihr Konto aktivieren können, finden Sie in <a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">Ihr Konto mit IBM Cloud CLI für Serviceendpunkt aktivieren</a>.</p>
+            <p>Nachdem Ihr Konto für VRF aktiviert wurde und der Serviceendpunkt aktiviert ist, befolgen Sie die Anweisungen in Ihrem Begrüßungsschreiben. </p>
+            <p>Jetzt ist es an der Zeit, Ihre Db2 on Cloud-Instanz ausgehend von Ihrem IBM Cloud-Konto mithilfe der privaten Netzadresse zu verbinden, die in Ihrem Begrüßungsschreiben angegeben ist. </p>
+          </section>
+        </section>
+        <section id="section-vpn">
+          <h2 id="vpn">Verbindung zu einem privaten Endpunkt herstellen: VPN (Virtual Private Network)</h2>
+          <p>Wenn Sie eine Anwendung in einem privaten Netz bereitgestellt haben, dass sich außerhalb von IBM Cloud befindet und keinen Zugang zum öffentlichen Internet hat, müssen Sie es über ein virtuelles privates Netz (VPN) mit Ihrer Datenbank verbinden.
+            Sie können die Anforderung dann stellen, wenn Sie den Service bestellen oder indem Sie einen IBM Supportfall öffnen. Netzentwickler von IBM unterstützen Ihre Netzentwickler beim Einrichten eines VPN-Tunnels zwischen Ihrem privaten Netz und
+            IBM Cloud.</p>
+          <section id="section-priv_endpt_vpn_steps">
+            <h3 id="priv_endpt_vpn_steps">Verbindung zu einem privaten Endpunkt mit einem VPN herstellen</h3>
+            <p>Um eine VPN-Verbindung zu Ihren Clouddaten hinter einem öffentlichen Endpunkt herzustellen, <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">erstellen Sie einen IBM Cloud-Supportfall <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>,
+              der folgende Details enthält: </p>
+            <ul>
+              <li><strong>Art des Supports</strong>: Technisch </li>
+              <li><strong>Kategorie</strong>: Datenbanken </li>
+              <li><strong>Angebot</strong>: Wählen Sie Ihre Db2 on Cloud-Instanz aus. </li>
+              <li><strong>Betreff</strong>: VPN-Verbindungsanforderung </li>
+              <li>
+                <p><strong>Beschreibung</strong>: Geben Sie die folgenden erforderlichen Informationen an.</p>
+                <ul>
+                  <li><strong>Kundenseitige VPN Peer-Adresse</strong> (Ihr VPN-Endpunkt): <code>&lt;IP Address&gt;</code></li>
+                  <li><strong>Kundenseitige Verschlüsselungsdomäne</strong> (geben Sie genau an, was erforderlich ist – 10.0.0.0/8 kann nicht bearbeitet werden, das die Adressierung 10 auch innerhalb von IBM Cloud für Back-End-Services verwendet wird): <code>&lt;Domain&gt;</code></li>
+                  <li><strong>Kundenseitige VPN-Hardware &amp; Version</strong>: <code>&lt;Hardware and Version number&gt;</code></li>
+                  <li><strong>Kundenseitiger VPN-Kontakt</strong> (Ansprechpartner mit Name und E-Mail-Adresse):
+                    <ul>
+                      <li><code>&lt;Name&gt;</code> </li>
+                      <li><code>&lt;Title&gt;</code> </li>
+                      <li><code>&lt;Email Address&gt;</code></li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><strong>Optional</strong> (Nur ändern, wenn die folgenden Standardwerte nicht geeignet sind):</p>
+                <p><em>IKE/ISAKMP-Parameter (Phase I)</em></p>
+                <ul>
+                  <li><strong>Verschlüsselungsverfahren</strong>: IKEv1</li>
+                  <li><strong>IKE-Verschlüsselung / Verschlüsselungsalgorithmus</strong>: AES-256</li>
+                  <li><strong>Authentifizierungsalgorithmus</strong>: SHA1</li>
+                  <li><strong>DH-Gruppe</strong>: Gruppe 5</li>
+                  <li><strong>Security Association-Lebensdauer (Sekunden)</strong>: 1d (86400 Sekunden)</li>
+                </ul>
+                <p><em>IPSEC-Parameter (Phase II)</em></p>
+                <ul>
+                  <li><strong>IPsec-Verschlüsselung / Verschlüsselungsalgorithmus</strong>: AES-256</li>
+                  <li><strong>Authentifizierungsalgorithmus</strong>: SHA1</li>
+                  <li><strong>DH-Gruppe</strong> (bei Verwendung von PF-Secrecy): Gruppe 5</li>
+                  <li><strong>Security Association-Lebensdauer (Sekunden)</strong>: 3600 Sekunden</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Nach dem Eingang Ihrer Anforderung werden IBM Cloud-Techniker die entsprechenden Firewall-Ports öffnen und die angegebene IP-Adresse in die Whitelist aufnehmen. Die Kommunikation und Auflösung der Anforderung erfolgt über ein IBM Cloud-Supportfallticket.
+              </p>
+            <p><img src="images/public_connection_vpn.png" alt="Zugriff durch das öffentliches Netz auf IBM Cloud"></p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-04-08">
+  <meta name="dcterms.date" content="2019-04-08">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud はアプリケーションの接続要件に応じて、複数のセキュアな接続オプションを提供します。  ">
+  <meta name="source.format" content="markdown">
+
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>接続オプション</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="connect_options" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-connect_options">
+        <h1 id="connect_options">接続オプション</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud はアプリケーションの接続要件に応じて、複数のセキュアな接続オプションを提供します。 </p>
+        <section id="section-pub_endpt">
+          <h2 id="pub_endpt">パブリック・エンドポイントへの接続 (デフォルト・オプション)</h2>
+          <p>他のパブリック・クラウド・サービスと同様に、サービスのプロビジョニング時に提供されるパブリック・ホスト名を使用してアプリケーションを接続できます。データへのアクセスは、強力な認証、広範な Db2 認証オプションとアクセス制御、通信中の暗号化、および開発と運用のための IBM のセキュリティーおよびコンプライアンスの取り組みによって保護されています。オプションで IP ホワイトリスティングを使用できます。IP ホワイトリスティングを有効にする場合は、IBM サポート Case を作成してください。</p>
+          <section id="section-pub_endpt_steps">
+            <h3 id="pub_endpt_steps">パブリック・エンドポイントに接続する方法:</h3>
+            <p>データに接続する最も簡単な方法は、ウェルカム・レターに記載されているパブリック・ホスト名を使用することです。ホスト名と資格情報は次の方法でも取得できます。</p>
+            <ol>
+              <li>Db2 on Cloud にログインし、サービス・インスタンスをクリックします。</li>
+              <li><strong>「サービス資格情報」</strong>をクリックします。</li>
+              <li><strong>「新規資格情報」</strong>をクリックし、<strong>「追加 (Add)」</strong>をクリックします。</li>
+              <li>資格情報が作成されたら、<code>「アクション」</code>列で<strong>「資格情報の表示」</strong>をクリックします。</li>
+              <li>
+                <p>以下の JSON 資料の例では、ホスト名、パスワード、およびユーザー名の各フィールドの内容に注目してください。パブリック・エンドポイント接続を確立する際に、これら 3 つのコンポーネントを使用します。</p>
+                <pre><code class="hljs">{
+  &quot;hostname&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;password&quot;: &quot;DTPY7KXxhp_pKtjLSt&quot;,
+  &quot;https_url&quot;: &quot;https://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;port&quot;: 50000,
+  &quot;ssldsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxx.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPY7KXWxhp_pKtjLSt;Security=SSL;&quot;,
+  &quot;host&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;jdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;uri&quot;: &quot;db2://bluadmin:DTPY7KXx1p_pKtjLSt@dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;db&quot;: &quot;BLUDB&quot;,
+  &quot;dsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxxx.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPYZunlWxhp_pKtjLSt;&quot;,
+  &quot;username&quot;: &quot;bluadmin&quot;,
+  &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
+}
+</code></pre>
+                <p><img src="images/public_connection.png" alt="IBM Cloud"></p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-priv_endpt">
+          <h2 id="priv_endpt">プライベート・エンドポイントへの接続: IBM Cloud サービス・エンドポイント</h2>
+          <p>アプリケーションが IBM Cloud アカウントでデプロイされており、データベース・トラフィックがいずれのパブリック・ネットワークも経由することなくデータベースに接続するようにしたい場合、データベースを注文する際に <strong>IBM Cloud サービス・エンドポイント</strong>・オプションを使用することができます。サービスのプロビジョニング時にプライベート・ホスト名が提供され、自分の IBM Cloud アカウント内からのみ接続できます。 </p>
+          <p>IBM Cloud サービス・エンドポイント・オプションについて詳しくは、<a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">サービス・エンドポイント: 概要</a>を参照してください。</p>
+          <section id="section-priv_endpt_steps">
+            <h3 id="priv_endpt_steps">IBM Cloud サービス・エンドポイントを使用してプライベート・エンドポイントに接続する方法</h3>
+            <p>プライベート・ネットワークおよびエンドポイント通信は、IBM Cloud サービス・エンドポイント・サービスを経由して実行されます。このサービス・エンドポイント・サービスを使用すると、IBM Cloud プライベート・ネットワーク・バックプレーンを介して、さまざまな IBM Cloud サービスとデータベースの間のネットワーク・トラフィックを迅速かつ安全にルーティングできます。このネットワーク・ルーティングにより、データがパブリック・インターネットに流出しないことが保証されます。
+              </p>
+            <p>サービス・エンドポイントの使用を開始するには、IBM Cloud アカウントで仮想ルーティングおよび転送 (VRF) を有効にする必要があります。アカウントを有効にするには、<a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">IBM Cloud CLI を使用してサービス・エンドポイントを使用するためにアカウントを有効にする</a>を参照してください。</p>
+            <p>アカウントで VRF が有効になり、サービス・エンドポイントが有効になったら、ウェルカム・レターに記載されている手順に従ってください。</p>
+            <p>これで、ウェルカム・レターで指定されているプライベート・ネットワーク・アドレスを経由して、IBM Cloud アカウント内から Db2 on Cloud インスタンスに接続できるようになります。</p>
+          </section>
+        </section>
+        <section id="section-vpn">
+          <h2 id="vpn">プライベート・エンドポイントへの接続: 仮想プライベート・ネットワーク (VPN)</h2>
+          <p>パブリック・インターネットにアクセスせずに IBM Cloud の外部にあるプライベート・ネットワーク上にデプロイされたアプリケーションがあり、仮想プライベート・ネットワーク (VPN) を介してそれをデータベースに接続したい場合、サービスを注文する時点で、または IBM サポート Case を開くことによって、その要求を行うことができます。ユーザーのネットワーク・エンジニアがプライベート・ネットワークと IBM Cloud の間に VPN トンネルを設定する際には、IBM ネットワーク・エンジニアがサポートします。</p>
+          <section id="section-priv_endpt_vpn_steps">
+            <h3 id="priv_endpt_vpn_steps">VPN を使用してプライベート・エンドポイントに接続する方法</h3>
+            <p>パブリック・エンドポイントの背後でクラウド・データベースへの VPN 接続を確立するには、以下の詳細を含む <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">IBM Cloud サポート Case を作成します<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>。</p>
+            <ul>
+              <li><strong>サポートのタイプ</strong>: テクニカル </li>
+              <li><strong>カテゴリー</strong>: データベース </li>
+              <li><strong>オファリング</strong>: ご使用の Db2 on Cloud インスタンスを選択します </li>
+              <li><strong>サブジェクト</strong>: VPN 接続要求 </li>
+              <li>
+                <p><strong>説明</strong>: 以下の必要情報を入力します</p>
+                <ul>
+                  <li><strong>お客様の VPN ピア・アドレス</strong> (ご使用の VPN エンドポイント): <code>&lt;IP Address&gt;</code></li>
+                  <li><strong>お客様の暗号化ドメイン</strong> (必要な情報を具体的に記載してください – 10 アドレッシングは IBM Cloud 内でバックエンド・サービス用に使用済みであるため、10.0.0.0/8 は動作しません): <code>&lt;Domain&gt;</code></li>
+                  <li><strong>お客様の VPN ハードウェア &amp; バージョン</strong>: <code>&lt;Hardware and Version number&gt;</code></li>
+                  <li><strong>お客様の VPN 連絡先</strong> (技術担当者の名前と E メール・アドレス):
+                    <ul>
+                      <li><code>&lt;Name&gt;</code> </li>
+                      <li><code>&lt;Title&gt;</code> </li>
+                      <li><code>&lt;Email Address&gt;</code></li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><strong>オプション</strong> (以下のデフォルト値が適切でない場合にのみ変更してください):</p>
+                <p><em>IKE/ISAKMP パラメーター (フェーズ I)</em></p>
+                <ul>
+                  <li><strong>暗号化方式</strong>: IKEv1</li>
+                  <li><strong>IKE 暗号化 / 暗号化アルゴリズム</strong>: AES-256</li>
+                  <li><strong>認証アルゴリズム</strong>: SHA1</li>
+                  <li><strong>DH グループ</strong>: グループ 5</li>
+                  <li><strong>セキュリティー・アソシエーションの存続時間 (秒)</strong>: 1 日 (86400 秒)</li>
+                </ul>
+                <p><em>IPSEC パラメーター (フェーズ II)</em></p>
+                <ul>
+                  <li><strong>IPsec 暗号化 / 暗号化アルゴリズム</strong>: AES-256</li>
+                  <li><strong>認証アルゴリズム</strong>: SHA1</li>
+                  <li><strong>DH グループ</strong> (PF-Secrecy を使用している場合): グループ 5</li>
+                  <li><strong>セキュリティー・アソシエーションの存続時間 (秒)</strong>: 3600 秒</li>
+                </ul>
+              </li>
+            </ul>
+            <p>要求を受け取った後、IBM Cloud 技術者は適切なファイアウォール・ポートを開き、提供された IP アドレスをホワイトリストに追加します。要求に対するコミュニケーションや解決策は、IBM Cloud サポート Case チケットを通じて行われます。</p>
+            <p><img src="images/public_connection_vpn.png" alt="IBM Cloud"></p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

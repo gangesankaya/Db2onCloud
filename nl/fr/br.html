@@ -35,12 +35,10 @@
           autre outil Db2.</p>
         <p>Pour plus d&#39;informations sur les restaurations avec point de cohérence, voir <a href="#point-in-time">Restauration avec point de cohérence</a>.</p>
         <p>Tous les plans payants utilisent généralement IBM Cloud Object Storage (COS) pour conserver les sauvegardes hors site dans trois différents centres de données. Toutefois, Sydney et certains centres de données de plus petite taille peuvent ne pas
-          prendre en charge actuellement la réplication hors site avec IBM COS. Consultez la <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">documentation IBM COS</a> correspondant à votre région afin de
-          déterminer quelles régions prennent en charge la réplication hors site.</p>
-        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
-        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
-        <p>Vous pouvez également utiliser l&#39;<a href="https://lift.ng.bluemix.net/" target="_blank">interface de ligne de commande IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a> pour importer
-          des données dans Db2 on Cloud.</p>
+          prendre en charge actuellement la réplication hors site avec IBM COS. Consultez la <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">documentation IBM COS</a> correspondant à votre région afin
+          de déterminer quelles régions prennent en charge la réplication hors site.</p>
+        <p>Vous pouvez également utiliser l&#39;<a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">interface de ligne de commande IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a> pour
+          importer des données dans Db2 on Cloud.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Restauration avec point de cohérence</h2>
           <p>Db2 on Cloud inclut désormais une fonction de restauration avec point de cohérence. A partir de vos sauvegardes, vous pouvez effectuer une restauration à un point temporel précis. Actuellement, pour la plupart des clients, vous devez demander
@@ -49,7 +47,7 @@
           <ul>
             <li>Centre de données Dallas - Fonction disponible actuellement dans les systèmes à serveur unique</li>
             <li>Tous les autres cas, notamment Europe et systèmes à haute disponibilité à Dallas - Demande d&#39;activation de la fonction auprès du support. La mise en oeuvre complète dans tous les systèmes sera effective le 28 février 2019.</li>
-            <li>Système IBM Cloud Dedicated (auparavant Bluemix Dedicated) - Fonction disponible uniquement en ouvrant un ticket de demande de service.</li>
+            <li>Système IBM Cloud Dedicated - Disponible uniquement via un ticket de demande de service.</li>
           </ul>
           <p>Vous trouverez ci-dessous des exemples sélectionnés de capture d&#39;écran concernant l&#39;interface utilisateur de la console Web dans lesquels l&#39;opération de restauration avec point de cohérence est exécutée et sa progression est indiquée
             :</p>

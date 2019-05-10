@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud/index.html"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"
             },
             {
                 "name": "path",
@@ -25,27 +25,27 @@
         ],
         "topics": [
             {
-                "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
-                "label": "Einführung",
+                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "label": "Lernprogramm 'Einführung'",
                 "id": "Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/index.html#interfaces",
+                        "href": "services/Db2onCloud/getting-started.html#interfaces",
                         "label": "Schnittstellen",
                         "id": "Db2onCloud-interfaces",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/index.html#web_console",
+                                "href": "services/Db2onCloud/getting-started.html#web_console",
                                 "label": "Db2 on Cloud-Webkonsole",
                                 "id": "Db2onCloud-web_console"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#connect_apps",
+                                "href": "services/Db2onCloud/getting-started.html#connect_apps",
                                 "label": "Db2-Befehlszeilenclients und -treiber auf dem Computer installieren",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#data_src",
+                                "href": "services/Db2onCloud/getting-started.html#data_src",
                                 "label": "Verwenden von Db2 on Cloud als Datenquelle für IBM Cloud-Apps oder -Services",
                                 "id": "Db2onCloud-data_src"
                             }
@@ -58,7 +58,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#samples",
+                        "href": "services/Db2onCloud/getting-started.html#samples",
                         "label": "Beispiele",
                         "id": "Db2onCloud-samples",
                         "properties": [
@@ -69,7 +69,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#intro_vid",
+                        "href": "services/Db2onCloud/getting-started.html#intro_vid",
                         "label": "Video: Db2 on Cloud - Einführung",
                         "id": "Db2onCloud-intro_vid",
                         "properties": [
@@ -80,7 +80,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#vid_api",
+                        "href": "services/Db2onCloud/getting-started.html#vid_api",
                         "label": "Video: Über die REST-API mit Db2 on Cloud kommunizieren",
                         "id": "Db2onCloud-vid_api",
                         "properties": [
@@ -91,7 +91,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#cognos_vid",
+                        "href": "services/Db2onCloud/getting-started.html#cognos_vid",
                         "label": "Video: Integration mit Jupyter-Notizbüchern",
                         "id": "Db2onCloud-cognos_vid",
                         "properties": [
@@ -234,55 +234,125 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/connecting.html#connect",
-                "label": "Verbindung herstellen",
-                "id": "Db2onCloud-connect",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/connecting.html#connect_prereq",
-                        "label": "Voraussetzungen",
-                        "id": "Db2onCloud-connect_prereq",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/connecting.html#cfg_env",
-                                "label": "Umgebung konfigurieren",
-                                "id": "Db2onCloud-cfg_env"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_prgrm",
-                        "label": "Programmgestützte Verbindungsherstellung",
-                        "id": "Db2onCloud-conx_prgrm",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
-                        "label": "Verbindung für Apps und Tools herstellen",
-                        "id": "Db2onCloud-conx_apps_tools",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
+                "label": "Verbindungen",
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Verbindungen"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting.html#connect",
+                        "label": "Verbindung herstellen",
+                        "id": "Db2onCloud-connect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                                "label": "Voraussetzungen",
+                                "id": "Db2onCloud-connect_prereq",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                        "label": "Umgebung konfigurieren",
+                                        "id": "Db2onCloud-cfg_env"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                                "label": "Programmgestützte Verbindungsherstellung",
+                                "id": "Db2onCloud-conx_prgrm",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
+                                "label": "Verbindung für Apps und Tools herstellen",
+                                "id": "Db2onCloud-conx_apps_tools",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connectivity_options.html#connect_options",
+                        "label": "Konnektivitätsoptionen",
+                        "id": "Db2onCloud-connect_options",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#pub_endpt",
+                                "label": "Verbindung zu einem öffentlichen Endpunkt herstellen (Standardoption)",
+                                "id": "Db2onCloud-pub_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#pub_endpt_steps",
+                                        "label": "Verbindung zu einem öffentlichen Endpunkt herstellen:",
+                                        "id": "Db2onCloud-pub_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#priv_endpt",
+                                "label": "Verbindung zu einem privaten Endpunkt herstellen: IBM Cloud-Serviceendpunkt",
+                                "id": "Db2onCloud-priv_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_steps",
+                                        "label": "Verbindung zu einem privaten Endpunkt mit IBM Cloud-Serviceendpunkt herstellen",
+                                        "id": "Db2onCloud-priv_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#vpn",
+                                "label": "Verbindung zu einem privaten Endpunkt herstellen: VPN (Virtual Private Network)",
+                                "id": "Db2onCloud-vpn",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_vpn_steps",
+                                        "label": "Verbindung zu einem privaten Endpunkt mit einem VPN herstellen",
+                                        "id": "Db2onCloud-priv_endpt_vpn_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -338,9 +408,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#getting_started",
+                                "href": "services/Db2onCloud/federation.html#getting_started_fed",
                                 "label": "Einführung",
-                                "id": "Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started_fed",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#targ",
@@ -784,7 +854,7 @@
                 ]
             },
             {
-                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
                 "label": "Einhaltung von Sicherheitsvorgaben",
                 "properties": [
                     {

@@ -51,7 +51,7 @@
           <p><strong>必備項目</strong>：Db2 Client 11.1 版 FP3 以及更新版本。</p>
           <p>下列方法可用於 IAM 鑑別：</p>
           <p><strong>存取記號</strong></p>
-          <p>應用程式可以使用 API 金鑰透過 REST API 直接從 IAM 服務取得存取記號。如需相關資訊，請參閱：<a href="https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey" target="_blank">使用 API 金鑰取得 IBM Cloud IAM 記號 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。存取記號在其到期前的預設有效期間為
+          <p>應用程式可以使用 API 金鑰透過 REST API 直接從 IAM 服務取得存取記號。如需相關資訊，請參閱：<a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank">使用 API 金鑰取得 IBM Cloud IAM 記號 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。存取記號在其到期前的預設有效期間為
             60 分鐘。如果記號已過期，則 Db2 伺服器不容許建立連線。在建立連線之後，不會檢查記號是否到期。就像在 IAM 整合之前一樣，連線將保持連接，直到應用程式中斷連接或連線因其他原因而終止。</p>
           <pre><code class="hljs">curl -k -X POST \
   --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
@@ -63,7 +63,7 @@
           <p>存取記號可向資料庫識別 IBM ID 使用者或服務 ID。資料庫伺服器會先驗證存取記號的有效性，再接受存取記號。如果應用程式需要連接至多個資料庫服務實例或其他 IBM Cloud 服務實例，這是最好的方法，因為它會將與 IAM 服務的通訊降到最少以驗證存取記號。</p>
           <p><strong>API 金鑰</strong></p>
           <p>您可以為每個 IBM ID 使用者或服務 ID 建立多個 API 金鑰。每個 API 金鑰通常是針對單一應用程式建立的。只要擁有的 IBM ID 或服務 ID 新增為資料庫服務實例的使用者，就容許應用程式連接至相同的資料庫服務實例。API 金鑰在資料庫內具有與所擁有 IBM ID 或服務 ID 相同的權限及許可權。如果不再容許應用程式連接至資料庫，則可以移除相對應的 API 金鑰。比起使用存取記號，這個鑑別方法在應用程式中所需的變更較少，因為它不需要與 IAM 服務直接互動。如需建立及管理
-            API 金鑰的相關資訊，請參閱：<a href="https://console.bluemix.net/docs/iam/userid_keys.html#userapikey" target="_blank">管理使用者 API 金鑰 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+            API 金鑰的相關資訊，請參閱：<a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">管理使用者 API 金鑰 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
           <p><strong>IBM ID/密碼</strong></p>
           <p>IBM ID/密碼可用來登入主控台，也可以利用容許使用者 ID/密碼的相同方法在應用程式內使用。聯合 IBM ID 時會發生異常狀況，因為無法完成重新導向至組織登入頁面的作業。不過，讓應用程式建立資料庫服務實例連線的建議方法是使用存取記號。</p>
         </section>
@@ -131,7 +131,7 @@
                 <p> <strong>IBM ID/密碼</strong></p>
                 <p> 在 CLPPLUS 命令提示字元或 Script 中執行下列指令，以使用 IBM ID/密碼連接至 DSN 別名 (<code>@&lt;data_source_name&gt;</code>)：</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> 如需使用 CLPPLUS 連接至 DSN 別名的詳細資料，請參閱：<a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlus 中的 DSN 別名 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+                <p> 如需使用 CLPPLUS 連接至 DSN 別名的詳細資料，請參閱：<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlus 中的 DSN 別名 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
               </li>
             </ul>
           </section>
@@ -167,7 +167,7 @@ dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
             <p>或</p>
-            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apikey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apiKey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
             <p><strong>IBM ID/密碼</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
@@ -197,7 +197,7 @@ Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt
             <li>
               <p>若要新增 IBM ID，請執行下列範例 API 呼叫：</p>
               <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
-              <p><code>&quot;id&quot;</code> 及 <code>&quot;ibmid&quot;</code> 的 <code>&lt;userid&gt;</code> 值不必相同。這兩個不同的 ID 不會以任何方式鏈結在一起。{: note}</p>
+              <p class="note"><code>&quot;id&quot;</code> 及 <code>&quot;ibmid&quot;</code> 的 <code>&lt;userid&gt;</code> 值不必相同。這兩個不同的 ID 不會以任何方式鏈結在一起。</p>
             </li>
             <li>
               <p>若要移轉現有的非 IBM ID 資料庫使用者（例如 <code>abcuser</code>）並使他們成為 IBM ID 使用者，首先請執行下列範例 API 呼叫來刪除非 IBM ID 使用者 ID：</p>
@@ -220,7 +220,7 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">IBM ID 聯合</h2>
-          <p>若要使用您自己的身分提供者（例如 LDAP），您必須先使用 IBM ID 聯合 LDAP 伺服器。如需使用 IBM ID 聯合 LDAP 伺服器的指示，請參閱：<a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。在
+          <p>若要使用您自己的身分提供者（例如 LDAP），您必須先使用 IBM ID 聯合 LDAP 伺服器。如需使用 IBM ID 聯合 LDAP 伺服器的指示，請參閱：<a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。在
             IBM ID 聯合完成且資料庫管理者將容許的使用者新增至資料庫服務實例之後，這些使用者就可以使用他們的公司使用者 ID 和密碼登入主控台。或者，這些使用者可以使用代表其使用者 ID 的存取記號或 API 金鑰，透過其中一個支援的資料庫用戶端介面連接至資料庫服務實例。</p>
         </section>
         <section id="section-restrictions">

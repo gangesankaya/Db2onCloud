@@ -56,7 +56,7 @@
           <p><strong>Prerequisito</strong>: Client Db2 V11.1 FP3 e successive.</p>
           <p>I seguenti metodi possono essere utilizzati per l&#39;autenticazione IAM:</p>
           <p><strong>Token di accesso</strong></p>
-          <p>Puoi ottenere un token di accesso dal servizio IAM direttamente dall&#39;applicazione tramite l&#39;API REST utilizzando una chiave API. Per ulteriori informazioni, consulta: <a href="https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey"
+          <p>Puoi ottenere un token di accesso dal servizio IAM direttamente dall&#39;applicazione tramite l&#39;API REST utilizzando una chiave API. Per ulteriori informazioni, consulta: <a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey"
               target="_blank">Getting an IBM Cloud IAM token by using an API key <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>. Il token di accesso ha un periodo di validità predefinito di 60 minuti prima
             della scadenza. Se il token è scaduto, il server Db2 non consentirà di stabilire la connessione. Non viene controllata la scadenza del token dopo che la connessione è stata stabilita. Così come era prima dell&#39;integrazione di IAM, la connessione
             rimarrà in essere fino a quando l&#39;applicazione non si scollega o viene terminata a causa di altre ragioni.</p>
@@ -73,8 +73,7 @@
           <p>Possono essere create più chiavi per ogni ID servizio o utente ID IBM. Ogni chiave API viene normalmente creata per una singola applicazione. Consente all&#39;applicazione di connettersi all&#39;istanza del servizio database fino a quando l&#39;ID
             IBM di appartenenza o l&#39;ID servizio viene aggiunto come un utente alla stessa istanza del servizio database. La chiave API ha le stesse autorizzazioni all&#39;interno del database come l&#39;ID servizio o l&#39;ID IBM di appartenenza.
             Se un&#39;applicazione non deve più essere consentita per connettersi al database, la chiave API corrispondente può essere rimossa. Questo metodo di autenticazione richiede meno modifiche nell&#39;applicazione rispetto all&#39;utilizzo di
-            un token di accesso poiché non richiede un&#39;interazione diretta con il servizio IAM. Per ulteriori informazioni sulla creazione e la gestione delle chiavi API, consulta: <a href="https://console.bluemix.net/docs/iam/userid_keys.html#userapikey"
-              target="_blank">Gestione delle chiavi API utente <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
+            un token di accesso poiché non richiede un&#39;interazione diretta con il servizio IAM. Per ulteriori informazioni sulla creazione e la gestione delle chiavi API, consulta: <a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">Gestione delle chiavi API utente <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
           <p><strong>ID IBM/password</strong></p>
           <p>Puoi utilizzare l&#39;ID IBM e la password per accedere alla console e anche all&#39;interno dell&#39;applicazione negli stessi modi in cui sono consentiti l&#39;ID utente e la password. Si verifica un&#39;eccezione quando l&#39;ID IBM è federato
             perché non è possibile eseguire un reindirizzamento alla pagina di accesso della tua organizzazione. Tuttavia, il metodo consigliato per un&#39;applicazione di stabilire una connessione all&#39;istanza del servizio database è quello di utilizzare
@@ -124,13 +123,13 @@
               <li>
                 <p>L&#39;istruzione CLP CONNECT può contenere uno dei seguenti:</p>
                 <p> <strong>Token di accesso</strong></p>
-                <p> Collegati al server database <code>&lt;database_server_name&gt;</code> e passa il token di accesso immettendo il seguente comando allo script o prompt del comando CLP:</p>
+                <p> Stabilisci una connessione al server database <code>&lt;database_server_name&gt;</code> e passa il token di accesso eseguendo questo comando allo script o prompt del comando CLP:</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; ACCESSTOKEN &lt;access_token_string&gt;</code></p>
                 <p> <strong>Chiave API</strong></p>
-                <p> Collegati al server database <code>&lt;database_server_name&gt;</code> con una chiave API immettendo il seguente comando allo script o prompt del comando CLP:</p>
+                <p> Stabilisci una connessione al server database <code>&lt;database_server_name&gt;</code> con una chiave API eseguendo questo comando allo script o prompt del comando CLP:</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; APIKEY &lt;api-key-string&gt;</code></p>
                 <p> <strong>ID IBM/password</strong></p>
-                <p> Collegati al server database <code>&lt;database_server_name&gt;</code> con un ID IBM/password immettendo il seguente comando allo script o prompt del comando CLP:</p>
+                <p> Stabilisci una connessione al server database <code>&lt;database_server_name&gt;</code> con un ID IBM/una password eseguendo questo comando allo script o prompt CLP:</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
                 <p> Per ulteriori dettagli sulla connessione a un server database con CLP, consulta: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.
                   </p>
@@ -146,7 +145,7 @@
                 <p> <strong>ID IBM/password</strong></p>
                 <p> Connettiti all&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) con un ID IBM/password immettendo il seguente comando allo script o prompt del comando CLPPLUS:</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> Per ulteriori dettagli sulla connessione agli alias DSN con CLPPLUS, consulta: <a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
+                <p> Per ulteriori dettagli sulla connessione agli alias DSN con CLPPLUS, consulta: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.</p>
               </li>
             </ul>
           </section>
@@ -182,7 +181,7 @@ dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
             <p>o</p>
-            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apikey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apiKey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
             <p><strong>ID IBM/password</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
@@ -238,7 +237,7 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">Federazione ID IBM</h2>
-          <p>Per utilizzare il tuo provider di identità come ad esempio LDAP, devi prima federare il tuo server LDAP con l&#39;ID IBM. Per istruzioni su come federare il server LDAP con l&#39;ID IBM, consulta: <a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc"
+          <p>Per utilizzare il tuo provider di identità come ad esempio LDAP, devi prima federare il tuo server LDAP con l&#39;ID IBM. Per istruzioni su come federare il server LDAP con l&#39;ID IBM, consulta: <a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide"
               target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>. Dopo che la federazione dell&#39;ID IBM è stata completata e gli utenti consentiti
             sono stati aggiunti all&#39;istanza del servizio database dall&#39;amministratore del database, questi utenti possono accedere alla console con i loro ID utente e password aziendali. In alternativa, questi utenti possono utilizzare un token
             di accesso o una chiave API che rappresenta il proprio ID utente per connettersi all&#39;istanza del servizio database tramite una delle interfacce client del database supportate.</p>

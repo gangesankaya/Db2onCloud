@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud/index.html"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"
             },
             {
                 "name": "path",
@@ -25,27 +25,27 @@
         ],
         "topics": [
             {
-                "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
-                "label": "概説",
+                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "label": "入門チュートリアル",
                 "id": "Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/index.html#interfaces",
+                        "href": "services/Db2onCloud/getting-started.html#interfaces",
                         "label": "インターフェース",
                         "id": "Db2onCloud-interfaces",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/index.html#web_console",
+                                "href": "services/Db2onCloud/getting-started.html#web_console",
                                 "label": "Db2 on Cloud Web コンソール",
                                 "id": "Db2onCloud-web_console"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#connect_apps",
+                                "href": "services/Db2onCloud/getting-started.html#connect_apps",
                                 "label": "ご使用のコンピューターへの Db2 コマンド・ライン・クライアントおよびドライバーのインストール",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#data_src",
+                                "href": "services/Db2onCloud/getting-started.html#data_src",
                                 "label": "IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する",
                                 "id": "Db2onCloud-data_src"
                             }
@@ -58,7 +58,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#samples",
+                        "href": "services/Db2onCloud/getting-started.html#samples",
                         "label": "例",
                         "id": "Db2onCloud-samples",
                         "properties": [
@@ -69,7 +69,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#intro_vid",
+                        "href": "services/Db2onCloud/getting-started.html#intro_vid",
                         "label": "ビデオ: Db2 on Cloud の紹介",
                         "id": "Db2onCloud-intro_vid",
                         "properties": [
@@ -80,7 +80,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#vid_api",
+                        "href": "services/Db2onCloud/getting-started.html#vid_api",
                         "label": "ビデオ: REST API を使用した Db2 on Cloud との通信",
                         "id": "Db2onCloud-vid_api",
                         "properties": [
@@ -91,7 +91,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#cognos_vid",
+                        "href": "services/Db2onCloud/getting-started.html#cognos_vid",
                         "label": "ビデオ: Jupyter ノートブックの統合",
                         "id": "Db2onCloud-cognos_vid",
                         "properties": [
@@ -205,7 +205,7 @@
                     },
                     {
                         "href": "services/Db2onCloud/iam.html#fed_ibmid",
-                        "label": "IBM ID 統合",
+                        "label": "IBMid 統合",
                         "id": "Db2onCloud-fed_ibmid",
                         "properties": [
                             {
@@ -234,55 +234,125 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/connecting.html#connect",
                 "label": "接続",
-                "id": "Db2onCloud-connect",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/connecting.html#connect_prereq",
-                        "label": "前提条件",
-                        "id": "Db2onCloud-connect_prereq",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/connecting.html#cfg_env",
-                                "label": "環境の構成",
-                                "id": "Db2onCloud-cfg_env"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_prgrm",
-                        "label": "プログラムによる接続",
-                        "id": "Db2onCloud-conx_prgrm",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
-                        "label": "アプリケーションとツールの接続",
-                        "id": "Db2onCloud-conx_apps_tools",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "接続"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting.html#connect",
+                        "label": "接続",
+                        "id": "Db2onCloud-connect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                                "label": "前提条件",
+                                "id": "Db2onCloud-connect_prereq",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                        "label": "環境の構成",
+                                        "id": "Db2onCloud-cfg_env"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                                "label": "プログラムによる接続",
+                                "id": "Db2onCloud-conx_prgrm",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
+                                "label": "アプリケーションとツールの接続",
+                                "id": "Db2onCloud-conx_apps_tools",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connectivity_options.html#connect_options",
+                        "label": "接続オプション",
+                        "id": "Db2onCloud-connect_options",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#pub_endpt",
+                                "label": "パブリック・エンドポイントへの接続 (デフォルト・オプション)",
+                                "id": "Db2onCloud-pub_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#pub_endpt_steps",
+                                        "label": "パブリック・エンドポイントに接続する方法:",
+                                        "id": "Db2onCloud-pub_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#priv_endpt",
+                                "label": "プライベート・エンドポイントへの接続: IBM Cloud サービス・エンドポイント",
+                                "id": "Db2onCloud-priv_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_steps",
+                                        "label": "IBM Cloud サービス・エンドポイントを使用してプライベート・エンドポイントに接続する方法",
+                                        "id": "Db2onCloud-priv_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#vpn",
+                                "label": "プライベート・エンドポイントへの接続: 仮想プライベート・ネットワーク (VPN)",
+                                "id": "Db2onCloud-vpn",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_vpn_steps",
+                                        "label": "VPN を使用してプライベート・エンドポイントに接続する方法",
+                                        "id": "Db2onCloud-priv_endpt_vpn_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -338,9 +408,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#getting_started",
+                                "href": "services/Db2onCloud/federation.html#getting_started_fed",
                                 "label": "概説",
-                                "id": "Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started_fed",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#targ",
@@ -349,7 +419,7 @@
                                     },
                                     {
                                         "href": "services/Db2onCloud/federation.html#fed_src",
-                                        "label": "フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:",
+                                        "label": "フェデレーション・ソースとして使用されている Db2 on Cloud マシン上:",
                                         "id": "Db2onCloud-fed_src"
                                     }
                                 ],
@@ -543,7 +613,7 @@
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/ha.html#db2-dr-dns-ip-",
-                                "label": "DB2 を使用しているアプリケーションがテークオーバー後に DR ノードと連動するためには、何を変更する必要がありますか? テークオーバー後、DNS 名や IP アドレスは変更されますか?",
+                                "label": "Db2 を使用しているアプリケーションがテークオーバー後に DR ノードと連動するためには、何を変更する必要がありますか? テークオーバー後、DNS 名や IP アドレスは変更されますか?",
                                 "id": "Db2onCloud-db2-dr-dns-ip-"
                             }
                         ],
@@ -784,7 +854,7 @@
                 ]
             },
             {
-                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
                 "label": "セキュリティー・コンプライアンス",
                 "properties": [
                     {

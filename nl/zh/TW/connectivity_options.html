@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-04-08">
+  <meta name="dcterms.date" content="2019-04-08">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud 提供多個安全的連線功能選項，取決於您的應用程式連線需求。  ">
+  <meta name="source.format" content="markdown">
+
+
+
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>連線功能選項</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="connect_options" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-connect_options">
+        <h1 id="connect_options">連線功能選項</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 提供多個安全的連線功能選項，取決於您的應用程式連線需求。 </p>
+        <section id="section-pub_endpt">
+          <h2 id="pub_endpt">連接至公用端點（預設選項）</h2>
+          <p>如同任何公用雲端服務，您可以藉由在佈建服務時提供給您的公用主機名稱，來連接您的應用程式。存取資料時會受到下列方式保護：強型態鑑別、大量 Db2 授權選項及存取控制、線上及靜態加密，以及用於開發及作業的 IBM 安全及法規遵循作法。系統會提供選用性的 IP 白名單。如果您想要啟用 IP 白名單，請建立 IBM 支援案例。</p>
+          <section id="section-pub_endpt_steps">
+            <h3 id="pub_endpt_steps">如何連接至公用端點：</h3>
+            <p>連接至資料時最輕鬆的方式，是藉由您歡迎使用信函中提供的公用主機名稱。您可以採用下列方式取得主機名稱及認證：</p>
+            <ol>
+              <li>登入 Db2 on Cloud 並按一下您的服務實例。</li>
+              <li>按一下<strong>服務認證</strong>。</li>
+              <li>按一下<strong>新建認證</strong>，然後按一下<strong>新增</strong>。</li>
+              <li>在建立認證之後，請在<code>動作</code>欄之下，按一下<strong>檢視認證</strong>。</li>
+              <li>
+                <p>在下列 JSON 文件範例中，記下主機名稱、密碼及使用者名稱欄位的內容。您可以使用這三個元件來進行公用端點連線：</p>
+                <pre><code class="hljs">{
+  &quot;hostname&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;password&quot;: &quot;DTPY7KXxhp_pKtjLSt&quot;,
+  &quot;https_url&quot;: &quot;https://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;port&quot;: 50000,
+  &quot;ssldsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxx.services.dal.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPY7KXWxhp_pKtjLSt;Security=SSL;&quot;,
+  &quot;host&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
+  &quot;jdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;uri&quot;: &quot;db2://bluadmin:DTPY7KXx1p_pKtjLSt@dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50000/BLUDB&quot;,
+  &quot;db&quot;: &quot;BLUDB&quot;,
+  &quot;dsn&quot;: &quot;DATABASE=BLUDB;HOSTNAME=dashdb-enterprise-xxxxxxx.services.dal.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=bluadmin;PWD=DTPYZunlWxhp_pKtjLSt;&quot;,
+  &quot;username&quot;: &quot;bluadmin&quot;,
+  &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
+}
+</code></pre>
+                <p><img src="images/public_connection.png" alt="對 IBM Cloud"></p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-priv_endpt">
+          <h2 id="priv_endpt">連接至專用端點：IBM Cloud Service Endpoint</h2>
+          <p>如果您已將應用程式部署在 IBM Cloud 帳戶上，而且想要將它連接至資料庫，而不讓資料庫資料流量流過任何公用網路，則可以在訂購資料庫時使用 <strong>IBM Cloud Service Endpoint</strong> 選項。佈建服務時將提供您一個專用主機名稱，而且您只能從 IBM Cloud 帳戶內連接至其中。 </p>
+          <p>若要進一步瞭解 IBM Cloud Service Endpoint 選項，請參閱 <a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">Service Endpoint：關於</a>。</p>
+          <section id="section-priv_endpt_steps">
+            <h3 id="priv_endpt_steps">如何使用 IBM Cloud Service Endpoint 連接至專用端點</h3>
+            <p>專用網路與端點通訊係藉由 IBM Cloud Service Endpoint 服務發生。Service Endpoint 服務可讓您輕鬆地透過 IBM Cloud 專用網路背板，在不同的 IBM Cloud 服務與您的資料庫之間快速且安全地遞送網路資料流量。此網路遞送確保您的資料絕對不會外送至公用網際網路。 </p>
+            <p>若要開始使用 Service Endpoint，必須啟用您的 IBM Cloud 帳戶，進行虛擬遞送及轉遞 (VRF)。若要啟用您的帳戶，請參閱<a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">使用 IBM Cloud CLI 讓您的帳戶可以使用 Service Endpoint</a>。</p>
+            <p>在您的帳戶啟用 VRF 且 Service Endpoint 啟用之後，請遵循歡迎使用信函中提供的指示。</p>
+            <p>現在，是時候從 IBM Cloud 帳戶內藉由歡迎使用信函中提供的專用網路位址連接至 Db2 on Cloud 實例。</p>
+          </section>
+        </section>
+        <section id="section-vpn">
+          <h2 id="vpn">連接至專用端點：虛擬專用網路 (VPN)</h2>
+          <p>如果您已將應用程式部署在 IBM Cloud 外的專用網路上，該網路無法存取公用網際網路，並且您想要透過虛擬專用網路 (VPN) 將其連接至資料庫，則可在訂購服務時提出要求，或是藉由開立 IBM 支援案例來提出要求。IBM 網路工程師會協助您的網路工程師在專用網路與 IBM Cloud 之間設定 VPN 通道。</p>
+          <section id="section-priv_endpt_vpn_steps">
+            <h3 id="priv_endpt_vpn_steps">如何使用 VPN 連接至專用端點</h3>
+            <p>若要在公用端點後面建立雲端資料庫的 VPN 連線，請<a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">建立 IBM Cloud 支援案例 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>，其中包括下列詳細資料：</p>
+            <ul>
+              <li><strong>支援類型</strong>：技術 </li>
+              <li><strong>種類</strong>：資料庫 </li>
+              <li><strong>供應項目</strong>：選取您的 Db2 on Cloud 實例 </li>
+              <li><strong>主旨</strong>：VPN 連線要求 </li>
+              <li>
+                <p><strong>說明</strong>：提供下列必要資訊</p>
+                <ul>
+                  <li><strong>客戶端 VPN 對等位址</strong>（您的 VPN 端點）：<code>&lt;IP Address&gt;</code></li>
+                  <li><strong>客戶端加密網域</strong>（請明確指明所需項目 – 10.0.0.0/8 無法運作，因為 10 定址也會在 IBM Cloud 內用於後端服務）：<code>&lt;Domain&gt;</code></li>
+                  <li><strong>客戶端 VPN 硬體及版本</strong>：<code>&lt;Hardware and Version number&gt;</code></li>
+                  <li><strong>客戶端 VPN 聯絡人</strong>（技術聯絡人名稱及電子郵件位址）：
+                    <ul>
+                      <li><code>&lt;Name&gt;</code> </li>
+                      <li><code>&lt;Title&gt;</code> </li>
+                      <li><code>&lt;Email Address&gt;</code></li>
+                    </ul>
+                  </li>
+                </ul>
+                <p><strong>選用</strong>（僅在下列預設值不適用時才會變更）：</p>
+                <p><em>IKE/ISAKMP 參數（階段 I）</em></p>
+                <ul>
+                  <li><strong>加密方法</strong>：IKEv1</li>
+                  <li><strong>IKE 加密/加密演算法</strong>：AES-256</li>
+                  <li><strong>鑑別演算法</strong>：SHA1</li>
+                  <li><strong>DH-Group</strong>：群組 5</li>
+                  <li><strong>安全關聯生命期限（秒）</strong>：1 日（86400 秒）</li>
+                </ul>
+                <p><em>IPSEC 參數（階段 II）</em></p>
+                <ul>
+                  <li><strong>IPsec 加密/加密演算法</strong>：AES-256</li>
+                  <li><strong>鑑別演算法</strong>：SHA1</li>
+                  <li><strong>DH-Group</strong>（如果使用 PF-Secrecy）：群組 5</li>
+                  <li><strong>安全關聯生命期限（秒）</strong>：3600 秒</li>
+                </ul>
+              </li>
+            </ul>
+            <p>在收到您的要求之後，IBM Cloud 技術人員將開啟適當的防火牆埠，並將提供的 IP 位址列入白名單中。要求的通訊及解析將透過 IBM Cloud 支援案例問題單來進行。</p>
+            <p><img src="images/public_connection_vpn.png" alt="對 IBM Cloud"></p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

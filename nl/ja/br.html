@@ -34,10 +34,8 @@
         <p>標準バックアップに加え、<a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">タイム・トラベル照会 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を使用して、古いデータのインスタント照会や簡易監査などの他の目的のために履歴データを保持することもできます。
           IBM Data Studio または任意の Db2 ツールを使用して、独自のエクスポートを実行することもできます。</p>
         <p>ポイント・イン・タイム・リストアについては、<a href="#point-in-time">ポイント・イン・タイム・リストア</a>を参照してください。</p>
-        <p>すべての有料プランでは通常、IBM Cloud Object Storage (COS) を利用して、オフサイトの 3 つの異なるデータ・センターでバックアップが保持されます。 ただし、現時点では、シドニー・データ・センターと小規模なデータ・センターの一部は、IBM COS によるオフサイト・レプリケーションをサポートしていません。 オフサイト・レプリケーションをサポートしている地域を判別するには、お客様の地域の <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">IBM COS の資料</a>を確認してください。</p>
-        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
-        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
-        <p><a href="https://lift.ng.bluemix.net/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を使用して、Db2 on Cloud にデータをインポートすることもできます。</p>
+        <p>すべての有料プランでは通常、IBM Cloud Object Storage (COS) を利用して、オフサイトの 3 つの異なるデータ・センターでバックアップが保持されます。 ただし、現時点では、シドニー・データ・センターと小規模なデータ・センターの一部は、IBM COS によるオフサイト・レプリケーションをサポートしていません。 オフサイト・レプリケーションをサポートしている地域を判別するには、お客様の地域の <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">IBM COS の資料</a>を確認してください。</p>
+        <p><a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を使用して、Db2 on Cloud にデータをインポートすることもできます。</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">ポイント・イン・タイム・リストア</h2>
           <p>Db2 on Cloud にポイント・イン・タイム・リストア機能が追加されました。 バックアップから正確なポイント・イン・タイムにリストアできます。 現在、ほとんどのお客様はこのフィーチャーをアクティブにするようサポートに要求する必要があります。 次のロールアウト・スケジュールを参照してください。</p>
@@ -45,7 +43,7 @@
           <ul>
             <li>ダラス・データ・センター: 単一サーバー・システム上で現在使用可能です</li>
             <li>その他のすべてのケース (ヨーロッパ、およびダラスの HA システムを含む): サポートにフィーチャー・アクティブ化を要求してください。 すべてのシステムへのフルロールアウトは、2019 年 2 月 28 日までに完了する予定です。</li>
-            <li>IBM Cloud Dedicated システム (旧称 Bluemix Dedicated): サポート・チケットを開くことによってのみ使用可能です。</li>
+            <li>IBM Cloud Dedicated システム: サポート・チケットを開くことによってのみ使用可能です。</li>
           </ul>
           <p>Web コンソール UI の特定の例を以下に示します。このスクリーン・ショットでは、ポイント・イン・タイム・リストア操作が開始されていて、その進行状況が示されています。</p>
           <ol>

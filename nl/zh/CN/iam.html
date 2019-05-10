@@ -51,7 +51,7 @@
           <p><strong>必备软件</strong>：Db2 Client V11.1 FP3 及更高版本。</p>
           <p>可以使用下列方法进行 IAM 认证：</p>
           <p><strong>访问令牌</strong></p>
-          <p>应用程序可以使用 API 密钥通过 REST API 直接从 IAM 服务获取访问令牌。有关更多信息，请参阅：<a href="https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey" target="_blank">使用 API 密钥获取 IBM Cloud IAM 令牌 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。访问令牌的缺省有效期为
+          <p>应用程序可以使用 API 密钥通过 REST API 直接从 IAM 服务获取访问令牌。有关更多信息，请参阅：<a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank">使用 API 密钥获取 IBM Cloud IAM 令牌 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。访问令牌的缺省有效期为
             60 分钟，之后即到期。如果令牌已到期，那么 Db2 服务器不会允许建立连接。但在建立连接之后，不会检查令牌是否到期。就像在 IAM 集成之前一样，仍将保持已连接状态，直到应用程序断开连接或连接由于其他原因被终止。</p>
           <pre><code class="hljs">curl -k -X POST \
   --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
@@ -63,7 +63,7 @@
           <p>访问令牌为数据库识别 IBM 标识用户或服务标识。数据库服务器先验证访问令牌的有效性，然后接受令牌。如果应用程序需要连接多个数据库服务实例或其他 IBM Cloud 服务实例，那么这是最佳方法，因为可以将与 IAM 服务进行通信已验证访问令牌的通信量降到最低。</p>
           <p><strong>API 密钥</strong></p>
           <p>可以为每个 IBM 标识用户或服务标识创建多个 API 密钥。通常情况下，每个 API 密钥都是为单个应用程序创建的。这样只要将其所属的 IBM 标识或服务标识作为用户添加到数据库服务实例中，应用程序就可以一直连接到该数据库服务实例。在数据库中，API 密钥与所属的 IBM 标识或服务标识具有相同的权限和许可权。如果应该不再允许应用程序连接到数据库，那么可以除去相应的 API 密钥。跟使用访问令牌相比，此认证方法需要在应用程序中进行的更改更少，这是因为它不需要与 IAM 服务进行直接交互。有关创建和管理
-            API 密钥的更多信息，请参阅：<a href="https://console.bluemix.net/docs/iam/userid_keys.html#userapikey" target="_blank">管理用户 API 密钥 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+            API 密钥的更多信息，请参阅：<a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">管理用户 API 密钥 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
           <p><strong>IBM 标识/密码</strong></p>
           <p>IBM 标识/密码可用于登录控制台，也可在应用程序中发挥与用户标识/密码相同的作用。如果联合 IBM 标识，就会发生异常，这是因为无法重定向到组织的登录页面。但我们建议用使用访问令牌的方法来建立应用程序与数据库服务实例的连接。</p>
         </section>
@@ -107,15 +107,15 @@
                 <p> 对于 ODBC，<strong>AUTHENTICATION=GSSPLUGIN</strong> 可以在 <code>db2dsdriver.cfg</code> 配置文件或应用程序的连接字符串中进行配置。</p>
               </li>
               <li>
-                <p>CLP CONNECT 语句可以包含以下某项：</p>
+                <p>CLP CONNECT 语句可以包含下列其中一项：</p>
                 <p> <strong>访问令牌</strong></p>
-                <p> 连接到数据库服务器 <code>&lt;database_server_name&gt;</code> 并传递访问令牌，方法是在 CLP 命令提示符或脚本处运行以下命令：</p>
+                <p> 在 CLP 命令提示符或脚本处运行以下命令，通过传递访问令牌来连接到数据库服务器 <code>&lt;database_server_name&gt;</code>：</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; ACCESSTOKEN &lt;access_token_string&gt;</code></p>
                 <p> <strong>API 密钥</strong></p>
-                <p> 连接到数据库服务器 <code>&lt;database_server_name&gt;</code>，方法是在 CLP 命令提示符或脚本处运行以下命令：</p>
+                <p> 在 CLP 命令提示符或脚本处运行以下命令，通过使用 API 密钥来连接到数据库服务器 <code>&lt;database_server_name&gt;</code>：</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; APIKEY &lt;api-key-string&gt;</code></p>
                 <p> <strong>IBM 标识/密码</strong></p>
-                <p> 连接到数据库服务器 <code>&lt;database_server_name&gt;</code>，方法是在 CLP 命令提示符或脚本处运行以下命令：</p>
+                <p> 在 CLP 命令提示符或脚本处运行以下命令，通过使用 IBM 标识/密码来连接到数据库服务器 <code>&lt;database_server_name&gt;</code>：</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
                 <p> 有关使用 CLP 连接到数据库服务器的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。
                   </p>
@@ -123,15 +123,15 @@
               <li>
                 <p>CLPPLUS CONNECT 语句可以包含以下某项：</p>
                 <p> <strong>访问令牌</strong></p>
-                <p> 连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>) 并传递访问令牌，方法是在 CLPPLUS 命令提示符或脚本处运行以下命令：</p>
+                <p> 在 CLPPLUS 命令提示符或脚本处运行以下命令，通过传递访问令牌来连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>)：</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(accesstoken &lt;access_token_string&gt;)</code></p>
                 <p> <strong>API 密钥</strong></p>
-                <p> 连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>) ，方法是在 CLPPLUS 命令提示符或脚本处运行以下命令：</p>
+                <p> 在 CLPPLUS 命令提示符或脚本处运行以下命令，通过使用 API 密钥来连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>)：</p>
                 <p> <code>connect @&lt;data_source_name&gt; using(apikey &lt;api-key-string&gt;)</code></p>
                 <p> <strong>IBM 标识/密码</strong></p>
-                <p> 连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>) ，方法是在 CLPPLUS 命令提示符或脚本处运行以下命令：</p>
+                <p> 在 CLPPLUS 命令提示符或脚本处运行以下命令，通过使用 IBM 标识/密码来连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>)：</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> 有关使用 CLPPLUS 连接到 DSN 别名的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlUS 中的 DSN 别名 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+                <p> 有关使用 CLPPLUS 连接到 DSN 别名的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlUS 中的 DSN 别名 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
               </li>
             </ul>
           </section>
@@ -167,7 +167,7 @@ dataSource.setApiKey( &quot;&lt;api_key&gt;&quot; );
 Connection conn = dataSource.getConnection( );
 </code></pre>
             <p>或者</p>
-            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apikey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
+            <pre><code class="hljs">Connection conn = DriverManager.getConnection( &quot;jdbc:db2://&lt;host_name_or_IP_address&gt;:50001/BLUDB:apiKey=&lt;api_key&gt;;securityMechanism=15;pluginName=IBMIAMauth;sslConnection=true&quot; );
 </code></pre>
             <p><strong>IBM 标识/密码</strong></p>
             <pre><code class="hljs">DB2SimpleDataSource dataSource;
@@ -197,7 +197,7 @@ Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt
             <li>
               <p>要添加新的 IBM 标识用户，请运行以下示例 API 调用：</p>
               <p><code>curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{&quot;id&quot;:&quot;&lt;userid&gt;&quot;,&quot;ibmid&quot;:&quot;&lt;userid&gt;@&lt;email_address_domain&gt;&quot;,&quot;role&quot;:&quot;bluadmin&quot;,&quot;locked&quot;:&quot;no&quot;,&quot;iam&quot;:true}&quot;</code></p>
-              <p class="note"><code>&quot;id&quot;</code> 和 <code>&quot;ibmid&quot;</code> 的 <code>&lt;userid&gt;</code> 值可以不同。无论如何，两种不同的标识都不会链接在一起。</p>
+              <p class="note"><code>&quot;id&quot;</code> 和 <code>&quot;ibmid&quot;</code> 的 <code>&lt;userid&gt;</code> 值不必相同。因为任何情况下，这两种不同的标识都不会链接在一起。</p>
             </li>
             <li>
               <p>要迁移现有的非 IBM 标识数据库用户（例如，<code>abcuser</code>），并使其成为 IBM 标识用户，首先要运行以下示例 API 调用来删除非 IBM 标识用户标识：</p>
@@ -220,7 +220,7 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">IBM 标识联合</h2>
-          <p>要使用您自己的身份提供程序（如 LDAP），必须先将 LDAP 服务器与 IBM 标识联合。有关将 LDAP 服务器与 IBM 标识联合的指示信息，请参阅：<a href="https://ibm.ent.box.com/notes/78040808400?s=nhuzrhlsn0ly338zddomx329tlpmfghc" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。在数据库管理员完成
+          <p>要使用您自己的身份提供程序（如 LDAP），必须先将 LDAP 服务器与 IBM 标识联合。有关将 LDAP 服务器与 IBM 标识联合的指示信息，请参阅：<a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。在数据库管理员完成
             IBM 标识联合并将允许的用户添加到数据库服务实例之后，这些用户就可以使用他们的公司用户标识和密码登录到控制台。或者，这些用户也可以使用表示他们用户标识的访问令牌或 API 密钥通过一个受支持的数据库客户机接口来连接数据库服务实例。</p>
         </section>
         <section id="section-restrictions">

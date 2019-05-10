@@ -4,26 +4,26 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"/>
   <property name="path" value="services/Db2onCloud"/>
-  <topic href="index.html#getting_started_db2oncloud" label="Introduzione" id="getting_started_db2oncloud">
+  <topic href="getting-started.html#getting_started_db2oncloud" label="Esercitazione introduttiva" id="getting_started_db2oncloud">
     <property name="navgroup" value="learn"/>
-    <topic href="index.html#interfaces" label="Interfacce" id="interfaces">
+    <topic href="getting-started.html#interfaces" label="Interfacce" id="interfaces">
       <property name="type" value="anchor"/>
-      <topic href="index.html#web_console" label="Console web di Db2 on Cloud" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="Installazione dei driver e dei client della riga di comando Db2 sul tuo computer" id="connect_apps"></topic>
-      <topic href="index.html#data_src" label="Usa Db2 on Cloud come origine dati per le tue applicazioni o i tuoi servizi IBM Cloud" id="data_src"></topic>
+      <topic href="getting-started.html#web_console" label="Console web di Db2 on Cloud" id="web_console"></topic>
+      <topic href="getting-started.html#connect_apps" label="Installazione dei driver e dei client della riga di comando Db2 sul tuo computer" id="connect_apps"></topic>
+      <topic href="getting-started.html#data_src" label="Usa Db2 on Cloud come origine dati per le tue applicazioni o i tuoi servizi IBM Cloud" id="data_src"></topic>
     </topic>
-    <topic href="index.html#samples" label="Esempi" id="samples">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="index.html#intro_vid" label="Video: Introduzione a Db2 on Cloud" id="intro_vid">
+    <topic href="getting-started.html#samples" label="Esempi" id="samples">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#vid_api" label="Video: utilizzo dell&#39;API REST per comunicare con Db2 on Cloud" id="vid_api">
+    <topic href="getting-started.html#intro_vid" label="Video: Introduzione a Db2 on Cloud" id="intro_vid">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#cognos_vid" label="Video: integrazione coni notebook Jupyter" id="cognos_vid">
+    <topic href="getting-started.html#vid_api" label="Video: utilizzo dell&#39;API REST per comunicare con Db2 on Cloud" id="vid_api">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="getting-started.html#cognos_vid" label="Video: integrazione con i notebook Jupyter" id="cognos_vid">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -59,17 +59,34 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="connecting.html#connect" label="Collegamento" id="connect">
+  <topic label="Connessioni">
     <property name="navgroup" value="learn"/>
-    <topic href="connecting.html#connect_prereq" label="Prerequisiti" id="connect_prereq">
-      <property name="type" value="anchor"/>
-      <topic href="connecting.html#cfg_env" label="Configurazione dell&#39;ambiente" id="cfg_env"></topic>
+    <property name="topicgroup" value="Connessioni"/>
+    <topic href="connecting.html#connect" label="Collegamento" id="connect">
+      <topic href="connecting.html#connect_prereq" label="Prerequisiti" id="connect_prereq">
+        <property name="type" value="anchor"/>
+        <topic href="connecting.html#cfg_env" label="Configurazione dell&#39;ambiente" id="cfg_env"></topic>
+      </topic>
+      <topic href="connecting.html#conx_prgrm" label="Collegamento in modo programmatico" id="conx_prgrm">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting.html#conx_apps_tools" label="Collegamento di applicazioni e strumenti" id="conx_apps_tools">
+        <property name="type" value="anchor"/>
+      </topic>
     </topic>
-    <topic href="connecting.html#conx_prgrm" label="Collegamento in modo programmatico" id="conx_prgrm">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="connecting.html#conx_apps_tools" label="Collegamento di applicazioni e strumenti" id="conx_apps_tools">
-      <property name="type" value="anchor"/>
+    <topic href="connectivity_options.html#connect_options" label="Opzioni di connettività" id="connect_options">
+      <topic href="connectivity_options.html#pub_endpt" label="Connessione a un endpoint pubblico (opzione predefinita)" id="pub_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#pub_endpt_steps" label="Come connettersi a un endpoint pubblico:" id="pub_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#priv_endpt" label="Connessione a un endpoint privato: IBM Cloud Service Endpoint" id="priv_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_steps" label="Come stabilire una connessione a un endpoint privato con IBM Cloud Service Endpoint" id="priv_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#vpn" label="Connessione a un endpoint privato: VPN (virtual private network)" id="vpn">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_vpn_steps" label="Come connettersi a un endpoint privato con una VPN" id="priv_endpt_vpn_steps"></topic>
+      </topic>
     </topic>
   </topic>
   <topic label="Connessione a un altro database Db2">
@@ -83,7 +100,7 @@
         <topic href="federation.html#dati-partizionati-su-pi-server" label="Dati partizionati su più server" id="dati-partizionati-su-pi-server"></topic>
         <topic href="federation.html#aumento-della-capacit-del-database-oltre-i-limiti-stabiliti" label="Aumento della capacità del database oltre i limiti stabiliti" id="aumento-della-capacit-del-database-oltre-i-limiti-stabiliti"></topic>
       </topic>
-      <topic href="federation.html#getting_started" label="Introduzione" id="getting_started">
+      <topic href="federation.html#getting_started_fed" label="Introduzione" id="getting_started_fed">
         <property name="type" value="anchor"/>
         <topic href="federation.html#targ" label="Nella macchina di destinazione Db2 on Cloud" id="targ"></topic>
         <topic href="federation.html#fed_src" label="Su una macchina Db2 on Cloud che viene utilizzata come un&#39;origine di federazione" id="fed_src"></topic>
@@ -198,7 +215,7 @@
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="Conformità di sicurezza">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Conformità di sicurezza">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">

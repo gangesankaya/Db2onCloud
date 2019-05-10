@@ -4,26 +4,26 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud/index.html"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"/>
   <property name="path" value="services/Db2onCloud"/>
-  <topic href="index.html#getting_started_db2oncloud" label="概説" id="getting_started_db2oncloud">
+  <topic href="getting-started.html#getting_started_db2oncloud" label="入門チュートリアル" id="getting_started_db2oncloud">
     <property name="navgroup" value="learn"/>
-    <topic href="index.html#interfaces" label="インターフェース" id="interfaces">
+    <topic href="getting-started.html#interfaces" label="インターフェース" id="interfaces">
       <property name="type" value="anchor"/>
-      <topic href="index.html#web_console" label="Db2 on Cloud Web コンソール" id="web_console"></topic>
-      <topic href="index.html#connect_apps" label="ご使用のコンピューターへの Db2 コマンド・ライン・クライアントおよびドライバーのインストール" id="connect_apps"></topic>
-      <topic href="index.html#data_src" label="IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する" id="data_src"></topic>
+      <topic href="getting-started.html#web_console" label="Db2 on Cloud Web コンソール" id="web_console"></topic>
+      <topic href="getting-started.html#connect_apps" label="ご使用のコンピューターへの Db2 コマンド・ライン・クライアントおよびドライバーのインストール" id="connect_apps"></topic>
+      <topic href="getting-started.html#data_src" label="IBM Cloud アプリまたはサービス用のデータ・ソースとして Db2 on Cloud を使用する" id="data_src"></topic>
     </topic>
-    <topic href="index.html#samples" label="例" id="samples">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="index.html#intro_vid" label="ビデオ: Db2 on Cloud の紹介" id="intro_vid">
+    <topic href="getting-started.html#samples" label="例" id="samples">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#vid_api" label="ビデオ: REST API を使用した Db2 on Cloud との通信" id="vid_api">
+    <topic href="getting-started.html#intro_vid" label="ビデオ: Db2 on Cloud の紹介" id="intro_vid">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="index.html#cognos_vid" label="ビデオ: Jupyter ノートブックの統合" id="cognos_vid">
+    <topic href="getting-started.html#vid_api" label="ビデオ: REST API を使用した Db2 on Cloud との通信" id="vid_api">
+      <property name="type" value="anchor"/>
+    </topic>
+    <topic href="getting-started.html#cognos_vid" label="ビデオ: Jupyter ノートブックの統合" id="cognos_vid">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
@@ -52,24 +52,41 @@
     <topic href="iam.html#api" label="REST API エクスペリエンス" id="api">
       <property name="type" value="anchor"/>
     </topic>
-    <topic href="iam.html#fed_ibmid" label="IBM ID 統合" id="fed_ibmid">
+    <topic href="iam.html#fed_ibmid" label="IBMid 統合" id="fed_ibmid">
       <property name="type" value="anchor"/>
     </topic>
     <topic href="iam.html#restrictions" label="制約事項" id="restrictions">
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="connecting.html#connect" label="接続" id="connect">
+  <topic label="接続">
     <property name="navgroup" value="learn"/>
-    <topic href="connecting.html#connect_prereq" label="前提条件" id="connect_prereq">
-      <property name="type" value="anchor"/>
-      <topic href="connecting.html#cfg_env" label="環境の構成" id="cfg_env"></topic>
+    <property name="topicgroup" value="接続"/>
+    <topic href="connecting.html#connect" label="接続" id="connect">
+      <topic href="connecting.html#connect_prereq" label="前提条件" id="connect_prereq">
+        <property name="type" value="anchor"/>
+        <topic href="connecting.html#cfg_env" label="環境の構成" id="cfg_env"></topic>
+      </topic>
+      <topic href="connecting.html#conx_prgrm" label="プログラムによる接続" id="conx_prgrm">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting.html#conx_apps_tools" label="アプリケーションとツールの接続" id="conx_apps_tools">
+        <property name="type" value="anchor"/>
+      </topic>
     </topic>
-    <topic href="connecting.html#conx_prgrm" label="プログラムによる接続" id="conx_prgrm">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="connecting.html#conx_apps_tools" label="アプリケーションとツールの接続" id="conx_apps_tools">
-      <property name="type" value="anchor"/>
+    <topic href="connectivity_options.html#connect_options" label="接続オプション" id="connect_options">
+      <topic href="connectivity_options.html#pub_endpt" label="パブリック・エンドポイントへの接続 (デフォルト・オプション)" id="pub_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#pub_endpt_steps" label="パブリック・エンドポイントに接続する方法:" id="pub_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#priv_endpt" label="プライベート・エンドポイントへの接続: IBM Cloud サービス・エンドポイント" id="priv_endpt">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_steps" label="IBM Cloud サービス・エンドポイントを使用してプライベート・エンドポイントに接続する方法" id="priv_endpt_steps"></topic>
+      </topic>
+      <topic href="connectivity_options.html#vpn" label="プライベート・エンドポイントへの接続: 仮想プライベート・ネットワーク (VPN)" id="vpn">
+        <property name="type" value="anchor"/>
+        <topic href="connectivity_options.html#priv_endpt_vpn_steps" label="VPN を使用してプライベート・エンドポイントに接続する方法" id="priv_endpt_vpn_steps"></topic>
+      </topic>
     </topic>
   </topic>
   <topic label="別の Db2 データベースへの接続">
@@ -83,10 +100,10 @@
         <topic href="federation.html#-" label="複数サーバーでのデータ・シャード" id="-"></topic>
         <topic href="federation.html#-" label="制限を超えたデータベース容量の拡張" id="-"></topic>
       </topic>
-      <topic href="federation.html#getting_started" label="概説" id="getting_started">
+      <topic href="federation.html#getting_started_fed" label="概説" id="getting_started_fed">
         <property name="type" value="anchor"/>
         <topic href="federation.html#targ" label="Db2 on Cloud ターゲット・マシン上:" id="targ"></topic>
-        <topic href="federation.html#fed_src" label="フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:" id="fed_src"></topic>
+        <topic href="federation.html#fed_src" label="フェデレーション・ソースとして使用されている Db2 on Cloud マシン上:" id="fed_src"></topic>
       </topic>
       <topic href="federation.html#more_info" label="追加情報" id="more_info">
         <property name="type" value="anchor"/>
@@ -137,7 +154,7 @@
     </topic>
     <topic href="ha.html#faq" label="FAQ" id="faq">
       <property name="type" value="anchor"/>
-      <topic href="ha.html#db2-dr-dns-ip-" label="DB2 を使用しているアプリケーションがテークオーバー後に DR ノードと連動するためには、何を変更する必要がありますか? テークオーバー後、DNS 名や IP アドレスは変更されますか?" id="db2-dr-dns-ip-"></topic>
+      <topic href="ha.html#db2-dr-dns-ip-" label="Db2 を使用しているアプリケーションがテークオーバー後に DR ノードと連動するためには、何を変更する必要がありますか? テークオーバー後、DNS 名や IP アドレスは変更されますか?" id="db2-dr-dns-ip-"></topic>
     </topic>
   </topic>
   <topic label="データのロード">
@@ -198,7 +215,7 @@
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" label="セキュリティー・コンプライアンス">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="セキュリティー・コンプライアンス">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">

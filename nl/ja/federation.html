@@ -10,7 +10,7 @@
   <meta name="dcterms.date" content="2018-10-26">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
-  <meta name="description" content="Db2 データ仮想化 (フェデレーション) は Db2 on Cloud でサポートされています。 データ仮想化によって、組織内の任意の場所にある複数の分散データベース上にあるすべてのデータに対して単一照会アクセスが可能になります。 クラウドとオンプレミスの両方の DB2 または Informix のデータ・ソースにあるデータにアクセスできます。 ">
+  <meta name="description" content="Db2 データ仮想化 (フェデレーション) は Db2 on Cloud でサポートされています。 データ仮想化によって、組織内の任意の場所にある複数の分散データベース上にあるすべてのデータに対して単一照会アクセスが可能になります。 クラウドとオンプレミスの両方の Db2 または Informix のデータ・ソースにあるデータにアクセスできます。 ">
   <meta name="source.format" content="markdown">
 
 
@@ -30,7 +30,7 @@
       <!-- Attribute definitions -->
       <section id="section-fed">
         <h1 id="fed">データ仮想化 (フェデレーション)</h1>
-        <p class="shortdesc">Db2 データ仮想化 (フェデレーション) は Db2 on Cloud でサポートされています。 データ仮想化によって、組織内の任意の場所にある複数の分散データベース上にあるすべてのデータに対して単一照会アクセスが可能になります。 クラウドとオンプレミスの両方の DB2 または Informix のデータ・ソースにあるデータにアクセスできます。 </p>
+        <p class="shortdesc">Db2 データ仮想化 (フェデレーション) は Db2 on Cloud でサポートされています。 データ仮想化によって、組織内の任意の場所にある複数の分散データベース上にあるすべてのデータに対して単一照会アクセスが可能になります。 クラウドとオンプレミスの両方の Db2 または Informix のデータ・ソースにあるデータにアクセスできます。 </p>
         <p>このファンクションは、無料のライト・プランを除き、Db2 on Cloud のすべてのバージョンでサポートされています。 ただし、Lite プランをデータ取得の ターゲットとして使用することは可能です。
         </p>
         <section id="section-use_cases">
@@ -62,8 +62,8 @@ located in the cloud and on-premises -->
             <!-- By using federation, users can increase capacity of an on premises database by federating to or from the cloud. This is a great option if your on premises database is running out of storage. Increased capacity will also be useful for new development as our users no longer need to change a database in production. You can also use this feature to federate between two Db2 on Cloud databases to increase the capacity beyond the current limits of the Flex plan. -->
           </section>
         </section>
-        <section id="section-getting_started">
-          <h2 id="getting_started">概説</h2>
+        <section id="section-getting_started_fed">
+          <h2 id="getting_started_fed">概説</h2>
           <p>以下の手順では、分散したデータ・ソースを統合し、あたかも 1 つのデータ・ソースからデー タを取得しているように見せる方法を例示します。 2 つの Db2 on Cloud データベースをフェデレーションする例を以下に示し ます。
           </p>
           <section id="section-targ">
@@ -128,31 +128,31 @@ located in the cloud and on-premises -->
 -->
           </section>
           <section id="section-fed_src">
-            <h3 id="fed_src">フェデレーション・ソースとして使用されている DB2 on Cloud マシン上:</h3>
+            <h3 id="fed_src">フェデレーション・ソースとして使用されている Db2 on Cloud マシン上:</h3>
             <p>Db2 on Cloud コンソールから、以下を行います。</p>
             <ol>
               <li>
-                <p>ターゲット・マシンと通信するためのサーバーを作成します。<br>
+                <p>ターゲット・マシンと通信するサーバーを作成します。<br>
                   <code>create server &lt;server_name&gt; type dashdb version 11 wrapper drda authorization &quot;&lt;admin_user_on_target&gt;&quot; password &quot;&lt;admin_password_on_target&gt;&quot; options (host &#39;&lt;target_host_name&gt;&#39;, port &#39;50000&#39;, dbname &#39;bludb&#39;)</code></p>
-                <p>例えば、以下を行えます。<br>
+                <p>例えば、以下のようにします。<br>
                   <code>create server db2server type dashdb version 11 wrapper drda authorization &quot;admin2&quot; password &quot;YYYY&quot; options (host &#39;targetdotcom&#39;, port &#39;50000&#39;, dbname &#39;bludb&#39;)</code></p>
               </li>
               <li>
-                <p>admin2 用のユーザー・マッピングを作成します。<br>
+                <p>admin2 のユーザー・マッピングを作成します。<br>
                   <code>create user mapping for &lt;admin_user&gt; server db2server options (remote_authid &#39;&lt;admin_user_on_target&gt;&#39;, remote_password &#39;&lt;admin_password_on_target&gt;&#39;)</code></p>
-                <p>例えば、以下を行えます。<br>
+                <p>例えば、以下のようにします。<br>
                   <code>create user mapping for admin1 server db2server options (remote_authid &#39;admin2&#39;, remote_password &#39;YYYY&#39;)</code></p>
               </li>
               <li>
                 <p>データベースのニックネームを作成します。<br>
                   <code>create nickname &lt;nickname&gt; for &lt;server_name&gt;.&lt;schema_name&gt;.&lt;table_name&gt;</code></p>
-                <p>例えば、以下を行えます。<br>
+                <p>例えば、以下のようにします。<br>
                   <code>create nickname ntest1 for db2server.admin2.testdata</code></p>
               </li>
               <li>
                 <p>ターゲット・サーバーからデータを取得できることをテストします。<br>
                   <code>select * from &lt;nickname&gt;</code></p>
-                <p>例えば、以下を行えます。<br>
+                <p>例えば、以下のようにします。<br>
                   <code>select * from ntest1</code></p>
               </li>
             </ol>

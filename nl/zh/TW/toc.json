@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud/index.html"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"
             },
             {
                 "name": "path",
@@ -25,27 +25,27 @@
         ],
         "topics": [
             {
-                "href": "services/Db2onCloud/index.html#getting_started_db2oncloud",
-                "label": "開始使用",
+                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "label": "入門指導教學",
                 "id": "Db2onCloud-getting_started_db2oncloud",
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/index.html#interfaces",
+                        "href": "services/Db2onCloud/getting-started.html#interfaces",
                         "label": "介面",
                         "id": "Db2onCloud-interfaces",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/index.html#web_console",
+                                "href": "services/Db2onCloud/getting-started.html#web_console",
                                 "label": "Db2 on Cloud Web 主控台",
                                 "id": "Db2onCloud-web_console"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#connect_apps",
+                                "href": "services/Db2onCloud/getting-started.html#connect_apps",
                                 "label": "在電腦上安裝 Db2 指令行用戶端及驅動程式",
                                 "id": "Db2onCloud-connect_apps"
                             },
                             {
-                                "href": "services/Db2onCloud/index.html#data_src",
+                                "href": "services/Db2onCloud/getting-started.html#data_src",
                                 "label": "將 Db2 on Cloud 用作 IBM Cloud 應用程式或服務的資料來源",
                                 "id": "Db2onCloud-data_src"
                             }
@@ -58,7 +58,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#samples",
+                        "href": "services/Db2onCloud/getting-started.html#samples",
                         "label": "範例",
                         "id": "Db2onCloud-samples",
                         "properties": [
@@ -69,7 +69,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#intro_vid",
+                        "href": "services/Db2onCloud/getting-started.html#intro_vid",
                         "label": "視訊：Introducing Db2 on Cloud",
                         "id": "Db2onCloud-intro_vid",
                         "properties": [
@@ -80,7 +80,7 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#vid_api",
+                        "href": "services/Db2onCloud/getting-started.html#vid_api",
                         "label": "視訊：Using REST API to communicate with Db2 on Cloud",
                         "id": "Db2onCloud-vid_api",
                         "properties": [
@@ -91,8 +91,8 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/index.html#cognos_vid",
-                        "label": "視訊：Integrating Jupyter notebooks",
+                        "href": "services/Db2onCloud/getting-started.html#cognos_vid",
+                        "label": "視訊：Integrating Jupyter Notebooks",
                         "id": "Db2onCloud-cognos_vid",
                         "properties": [
                             {
@@ -234,55 +234,125 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/connecting.html#connect",
-                "label": "連接",
-                "id": "Db2onCloud-connect",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/connecting.html#connect_prereq",
-                        "label": "必要條件",
-                        "id": "Db2onCloud-connect_prereq",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/connecting.html#cfg_env",
-                                "label": "配置環境",
-                                "id": "Db2onCloud-cfg_env"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_prgrm",
-                        "label": "以程式設計方式連接",
-                        "id": "Db2onCloud-conx_prgrm",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
-                        "label": "連接應用程式及工具",
-                        "id": "Db2onCloud-conx_apps_tools",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
+                "label": "連線",
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "連線"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting.html#connect",
+                        "label": "連接",
+                        "id": "Db2onCloud-connect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                                "label": "必要條件",
+                                "id": "Db2onCloud-connect_prereq",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                        "label": "配置環境",
+                                        "id": "Db2onCloud-cfg_env"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                                "label": "以程式設計方式連接",
+                                "id": "Db2onCloud-conx_prgrm",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
+                                "label": "連接應用程式及工具",
+                                "id": "Db2onCloud-conx_apps_tools",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connectivity_options.html#connect_options",
+                        "label": "連線功能選項",
+                        "id": "Db2onCloud-connect_options",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#pub_endpt",
+                                "label": "連接至公用端點（預設選項）",
+                                "id": "Db2onCloud-pub_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#pub_endpt_steps",
+                                        "label": "如何連接至公用端點：",
+                                        "id": "Db2onCloud-pub_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#priv_endpt",
+                                "label": "連接至專用端點：IBM Cloud Service Endpoint",
+                                "id": "Db2onCloud-priv_endpt",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_steps",
+                                        "label": "如何使用 IBM Cloud Service Endpoint 連接至專用端點",
+                                        "id": "Db2onCloud-priv_endpt_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connectivity_options.html#vpn",
+                                "label": "連接至專用端點：虛擬專用網路 (VPN)",
+                                "id": "Db2onCloud-vpn",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_vpn_steps",
+                                        "label": "如何使用 VPN 連接至專用端點",
+                                        "id": "Db2onCloud-priv_endpt_vpn_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -338,9 +408,9 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/federation.html#getting_started",
+                                "href": "services/Db2onCloud/federation.html#getting_started_fed",
                                 "label": "開始使用",
-                                "id": "Db2onCloud-getting_started",
+                                "id": "Db2onCloud-getting_started_fed",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/federation.html#targ",
@@ -784,7 +854,7 @@
                 ]
             },
             {
-                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html",
+                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
                 "label": "安全規範",
                 "properties": [
                     {

@@ -34,12 +34,10 @@
         <p>Zusätzlich zu Standardsicherungen können Sie mithilfe der <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>          Langzeitdaten für andere Zwecke speichern, z. B. für schnelle Abfragen alter Daten oder für die vereinfachte Durchführung von Audits. Darüber hinaus können Sie mithilfe von IBM Data Studio oder einem beliebigen Db2-Tool eigene Exporte durchführen.</p>
         <p>Informationen zur zeitpunktgesteuerten Wiederherstellungen finden Sie in <a href="#point-in-time">Zeitpunktgesteuerte Wiederherstellung</a>.</p>
         <p>In allen kostenpflichtigen Plänen wird normalerweise IBM Cloud Object Storage (COS) verwendet, um Sicherungen an 3 verschiedene Rechenzentren auszulagern. Sydney und bestimmte kleinere Rechenzentren unterstützten jedoch zum gegenwärtigen Zeitpunkt
-          möglicherweise keine ausgelagerte Replikation mit IBM COS. In der <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">Dokumentation zu IBM COS</a> für die jeweilige Region finden Sie Informationen
+          möglicherweise keine ausgelagerte Replikation mit IBM COS. In der <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">Dokumentation zu IBM COS</a> für die jeweilige Region finden Sie Informationen
           dazu, welche Regionen die ausgelagerte Replikation unterstützen.</p>
-        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
-        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
-        <p>Sie können auch die <a href="https://lift.ng.bluemix.net/" target="_blank">IBM Lift-Befehlszeilenschnittstelle <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> verwenden, um Daten in
-          Db2 on Cloud zu importieren.</p>
+        <p>Sie können auch die <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift-Befehlszeilenschnittstelle <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> verwenden, um Daten
+          in Db2 on Cloud zu importieren.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Zeitpunktgesteuerte Wiederherstellung</h2>
           <p>Db2 on Cloud ist nun eine Funktion zur zeitpunktgesteuerten Wiederherstellung verfügbar. Diese ermöglicht die Wiederherstellung der gesicherten Daten für einen exakten Zeitpunkt. Derzeit müssen die meisten Kunden Unterstützung zur Aktivierung
@@ -48,7 +46,7 @@
           <ul>
             <li>Rechenzentrum Dallas: Derzeit verfügbar auf Einzelserversystemen.</li>
             <li>Alle anderen, einschließlich Europa und HA-Systeme in Dallas: Aktivierung des Features muss beim Support angefordert werden. Der vollständige Rollout für alle Systeme wird bis 28. Februar 2019 abgeschlossen sein.</li>
-            <li>IBM Cloud Dedicated-System (früher Bluemix Dedicated): Verfügbarkeit nur durch das Öffnen eines Support-Tickets.</li>
+            <li>IBM Cloud Dedicated-System: Verfügbarkeit nur durch das Öffnen eines Support-Tickets.</li>
           </ul>
           <p>Mit den folgenden ausgewählten Beispielen für Screenshots der Webkonsolenbenutzerschnittstelle wird veranschaulicht, wie die zeitpunktgesteuerte Wiederherstellungsoperation initiiert und der Fortschritt angezeigt wird:</p>
           <ol>
@@ -60,7 +58,7 @@
               <p><img src="images/pit_restore_1.png" alt="Ansicht der hervorgehobenen Auswahl für die zeitpunktgesteuerte Wiederherstellungsstrategie"></p>
             </li>
             <li>
-              <p>Bestätigen Sie, dass Sie den Vorgang mit den ausgewählten Wiederherstellungsptionen fortsetzen möchten. Nach dem Initiieren der Wiederherstellungsoperation können Sie die Anforderung nicht mehr ändern.<br><img src="images/pit_restore_2.png"
+              <p>Bestätigen Sie, dass Sie den Vorgang mit den ausgewählten Wiederherstellungsoptionen fortsetzen möchten. Nach dem Initiieren der Wiederherstellungsoperation können Sie die Anforderung nicht mehr ändern.<br><img src="images/pit_restore_2.png"
                   alt="Ansicht des Bestätigungsdialogs für die zeitpunktgesteuerte Wiederherstellung"></p>
             </li>
             <li>

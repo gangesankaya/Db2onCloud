@@ -6,11 +6,11 @@
   <meta name="DC.Publisher" content="IBM Corporation">
   <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2019-01-02">
-  <meta name="dcterms.date" content="2019-01-02">
+  <meta name="DC.date" content="2019-04-30">
+  <meta name="dcterms.date" content="2019-04-30">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
-  <meta name="description" content="IBM&reg; Db2&reg; on Cloud es una base de datos SQL suministrada para usted en la nube. Puede utilizar Db2 on Cloud como utilizaría cualquier software de base de datos, pero sin la sobrecarga de la configuración del hardware ni de la instalación y el mantenimiento del software. ">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud es una base de datos SQL suministrada en la nube. Puede utilizar Db2 on Cloud como utilizaría cualquier software de base de datos, pero sin el tiempo y el gasto que suponen la configuración del hardware ni de la instalación y el mantenimiento del software. ">
   <meta name="source.format" content="markdown">
 
 
@@ -21,7 +21,7 @@
   <!-- Use, duplication or disclosure restricted by -->
   <!-- GSA ADP Schedule Contract with IBM Corp. -->
 
-  <title>Cómo empezar</title>
+  <title>Guía de aprendizaje de iniciación</title>
 </head>
 
 <body>
@@ -29,16 +29,13 @@
     <article aria-labelledby="getting_started_db2oncloud" role="article">
       <!-- Attribute definitions -->
       <section id="section-getting_started_db2oncloud">
-        <h1 id="getting_started_db2oncloud">Cómo empezar</h1>
-        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud es una base de datos SQL suministrada para usted en la nube. Puede utilizar Db2 on Cloud como utilizaría cualquier software de base de datos, pero sin la sobrecarga de la configuración del hardware ni de la instalación
+        <h1 id="getting_started_db2oncloud">Guía de aprendizaje de iniciación</h1>
+        <p class="shortdesc">IBM&reg; Db2&reg; on Cloud es una base de datos SQL suministrada en la nube. Puede utilizar Db2 on Cloud como utilizaría cualquier software de base de datos, pero sin el tiempo y el gasto que suponen la configuración del hardware ni de la instalación
           y el mantenimiento del software. </p>
         <p class="important">Cree credenciales. Después de crear el servicio, los nuevos usuarios de IBM Cloud deben crear un nombre de usuario y contraseña pulsando el botón <strong>Crear credenciales</strong> cuando inicien el servicio. Técnicamente pueden conectarse a
           la consola web sin credenciales, pero son necesarios el nombre de usuario y la contraseña para utilizar muchas de las herramientas de Db2.</p>
         <p>También puede instalar una base de datos Db2 local utilizando la <a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions" target="_blank">descarga gratuita de Db2 Developer Edition <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.
           De esta forma, se instala rápidamente una edición de Db2 para desarrolladores lista para utilizar dentro de un contenedor Docker (no se requiere Docker; todos los componentes necesarios se instalarán automáticamente). </p>
-        <!-- ## Free trial
-
-You can try the Db2 on Cloud Precise Performance 500 (2.8.500) plan for 7 days on IBM Cloud without charge. [Free trial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/db2){:new_window} -->
         <section id="section-interfaces">
           <h2 id="interfaces">Interfaces</h2>
           <p class="shortdesc">Puede trabajar con la base de datos de Db2 on Cloud de los siguientes modos:</p>
@@ -66,10 +63,22 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
           </section>
           <section id="section-connect_apps">
             <h3 id="connect_apps">Instalación de los controladores y clientes de línea de mandatos de Db2 en el sistema local</h3>
-            <p class="shortdesc">La mayoría de usuarios pueden saltarse este paso. En la mayoría de los casos, los usuarios tienden a utilizar solamente la API REST o instalar controladores para un entorno de trabajo, por ejemplo con el mandato <code>pip</code> de Python.
-              Sin embargo, es posible que los usuarios experimentados deseen utilizar el cliente de línea de mandatos de Db2 para administrar su base de datos y utilizar mandatos de Db2. Además, ciertas aplicaciones ODBC o JDBC pueden beneficiarse de
-              una instalación general de controladores de Db2. Si es así, lleve a cabo los pasos siguientes:</p>
+            <p class="shortdesc">En la mayoría de los casos, los usuarios tienden a utilizar solamente la API REST o instalar controladores para un entorno de trabajo, por ejemplo con el mandato <code>pip</code> de Python.</p>
+            <p class="note">Para instalar los paquetes de controlador de Python para MacOS, debe utilizar el mandato <code>pip</code> con la opción <code>--no-cache-dir</code>. Para ver instrucciones detalladas, consulte: <a href="https://ibm.biz/db2-drivers-python"
+                target="_blank">Soporte de Python para IBM DB2 e IBM Informix <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></p>
             <!-- Drivers on site are broken so taking out this one -Simon. 1. Download the [driver package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html){:new_window} from the Connection info page of the Db2 on Cloud web console.-->
+            <p>Para instalar los controladores de infraestructura Python o Node.js, pulse uno de los siguientes enlaces:</p>
+            <ul>
+              <li><a href="https://ibm.biz/db2-drivers-python" target="_blank">Controladores de Python <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
+              <li><a href="https://ibm.biz/db2-drivers-node" target="_blank">Controladores de Node.js <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
+            </ul>
+            <p class="note">Para instalar el ORM de Node.js llamado Sequelize, pulse el siguiente enlace: <a href="https://github.com/ibmdb/sequelize" target="_blank">Sequelize <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></p>
+            <p>Para ver más opciones de instalación de controladores, incluidos Java, Go, Jupyter Notebooks, Ruby, PHP y más, pulse el siguiente enlace: </p>
+            <ul>
+              <li><a href="https://github.com/ibmdb" target="_blank">ibmdb <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
+            </ul>
+            <p>Si ya ha instalado los controladores de la infraestructura, puede saltarse los siguientes pasos. Sin embargo, es posible que los usuarios experimentados deseen utilizar el cliente de línea de mandatos de Db2 para administrar su base de datos
+              y utilizar mandatos de Db2. Además, ciertas aplicaciones ODBC o JDBC pueden beneficiarse de una instalación general de controladores de Db2. Si es así, lleve a cabo los pasos siguientes:</p>
             <ol>
               <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">Instale el paquete de controladores <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>                en el sistema donde esté ejecutando las apps o las herramientas.</li>
               <li><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">Configure los archivos de controladores <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>                para la base de datos de Db2 on Cloud.</li>
@@ -77,7 +86,7 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
           </section>
           <section id="section-data_src">
             <h3 id="data_src">Utilice Db2 on Cloud como origen de datos para apps o servicios de IBM Cloud</h3>
-            <p class="shortdesc">Las apps alojadas en IBM Cloud pueden conectarse a la base de datos de Db2 on Cloud exactamente del mismo modo que pueden conectarse las aplicaciones locales a la base de datos de Db2 on Cloud.</p>
+            <p class="shortdesc">Las apps alojadas en IBM Cloud pueden conectarse a la base de datos de Db2 on Cloud del mismo modo que pueden conectarse las aplicaciones locales a la base de datos de Db2 on Cloud.</p>
             <p>Cuando las apps utilizan la plataforma de IBM Cloud, puede sacar partido de la variable de entorno <code>VCAP _SERVICES</code> para simplificar la tarea de especificar detalles y credenciales de bases de datos:</p>
             <ol>
               <li>En el panel de control de IBM Cloud, en el separador <strong>Conexiones</strong> de la página Detalles del servicio para el servicio de IBM Db2 on Cloud, pulse el botón <strong>Crear conexión</strong>.</li>

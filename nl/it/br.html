@@ -34,10 +34,8 @@
         <p>In aggiunta ai backup standard, puoi utilizzare <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>          per conservare i dati cronologici per altri scopi, come ad esempio una query istantanea di dati precedenti o un controllo semplificato. Puoi anche eseguire le tue esportazioni utilizzando IBM Data Studio o un qualsiasi strumento Db2.</p>
         <p>Per informazioni sui ripristini del punto temporale, consulta <a href="#point-in-time">Ripristino del punto temporale</a>.</p>
         <p>Tutti i piani a pagamento normalmente utilizzano IBM Cloud Object Storage (COS) per conservare i backup offsite in 3 diversi data center. Tuttavia, Sydney e alcuni data center più piccoli potrebbero non supportare la replica offsite con IBM COS
-          in questo momento. Consulta la <a href="/docs/services/cloud-object-storage/basics/endpoints.html#select-regions-and-endpoints">Documentazione IBM COS</a> per la tua regione per determinare quali regioni supportano la replica offsite.</p>
-        <!-- Retained backups are used by IBM for system recovery purposes in the event of a disaster or system loss. Use the [Time Travel Query ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:new_window} to keep historical data for your own purposes. In addition, you can also perform your own exports using IBM Data Studio or any Db2 tool. -->
-        <!-- To store your backups offsite at a remote storage site, make a request to IBM Support. -->
-        <p>Puoi anche utilizzare l&#39;<a href="https://lift.ng.bluemix.net/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a> per importare i dati in Db2 on Cloud.</p>
+          in questo momento. Consulta la <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">Documentazione IBM COS</a> per la tua regione per determinare quali regioni supportano la replica offsite.</p>
+        <p>Puoi anche utilizzare l&#39;<a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a> per importare i dati in Db2 on Cloud.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Ripristino del punto temporale</h2>
           <p>Db2 on Cloud ha aggiunto una funzionalità di ripristino del punto temporale. Puoi eseguire il ripristino in un punto nel tempo esatto dai tuoi backup. Oggi, per la maggior parte dei clienti, devi richiedere del supporto per attivare questa funzione.
@@ -46,7 +44,7 @@
           <ul>
             <li>Data center di Dallas: oggi disponibile su sistemi server singoli</li>
             <li>Tutti gli altri casi, inclusi i sistemi HA in Dallas e l&#39;Europa: richiedi l&#39;attivazione della funzione dal supporto. La distribuzione completa a tutti i sistemi sarà completata per il 28 febbraio 2019.</li>
-            <li>Sistema IBM Cloud dedicato (precedentemente Bluemix dedicato): disponibile solo aprendo un ticket di supporto.</li>
+            <li>Sistema IBM Cloud Dedicated: disponibile solo aprendo un ticket di supporto.</li>
           </ul>
           <p>Di seguito viene riportato un esempio selezionato di acquisizioni schermo dell&#39;IU della console web in cui l&#39;operazione di ripristino del punto temporale è avviata e ne viene indicato l&#39;avanzamento:</p>
           <ol>
