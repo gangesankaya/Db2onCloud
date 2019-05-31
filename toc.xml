@@ -92,7 +92,7 @@
   <topic label="Connecting to another Db2 database">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="Connecting to another Db2 database"/>
-    <topic href="federation.html#fed" label="Data virtualization (federation) &amp; InfoSphere CDC" id="fed">
+    <topic href="federation.html#fed" label="Data virtualization (federation)" id="fed">
       <topic href="federation.html#use_cases" label="Use Cases" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#consolidate-data-sources" label="Consolidate data sources" id="consolidate-data-sources"></topic>
@@ -109,6 +109,7 @@
         <property name="type" value="anchor"/>
       </topic>
     </topic>
+    <topic href="cdc.html#cdc" label="InfoSphere CDC" id="cdc"></topic>
   </topic>
   <topic href="free_plan.html#free_plan" label="Free plan" id="free_plan">
     <property name="navgroup" value="learn"/>
