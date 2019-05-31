@@ -371,7 +371,7 @@
                 "topics": [
                     {
                         "href": "services/Db2onCloud/federation.html#fed",
-                        "label": "Data virtualization (federation)",
+                        "label": "Data virtualization (federation) & InfoSphere CDC",
                         "id": "Db2onCloud-fed",
                         "topics": [
                             {
