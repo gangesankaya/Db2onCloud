@@ -48,14 +48,14 @@
           <p><strong>Service IDs</strong></p>
           <p>A service ID identifies a service or application similar to how a user ID identifies a user. The service IDs are IDs that can be used by applications to authenticate with an IBM Cloud service. A service ID represents a separate entity from the
             owning IBMid. Therefore, different authorities and permissions can be granted specific to the service ID within the database. Service IDs do not have passwords. An API key must be created for each service ID for the service ID to connect to
-            the database service instance. For more information about service IDs, see: <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+            the database service instance. For more information about service IDs, see: <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank" class="external">Introducing IBM Cloud IAM Service IDs and API Keys</a>.</p>
         </section>
         <section id="section-connect_user">
           <h2 id="connect_user">Client connections and user logins</h2>
           <p><strong>Prerequisite</strong>: Db2 Client V11.1 FP3 and later.</p>
           <p>The following methods can be used for IAM authentication:</p>
           <p><strong>Access token</strong></p>
-          <p>An access token can be obtained from the IAM service directly by the application through the REST API by using an API key. For more information, see: <a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank">Getting an IBM Cloud IAM token by using an API key <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.
+          <p>An access token can be obtained from the IAM service directly by the application through the REST API by using an API key. For more information, see: <a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank" class="external">Getting an IBM Cloud IAM token by using an API key</a>.
             The access token has a default validity period of 60 minutes before it expires. If the token has expired, the Db2 server won&#39;t allow the connection to be established. The token isn’t checked for expiry after the connection is established.
             Just as it was prior to IAM integration, the connection will stay connected until the application disconnects or the connection is terminated due to other reasons.</p>
           <pre><code class="hljs">curl -k -X POST \
@@ -71,7 +71,7 @@
           <p>Multiple API keys can be created for each IBMid user or service ID. Each API key is typically created for a single application. It allows the application to connect to the database service instance as long as the owning IBMid or service ID is
             added as a user to the same database service instance. The API key has the same authorities and permissions within the database as the owning IBMid or service ID. If an application should no longer be allowed to connect to the database, the
             corresponding API key can be removed. This method of authentication requires less changes in the application than using an access token as it requires no direct interaction with the IAM service. For more information about creating and managing
-            API keys, see: <a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">Managing user API keys <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+            API keys, see: <a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank" class="external">Managing user API keys</a>.</p>
           <p><strong>IBMid/password</strong></p>
           <p>The IBMid/password can be used to log in to the console and can also be used within the application in the same ways that a user ID/password is allowed. The exception occurs when the IBMid is federated because a redirection to your organization’s
             login page cannot be done. However, the recommended method for an application to establish a connection to the database service instance is to use an access token.</p>
@@ -128,7 +128,7 @@
                 <p> <strong>IBMid/password</strong></p>
                 <p> Connect to the database server <code>&lt;database_server_name&gt;</code> with an IBMid/password by running the following command at the CLP command prompt or script:</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
-                <p> For more details about connecting to a database server with CLP, see: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.
+                <p> For more details about connecting to a database server with CLP, see: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank" class="external">CONNECT (type 2) statement</a>.
                   </p>
               </li>
               <li>
@@ -142,7 +142,7 @@
                 <p> <strong>IBMid/password</strong></p>
                 <p> Connect to the DSN alias (<code>@&lt;data_source_name&gt;</code>) with an IBMid/password by running the following command at the CLPPLUS command prompt or script:</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> For more details about connecting to DSN aliases with CLPPLUS, see: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+                <p> For more details about connecting to DSN aliases with CLPPLUS, see: <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank" class="external">DSN aliases in CLPPlus</a>.</p>
               </li>
             </ul>
           </section>
@@ -230,14 +230,13 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
 </code></pre>
             </li>
           </ul>
-          <p>For more details about your service&#39;s API, see: <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>.</p>
+          <p>For more details about your service&#39;s API, see: <a href="http://ibm.biz/db2oc_api" target="_blank" class="external">Db2 on Cloud REST API</a>.</p>
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">IBMid federation</h2>
           <p>To use your own identity provider such as LDAP, you must first federate your LDAP server with IBMid. For instructions about federating your LDAP server with IBMid, see: <a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide"
-              target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. After IBMid federation is completed and the allowed users are added to the database
-            service instance by the database administrator, these users can log in to the console with their company user ID and password. Alternatively, these users can use an access token or API key that represents their user ID to connect to the database
-            service instance through one of the supported database client interfaces.</p>
+              target="_blank" class="external">IBMid Enterprise Federation Adoption Guide</a>. After IBMid federation is completed and the allowed users are added to the database service instance by the database administrator, these users can log in to
+            the console with their company user ID and password. Alternatively, these users can use an access token or API key that represents their user ID to connect to the database service instance through one of the supported database client interfaces.</p>
         </section>
         <section id="section-restrictions">
           <h2 id="restrictions">Restrictions</h2>
