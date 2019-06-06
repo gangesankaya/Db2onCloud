@@ -699,6 +699,131 @@
                 ]
             },
             {
+                "label": "Security",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Security"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
+                        "label": "Managing users",
+                        "id": "Db2onCloud-user_mgmt"
+                    },
+                    {
+                        "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
+                        "label": "Security compliances"
+                    },
+                    {
+                        "href": "services/Db2onCloud/key_protect.html#key-protect",
+                        "label": "IBM Key Protect",
+                        "id": "Db2onCloud-key-protect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_prereqs",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-kp_prereqs",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_gs",
+                                "label": "Getting started",
+                                "id": "Db2onCloud-kp_gs",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_instance",
+                                        "label": "Creating an IBM Key Protect instance",
+                                        "id": "Db2onCloud-kp_instance",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_1",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_1"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_key",
+                                        "label": "Creating an encryption key in Key Protect",
+                                        "id": "Db2onCloud-kp_key",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_2",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_grant",
+                                        "label": "Granting service authorization",
+                                        "id": "Db2onCloud-kp_grant",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_3",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_3"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_cfg_key",
+                                        "label": "Configuring a Db2 service instance to use encryption key",
+                                        "id": "Db2onCloud-kp_cfg_key",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_4",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_4"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_rotate",
+                                "label": "Rotating the key in Key Protect",
+                                "id": "Db2onCloud-kp_rotate",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_rm_auth",
+                                "label": "Removing the authorizations of Db2 services to access Key Protect",
+                                "id": "Db2onCloud-kp_rm_auth",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "href": "services/Db2onCloud/audit.html#aud-log-mon",
                 "label": "Auditing, logging, and monitoring",
                 "id": "Db2onCloud-aud-log-mon",
@@ -733,17 +858,6 @@
                         ]
                     }
                 ],
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
-                "label": "Managing users",
-                "id": "Db2onCloud-user_mgmt",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -851,16 +965,6 @@
             {
                 "href": "https://developer.ibm.com/answers/index.html",
                 "label": "IBM Developer Answers",
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
-                "label": "Security compliances",
                 "properties": [
                     {
                         "name": "navgroup",
