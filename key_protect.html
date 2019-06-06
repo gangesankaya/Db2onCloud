@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-06-06">
+  <meta name="dcterms.date" content="2019-06-06">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2whc">
+  <meta name="description" content="With ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/key_protect.md">
+  <meta name="github.issue" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>IBM Key Protect</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="key-protect" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-key-protect">
+        <h1 id="key-protect">IBM Key Protect</h1>
+        <p class="shortdesc">With <a href="/docs/services/key-protect?topic=key-protect-getting-started-tutorial">IBM Key Protect</a> integration, you can have direct control over the encryption keys that are used in your database and backups. You can manage your own keys
+          in the Key Protect service on IBM Cloud and you can use your key to encrypt the data in your IBM&reg; Db2&reg; on Cloud database. </p>
+        <p>Upon creation, your database instance is not associated with any encryption key in Key Protect. Your database instance uses am encryption key that is stored locally on the system that uses the PKCS12 format. To use an encryption key in IBM Key
+          Protect, you must create a key in IBM Key Protect and grant your specific Db2 on Cloud instance (resource) <code>Reader</code> access to your root key in IBM Key Protect. On the Db2 on Cloud web console, you specify the Key Protect instance
+          and key to be used. After the association is complete, the specified key is then used by Db2 on Cloud to encrypt your data and the key is required to access the data at the time that the database is activated.</p>
+        <p>You can rotate the root key in Key Protect. The database instance periodically checks for any key rotation. When a key rotation is detected, a new master key is correspondingly generated.</p>
+        <p>When you revoke the root key authorization of the Db2 on Cloud service, you can no longer restart the database instance. In addition, any stored backups will not be able to be restored because the master key will no longer be accessible without
+          access to the root key in Key Protect.</p>
+        <section id="section-kp_prereqs">
+          <h2 id="kp_prereqs">Prerequisites</h2>
+          <p>To integrate the Key Protect feature into the Db2 on Cloud service, the Db2 on Cloud service instance must be in a resource group. If your Db2 on Cloud service instance is a Cloud Foundry service, see <a href="/docs/resources?topic=resources-migrate#migrate">Migrating Cloud Foundry service instances and apps to a resource group</a>            for information about the migration, the advantages of migrating the instance to a resource group, and instructions to conduct the migration.</p>
+        </section>
+        <section id="section-kp_gs">
+          <h2 id="kp_gs">Getting started</h2>
+          <p>Complete the steps in the following sections to get started with using IBM Key Protect to encrypt the data in your Db2 on Cloud database.</p>
+          <section id="section-kp_instance">
+            <h3 id="kp_instance">Creating an IBM Key Protect instance</h3>
+            <section id="section-kp_proc_1">
+              <h4 id="kp_proc_1">Procedure</h4>
+              <p>Key Protect is a cloud-based security service that provides lifecycle management for encryption keys that are used in IBM Cloud services or in your applications. Key Protect provides roots of trust (RoT), backed by a hardware security module
+                (HSM). </p>
+              <ol>
+                <li>
+                  <p>Log in to IBM Cloud.</p>
+                </li>
+                <li>
+                  <p>In the IBM Cloud catalog, open the <a href="https://cloud.ibm.com/catalog/services/key-protect" target="_blank" class="external">Key Protect</a> service page and create an instance of the service.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_1.png" alt="Screen capture of Key Protect service catalog page." title="Key Protect service catalog page">
+                      <figcaption>Figure 1. Key Protect service catalog page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>After creating the Key Protect service, the Manage page opens where you can create the keys.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_2.png" alt="Screen capture of Key Protect Manage page" title="On the Key Protect Manage page, you can create keys.">
+                      <figcaption>Figure 2. The Manage page of the Key Protect service</figcaption>
+                    </figure>
+                  </p>
+                </li>
+              </ol>
+            </section>
+          </section>
+          <section id="section-kp_key">
+            <h3 id="kp_key">Creating an encryption key in Key Protect</h3>
+            <section id="section-kp_proc_2">
+              <h4 id="kp_proc_2">Procedure</h4>
+              <p>You can create keys or import existing keys by using the following methods:</p>
+              <ul>
+                <li>
+                  <p>GUI</p>
+                  <ul>
+                    <li><a href="/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-key-gui">Root key</a></li>
+                    <li><a href="/docs/services/key-protect?topic=key-protect-create-standard-keys#create-standard-key-gui">Standard key</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p><a href="https://cloud.ibm.com/apidocs/key-protect" target="_blank" class="external">API</a></p>
+                  <ul>
+                    <li><a href="/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-key-api">Root key</a></li>
+                    <li><a href="/docs/services/key-protect?topic=key-protect-create-standard-keys#create-standard-key-api">Standard key</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <p>As an example, the following steps create a root key by using the GUI:</p>
+              <ol>
+                <li>
+                  <p>Click <strong>Add Key</strong> to create a key. In the <strong>Add a new key</strong> console, you can create a key or import an existing key. Select <strong>Create a key</strong>. </p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_3.png" alt="Screen capture of the Add a new key UI console." title="Create a key or import an existing key with the UI console">
+                      <figcaption>Figure 3. Console used to create a key</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>Select a key type and enter a name for the key. Click <strong>Create key</strong>.</p>
+                </li>
+                <li>
+                  <p>After the key is added, you can see it in the Key Protect service dashboard.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_4.png" alt="Screen capture of Key Protect dashboard." title="Key Protect dashboard shows a list of keys">
+                      <figcaption>Figure 4. Key Protect service dashboard</figcaption>
+                    </figure>
+                  </p>
+                </li>
+              </ol>
+              <p>After creating the key in the Key Protect service instance, you can proceed with granting authorization and to use that key in Db2 on Cloud.</p>
+            </section>
+          </section>
+          <section id="section-kp_grant">
+            <h3 id="kp_grant">Granting service authorization</h3>
+            <p>IBM Cloud Identity and Access Management (IAM) provides a feature that is called service to service authorization, where you can grant your Db2 on Cloud service instance <code>Reader</code> access to your IBM Key Protect service instance.
+              </p>
+            <section id="section-kp_proc_3">
+              <h4 id="kp_proc_3">Procedure</h4>
+              <ol>
+                <li>
+                  <p>To open the <strong>Access (IAM)</strong> overview page, click the <strong>Manage</strong> drop-down menu and select <strong>Access (IAM)</strong>.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_5.png" alt="Screen capture of the Access (IAM) overview page opened from the Manage drop-down menu." title="Screen capture of the Access (IAM) overview page opened from the Manage drop-down menu.">
+                      <figcaption>Figure 5. The Access (IAM) page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>To open the <strong>Manage Authorizations</strong> page, select <strong>Authorizations</strong> from the <strong>Access (IAM)</strong> menu.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_6.png" alt="Screen capture of the Manage Authorizations page." title="Manage Authorizations page">
+                      <figcaption>Figure 6. The Manage Authorizations page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>To create an authorization, click <strong>Create</strong>. </p>
+                </li>
+                <li>
+                  <p>On the <strong>Grant a Service Authorization</strong> page, select <strong>Db2 on Cloud</strong> as the source service. You can either select an instance, or you can authorize <strong>All instances</strong> in your account. </p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_7.png" alt="Screen capture of the Grant a Service Authorization page where source service is selected." title="Selecting a source service on the Grant a Service Authorization page">
+                      <figcaption>Figure 7. Selecting a source service on the Grant a Service Authorization page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>Select <strong>Key Protect</strong> as the target service, and select the Key Protect instance that you want to authorize, or select <strong>All instances</strong>.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_8.png" alt="Screen capture of the Grant a Service Authorization page where target service is selected." title="Selecting a target service on the Grant a Service Authorization page">
+                      <figcaption>Figure 8. Selecting a target service on the Grant a Service Authorization page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>The only permissible service access role that can be assigned is <code>Reader</code>. Assign the <code>Reader</code> role. With a <code>Reader</code> role, you can list only the keys or use the keys to wrap or unwrap any data on Db2
+                    on Cloud instances. </p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_9.png" alt="Screen capture of the Grant a Service Authorization page where the Reader role is assigned." title="Assigning the Reader role on the Grant a Service Authorization page">
+                      <figcaption>Figure 9. Assigning the Reader role on the Grant a Service Authorization page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+              </ol>
+            </section>
+          </section>
+          <section id="section-kp_cfg_key">
+            <h3 id="kp_cfg_key">Configuring a Db2 service instance to use encryption key</h3>
+            <section id="section-kp_proc_4">
+              <h4 id="kp_proc_4">Procedure</h4>
+              <ol>
+                <li>
+                  <p>Log in to the Db2 on Cloud web console and select <strong>SETTINGS &gt; Manage Keys</strong> from the hamburger menu.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_10.png" alt="Screen capture of the hamburger menu." title="Navigating to the MANAGE KEYS page in Db2 on Cloud web console">
+                      <figcaption>Figure 10. Navigating to the MANAGE KEYS page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>Select the Key Protect instance and the key that you want to use. Click <strong>Migrate</strong>.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_11.png" alt="Screen capture of the MANAGE KEYS page where key migration settings are made." title="Selecting the Key Protect service instance and key to migrate">
+                      <figcaption>Figure 11. Key migration</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>Review the settings.</p>
+                  <p class="important">You will not be able to revert the change. Be certain your migration settings are correct for the selected key.</p>
+                  <p>To migrate the key from Key Protect to your Db2 on Cloud service, click <strong>Continue</strong>.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_12.png" alt="Screen capture of the key migration confirmation window." title="Review the key migration settings before confirming the migration">
+                      <figcaption>Figure 12. Confirming the key migration</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>After the key migration request is received, it takes a few minutes to complete. You can check the status of the key migration on this page.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_13.png" alt="Screen capture of the MANAGE KEYS page now showing the migration status." title="Monitor key migration status on the MANAGE KEYS page">
+                      <figcaption>Figure 13. Migration status is shown on MANAGE KEYS page</figcaption>
+                    </figure>
+                  </p>
+                </li>
+                <li>
+                  <p>After the key migration is complete, Db2 on Cloud uses the encryption key from Key Protect to encrypt your data.</p>
+                  <p>
+                    <figure>
+                      <img src="images/kp_14.png" alt="Screen capture of the MANAGE KEYS page after the completion of the key migration." title="MANAGE KEYS page after the key migration shows the Key type as Key Protect">
+                      <figcaption>Figure 14. Key migration is completed</figcaption>
+                    </figure>
+                  </p>
+                </li>
+              </ol>
+              <p>If you face any issues, contact IBM Cloud Customer Support. </p>
+            </section>
+          </section>
+        </section>
+        <section id="section-kp_rotate">
+          <h2 id="kp_rotate">Rotating the key in Key Protect</h2>
+          <p>If you want to rotate the key in IBM Key Protect, you can do it either from the IBM Cloud console or by using the <a href="https://cloud.ibm.com/apidocs/key-protect#invoke-an-action-on-a-key" target="_blank" class="external">IBM Key Protect API: Invoke an action on a key</a>.
+            </p>
+        </section>
+        <section id="section-kp_rm_auth">
+          <h2 id="kp_rm_auth">Removing the authorizations of Db2 services to access Key Protect</h2>
+          <p>You can remove the authorization of a Db2 on Cloud service to access the Key Protect service instance by using the IBM Cloud console. In such cases, the Db2 on Cloud service ceases to start or activate. In addition, encrypted backups for the
+            Db2 on Cloud service cannot be restored.</p>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
