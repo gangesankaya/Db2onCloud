@@ -779,7 +779,7 @@
                                     },
                                     {
                                         "href": "services/Db2onCloud/key_protect.html#kp_cfg_key",
-                                        "label": "Configuring a Db2 service instance to use encryption key",
+                                        "label": "Configuring a Db2 service instance to use Key Protect root key",
                                         "id": "Db2onCloud-kp_cfg_key",
                                         "topics": [
                                             {
@@ -810,8 +810,19 @@
                             },
                             {
                                 "href": "services/Db2onCloud/key_protect.html#kp_rm_auth",
-                                "label": "Removing the authorizations of Db2 services to access Key Protect",
+                                "label": "Removing the authorization of Db2 on Cloud service to access Key Protect",
                                 "id": "Db2onCloud-kp_rm_auth",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_del_root_key",
+                                "label": "Deleting the root key in Key Protect",
+                                "id": "Db2onCloud-kp_del_root_key",
                                 "properties": [
                                     {
                                         "name": "type",
