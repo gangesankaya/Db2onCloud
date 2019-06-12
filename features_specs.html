@@ -31,30 +31,10 @@
       <section id="section-fs">
         <h1 id="fs">Features &amp; specs</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud features and specifications are summarized here for your convenience.</p>
-        <!--## Categories
-
-[General](#fs_gen)
-
-[High availability & replication](#fs_ha_rep)
-
-[System configurations](#fs_sys_cfgs)
-
-[Maintenance policies & SLAs](#fs_sys_cfgs)
-
-[Security compliances](#fs_sec_compl)
-
-[Backup & restore](#fs_bnr)
-
-[Networking, security, & VMs](#fs_net_sec_vm)
-
-[Pricing & purchasing](#fs_price_purch)
-
-[Deployment & scaling durations](#fs_dep_scale_dur)
-
-
+        <!--
 | Category | Feature | Supported? | Comments |
 |----------|---------|------------|----------|
-| General{: #fs_gen} | Db2 AESE | Y | Db2 v11.1.3.3 |
+| General | Db2 AESE | Y | Db2 v11.1.3.3 |
 |  | Read on Standby | Y | Offsite DR node only |
 |  | Automatic rolling updates | Y | With HA plans |
 |  | Data center location options | Y | [Locations](https://ibm.biz/db2oncloud-locations){:external}. See also: Deployment & scaling durations. |
@@ -62,7 +42,7 @@
 |  | Activity Tracker | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | - |
 |  | Root access provided | N | Use Db2 Hosted if root access is required |
 |  |  |  |  |
-| High availability & replication{: #fs_ha_rep} | Offsite DR | Y | - |
+| High availability & replication | Offsite DR | Y | - |
 |  | High availability (2 nodes in 1 zone) | Y | 99.99% uptime SLA |
 |  | Different zones in same data center | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | **Note**: Offsite HADR is available |
 |  | Change Data Capture (CDC) | Y | - |
@@ -75,18 +55,18 @@
 |  | RPO: Offsite node HADR | Typically < 15 s | Offsite DR is asynchronous |
 |  | RTO: Offsite node HADR | < 3 min | Must initiate with console button or API |
 |  |  |  |  |
-| System configurations{: #fs_sys_cfgs} | Max RAM and cores | 1 TB RAM, 48 cores | Applies to Precise Performance XL plan |
+| System configurations | Max RAM and cores | 1 TB RAM, 48 cores | Applies to Precise Performance XL plan |
 |  | Max storage | 11 TB | Applies to Precise Performance XL plan. Disk for both data and logs. |
 |  | Flex: base plan | 4 GB RAM, 1 core, 2 GB disk | - |
 |  | Flex: Max RAM and cores | 128 GB RAM, 32 cores | Need higher specs? Use Precise Performance plan or contact IBM Support. |
 |  | Flex: Max storage | 4 TB | Disk for both data and logs. Need higher specs? Use Precise Performance plan or contact IBM Support. |
 |  |  |  |  |
-| Maintenance policies & SLAs{: #fs_maint_sla} | High availability plans | 99.99% | - |
+| Maintenance policies & SLAs | High availability plans | 99.99% | - |
 |  | Single server plans | 99.5% | - |
 |  | Offsite DR node | 99.5% | Must use additional local HA to achieve 99.99% |
 |  | Maintenance policy | Y | [Read details](https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html){:external} |
 |  |  |  |  |
-| Security compliances{: #fs_sec_compl} | HIPAA Ready | Y | All paid plans including Flex. Must request HIPAA mode from IBM Support. |
+| Security compliances | HIPAA Ready | Y | All paid plans including Flex. Must request HIPAA mode from IBM Support. |
 |  | HITRUST  | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | Db2 Hosted can be used today for HITRUST |
 |  | International Organization for Standardization (ISO)  | Y | ISO 27001, 27002, 27017, and 27018 |
 |  | Service Organization Controls (SOC) | Y | SOC 2 Type 2 |
@@ -94,13 +74,13 @@
 |  | EU Cloud | Y | Use Frankfurt region. Support provided physically in EU. |
 |  | Full list of compliances | Y | [Security compliances](https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html){:external} |
 |  |  |  |  |
-| Backup & restore{: #fs_bnr} | Daily backups | Y | 14 days of daily backups |
+| Backup & restore | Daily backups | Y | 14 days of daily backups |
 |  | Point-in-time self-serve recovery | Available Nov 15, 2018 | [Point-in-time restore](/docs/services/Db2onCloud?topic=Db2onCloud-bnr#point-in-time) |
 |  | Backups kept offsite | On request | As of Dec 1, 2018, offsite is default  |
 |  | Keep backup up to 10 yrs | On request | As of Dec 1, 2018. Requires support ticket. |
 |  | Query old data without restore | Y | Must set up [Time Travel Query](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:external} |
 |  |  |  |  |
-| Networking, security, & VMs{: #fs_net_sec_vm} | Single-tenant virtual machine | Y | All paid plans, including Flex, are single-tenant VMs or baremetal. |
+| Networking, security, & VMs | Single-tenant virtual machine | Y | All paid plans, including Flex, are single-tenant VMs or baremetal. |
 |  | ICIAE | Y | Request from IBM Support. If ICIAE is being requested for an existing service environment, your data must be migrated to your ICIAE environment by IBM Support. |
 |  | VPN | Y | Request from IBM Support |
 |  | On-disk encryption | Y | -  |
@@ -111,7 +91,7 @@
 |  | Maximum concurrent connection limit: **Free plan** | Y | Max: 5 connections  |
 |  | Maximum concurrent connection limit: **paid plans** | N | Unlimited number of connections  |
 |  |  |  |  |
-| Pricing & purchasing{: #fs_price_purch} | BYOL discounts | Y | [Announcement](https://ibm.biz/db2oncloud-byol){:external} |
+| Pricing & purchasing | BYOL discounts | Y | [Announcement](https://ibm.biz/db2oncloud-byol){:external} |
 |  | Available on IBM Cloud | Y | Both subscription and pay-as-you-go |
 |  | Available with software quote order | Y | All plans including Flex. [Parts & details](https://ibm.biz/db2oncloud-parts-public){:external}|
 |  | Available on Hybrid Data Management Platform (HDMP) | Y | Flex plan only. [Details about HDMP](https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform){:external}|
@@ -119,7 +99,7 @@
 |  | Hourly billing | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | - | 
 |  | Main pricing metric | Monthly | Prices are stated in monthly terms (for example, $189 USD per month). A prorated monthly price is based on the number of days of activated service during the month in which the service was terminated. [Examples](/docs/services/Db2onCloud?topic=Db2onCloud-plans_pricing#examples) |
 |  |  |  |  |
-| Deployment & scaling durations{: #fs_dep_scale_dur} | Dallas | **Deploy**: < 5 minutes. **Scale**: < 45 minutes. | Flex plan only, depending on inventory |
+| Deployment & scaling durations | Dallas | **Deploy**: < 5 minutes. **Scale**: < 45 minutes. | Flex plan only, depending on inventory |
 | | Other US South | **Deploy**: 1 day. **Scale**: 8 hours. | Some locations shorter than others |
 | | Frankfurt & London | **Deploy**: < 5 min. **Scale**: 2 hours. | Flex plan only, depending on inventory |
 | | Other EU | **Deploy**: 3-5 days. **Scale**: 1-2 days. | Some locations shorter than others |
