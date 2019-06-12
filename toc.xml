@@ -29,6 +29,9 @@
   </topic>
   <topic href="features_specs.html#fs" label="Features &amp; specs" id="fs">
     <property name="navgroup" value="learn"/>
+    <topic href="features_specs.html#fs_categories" label="Categories" id="fs_categories">
+      <property name="type" value="anchor"/>
+    </topic>
   </topic>
   <topic href="iam.html#iam" label="Identity and access management (IAM) on IBM Cloud" id="iam">
     <property name="navgroup" value="learn"/>
