@@ -113,19 +113,6 @@
                 "href": "services/Db2onCloud/features_specs.html#fs",
                 "label": "Features & specs",
                 "id": "Db2onCloud-fs",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/features_specs.html#fs_categories",
-                        "label": "Categories",
-                        "id": "Db2onCloud-fs_categories",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
                 "properties": [
                     {
                         "name": "navgroup",

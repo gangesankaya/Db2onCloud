@@ -31,457 +31,524 @@
       <section id="section-fs">
         <h1 id="fs">Features &amp; specs</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud features and specifications are summarized here for your convenience.</p>
-        <section id="section-fs_categories">
-          <h2 id="fs_categories">Categories</h2>
-          <p><a href="#fs_gen">General</a></p>
-          <p><a href="#fs_ha_rep">High availability &amp; replication</a></p>
-          <p><a href="#fs_sys_cfgs">System configurations</a></p>
-          <p><a href="#fs_sys_cfgs">Manitenance policies &amp; SLAs</a></p>
-          <p><a href="#fs_sec_compl">Security compliances</a></p>
-          <p><a href="#fs_bnr">Backup &amp; restore</a></p>
-          <p><a href="#fs_net_sec_vm">Networking, security, &amp; VMs</a></p>
-          <p><a href="#fs_price_purch">Pricing &amp; purchasing</a></p>
-          <p><a href="#fs_dep_scale_dur">Deployment &amp; scaling durations</a></p>
-          <table>
-            <caption caption-side="top">Table 1. Features and specifications supported in Db2 on Cloud</caption>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Feature</th>
-                <th>Supported?</th>
-                <th>Comments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>General{: #fs_gen}</td>
-                <td>Db2 AESE</td>
-                <td>Y</td>
-                <td>Db2 v11.1.3.3</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Read on Standby</td>
-                <td>Y</td>
-                <td>Offsite DR node only</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Automatic rolling updates</td>
-                <td>Y</td>
-                <td>With HA plans</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Data center location options</td>
-                <td>Y</td>
-                <td><a href="https://ibm.biz/db2oncloud-locations" target="_blank" class="external">Locations</a>. See also: Deployment &amp; scaling durations.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>BLU in-memory</td>
-                <td>Y</td>
-                <td>Default is row, specify <code>CREATE TABLE..AS COL</code> for BLU</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Activity Tracker</td>
-                <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Root access provided</td>
-                <td>N</td>
-                <td>Use Db2 Hosted if root access is required</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>High availability &amp; replication{: #fs_ha_rep}</td>
-                <td>Offsite DR</td>
-                <td>Y</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>High availability (2 nodes in 1 zone)</td>
-                <td>Y</td>
-                <td>99.99% uptime SLA</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Different zones in same data center</td>
-                <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
-                <td><strong>Note</strong>: Offsite HADR is available</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Change Data Capture (CDC)</td>
-                <td>Y</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Use as HADR from on premises</td>
-                <td>N</td>
-                <td>Use CDC. For information, see <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank" class="external">How can I migrate or sync data from Db2 to Db2 on Cloud?</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Autonomous failover - HA</td>
-                <td>Y</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Autonomous failover - Offsite DR</td>
-                <td>N</td>
-                <td>Use button or API</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>IP moves with failover</td>
-                <td>Y</td>
-                <td>Local HA only; not offsite HADR</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>RPO: High Availability</td>
-                <td>0 s</td>
-                <td>HA is synchronous</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>RTO: High Availability</td>
-                <td>Typically 0-10 min</td>
-                <td>With retry code, will appear as slowness with Db2 ACR</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>RPO: Offsite node HADR</td>
-                <td>Typically &lt; 15 s</td>
-                <td>Offsite DR is asynchronous</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>RTO: Offsite node HADR</td>
-                <td>&lt; 3 min</td>
-                <td>Must initiate with console button or API</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>System configurations{: #fs_sys_cfgs}</td>
-                <td>Max RAM and cores</td>
-                <td>1 TB RAM, 48 cores</td>
-                <td>Applies to Precise Performance XL plan</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Max storage</td>
-                <td>11 TB</td>
-                <td>Applies to Precise Performance XL plan. Disk for both data and logs.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Flex: base plan</td>
-                <td>4 GB RAM, 1 core, 2 GB disk</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Flex: Max RAM and cores</td>
-                <td>128 GB RAM, 32 cores</td>
-                <td>Need higher specs? Use Precise Performance plan or contact IBM Support.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Flex: Max storage</td>
-                <td>4 TB</td>
-                <td>Disk for both data and logs. Need higher specs? Use Precise Performance plan or contact IBM Support.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Maintenance policies &amp; SLAs{: #fs_maint_sla}</td>
-                <td>High availability plans</td>
-                <td>99.99%</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Single server plans</td>
-                <td>99.5%</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Offsite DR node</td>
-                <td>99.5%</td>
-                <td>Must use additional local HA to achieve 99.99%</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Maintenance policy</td>
-                <td>Y</td>
-                <td><a href="https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html" target="_blank" class="external">Read details</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Security compliances{: #fs_sec_compl}</td>
-                <td>HIPAA Ready</td>
-                <td>Y</td>
-                <td>All paid plans including Flex. Must request HIPAA mode from IBM Support.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>HITRUST</td>
-                <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
-                <td>Db2 Hosted can be used today for HITRUST</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>International Organization for Standardization (ISO)</td>
-                <td>Y</td>
-                <td>ISO 27001, 27002, 27017, and 27018</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Service Organization Controls (SOC)</td>
-                <td>Y</td>
-                <td>SOC 2 Type 2</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>GDPR</td>
-                <td>Y</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>EU Cloud</td>
-                <td>Y</td>
-                <td>Use Frankfurt region. Support provided physically in EU.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Full list of compliances</td>
-                <td>Y</td>
-                <td><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" target="_blank" class="external">Security compliances</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Backup &amp; restore{: #fs_bnr}</td>
-                <td>Daily backups</td>
-                <td>Y</td>
-                <td>14 days of daily backups</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Point-in-time self-serve recovery</td>
-                <td>Available Nov 15, 2018</td>
-                <td><a href="/docs/services/Db2onCloud?topic=Db2onCloud-bnr#point-in-time">Point-in-time restore</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Backups kept offsite</td>
-                <td>On request</td>
-                <td>As of Dec 1, 2018, offsite is default</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Keep backup up to 10 yrs</td>
-                <td>On request</td>
-                <td>As of Dec 1, 2018. Requires support ticket.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Query old data without restore</td>
-                <td>Y</td>
-                <td>Must set up <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Networking, security, &amp; VMs{: #fs_net_sec_vm}</td>
-                <td>Single-tenant virtual machine</td>
-                <td>Y</td>
-                <td>All paid plans, including Flex, are single-tenant VMs or baremetal.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>ICIAE</td>
-                <td>Y</td>
-                <td>Request from IBM Support. If ICIAE is being requested for an existing service environment, your data must be migrated to your ICIAE environment by IBM Support.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>VPN</td>
-                <td>Y</td>
-                <td>Request from IBM Support</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>On-disk encryption</td>
-                <td>Y</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>SSL/TLS connections</td>
-                <td>Y</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>IP whitelisting</td>
-                <td>Some</td>
-                <td>Available at Db2 user level. For network level, consider ICIAE or similar.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Key Protect (Bring your own key)</td>
-                <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>MIS / Interconnected service</td>
-                <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Maximum concurrent connection limit: <strong>Free plan</strong></td>
-                <td>Y</td>
-                <td>Max: 5 connections</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Maximum concurrent connection limit: <strong>paid plans</strong></td>
-                <td>N</td>
-                <td>Unlimited number of connections</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Pricing &amp; purchasing{: #fs_price_purch}</td>
-                <td>BYOL discounts</td>
-                <td>Y</td>
-                <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank" class="external">Announcement</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Available on IBM Cloud</td>
-                <td>Y</td>
-                <td>Both subscription and pay-as-you-go</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Available with software quote order</td>
-                <td>Y</td>
-                <td>All plans including Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank" class="external">Parts &amp; details</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Available on Hybrid Data Management Platform (HDMP)</td>
-                <td>Y</td>
-                <td>Flex plan only. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank" class="external">Details about HDMP</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Daily billing</td>
-                <td>Y</td>
-                <td>Billing for Flex plans is based on peak daily usage. For example, if you scale up from 2 to 8 cores for one hour of a day, you will be billed for 8 cores for only that day, and 2 cores for all of the other days of the month.</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Hourly billing</td>
-                <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Main pricing metric</td>
-                <td>Monthly</td>
-                <td>Prices are stated in monthly terms (for example, $189 USD per month). A prorated monthly price is based on the number of days of activated service during the month in which the service was terminated. <a href="/docs/services/Db2onCloud?topic=Db2onCloud-plans_pricing#examples">Examples</a></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Deployment &amp; scaling durations{: #fs_dep_scale_dur}</td>
-                <td>Dallas</td>
-                <td><strong>Deploy</strong>: &lt; 5 minutes. <strong>Scale</strong>: &lt; 45 minutes.</td>
-                <td>Flex plan only, depending on inventory</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Other US South</td>
-                <td><strong>Deploy</strong>: 1 day. <strong>Scale</strong>: 8 hours.</td>
-                <td>Some locations shorter than others</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Frankfurt &amp; London</td>
-                <td><strong>Deploy</strong>: &lt; 5 min. <strong>Scale</strong>: 2 hours.</td>
-                <td>Flex plan only, depending on inventory</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Other EU</td>
-                <td><strong>Deploy</strong>: 3-5 days. <strong>Scale</strong>: 1-2 days.</td>
-                <td>Some locations shorter than others</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Sydney</td>
-                <td><strong>Deploy</strong>: &lt; 1 hour. <strong>Scale</strong>: 2 hours.</td>
-                <td>Flex plan only, depending on inventory</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Other AP</td>
-                <td><strong>Deploy</strong>: 3-5 days. <strong>Scale</strong>: 3-5 days.</td>
-                <td>Some locations shorter than others. Lower volumes in AP result in slower infrastructure provisioning times.</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+        <!--## Categories
+
+[General](#fs_gen)
+
+[High availability & replication](#fs_ha_rep)
+
+[System configurations](#fs_sys_cfgs)
+
+[Maintenance policies & SLAs](#fs_sys_cfgs)
+
+[Security compliances](#fs_sec_compl)
+
+[Backup & restore](#fs_bnr)
+
+[Networking, security, & VMs](#fs_net_sec_vm)
+
+[Pricing & purchasing](#fs_price_purch)
+
+[Deployment & scaling durations](#fs_dep_scale_dur)
+
+
+| Category | Feature | Supported? | Comments |
+|----------|---------|------------|----------|
+| General{: #fs_gen} | Db2 AESE | Y | Db2 v11.1.3.3 |
+|  | Read on Standby | Y | Offsite DR node only |
+|  | Automatic rolling updates | Y | With HA plans |
+|  | Data center location options | Y | [Locations](https://ibm.biz/db2oncloud-locations){:external}. See also: Deployment & scaling durations. |
+|  | BLU in-memory | Y | Default is row, specify `CREATE TABLE..AS COL` for BLU |
+|  | Activity Tracker | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | - |
+|  | Root access provided | N | Use Db2 Hosted if root access is required |
+|  |  |  |  |
+| High availability & replication{: #fs_ha_rep} | Offsite DR | Y | - |
+|  | High availability (2 nodes in 1 zone) | Y | 99.99% uptime SLA |
+|  | Different zones in same data center | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | **Note**: Offsite HADR is available |
+|  | Change Data Capture (CDC) | Y | - |
+|  | Use as HADR from on premises | N | Use CDC. For information, see [How can I migrate or sync data from Db2 to Db2 on Cloud?](https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/){:external} |
+|  | Autonomous failover - HA | Y | - |
+|  | Autonomous failover - Offsite DR | N | Use button or API |
+|  | IP moves with failover | Y | Local HA only; not offsite HADR |
+|  | RPO: High Availability | 0 s | HA is synchronous |
+|  | RTO: High Availability | Typically 0-10 min | With retry code, will appear as slowness with Db2 ACR |
+|  | RPO: Offsite node HADR | Typically < 15 s | Offsite DR is asynchronous |
+|  | RTO: Offsite node HADR | < 3 min | Must initiate with console button or API |
+|  |  |  |  |
+| System configurations{: #fs_sys_cfgs} | Max RAM and cores | 1 TB RAM, 48 cores | Applies to Precise Performance XL plan |
+|  | Max storage | 11 TB | Applies to Precise Performance XL plan. Disk for both data and logs. |
+|  | Flex: base plan | 4 GB RAM, 1 core, 2 GB disk | - |
+|  | Flex: Max RAM and cores | 128 GB RAM, 32 cores | Need higher specs? Use Precise Performance plan or contact IBM Support. |
+|  | Flex: Max storage | 4 TB | Disk for both data and logs. Need higher specs? Use Precise Performance plan or contact IBM Support. |
+|  |  |  |  |
+| Maintenance policies & SLAs{: #fs_maint_sla} | High availability plans | 99.99% | - |
+|  | Single server plans | 99.5% | - |
+|  | Offsite DR node | 99.5% | Must use additional local HA to achieve 99.99% |
+|  | Maintenance policy | Y | [Read details](https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html){:external} |
+|  |  |  |  |
+| Security compliances{: #fs_sec_compl} | HIPAA Ready | Y | All paid plans including Flex. Must request HIPAA mode from IBM Support. |
+|  | HITRUST  | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | Db2 Hosted can be used today for HITRUST |
+|  | International Organization for Standardization (ISO)  | Y | ISO 27001, 27002, 27017, and 27018 |
+|  | Service Organization Controls (SOC) | Y | SOC 2 Type 2 |
+|  | GDPR | Y | - |
+|  | EU Cloud | Y | Use Frankfurt region. Support provided physically in EU. |
+|  | Full list of compliances | Y | [Security compliances](https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html){:external} |
+|  |  |  |  |
+| Backup & restore{: #fs_bnr} | Daily backups | Y | 14 days of daily backups |
+|  | Point-in-time self-serve recovery | Available Nov 15, 2018 | [Point-in-time restore](/docs/services/Db2onCloud?topic=Db2onCloud-bnr#point-in-time) |
+|  | Backups kept offsite | On request | As of Dec 1, 2018, offsite is default  |
+|  | Keep backup up to 10 yrs | On request | As of Dec 1, 2018. Requires support ticket. |
+|  | Query old data without restore | Y | Must set up [Time Travel Query](https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html){:external} |
+|  |  |  |  |
+| Networking, security, & VMs{: #fs_net_sec_vm} | Single-tenant virtual machine | Y | All paid plans, including Flex, are single-tenant VMs or baremetal. |
+|  | ICIAE | Y | Request from IBM Support. If ICIAE is being requested for an existing service environment, your data must be migrated to your ICIAE environment by IBM Support. |
+|  | VPN | Y | Request from IBM Support |
+|  | On-disk encryption | Y | -  |
+|  | SSL/TLS connections | Y | -  |
+|  | IP whitelisting | Some | Available at Db2 user level. For network level, consider ICIAE or similar.  |
+|  | Key Protect (Bring your own key) | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | - |
+|  | MIS / Interconnected service | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | - |
+|  | Maximum concurrent connection limit: **Free plan** | Y | Max: 5 connections  |
+|  | Maximum concurrent connection limit: **paid plans** | N | Unlimited number of connections  |
+|  |  |  |  |
+| Pricing & purchasing{: #fs_price_purch} | BYOL discounts | Y | [Announcement](https://ibm.biz/db2oncloud-byol){:external} |
+|  | Available on IBM Cloud | Y | Both subscription and pay-as-you-go |
+|  | Available with software quote order | Y | All plans including Flex. [Parts & details](https://ibm.biz/db2oncloud-parts-public){:external}|
+|  | Available on Hybrid Data Management Platform (HDMP) | Y | Flex plan only. [Details about HDMP](https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform){:external}|
+|  | Daily billing | Y | Billing for Flex plans is based on peak daily usage. For example, if you scale up from 2 to 8 cores for one hour of a day, you will be billed for 8 cores for only that day, and 2 cores for all of the other days of the month. |
+|  | Hourly billing | [In roadmap](https://ibm.biz/db2oncloud-roadmap){:external} | - | 
+|  | Main pricing metric | Monthly | Prices are stated in monthly terms (for example, $189 USD per month). A prorated monthly price is based on the number of days of activated service during the month in which the service was terminated. [Examples](/docs/services/Db2onCloud?topic=Db2onCloud-plans_pricing#examples) |
+|  |  |  |  |
+| Deployment & scaling durations{: #fs_dep_scale_dur} | Dallas | **Deploy**: < 5 minutes. **Scale**: < 45 minutes. | Flex plan only, depending on inventory |
+| | Other US South | **Deploy**: 1 day. **Scale**: 8 hours. | Some locations shorter than others |
+| | Frankfurt & London | **Deploy**: < 5 min. **Scale**: 2 hours. | Flex plan only, depending on inventory |
+| | Other EU | **Deploy**: 3-5 days. **Scale**: 1-2 days. | Some locations shorter than others |
+| | Sydney | **Deploy**: < 1 hour. **Scale**: 2 hours. | Flex plan only, depending on inventory |
+| | Other AP | **Deploy**: 3-5 days. **Scale**: 3-5 days. | Some locations shorter than others. Lower volumes in AP result in slower infrastructure provisioning times. |
+-->
+        <table class="simple-tab-table" id="simpletabtable1" tab-title="General" tab-group="fs">
+          <caption caption-side="top">Table 1. General</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Db2 AESE</td>
+              <td>Y</td>
+              <td>Db2 v11.1.3.3</td>
+            </tr>
+            <tr>
+              <td>Read on Standby</td>
+              <td>Y</td>
+              <td>Offsite DR node only</td>
+            </tr>
+            <tr>
+              <td>Automatic rolling updates</td>
+              <td>Y</td>
+              <td>With HA plans</td>
+            </tr>
+            <tr>
+              <td>Data center location options</td>
+              <td>Y</td>
+              <td><a href="https://ibm.biz/db2oncloud-locations" target="_blank" class="external">Locations</a>. See also: Deployment &amp; scaling durations.</td>
+            </tr>
+            <tr>
+              <td>BLU in-memory</td>
+              <td>Y</td>
+              <td>Default is row, specify <code>CREATE TABLE..AS COL</code> for BLU</td>
+            </tr>
+            <tr>
+              <td>Activity Tracker</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Root access provided</td>
+              <td>N</td>
+              <td>Use Db2 Hosted if root access is required</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable2" tab-title="High availability & replication" tab-group="fs">
+          <caption caption-side="top">Table 2. High availability & replication</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Offsite DR</td>
+              <td>Y</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>High availability (2 nodes in 1 zone)</td>
+              <td>Y</td>
+              <td>99.99% uptime SLA</td>
+            </tr>
+            <tr>
+              <td>Different zones in same data center</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
+              <td><strong>Note</strong>: Offsite HADR is available</td>
+            </tr>
+            <tr>
+              <td>Change Data Capture (CDC)</td>
+              <td>Y</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Use as HADR from on premises</td>
+              <td>N</td>
+              <td>Use CDC. For information, see <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank" class="external">How can I migrate or sync data from Db2 to Db2 on Cloud?</a></td>
+            </tr>
+            <tr>
+              <td>Autonomous failover - HA</td>
+              <td>Y</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Autonomous failover - Offsite DR</td>
+              <td>N</td>
+              <td>Use button or API</td>
+            </tr>
+            <tr>
+              <td>IP moves with failover</td>
+              <td>Y</td>
+              <td>Local HA only; not offsite HADR</td>
+            </tr>
+            <tr>
+              <td>RPO: High Availability</td>
+              <td>0 s</td>
+              <td>HA is synchronous</td>
+            </tr>
+            <tr>
+              <td>RTO: High Availability</td>
+              <td>Typically 0-10 min</td>
+              <td>With retry code, will appear as slowness with Db2 ACR</td>
+            </tr>
+            <tr>
+              <td>RPO: Offsite node HADR</td>
+              <td>Typically &lt; 15 s</td>
+              <td>Offsite DR is asynchronous</td>
+            </tr>
+            <tr>
+              <td>RTO: Offsite node HADR</td>
+              <td>&lt; 3 min</td>
+              <td>Must initiate with console button or API</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable3" tab-title="System configurations" tab-group="fs">
+          <caption caption-side="top">Table 3. System configurations</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Max RAM and cores</td>
+              <td>1 TB RAM, 48 cores</td>
+              <td>Applies to Precise Performance XL plan</td>
+            </tr>
+            <tr>
+              <td>Max storage</td>
+              <td>11 TB</td>
+              <td>Applies to Precise Performance XL plan. Disk for both data and logs.</td>
+            </tr>
+            <tr>
+              <td>Flex: base plan</td>
+              <td>4 GB RAM, 1 core, 2 GB disk</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Flex: Max RAM and cores</td>
+              <td>128 GB RAM, 32 cores</td>
+              <td>Need higher specs? Use Precise Performance plan or contact IBM Support.</td>
+            </tr>
+            <tr>
+              <td>Flex: Max storage</td>
+              <td>4 TB</td>
+              <td>Disk for both data and logs. Need higher specs? Use Precise Performance plan or contact IBM Support.</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable4" tab-title="Maintenance policies & SLAs" tab-group="fs">
+          <caption caption-side="top">Table 4. Maintenance policies & SLAs</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>High availability plans</td>
+              <td>99.99%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Single server plans</td>
+              <td>99.5%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Offsite DR node</td>
+              <td>99.5%</td>
+              <td>Must use additional local HA to achieve 99.99%</td>
+            </tr>
+            <tr>
+              <td>Maintenance policy</td>
+              <td>Y</td>
+              <td><a href="https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html" target="_blank" class="external">Read details</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable5" tab-title="Security compliances" tab-group="fs">
+          <caption caption-side="top">Table 5. Security compliances</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HIPAA Ready</td>
+              <td>Y</td>
+              <td>All paid plans including Flex. Must request HIPAA mode from IBM Support.</td>
+            </tr>
+            <tr>
+              <td>HITRUST</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
+              <td>Db2 Hosted can be used today for HITRUST</td>
+            </tr>
+            <tr>
+              <td>International Organization for Standardization (ISO)</td>
+              <td>Y</td>
+              <td>ISO 27001, 27002, 27017, and 27018</td>
+            </tr>
+            <tr>
+              <td>Service Organization Controls (SOC)</td>
+              <td>Y</td>
+              <td>SOC 2 Type 2</td>
+            </tr>
+            <tr>
+              <td>GDPR</td>
+              <td>Y</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>EU Cloud</td>
+              <td>Y</td>
+              <td>Use Frankfurt region. Support provided physically in EU.</td>
+            </tr>
+            <tr>
+              <td>Full list of compliances</td>
+              <td>Y</td>
+              <td><a href="https://www.ibm.com/support/knowledgecenter/en/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" target="_blank" class="external">Security compliances</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable6" tab-title="Backup & restore" tab-group="fs">
+          <caption caption-side="top">Table 6. Backup & restore</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daily backups</td>
+              <td>Y</td>
+              <td>14 days of daily backups</td>
+            </tr>
+            <tr>
+              <td>Point-in-time self-serve recovery</td>
+              <td>Available Nov 15, 2018</td>
+              <td><a href="/docs/services/Db2onCloud?topic=Db2onCloud-bnr#point-in-time">Point-in-time restore</a></td>
+            </tr>
+            <tr>
+              <td>Backups kept offsite</td>
+              <td>On request</td>
+              <td>As of Dec 1, 2018, offsite is default</td>
+            </tr>
+            <tr>
+              <td>Keep backup up to 10 yrs</td>
+              <td>On request</td>
+              <td>As of Dec 1, 2018. Requires support ticket.</td>
+            </tr>
+            <tr>
+              <td>Query old data without restore</td>
+              <td>Y</td>
+              <td>Must set up <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable7" tab-title="Networking, security, & VMs" tab-group="fs">
+          <caption caption-side="top">Table 7. Networking, security, & VMs</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Single-tenant virtual machine</td>
+              <td>Y</td>
+              <td>All paid plans, including Flex, are single-tenant VMs or baremetal.</td>
+            </tr>
+            <tr>
+              <td>ICIAE</td>
+              <td>Y</td>
+              <td>Request from IBM Support. If ICIAE is being requested for an existing service environment, your data must be migrated to your ICIAE environment by IBM Support.</td>
+            </tr>
+            <tr>
+              <td>VPN</td>
+              <td>Y</td>
+              <td>Request from IBM Support</td>
+            </tr>
+            <tr>
+              <td>On-disk encryption</td>
+              <td>Y</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>SSL/TLS connections</td>
+              <td>Y</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>IP whitelisting</td>
+              <td>Some</td>
+              <td>Available at Db2 user level. For network level, consider ICIAE or similar.</td>
+            </tr>
+            <tr>
+              <td>Key Protect (Bring your own key)</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>MIS / Interconnected service</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Maximum concurrent connection limit: <strong>Free plan</strong></td>
+              <td>Y</td>
+              <td>Max: 5 connections</td>
+            </tr>
+            <tr>
+              <td>Maximum concurrent connection limit: <strong>paid plans</strong></td>
+              <td>N</td>
+              <td>Unlimited number of connections</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable8" tab-title="Pricing & purchasing" tab-group="fs">
+          <caption caption-side="top">Table 8. Pricing & purchasing</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BYOL discounts</td>
+              <td>Y</td>
+              <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank" class="external">Announcement</a></td>
+            </tr>
+            <tr>
+              <td>Available on IBM Cloud</td>
+              <td>Y</td>
+              <td>Both subscription and pay-as-you-go</td>
+            </tr>
+            <tr>
+              <td>Available with software quote order</td>
+              <td>Y</td>
+              <td>All plans including Flex. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank" class="external">Parts &amp; details</a></td>
+            </tr>
+            <tr>
+              <td>Available on Hybrid Data Management Platform (HDMP)</td>
+              <td>Y</td>
+              <td>Flex plan only. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank" class="external">Details about HDMP</a></td>
+            </tr>
+            <tr>
+              <td>Daily billing</td>
+              <td>Y</td>
+              <td>Billing for Flex plans is based on peak daily usage. For example, if you scale up from 2 to 8 cores for one hour of a day, you will be billed for 8 cores for only that day, and 2 cores for all of the other days of the month.</td>
+            </tr>
+            <tr>
+              <td>Hourly billing</td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">In roadmap</a></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Main pricing metric</td>
+              <td>Monthly</td>
+              <td>Prices are stated in monthly terms (for example, $189 USD per month). A prorated monthly price is based on the number of days of activated service during the month in which the service was terminated. <a href="/docs/services/Db2onCloud?topic=Db2onCloud-plans_pricing#examples">Examples</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable9" tab-title="Deployment & scaling durations" tab-group="fs">
+          <caption caption-side="top">Table 9. Deployment & scaling durations</caption>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Supported?</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dallas</td>
+              <td><strong>Deploy</strong>: &lt; 5 minutes. <strong>Scale</strong>: &lt; 45 minutes.</td>
+              <td>Flex plan only, depending on inventory</td>
+            </tr>
+            <tr>
+              <td>Other US South</td>
+              <td><strong>Deploy</strong>: 1 day. <strong>Scale</strong>: 8 hours.</td>
+              <td>Some locations shorter than others</td>
+            </tr>
+            <tr>
+              <td>Frankfurt &amp; London</td>
+              <td><strong>Deploy</strong>: &lt; 5 min. <strong>Scale</strong>: 2 hours.</td>
+              <td>Flex plan only, depending on inventory</td>
+            </tr>
+            <tr>
+              <td>Other EU</td>
+              <td><strong>Deploy</strong>: 3-5 days. <strong>Scale</strong>: 1-2 days.</td>
+              <td>Some locations shorter than others</td>
+            </tr>
+            <tr>
+              <td>Sydney</td>
+              <td><strong>Deploy</strong>: &lt; 1 hour. <strong>Scale</strong>: 2 hours.</td>
+              <td>Flex plan only, depending on inventory</td>
+            </tr>
+            <tr>
+              <td>Other AP</td>
+              <td><strong>Deploy</strong>: 3-5 days. <strong>Scale</strong>: 3-5 days.</td>
+              <td>Some locations shorter than others. Lower volumes in AP result in slower infrastructure provisioning times.</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </article>
   </main>
