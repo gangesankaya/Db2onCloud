@@ -2,6 +2,7 @@
 <?NLS TYPE="markdown.toc"?>
 <toc label="Db2 on Cloud">
   <property name="subcollection" value="Db2onCloud"/>
+  <property name="category" value="databases"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
   <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started#getting-started"/>
