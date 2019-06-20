@@ -7,6 +7,10 @@
                 "value": "Db2onCloud"
             },
             {
+                "name": "category",
+                "value": "databases"
+            },
+            {
                 "name": "audience",
                 "value": "service"
             },
