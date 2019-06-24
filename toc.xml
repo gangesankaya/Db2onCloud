@@ -93,7 +93,7 @@
   <topic label="Connecting to another Db2 database">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="Connecting to another Db2 database"/>
-    <topic href="federation.html#fed" label="Data virtualization (federation)" id="fed">
+    <topic href="federation.html#data_virt_fed" label="Data virtualization (federation)" id="data_virt_fed">
       <topic href="federation.html#use_cases" label="Use Cases" id="use_cases">
         <property name="type" value="anchor"/>
         <topic href="federation.html#consolidate-data-sources" label="Consolidate data sources" id="consolidate-data-sources"></topic>

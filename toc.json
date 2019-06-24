@@ -374,9 +374,9 @@
                 ],
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/federation.html#fed",
+                        "href": "services/Db2onCloud/federation.html#data_virt_fed",
                         "label": "Data virtualization (federation)",
-                        "id": "Db2onCloud-fed",
+                        "id": "Db2onCloud-data_virt_fed",
                         "topics": [
                             {
                                 "href": "services/Db2onCloud/federation.html#use_cases",
