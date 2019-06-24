@@ -933,7 +933,7 @@
                 ]
             },
             {
-                "href": "http://ibm.biz/db2oc_api",
+                "href": "https://cloud.ibm.com/apidocs/db2-on-cloud",
                 "label": "REST API",
                 "properties": [
                     {

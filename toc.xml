@@ -238,7 +238,7 @@
   <topic href="https://www.youtube.com/watch?v=bNfH0Wzx3is" label="Video: Integrating Jupyter notebooks">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="http://ibm.biz/db2oc_api" label="REST API">
+  <topic href="https://cloud.ibm.com/apidocs/db2-on-cloud" label="REST API">
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL reference">
