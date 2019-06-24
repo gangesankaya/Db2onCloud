@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="You can install the Db2 on Cloud driver package on Linux or PowerLinux by using ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/install_linux.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Installing the driver package on Linux or PowerLinux</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="install_dr_pkg_linux" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-install_dr_pkg_linux">
+        <h1 id="install_dr_pkg_linux">Installing the driver package on Linux or PowerLinux</h1>
+        <p class="shortdesc">You can install the Db2 on Cloud driver package on Linux or PowerLinux by using <code>installDSDriver</code>. </p>
+        <section id="section-prereq31">
+          <h2 id="prereq31">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Download the Db2 driver package for your operating system from the web console and install it. -->
+          <p><strong>On PowerLinux only</strong>, complete the following steps to install the XL C/C++ compiler runtime package:</p>
+          <ol>
+            <li>
+              <p>Download the XL C/C++ compiler runtime package from the FTP site. For example, to use the <strong>wget</strong> tool to download the runtime package for Linux little endian Ubuntu 14, issue the following command: </p>
+              <p><code>wget ftp://public.dhe.ibm.com/software/server/POWER/Linux/rte/xlcpp/le/ubuntu/dists/trusty/main/binary-ppc64el/*</code></p>
+            </li>
+            <li>
+              <p>Install the runtime package by issuing the following command:</p>
+              <p><code>sudo dpkg -iG *.deb</code> </p>
+            </li>
+          </ol>
+        </section>
+        <section id="section-proc31">
+          <h2 id="proc31">Procedure</h2>
+          <ol>
+            <li>
+              <p>Decompress the compressed driver package file that you downloaded earlier.</p>
+              <p>Example: </p>
+              <p><code>gunzip file_name.tar.gz</code></p>
+              <p><code>tar -xvf file_name.tar</code></p>
+              <p> A <code>dsdriver</code> subdirectory is created in the directory where you ran the decompression commands.</p>
+            </li>
+            <li>
+              <p>Extract the Java and ODBC/CLI drivers.</p>
+              <p>a. In the <code>dsdriver</code> subdirectory, run the <strong>installDSDriver</strong> command.</p>
+              <p>The <strong>installDSDriver</strong> command creates the <code>db2profile</code> and <code>db2cshrc</code> script files in the <code>dsdriver</code> directory.</p>
+              <p>b. Run one of the following script files based on your shell environment:</p>
+              <ul>
+                <li><strong>Bash or Korn shell</strong>: <code>source db2profile</code></li>
+                <li><strong>C shell</strong>: <code>source db2cshrc</code></li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+        <section id="section-wn">
+          <h2 id="wn">What&#39;s next?</h2>
+          <p>To be able to connect your local applications or client tools to your Db2 on Cloud database, <a href="/docs/services/Db2onCloud?topic=Db2onCloud-cfg_loc_env#cfg_loc_env">configure your local environment</a>. </p>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

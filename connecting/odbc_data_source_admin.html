@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="Use the Microsoft ODBC Data Source Administrator tool to define a connection between an ODBC or CLI application and a Db2 on Cloud database.">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/odbc_data_source_admin.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Connecting with the ODBC Data Source Administrator</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="con_prog_odbc_dsa" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-con_prog_odbc_dsa">
+        <h1 id="con_prog_odbc_dsa">Connecting with the ODBC Data Source Administrator</h1>
+        <p class="shortdesc">Use the Microsoft ODBC Data Source Administrator tool to define a connection between an ODBC or CLI application and a Db2 on Cloud database.</p>
+        <section id="section-prereq91">
+          <h2 id="prereq91">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Before you can connect to your database, you must perform the following steps:
+
+- [Verify prerequisites](prereqs.html), including installing driver packages, configuring your local environment, and downloading SSL certificates (if needed)
+- Collect [connection information](credentials.html), including database details such as host name and port numbers, and connection credentials such as user ID and password -->
+        </section>
+        <section id="section-proc91">
+          <h2 id="proc91">Procedure</h2>
+          <ol>
+            <li>
+              <p>Install the <a href="/docs/services/Db2onCloud?topic=Db2onCloud-dr_pkg#dr_pkg">Db2 driver package</a>.</p>
+            </li>
+            <li>
+              <p>Open ODBC Data Source Administrator and create either a User DSN or System DSN for the Db2 driver package.</p>
+            </li>
+            <li>
+              <p>Click <strong>Advanced</strong> Settings. Enter following CLI parameters with their values for the Db2 on Cloud server: <strong>Hostname</strong>, <strong>Port</strong>, and <strong>Database</strong>.</p>
+            </li>
+            <li>
+              <p>For an SSL connection, enter CLI parameter <strong>Security</strong> with value <code>SSL</code>.</p>
+            </li>
+            <li>
+              <p>Click <strong>Apply</strong>.</p>
+            </li>
+            <li>
+              <p>To test the connection, return to main page of ODBC Data Source Administrator. Click <strong>Configure</strong> for the DSN that you created. Enter the user ID and password for the server and click <strong>Connect</strong>.</p>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

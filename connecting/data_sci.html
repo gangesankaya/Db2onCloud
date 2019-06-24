@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-10-15">
+  <meta name="dcterms.date" content="2018-10-15">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="You can also connect external applications and tools to Db2 on Cloud and use them to further manage or analyze your data. ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/data_sci.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Data science</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="ds" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-ds">
+        <h1 id="ds">Data science</h1>
+        <p class="shortdesc">You can also connect external applications and tools to Db2 on Cloud and use them to further manage or analyze your data. </p>
+        <section id="section-watson_studio">
+          <h2 id="watson_studio">Watson Studio</h2>
+          <p class="shortdesc">After you create a project in IBM Watson Studio (formerly Data Science Experience), you add data assets to it so that you can work with data. All the collaborators in the project are automatically authorized to access the data in the project.</p>
+          <p>How you add data and from where you can add data differs between legacy and IBM Watson projects. IBM Watson projects use IBM Cloud Object Storage. The project is a legacy project if it uses Object Storage OpenStack Swift. </p>
+          <section id="section-to-create-a-new-connection-in-an-ibm-watson-project-">
+            <h3 id="to-create-a-new-connection-in-an-ibm-watson-project-">To create a new connection in an IBM Watson project:</h3>
+            <ol>
+              <li>
+                <p>Click <strong>Add to project &gt; Connection</strong>.</p>
+              </li>
+              <li>
+                <p>Choose a data source.</p>
+              </li>
+              <li>
+                <p>Enter the connection information required for your data source. Typically, you need to provide information like the host, port number, user name, and password.</p>
+              </li>
+              <li>
+                <p>You can discover assets from connections to Db2 on Cloud, which gives you the ability to add all tables from the connection as data assets to a project. Select <strong>Discover data assets</strong> and choose a project.</p>
+              </li>
+              <li>
+                <p>Click <strong>Create</strong>. The connection appears on the <strong>Assets</strong> page.</p>
+              </li>
+            </ol>
+            <p>Watch this video to see how to create a connection and add connected data to a project.</p>
+            <iframe class="embed-responsive-item" id="youtubeplayer" title="Create a connection and add connected data to a project" type="text/html" width="640" height="390" src="//www.youtube.com/embed/U7-gCbo4QtM?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen
+              allowfullscreen> </iframe>
+          </section>
+          <section id="section-to-create-a-new-connection-in-a-legacy-project-">
+            <h3 id="to-create-a-new-connection-in-a-legacy-project-">To create a new connection in a legacy project:</h3>
+            <ol>
+              <li>
+                <p>From your project&#39;s <strong>Assets</strong> page, click the <strong>Find and add data</strong> icon.</p>
+              </li>
+              <li>
+                <p>On the <strong>Connections</strong> pane, click <strong>Create Connection</strong>.</p>
+              </li>
+              <li>
+                <p>Enter a name and description and choose a Service Category:</p>
+                <p><strong>Data Service</strong> = IBM Cloud data service</p>
+                <p>When you choose <strong>Data Service</strong>, your existing IBM Cloud data services appear in the <strong>Service Instance</strong> list.</p>
+              </li>
+              <li>
+                <p>Choose the service or database server from the list.</p>
+              </li>
+              <li>
+                <p>Enter the connection information:</p>
+                <p>When you choose <strong>Data Service</strong>, your existing IBM Cloud data services appear in the <strong>Service Instance</strong> list.</p>
+              </li>
+              <li>
+                <p>Click <strong>Create</strong>. The connection is available to all legacy projects.</p>
+              </li>
+              <li>
+                <p>On the <strong>Connections</strong> pane, select the connection and click <strong>Apply</strong>.</p>
+              </li>
+            </ol>
+            <p>To add an existing connection to a legacy project:</p>
+            <ol>
+              <li>
+                <p>From your project&#39;s <strong>Assets</strong> page, click the <strong>Find and add data</strong> icon.</p>
+              </li>
+              <li>
+                <p>On the <strong>Connections</strong> pane, select the connection and click <strong>Apply</strong>.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-spss_stats">
+          <h2 id="spss_stats">SPSS Statistics</h2>
+          <p class="shortdesc">These instructions explain how to create a connection from IBM® SPSS® Statistics to a Db2 on Cloud database.</p>
+          <section id="section-prereq11">
+            <h3 id="prereq11">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc11">
+            <h3 id="proc11">Procedure</h3>
+            <ol>
+              <li>
+                <p>In SPSS Statistics, click <strong>File &gt; Open Database &gt; New Query</strong>.</p>
+              </li>
+              <li>
+                <p>In the Database Wizard, click <strong>Add ODBC data source</strong>.</p>
+              </li>
+              <li>
+                <p>Use the ODBC Data Source Administrator window to add an ODBC data source name (DSN) for the Db2 on Cloud database:</p>
+                <p>a. On the <strong>User DSN</strong> tab, click <strong>Add</strong>.</p>
+                <p>b. On the Create New Data Source window, select the driver that is named <strong>IBM DB2 ODBC DRIVER</strong> and click <strong>Finish</strong>.</p>
+                <p>Be sure that the driver that you select is not a driver with a similar name such as <code>IBM DB2® ODBC DRIVER - DB2COPY</code>. If the driver does not appear in the list, exit SPSS Statistics, then download and install the driver. See
+                  <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-dr_pkg#dr_pkg">Driver package</a>.</p>
+                <p>c. In the ODBC IBM Driver - Add window, enter a data source name (usually the name of the database you are connecting to), and click <strong>Add</strong>.</p>
+                <p>d. From the CLI/ODBC Settings window, on the <strong>Data Source</strong> tab, enter the user ID and password from the <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-db_details_cxn_creds#db_details_cxn_creds">connection information</a>                  that you collected beforehand.</p>
+                <p>e. On the Advanced Settings page, for each of the following parameters, click <strong>Add</strong> to open the Add CLI Parameter window to begin the step, and click <strong>OK</strong> to return to the Advanced Settings page:</p>
+                <ul>
+                  <li>
+                    <p>Select the <code>Database</code> parameter, then click <strong>OK</strong> to open the CLI/ODBC Settings window. In the <strong>Pending Value</strong> field, enter the database name from the connection information that you collected
+                      beforehand.</p>
+                  </li>
+                  <li>
+                    <p>Select the <code>Hostname</code> parameter, then click <strong>OK</strong> to open the CLI/ODBC Settings window. In the <strong>Pending Value</strong> field, enter the host name from the connection information that you collected beforehand.</p>
+                  </li>
+                  <li>
+                    <p>Select the <code>Port</code> parameter, then click <strong>OK</strong> to open the CLI/ODBC Settings window. In the <strong>Pending Value</strong> field, enter the port number from the connection information that you collected beforehand.</p>
+                  </li>
+                  <li>
+                    <p>Select the <code>Protocol</code> parameter, then click <strong>OK</strong> to open the CLI/ODBC Settings window. Select <strong>TCP/IP</strong>.</p>
+                  </li>
+                </ul>
+                <p>f. Click <strong>OK</strong> to return to the ODBC Data Source Administrator window.</p>
+                <p>g. On the <strong>User DSN</strong> tab, select the data source name, then click <strong>Configure</strong>.</p>
+                <p>h. On the CLI/ODBC Settings window, click <strong>Connect</strong> to test the connection.</p>
+                <ul>
+                  <li>
+                    <p>If the connection is successful, click <strong>OK</strong> to return to the ODBC Data Source Administrator window, and then click <strong>OK</strong> to exit the window.</p>
+                  </li>
+                  <li>
+                    <p>If the connection is not successful, note and correct any errors before you test the connection again.</p>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-sas">
+          <h2 id="sas">SAS</h2>
+          <p class="shortdesc">These instructions explain how to create a connection from SAS to a Db2 on Cloud database.</p>
+          <section id="section-prereq12">
+            <h3 id="prereq12">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc12">
+            <h3 id="proc12">Procedure</h3>
+            <p>For steps on how to connect from SAS to a Db2 on Cloud database, see the SAS documentation:</p>
+            <ul>
+              <li><a href="https://documentation.sas.com/?docsetId=acreldb&amp;docsetTarget=p1dzq4zjg1iycgn16l4xj9nnvibt.htm&amp;docsetVersion=9.4&amp;locale=en" target="_blank" class="external">SAS/ACCESS Interface to DB2 under UNIX and PC Hosts</a></li>
+            </ul>
+          </section>
+        </section>
+        <section id="section-r_dev_env">
+          <h2 id="r_dev_env">R development environment</h2>
+          <p class="shortdesc">Instead of using the RStudio® environment that is integrated within IBM Watson Studio, you might prefer to use your own, locally-installed R development environment. For example, you might have your own RStudio installation, or you might prefer
+            to use some other development tool such as Rcmdr or Rattle. These instructions explain how to connect an R development environment to a Db2 on Cloud database.</p>
+          <section id="section-prereq13">
+            <h3 id="prereq13">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc13">
+            <h3 id="proc13">Procedure</h3>
+            <ol>
+              <li>
+                <p>In your local R environment, install the <code>ibmdbR</code> package by entering the following command:</p>
+                <p><code>install.packages(&quot;ibmdbR&quot;)</code></p>
+                <p>Your local R environment accesses the Comprehensive R Archive Network (CRAN) and automatically downloads and installs the <code>ibmdbR</code> package and any prerequisite packages that are not already installed.</p>
+              </li>
+              <li>
+                <p>Create an ODBC driver connection between your R development environment and your Db2 on Cloud database:</p>
+                <p>a. <a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_cli_and_odbc_applications.html" target="_blank" class="external">Set up your database as an ODBC data source</a>.</p>
+                <p>b. Open your locally installed R development environment.</p>
+                <p>c. At the R prompt, enter the following statements to create the connection. Replace the placeholders with the <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-db_details_cxn_creds#db_details_cxn_creds">connection information</a>                  that you collected beforehand.</p>
+                <ul>
+                  <li>
+                    <p>If your locally installed R development environment runs in the Db2 on Cloud database:</p>
+                    <pre><code class="hljs">library(ibmdbR)
+host.name &lt;- &quot;placeholderForYourHostName&quot;
+port &lt;-&quot;placeholderForPortNumber&quot; # 50000 if not using SSL or 50001 if using SSL
+user.name &lt;-&quot;placeholderForYourUserName&quot;
+pwd &lt;- &quot;placeholderForYourPassword&quot;
+con.text &lt;- paste(&quot;placeholderForYourDSNName;DRIVER=BLUDB&quot;,
+                  &quot;;Database=BLUDB&quot;,
+                  &quot;;Hostname=&quot;,host.name,
+                  &quot;;Port=&quot;,port,
+                  &quot;;PROTOCOL=TCPIP&quot;,
+                  &quot;;UID=&quot;, user.name,
+                  &quot;;PWD=&quot;,pwd,sep=&quot;&quot;)
+# Connect to using a odbc Driver Connection string to a remote database
+con &lt;- idaConnect(con.text)
+</code></pre>
+                  </li>
+                  <li>
+                    <p>If your locally installed R development environment does not run in the Db2 on Cloud database:</p>
+                    <pre><code class="hljs">library(ibmdbR)
+driver.name &lt;- &quot;{placeholderForYourDriverName}&quot;
+db.name &lt;- &quot;placeholderForYourDatabaseName&quot;
+host.name &lt;- &quot;placeholderForYourHostName&quot;
+port &lt;-&quot;placeholderForYourPort&quot;
+user.name &lt;-&quot;placeholderForYourUserName&quot;
+pwd &lt;- &quot;placeholderForYourPassword&quot;
+con.text &lt;- paste(&quot;placeholderForYourDSNName;DRIVER=&quot;,driver.name,
+                  &quot;;Database=&quot;,db.name,
+                  &quot;;Hostname=&quot;,host.name,
+                  &quot;;Port=&quot;,port,
+                  &quot;;PROTOCOL=TCPIP&quot;,
+                  &quot;;UID=&quot;, user.name,
+                  &quot;;PWD=&quot;,pwd,sep=&quot;&quot;)
+# Connect to using a odbc Driver Connection string to a remote database
+con &lt;- idaConnect(con.text)
+</code></pre>
+                    <p><strong>Note</strong>: The statement that is used to create the connection object uses the <code>idaConnect()</code> method, not the <code>odbcConnect()</code> or <code>odbcDriverConnect()</code> methods.</p>
+                  </li>
+                </ul>
+                <p>d. Initialize the analytics package by issuing the following R command:</p>
+                <p><code>idaInit(con)</code></p>
+                <p>e. To test whether the connection is working, issue the following R command:</p>
+                <p><code>idaShowTables()</code></p>
+                <p>The console displays a list of all of the tables and views in the current schema.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

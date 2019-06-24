@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="Define a connection between a Microsoft Windows ODBC or CLI application and a Db2 on Cloud database.">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/odbc_cli.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Connecting programmatically with ODBC or CLI</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="con_prog_odbc_cli" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-con_prog_odbc_cli">
+        <h1 id="con_prog_odbc_cli">Connecting programmatically with ODBC or CLI</h1>
+        <p class="shortdesc">Define a connection between a Microsoft Windows ODBC or CLI application and a Db2 on Cloud database.</p>
+        <section id="section-prereq81">
+          <h2 id="prereq81">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Before you can connect to your database, you must perform the following steps:
+
+- [Verify prerequisites](prereqs.html), including installing driver packages, configuring your local environment, and downloading SSL certificates (if needed)
+- Collect [connection information](credentials.html), including database details such as host name and port numbers, and connection credentials such as user ID and password -->
+        </section>
+        <section id="section-proc81">
+          <h2 id="proc81">Procedure</h2>
+          <ol>
+            <li>
+              <p>In a command shell on Linux operating systems, at the Windows command prompt, or in the Db2 command window on Windows operating systems, enter the following commands:</p>
+              <p><strong>Note</strong>: These commands create new entries in the driver configuration file (<code>db2dsdriver.cfg</code>) on your computer and set the connection attributes. You need to do this step only one time.</p>
+              <ul>
+                <li>
+                  <p>For a connection with SSL:</p>
+                  <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50001 -parameter &quot;SecurityTransportMode=SSL&quot;</code></p>
+                  <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50001</code></p>
+                </li>
+                <li>
+                  <p>For a connection without SSL:</p>
+                  <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+                  <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+                </li>
+              </ul>
+              <p>where:</p>
+              <p><code>&lt;hostname&gt;</code> is the host name of the server</p>
+              <p><code>&lt;alias&gt;</code> is a DSN alias that you choose</p>
+            </li>
+            <li>
+              <p>[<em>Optional</em>]: To test the connection to the database, run this command from the command prompt:</p>
+              <p><code>db2cli validate -dsn &lt;alias&gt; -connect -user &lt;user_id&gt; -passwd &lt;password&gt;</code></p>
+              <p>where:</p>
+              <p><code>&lt;alias&gt;</code> is the DSN alias that you created with the <strong>db2cli writecfg</strong> command</p>
+              <p><code>&lt;user_id&gt;</code> is from the connect credentials that you collected beforehand</p>
+              <p><code>&lt;password&gt;</code> is from the connect credentials that you collected beforehand</p>
+            </li>
+            <li>
+              <p>[<em>Optional</em>]: To register the data source name (DSN) with Microsoft ODBC Driver Manger and to work with Microsoft ODBC applications, run the following command. By default, the DSN is created as user DSN.</p>
+              <p><code>db2cli registerdsn -add -dsn &lt;alias&gt;</code></p>
+              <p>where:</p>
+              <p><code>&lt;alias&gt;</code> is the DSN alias that you created with the <strong>db2cli writecfg</strong> command</p>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-10-24">
+  <meta name="dcterms.date" content="2018-10-24">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="You can also connect external applications and tools to Db2 on Cloud and use them to further manage or analyze your data. ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/vis_bi.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Data visualization/BI</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="data_vis_bi" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-data_vis_bi">
+        <h1 id="data_vis_bi">Data visualization/BI</h1>
+        <p class="shortdesc">You can also connect external applications and tools to Db2 on Cloud and use them to further manage or analyze your data. </p>
+        <section id="section-cognos">
+          <h2 id="cognos">Cognos Analytics</h2>
+          <p class="shortdesc">You can run your IBM Cognos® reports against data in the cloud rather than the data in an on-premises database. After you load your data to a Db2 on Cloud database, you set up the JDBC driver, and then use the Cognos administration tools to
+            create the database connection.
+            <!--These instructions explain how to connect to the database from Cognos version 10.2.1.-->
+          </p>
+          <p>Watch this video to see how to create a connection.</p>
+          <iframe class="embed-responsive-item" id="youtubeplayer" title="Creating a connection from Cognos Analytics" type="text/html" width="640" height="390" src="//www.youtube.com/embed/TRUEPVHGi0s?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen
+            allowfullscreen> </iframe>
+          <p>For more information, see <a href="https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ug_cra.doc/c_create_ds.html#create_ds" target="_blank" class="external">Connecting Cognos Analytics</a></p>
+        </section>
+        <section id="section-looker">
+          <h2 id="looker">Looker</h2>
+          <p class="shortdesc">You can connect Looker to a Db2 on Cloud database. Looker is a business intelligence app and big data analytics platform with which you can explore, analyze, and share real-time business analytics.</p>
+          <p><a href="https://docs.looker.com/setup-and-management/connecting-to-db" target="_blank" class="external">Connecting Looker</a></p>
+        </section>
+        <section id="section-tableau">
+          <h2 id="tableau">Tableau</h2>
+          <p class="shortdesc">These instructions explain how to connect Tableau to a Db2 on Cloud database and apply to Tableau Desktop
+            <!--version 8.x-->, but you can use similar steps for other Tableau tools.</p>
+          <section id="section-prereq8">
+            <h3 id="prereq8">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc8">
+            <h3 id="proc8">Procedure</h3>
+            <ol>
+              <li>In Tableau Desktop, open the window or page in your tool that is used to define a database connection.</li>
+              <li>From the start page, click <strong>Connect to data</strong>.</li>
+              <li>From the <strong>Data Sources</strong> list, select the data source or driver to use for your database connection. In the <strong>On a server</strong> section of the list, select <strong>IBM Db2</strong>.</li>
+              <li>From the <strong>IBM DB2 Connection</strong> window, enter the connection information by using the following table.</li>
+            </ol>
+            <table>
+              <caption caption-side="top">Table 1. Fields in Tableau for connection information</caption>
+              <thead>
+                <tr>
+                  <th>Tableau field</th>
+                  <th>Db2 connections information field</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Step 1: Enter a server name</td>
+                  <td>Host name</td>
+                </tr>
+                <tr>
+                  <td>Step 2: Port</td>
+                  <td>Port number</td>
+                </tr>
+                <tr>
+                  <td>Step 3: Enter a database on the server</td>
+                  <td>Database name</td>
+                </tr>
+                <tr>
+                  <td>Username</td>
+                  <td>User ID</td>
+                </tr>
+                <tr>
+                  <td>Password</td>
+                  <td>Password</td>
+                </tr>
+              </tbody>
+            </table>
+            <ol>
+              <li>Click <strong>Connect</strong> to establish the connection. Tableau offers several options for connecting to your data. To make full use of your Db2 on Cloud database, choose the <strong>Connect Live</strong> option.</li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-excel">
+          <h2 id="excel">Microsoft Excel</h2>
+          <p class="shortdesc">These instructions explain how to connect Microsoft Excel
+            <!--2010-->to a Db2 on Cloud database.</p>
+          <section id="section-prereq9">
+            <h3 id="prereq9">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+            <p>You must have the Db2 driver package or the IBM® Data Server Driver Package installed on your local computer. </p>
+            <p><strong>Restriction</strong>: Connections between Excel and Db2 on Cloud are supported on only the Windows operating system.</p>
+          </section>
+          <section id="section-proc9">
+            <h3 id="proc9">Procedure</h3>
+            <ol>
+              <li>
+                <p>In the web console, go to the <strong>Run SQL</strong> page.</p>
+              </li>
+              <li>
+                <p>Type one or more SELECT statements in the editor text box.</p>
+              </li>
+              <li>
+                <p>Click one of the Run options.</p>
+              </li>
+              <li>
+                <p>Click <strong>Excel ODC File</strong>.</p>
+              </li>
+              <li>
+                <p>Download and open the <code>BLUExcel.odc</code> file in Excel. If a security notice is displayed, click <strong>Enable</strong>.</p>
+              </li>
+              <li>
+                <p>Click <strong>Open</strong> to connect to the Db2 on Cloud database. The <strong>Connect To DB2 Database</strong> dialog box opens.</p>
+              </li>
+              <li>
+                <p>Type the user ID and password that you use to log in to Db2 on Cloud. To obtain the user ID and password, click <strong>Connect</strong> in the web console or <strong>Connect &gt; Connection Information</strong> in the web console.</p>
+              </li>
+              <li>
+                <p>Ensure that the connection mode is <code>Share</code>, and then click <strong>OK</strong>.</p>
+              </li>
+            </ol>
+          </section>
+          <section id="section-results2">
+            <h3 id="results2">Results</h3>
+            <p>The query results are displayed in an Excel spreadsheet. These are the same results that are displayed in the Results viewer. Now you can generate charts and reports and analyze your data by using Excel. For more information about how to do
+              this and how to run SQL queries on your data from the web console, see: </p>
+            <ul>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.analytics.doc/doc/explore_excel_reports.html" target="_blank" class="external">Tutorial: Generating charts and reports by using Excel</a></li>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.analytics.doc/doc/exploreexcel.html" target="_blank" class="external">Analyzing with Excel</a></li>
+            </ul>
+          </section>
+        </section>
+        <section id="section-esri_arcgis">
+          <h2 id="esri_arcgis">Esri ArcGIS for Desktop</h2>
+          <p class="shortdesc">You can connect Esri ArcGIS for Desktop
+            <!--version 10.3.1 -->to a Db2 on Cloud database and then use it to analyze and visualize geospatial data.</p>
+          <section id="section-prereq10">
+            <h3 id="prereq10">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+            <p>You must have the Db2 driver package or the IBM® Data Server Driver Package installed on your computer.</p>
+          </section>
+          <section id="section-proc10">
+            <h3 id="proc10">Procedure</h3>
+            <ol>
+              <li>
+                <p>Determine your ODBC DSN data from the <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-db_details_cxn_creds#db_details_cxn_creds">connection information</a> that you collected beforehand.</p>
+              </li>
+              <li>
+                <p>Create a new connection:</p>
+                <p>a. In the ArcCatalog Catalog tree, open the Database Connections node and click <strong>Add Database Connection</strong>.</p>
+                <p>b. In the Database Connections wizard:</p>
+                <ul>
+                  <li>Select <strong>DB2</strong> from the Database Platform drop-down list.</li>
+                  <li>
+                    <p>Enter the following string in the <strong>Data source</strong> field:</p>
+                    <pre><code class="hljs">HostName=&lt;hostname&gt;;Port=&lt;port&gt;;Database=&lt;database&gt;;
+CLIENTBUFFERSUNBOUNDLOBS=1;LOBCACHESIZE=50000000;
+FET_BUF_SIZE=256K
+</code></pre>
+                    <p>where <code>&lt;hostname&gt;</code>, <code>&lt;port&gt;</code>, and <code>&lt;database&gt;</code> are placeholders that represent the host name, port number, and database name that you noted earlier.</p>
+                  </li>
+                  <li>
+                    <p>Select <strong>Database authentication</strong> as the authentication type.</p>
+                  </li>
+                  <li>
+                    <p>Specify your user name and password (the user ID and password that you noted earlier) in the corresponding fields.</p>
+                  </li>
+                  <li>
+                    <p>Press <strong>OK</strong>.</p>
+                    <p>
+                      <figure>
+                        <img src="images/2_gs_conn.jpg" alt="Database Connections wizard" title="Database Connections wizard">
+                        <figcaption>Figure 1. Database Connections wizard</figcaption>
+                      </figure>
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section id="section-results3">
+            <h3 id="results3">Results</h3>
+            <p>The ArcCatalog component of Esri ArcGIS for Desktop is now connected to your Db2 on Cloud database. </p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

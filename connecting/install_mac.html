@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="You can install the Db2 on Cloud driver package on Mac OS X by using the ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/install_mac.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Installing the driver package on Mac OS X</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="install_dr_pkg_mac" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-install_dr_pkg_mac">
+        <h1 id="install_dr_pkg_mac">Installing the driver package on Mac OS X</h1>
+        <p class="shortdesc">You can install the Db2 on Cloud driver package on Mac OS X by using the <code>installDSDriver.sh</code> script. </p>
+        <section id="section-prereq41">
+          <h2 id="prereq41">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Download the Db2 driver package for your operating system from the web console and install it. -->
+        </section>
+        <section id="section-proc41">
+          <h2 id="proc41">Procedure</h2>
+          <ul>
+            <li>
+              <p><strong>For a new installation</strong></p>
+              <ol>
+                <li>
+                  <p>Mount the disk image by double-clicking the <code>macos_dsdriver.dmg</code> file.</p>
+                  <p>A new <strong>Finder</strong> window opens with the contents of the disk image.</p>
+                  <p>If the <strong>Finder</strong> window does not open, double-click the <code>macos_dsdriver</code> icon on your desktop.</p>
+                </li>
+                <li>
+                  <p>In the <strong>Finder</strong> window, double-click the <code>installDSDriver.sh</code> file.</p>
+                  <p>The driver package is installed in the default location: <code>/Applications/dsdriver</code>.</p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <p><strong>For updates to your existing driver package installation</strong></p>
+              <ol>
+                <li>
+                  <p>Back up current configuration files:</p>
+                  <p>a. Go the <code>Applications/dsdriver/cfg</code> folder.</p>
+                  <p>b. Copy the following files to a different folder: </p>
+                  <p> <code>db2cli.ini</code></p>
+                  <p> <code>db2dsdriver.cfg</code></p>
+                </li>
+                <li>Remove the currently installed driver package by right-clicking the <code>dsdriver</code> folder and selecting <strong>Move to Trash</strong>.</li>
+                <li>
+                  <p>Install the new driver package as described in the preceding <strong>For a new installation</strong> section:</p>
+                  <p>a. Mount the disk image by double-clicking the <code>macos_dsdriver.dmg</code> file. b. In the <strong>Finder</strong> window, double-click the <code>installDSDriver.sh</code> file.</p>
+                </li>
+                <li>
+                  <p>Restore the configuration files:</p>
+                  <p>Copy the <code>db2cli.ini</code> and <code>db2dsdriver.cfg</code> files that you saved from Step 1 to the <code>/Applications/dsdriver/cfg</code> folder.</p>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </section>
+        <section id="section-wn41">
+          <h2 id="wn41">What&#39;s next?</h2>
+          <p>To be able to connect your local applications or client tools to your Db2 on Cloud database, <a href="/docs/services/Db2onCloud?topic=Db2onCloud-cfg_loc_env#cfg_loc_env">configure your local environment</a>.</p>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="Define a connection between a .NET application and your Db2 on Cloud database. ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/net_apps.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Connecting programmatically with .NET</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="con_prog_net" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-con_prog_net">
+        <h1 id="con_prog_net">Connecting programmatically with .NET</h1>
+        <p class="shortdesc">Define a connection between a .NET application and your Db2 on Cloud database. </p>
+        <section id="section-prereq71">
+          <h2 id="prereq71">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Before you can connect to your database, you must perform the following steps:
+
+- [Verify prerequisites](prereqs.html), including installing driver packages, configuring your local environment, and downloading SSL certificates (if needed)
+- Collect [connection information](credentials.html), including database details such as host name and port numbers, and connection credentials such as user ID and password -->
+        </section>
+        <section id="section-proc71">
+          <h2 id="proc71">Procedure</h2>
+          <p>The following steps show you how to connect your application to the database with .NET.</p>
+          <ol>
+            <li>
+              <p>From a command prompt, enter the following commands. These commands create new entries in the driver configuration file (<code>db2dsdriver.cfg</code>) on your computer and set the connection attributes. You need to do this step only one
+                time.</p>
+              <ul>
+                <li>
+                  <p>For a connection with SSL:</p>
+                  <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50001</code></p>
+                  <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50001</code></p>
+                  <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50001 -parameter &quot;SecurityTransportMode=SSL&quot;</code></p>
+                  <p>where:</p>
+                  <p><code>&lt;hostname&gt;</code>: The host name of the server.</p>
+                  <p><code>&lt;alias&gt;</code>: The name for a DSN alias that you want to use to establish the .NET connection. Choose a name that is meaningful to you; for example, <code>analytics</code>. </p>
+                </li>
+                <li>
+                  <p>For a connection without SSL:</p>
+                  <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+                  <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>[<em>Optional</em>]: To verify the .NET connection to the database, enter the following command at a command prompt:</p>
+              <p><code>testconn40 &quot;DATABASE=&lt;alias&gt;;UID=&lt;user_id&gt;;PWD=&lt;password&gt;;&quot;</code></p>
+              <p>where:</p>
+              <p><code>&lt;alias&gt;</code>: The name of the DSN alias that you created with the <strong>db2cli writecfg</strong> command in step 1.</p>
+              <p><code>&lt;user_id&gt;</code>: Your Db2 on Cloud user ID. </p>
+              <p><code>&lt;password&gt;</code>: The password that you use to connect to your Db2 on Cloud database. </p>
+            </li>
+          </ol>
+        </section>
+        <section id="section-ex71">
+          <h2 id="ex71">Example</h2>
+          <p>The following syntax shows sample C# code that uses the .NET driver to make a connection to the database.</p>
+          <pre><code class="hljs">using System;
+using IBM.Data.DB2;
+
+namespace dotNetSSLTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DB2Command MyDB2Command = null;
+            // Use the dsn alias that you defined in db2dsdriver.cfg with the db2cli writecfg command in step 1.
+            String MyDb2ConnectionString = &quot;database=alias;uid=userid;pwd=password;&quot;; 
+            DB2Connection MyDb2Connection = new DB2Connection(MyDb2ConnectionString);
+            MyDb2Connection.Open();
+            MyDB2Command = MyDb2Connection.CreateCommand();
+            MyDB2Command.CommandText = &quot;SELECT branch_code, city from GOSALES.BRANCH&quot;;
+            Console.WriteLine(MyDB2Command.CommandText);
+
+            DB2DataReader MyDb2DataReader = null;
+            MyDb2DataReader = MyDB2Command.ExecuteReader();
+            Console.WriteLine(&quot;BRANCH\tCITY&quot;);
+            Console.WriteLine(&quot;============================&quot;);
+            while (MyDb2DataReader.Read())
+            {
+                for (int i = 0; i &lt;= 1; i++)
+                {
+                    try
+                    {
+                        if (MyDb2DataReader.IsDBNull(i))
+                        {
+                            Console.Write(&quot;NULL&quot;);
+                        }
+                        else
+                        {
+                            Console.Write(MyDb2DataReader.GetString(i));
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Write(e.ToString());
+                    }
+                    Console.Write(&quot;\t&quot;); 
+
+                }
+                Console.WriteLine(&quot;&quot;);
+            }
+            MyDb2DataReader.Close();
+            MyDB2Command.Dispose();
+            MyDb2Connection.Close();
+        }
+    }
+}
+</code></pre>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

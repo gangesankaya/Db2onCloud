@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="The Db2 on Cloud database uses a certificate for SSL connections that is issued by a third-party digital certificate authority (CA). ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/blob/master/connecting/ssl.md">
+  <meta name="github.issue" content="yes" repo="https://github.com/IBM-Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Secure Sockets Layer (SSL) support</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="ssl_support" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-ssl_support">
+        <h1 id="ssl_support">Secure Sockets Layer (SSL) support</h1>
+        <p class="shortdesc">The Db2 on Cloud database uses a certificate for SSL connections that is issued by a third-party digital certificate authority (CA). </p>
+        <p>The CA certificate is part of the Db2 driver package. If your application connects with a driver from the Db2 driver package, you do not need to download the certificate separately. You can download the Db2 driver package from the web console.</p>
+        <p>However, if your application has its own driver, you might need to download the certificate separately. You can download the certificate from the web console.</p>
+        <p>Secure Sockets Layer (SSL) is a security protocol that provides communication privacy. SSL enables client and server applications to communicate in a way that is designed to prevent eavesdropping, tampering, and message forgery. SSL-enabled client
+          applications use standard encryption techniques to help ensure secure communication.</p>
+        <p>Configuring your applications to connect to your Db2 on Cloud database with SSL depends on your company policy. Both the standard and the SSL protocols that you can use to connect to the database transmit user names and passwords as encrypted
+          data. If you want to ensure complete end-to-end security, transmit all database information, including sensitive data and metadata, through an SSL connection. Administrators can make SSL connections mandatory by changing a setting on the web
+          console.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

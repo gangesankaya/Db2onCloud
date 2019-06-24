@@ -60,33 +60,261 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic label="Connections">
+  <topic label="Connecting">
     <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Connections"/>
-    <topic href="connecting.html#connect" label="Connecting" id="connect">
-      <topic href="connecting.html#connect_prereq" label="Prerequisites" id="connect_prereq">
+    <property name="topicgroup" value="Connecting"/>
+    <topic href="connecting/connecting.html#connect_ov" label="Connecting overview" id="connect_ov">
+      <topic href="connecting/connecting.html#prereqs" label="Prerequisites" id="prereqs">
         <property name="type" value="anchor"/>
-        <topic href="connecting.html#cfg_env" label="Configuring your environment" id="cfg_env"></topic>
+        <topic href="connecting/connecting.html#collect_info" label="Collecting connection information" id="collect_info"></topic>
+        <topic href="connecting/connecting.html#dl_install" label="Downloading and installing driver package" id="dl_install"></topic>
+        <topic href="connecting/connecting.html#cfg_env" label="Configuring your environment" id="cfg_env"></topic>
       </topic>
-      <topic href="connecting.html#conx_prgrm" label="Connecting programmatically" id="conx_prgrm">
+      <topic href="connecting/connecting.html#connect_opts" label="Connectivity options" id="connect_opts">
         <property name="type" value="anchor"/>
       </topic>
-      <topic href="connecting.html#conx_apps_tools" label="Connecting apps and tools" id="conx_apps_tools">
+      <topic href="connecting/connecting.html#conx_prgrm" label="Connecting programmatically" id="conx_prgrm">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/connecting.html#conx_apps_tools" label="Integrating apps and tools" id="conx_apps_tools">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/connecting.html#di" label="Data integration" id="di"></topic>
+        <topic href="connecting/connecting.html#dvis_bi" label="Data visualization/BI" id="dvis_bi"></topic>
+        <topic href="connecting/connecting.html#dsci" label="Data science" id="dsci"></topic>
+      </topic>
+      <topic href="connecting/connecting.html#fed" label="Connecting to another Db2 database" id="fed">
         <property name="type" value="anchor"/>
       </topic>
     </topic>
-    <topic href="connectivity_options.html#connect_options" label="Connectivity options" id="connect_options">
-      <topic href="connectivity_options.html#pub_endpt" label="Connecting to a public endpoint (default option)" id="pub_endpt">
+    <topic href="connecting/connectivity_options.html#connect_options" label="Connectivity options" id="connect_options">
+      <topic href="connecting/connectivity_options.html#pub_endpt" label="Connecting to a public endpoint (default option)" id="pub_endpt">
         <property name="type" value="anchor"/>
-        <topic href="connectivity_options.html#pub_endpt_steps" label="How to connect to a public endpoint:" id="pub_endpt_steps"></topic>
+        <topic href="connecting/connectivity_options.html#pub_endpt_steps" label="How to connect to a public endpoint:" id="pub_endpt_steps"></topic>
       </topic>
-      <topic href="connectivity_options.html#priv_endpt" label="Connecting to a private endpoint: IBM Cloud Service Endpoint" id="priv_endpt">
+      <topic href="connecting/connectivity_options.html#priv_endpt" label="Connecting to a private endpoint: IBM Cloud Service Endpoint" id="priv_endpt">
         <property name="type" value="anchor"/>
-        <topic href="connectivity_options.html#priv_endpt_steps" label="How to connect to a private endpoint with IBM Cloud Service Endpoint" id="priv_endpt_steps"></topic>
+        <topic href="connecting/connectivity_options.html#priv_endpt_steps" label="How to connect to a private endpoint with IBM Cloud Service Endpoint" id="priv_endpt_steps"></topic>
       </topic>
-      <topic href="connectivity_options.html#vpn" label="Connecting to a private endpoint: virtual private network (VPN)" id="vpn">
+      <topic href="connecting/connectivity_options.html#vpn" label="Connecting to a private endpoint: virtual private network (VPN)" id="vpn">
         <property name="type" value="anchor"/>
-        <topic href="connectivity_options.html#priv_endpt_vpn_steps" label="How to connect to a private endpoint with a VPN" id="priv_endpt_vpn_steps"></topic>
+        <topic href="connecting/connectivity_options.html#priv_endpt_vpn_steps" label="How to connect to a private endpoint with a VPN" id="priv_endpt_vpn_steps"></topic>
+      </topic>
+    </topic>
+    <topic href="connecting/credentials.html#db_details_cxn_creds" label="Database details and connection credentials" id="db_details_cxn_creds">
+      <topic href="connecting/credentials.html#db_details" label="Database details" id="db_details">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/credentials.html#cxn_creds" label="Connection credentials" id="cxn_creds">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/credentials.html#location" label="Where to find database details and connection credentials" id="location">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/driver_pkg.html#dr_pkg" label="Driver package" id="dr_pkg">
+      <topic href="connecting/driver_pkg.html#abt" label="About" id="abt">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/driver_pkg.html#alrdy_instld" label="Already installed?" id="alrdy_instld">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/driver_pkg.html#dwnldng" label="Downloading" id="dwnldng">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/driver_pkg.html#instlng" label="Installing" id="instlng">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/install_linux.html#install_dr_pkg_linux" label="Installing the driver package on Linux or PowerLinux" id="install_dr_pkg_linux">
+      <topic href="connecting/install_linux.html#prereq31" label="Prerequisites" id="prereq31">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/install_linux.html#proc31" label="Procedure" id="proc31">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/install_linux.html#wn" label="What&#39;s next?" id="wn">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/install_mac.html#install_dr_pkg_mac" label="Installing the driver package on Mac OS X" id="install_dr_pkg_mac">
+      <topic href="connecting/install_mac.html#prereq41" label="Prerequisites" id="prereq41">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/install_mac.html#proc41" label="Procedure" id="proc41">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/install_mac.html#wn41" label="What&#39;s next?" id="wn41">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/install_win.html#install_dr_pkg_windows" label="Installing the driver package on Windows" id="install_dr_pkg_windows">
+      <topic href="connecting/install_win.html#prereq51" label="Prerequisites" id="prereq51">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/install_win.html#proc51" label="Procedure" id="proc51">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/install_win.html#wn51" label="What&#39;s next?" id="wn51">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/driver_pkg_cfg.html#cfg_loc_env" label="Configuring your local environment" id="cfg_loc_env">
+      <topic href="connecting/driver_pkg_cfg.html#prereq21" label="Prerequisites" id="prereq21">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/driver_pkg_cfg.html#proc21" label="Procedure" id="proc21">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/ssl.html#ssl_support" label="Secure Sockets Layer (SSL) support" id="ssl_support"></topic>
+    <topic href="connecting/jdbc.html#con_prog_jdbc" label="Connecting programmatically with JDBC" id="con_prog_jdbc">
+      <topic href="connecting/jdbc.html#prereq61" label="Prerequisites" id="prereq61">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/jdbc.html#proc61" label="Procedure" id="proc61">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/net_apps.html#con_prog_net" label="Connecting programmatically with .NET" id="con_prog_net">
+      <topic href="connecting/net_apps.html#prereq71" label="Prerequisites" id="prereq71">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/net_apps.html#proc71" label="Procedure" id="proc71">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/net_apps.html#ex71" label="Example" id="ex71">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/odbc_cli.html#con_prog_odbc_cli" label="Connecting programmatically with ODBC or CLI" id="con_prog_odbc_cli">
+      <topic href="connecting/odbc_cli.html#prereq81" label="Prerequisites" id="prereq81">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/odbc_cli.html#proc81" label="Procedure" id="proc81">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/odbc_data_source_admin.html#con_prog_odbc_dsa" label="Connecting with the ODBC Data Source Administrator" id="con_prog_odbc_dsa">
+      <topic href="connecting/odbc_data_source_admin.html#prereq91" label="Prerequisites" id="prereq91">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/odbc_data_source_admin.html#proc91" label="Procedure" id="proc91">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="connecting/php.html#con_prog_php" label="Connecting programmatically with PHP" id="con_prog_php">
+      <topic href="connecting/php.html#prereq101" label="Prerequisites" id="prereq101">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/php.html#proc101" label="Procedure" id="proc101">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/php.html#scen1" label="Scenario 1: Connecting from outside IBM Cloud:" id="scen1"></topic>
+        <topic href="connecting/php.html#scen2" label="Scenario 2: Connecting from a PHP web app in IBM Cloud" id="scen2"></topic>
+      </topic>
+    </topic>
+    <topic href="connecting/rest_api.html#con_rest_api" label="Connecting with REST API" id="con_rest_api"></topic>
+  </topic>
+  <topic label="Integrations">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="Integrations"/>
+    <topic href="connecting/data.html#data_int" label="Data integration" id="data_int">
+      <topic href="connecting/data.html#datastage" label="DataStage" id="datastage">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#prereq1" label="Prerequisites" id="prereq1"></topic>
+        <topic href="connecting/data.html#proc1" label="Procedure" id="proc1"></topic>
+      </topic>
+      <topic href="connecting/data.html#informatica" label="Informatica" id="informatica">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/data.html#lift" label="Lift" id="lift">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/data.html#idr" label="InfoSphere Data Replication" id="idr">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#overview2" label="Overview" id="overview2"></topic>
+        <topic href="connecting/data.html#prereq2" label="Prerequisites" id="prereq2"></topic>
+        <topic href="connecting/data.html#proc2" label="Procedure" id="proc2"></topic>
+        <topic href="connecting/data.html#what2" label="What to do next" id="what2"></topic>
+      </topic>
+      <topic href="connecting/data.html#segment" label="Segment" id="segment">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/data.html#data_studio" label="Data Studio" id="data_studio">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#prereq3" label="Prerequisites" id="prereq3"></topic>
+        <topic href="connecting/data.html#proc3" label="Procedure" id="proc3"></topic>
+      </topic>
+      <topic href="connecting/data.html#dsm" label="Data Server Manager (DSM)" id="dsm">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#prereq4" label="Prerequisites" id="prereq4"></topic>
+        <topic href="connecting/data.html#proc4" label="Procedure" id="proc4"></topic>
+      </topic>
+      <topic href="connecting/data.html#ida" label="InfoSphere Data Architect" id="ida">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#prereq5" label="Prerequisites" id="prereq5"></topic>
+        <topic href="connecting/data.html#proc5" label="Procedure" id="proc5"></topic>
+      </topic>
+      <topic href="connecting/data.html#aginity_wb" label="Aginity Workbench" id="aginity_wb">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#prereq6" label="Prerequisites" id="prereq6"></topic>
+        <topic href="connecting/data.html#proc6" label="Procedure" id="proc6"></topic>
+      </topic>
+      <topic href="connecting/data.html#clpplus" label="CLPPlus" id="clpplus">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data.html#prereq7" label="Prerequisites" id="prereq7"></topic>
+        <topic href="connecting/data.html#proc7" label="Procedure" id="proc7"></topic>
+        <topic href="connecting/data.html#results7" label="Results" id="results7"></topic>
+        <topic href="connecting/data.html#examples" label="Examples" id="examples">
+          <topic href="connecting/data.html#example-1" label="Example 1" id="example-1"></topic>
+          <topic href="connecting/data.html#example-2" label="Example 2" id="example-2"></topic>
+        </topic>
+      </topic>
+    </topic>
+    <topic href="connecting/vis_bi.html#data_vis_bi" label="Data visualization/BI" id="data_vis_bi">
+      <topic href="connecting/vis_bi.html#cognos" label="Cognos Analytics" id="cognos">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/vis_bi.html#looker" label="Looker" id="looker">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="connecting/vis_bi.html#tableau" label="Tableau" id="tableau">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/vis_bi.html#prereq8" label="Prerequisites" id="prereq8"></topic>
+        <topic href="connecting/vis_bi.html#proc8" label="Procedure" id="proc8"></topic>
+      </topic>
+      <topic href="connecting/vis_bi.html#excel" label="Microsoft Excel" id="excel">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/vis_bi.html#prereq9" label="Prerequisites" id="prereq9"></topic>
+        <topic href="connecting/vis_bi.html#proc9" label="Procedure" id="proc9"></topic>
+        <topic href="connecting/vis_bi.html#results2" label="Results" id="results2"></topic>
+      </topic>
+      <topic href="connecting/vis_bi.html#esri_arcgis" label="Esri ArcGIS for Desktop" id="esri_arcgis">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/vis_bi.html#prereq10" label="Prerequisites" id="prereq10"></topic>
+        <topic href="connecting/vis_bi.html#proc10" label="Procedure" id="proc10"></topic>
+        <topic href="connecting/vis_bi.html#results3" label="Results" id="results3"></topic>
+      </topic>
+    </topic>
+    <topic href="connecting/data_sci.html#ds" label="Data science" id="ds">
+      <topic href="connecting/data_sci.html#watson_studio" label="Watson Studio" id="watson_studio">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data_sci.html#to-create-a-new-connection-in-an-ibm-watson-project-" label="To create a new connection in an IBM Watson project:" id="to-create-a-new-connection-in-an-ibm-watson-project-"></topic>
+        <topic href="connecting/data_sci.html#to-create-a-new-connection-in-a-legacy-project-" label="To create a new connection in a legacy project:" id="to-create-a-new-connection-in-a-legacy-project-"></topic>
+      </topic>
+      <topic href="connecting/data_sci.html#spss_stats" label="SPSS Statistics" id="spss_stats">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data_sci.html#prereq11" label="Prerequisites" id="prereq11"></topic>
+        <topic href="connecting/data_sci.html#proc11" label="Procedure" id="proc11"></topic>
+      </topic>
+      <topic href="connecting/data_sci.html#sas" label="SAS" id="sas">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data_sci.html#prereq12" label="Prerequisites" id="prereq12"></topic>
+        <topic href="connecting/data_sci.html#proc12" label="Procedure" id="proc12"></topic>
+      </topic>
+      <topic href="connecting/data_sci.html#r_dev_env" label="R development environment" id="r_dev_env">
+        <property name="type" value="anchor"/>
+        <topic href="connecting/data_sci.html#prereq13" label="Prerequisites" id="prereq13"></topic>
+        <topic href="connecting/data_sci.html#proc13" label="Procedure" id="proc13"></topic>
       </topic>
     </topic>
   </topic>
