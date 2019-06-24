@@ -124,6 +124,17 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
+  <topic label="Amazon Web services">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="Amazon Web services"/>
+    <topic href="aws_overview.html#aws_overview" label="Overview" id="aws_overview">
+      <topic href="aws_overview.html#aws_rds" label="Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)" id="aws_rds">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="gs.html#aws_gs" label="Getting started" id="aws_gs"></topic>
+    <topic href="feat_specs.html#aws_fs" label="Features &amp; specs" id="aws_fs"></topic>
+  </topic>
   <topic href="plans_pricing.html#plans_pricing" label="Plans and pricing" id="plans_pricing">
     <property name="navgroup" value="learn"/>
     <topic href="plans_pricing.html#plans_cfgs" label="Plans and configurations" id="plans_cfgs">

@@ -501,6 +501,49 @@
                 ]
             },
             {
+                "label": "Amazon Web services",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Amazon Web services"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/aws_overview.html#aws_overview",
+                        "label": "Overview",
+                        "id": "Db2onCloud-aws_overview",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/aws_overview.html#aws_rds",
+                                "label": "Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)",
+                                "id": "Db2onCloud-aws_rds",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/gs.html#aws_gs",
+                        "label": "Getting started",
+                        "id": "Db2onCloud-aws_gs"
+                    },
+                    {
+                        "href": "services/Db2onCloud/feat_specs.html#aws_fs",
+                        "label": "Features & specs",
+                        "id": "Db2onCloud-aws_fs"
+                    }
+                ]
+            },
+            {
                 "href": "services/Db2onCloud/plans_pricing.html#plans_pricing",
                 "label": "Plans and pricing",
                 "id": "Db2onCloud-plans_pricing",
