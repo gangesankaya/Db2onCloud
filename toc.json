@@ -238,11 +238,11 @@
                 ]
             },
             {
-                "label": "Connections",
+                "label": "Connecting",
                 "properties": [
                     {
                         "name": "topicgroup",
-                        "value": "Connections"
+                        "value": "Connecting"
                     },
                     {
                         "name": "navgroup",
@@ -251,17 +251,27 @@
                 ],
                 "topics": [
                     {
-                        "href": "services/Db2onCloud/connecting.html#connect",
-                        "label": "Connecting",
-                        "id": "Db2onCloud-connect",
+                        "href": "services/Db2onCloud/connecting/connecting.html#connect_ov",
+                        "label": "Connecting overview",
+                        "id": "Db2onCloud-connect_ov",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/connecting.html#connect_prereq",
+                                "href": "services/Db2onCloud/connecting/connecting.html#prereqs",
                                 "label": "Prerequisites",
-                                "id": "Db2onCloud-connect_prereq",
+                                "id": "Db2onCloud-prereqs",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/connecting.html#cfg_env",
+                                        "href": "services/Db2onCloud/connecting/connecting.html#collect_info",
+                                        "label": "Collecting connection information",
+                                        "id": "Db2onCloud-collect_info"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/connecting.html#dl_install",
+                                        "label": "Downloading and installing driver package",
+                                        "id": "Db2onCloud-dl_install"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/connecting.html#cfg_env",
                                         "label": "Configuring your environment",
                                         "id": "Db2onCloud-cfg_env"
                                     }
@@ -274,7 +284,18 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/connecting.html#conx_prgrm",
+                                "href": "services/Db2onCloud/connecting/connecting.html#connect_opts",
+                                "label": "Connectivity options",
+                                "id": "Db2onCloud-connect_opts",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/connecting.html#conx_prgrm",
                                 "label": "Connecting programmatically",
                                 "id": "Db2onCloud-conx_prgrm",
                                 "properties": [
@@ -285,9 +306,37 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/connecting.html#conx_apps_tools",
-                                "label": "Connecting apps and tools",
+                                "href": "services/Db2onCloud/connecting/connecting.html#conx_apps_tools",
+                                "label": "Integrating apps and tools",
                                 "id": "Db2onCloud-conx_apps_tools",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/connecting.html#di",
+                                        "label": "Data integration",
+                                        "id": "Db2onCloud-di"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/connecting.html#dvis_bi",
+                                        "label": "Data visualization/BI",
+                                        "id": "Db2onCloud-dvis_bi"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/connecting.html#dsci",
+                                        "label": "Data science",
+                                        "id": "Db2onCloud-dsci"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/connecting.html#fed",
+                                "label": "Connecting to another Db2 database",
+                                "id": "Db2onCloud-fed",
                                 "properties": [
                                     {
                                         "name": "type",
@@ -298,17 +347,17 @@
                         ]
                     },
                     {
-                        "href": "services/Db2onCloud/connectivity_options.html#connect_options",
+                        "href": "services/Db2onCloud/connecting/connectivity_options.html#connect_options",
                         "label": "Connectivity options",
                         "id": "Db2onCloud-connect_options",
                         "topics": [
                             {
-                                "href": "services/Db2onCloud/connectivity_options.html#pub_endpt",
+                                "href": "services/Db2onCloud/connecting/connectivity_options.html#pub_endpt",
                                 "label": "Connecting to a public endpoint (default option)",
                                 "id": "Db2onCloud-pub_endpt",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/connectivity_options.html#pub_endpt_steps",
+                                        "href": "services/Db2onCloud/connecting/connectivity_options.html#pub_endpt_steps",
                                         "label": "How to connect to a public endpoint:",
                                         "id": "Db2onCloud-pub_endpt_steps"
                                     }
@@ -321,12 +370,12 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/connectivity_options.html#priv_endpt",
+                                "href": "services/Db2onCloud/connecting/connectivity_options.html#priv_endpt",
                                 "label": "Connecting to a private endpoint: IBM Cloud Service Endpoint",
                                 "id": "Db2onCloud-priv_endpt",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_steps",
+                                        "href": "services/Db2onCloud/connecting/connectivity_options.html#priv_endpt_steps",
                                         "label": "How to connect to a private endpoint with IBM Cloud Service Endpoint",
                                         "id": "Db2onCloud-priv_endpt_steps"
                                     }
@@ -339,14 +388,887 @@
                                 ]
                             },
                             {
-                                "href": "services/Db2onCloud/connectivity_options.html#vpn",
+                                "href": "services/Db2onCloud/connecting/connectivity_options.html#vpn",
                                 "label": "Connecting to a private endpoint: virtual private network (VPN)",
                                 "id": "Db2onCloud-vpn",
                                 "topics": [
                                     {
-                                        "href": "services/Db2onCloud/connectivity_options.html#priv_endpt_vpn_steps",
+                                        "href": "services/Db2onCloud/connecting/connectivity_options.html#priv_endpt_vpn_steps",
                                         "label": "How to connect to a private endpoint with a VPN",
                                         "id": "Db2onCloud-priv_endpt_vpn_steps"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/credentials.html#db_details_cxn_creds",
+                        "label": "Database details and connection credentials",
+                        "id": "Db2onCloud-db_details_cxn_creds",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/credentials.html#db_details",
+                                "label": "Database details",
+                                "id": "Db2onCloud-db_details",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/credentials.html#cxn_creds",
+                                "label": "Connection credentials",
+                                "id": "Db2onCloud-cxn_creds",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/credentials.html#location",
+                                "label": "Where to find database details and connection credentials",
+                                "id": "Db2onCloud-location",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/driver_pkg.html#dr_pkg",
+                        "label": "Driver package",
+                        "id": "Db2onCloud-dr_pkg",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/driver_pkg.html#abt",
+                                "label": "About",
+                                "id": "Db2onCloud-abt",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/driver_pkg.html#alrdy_instld",
+                                "label": "Already installed?",
+                                "id": "Db2onCloud-alrdy_instld",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/driver_pkg.html#dwnldng",
+                                "label": "Downloading",
+                                "id": "Db2onCloud-dwnldng",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/driver_pkg.html#instlng",
+                                "label": "Installing",
+                                "id": "Db2onCloud-instlng",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/install_linux.html#install_dr_pkg_linux",
+                        "label": "Installing the driver package on Linux or PowerLinux",
+                        "id": "Db2onCloud-install_dr_pkg_linux",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/install_linux.html#prereq31",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq31",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/install_linux.html#proc31",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc31",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/install_linux.html#wn",
+                                "label": "What's next?",
+                                "id": "Db2onCloud-wn",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/install_mac.html#install_dr_pkg_mac",
+                        "label": "Installing the driver package on Mac OS X",
+                        "id": "Db2onCloud-install_dr_pkg_mac",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/install_mac.html#prereq41",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq41",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/install_mac.html#proc41",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc41",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/install_mac.html#wn41",
+                                "label": "What's next?",
+                                "id": "Db2onCloud-wn41",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/install_win.html#install_dr_pkg_windows",
+                        "label": "Installing the driver package on Windows",
+                        "id": "Db2onCloud-install_dr_pkg_windows",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/install_win.html#prereq51",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq51",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/install_win.html#proc51",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc51",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/install_win.html#wn51",
+                                "label": "What's next?",
+                                "id": "Db2onCloud-wn51",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/driver_pkg_cfg.html#cfg_loc_env",
+                        "label": "Configuring your local environment",
+                        "id": "Db2onCloud-cfg_loc_env",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/driver_pkg_cfg.html#prereq21",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq21",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/driver_pkg_cfg.html#proc21",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc21",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/ssl.html#ssl_support",
+                        "label": "Secure Sockets Layer (SSL) support",
+                        "id": "Db2onCloud-ssl_support"
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/jdbc.html#con_prog_jdbc",
+                        "label": "Connecting programmatically with JDBC",
+                        "id": "Db2onCloud-con_prog_jdbc",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/jdbc.html#prereq61",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq61",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/jdbc.html#proc61",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc61",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/net_apps.html#con_prog_net",
+                        "label": "Connecting programmatically with .NET",
+                        "id": "Db2onCloud-con_prog_net",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/net_apps.html#prereq71",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq71",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/net_apps.html#proc71",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc71",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/net_apps.html#ex71",
+                                "label": "Example",
+                                "id": "Db2onCloud-ex71",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/odbc_cli.html#con_prog_odbc_cli",
+                        "label": "Connecting programmatically with ODBC or CLI",
+                        "id": "Db2onCloud-con_prog_odbc_cli",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/odbc_cli.html#prereq81",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq81",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/odbc_cli.html#proc81",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc81",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/odbc_data_source_admin.html#con_prog_odbc_dsa",
+                        "label": "Connecting with the ODBC Data Source Administrator",
+                        "id": "Db2onCloud-con_prog_odbc_dsa",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/odbc_data_source_admin.html#prereq91",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq91",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/odbc_data_source_admin.html#proc91",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc91",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/php.html#con_prog_php",
+                        "label": "Connecting programmatically with PHP",
+                        "id": "Db2onCloud-con_prog_php",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/php.html#prereq101",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-prereq101",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/php.html#proc101",
+                                "label": "Procedure",
+                                "id": "Db2onCloud-proc101",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/php.html#scen1",
+                                        "label": "Scenario 1: Connecting from outside IBM Cloud:",
+                                        "id": "Db2onCloud-scen1"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/php.html#scen2",
+                                        "label": "Scenario 2: Connecting from a PHP web app in IBM Cloud",
+                                        "id": "Db2onCloud-scen2"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/rest_api.html#con_rest_api",
+                        "label": "Connecting with REST API",
+                        "id": "Db2onCloud-con_rest_api"
+                    }
+                ]
+            },
+            {
+                "label": "Integrations",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Integrations"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/connecting/data.html#data_int",
+                        "label": "Data integration",
+                        "id": "Db2onCloud-data_int",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#datastage",
+                                "label": "DataStage",
+                                "id": "Db2onCloud-datastage",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq1",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq1"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc1",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc1"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#informatica",
+                                "label": "Informatica",
+                                "id": "Db2onCloud-informatica",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#lift",
+                                "label": "Lift",
+                                "id": "Db2onCloud-lift",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#idr",
+                                "label": "InfoSphere Data Replication",
+                                "id": "Db2onCloud-idr",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#overview2",
+                                        "label": "Overview",
+                                        "id": "Db2onCloud-overview2"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq2",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq2"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc2",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc2"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#what2",
+                                        "label": "What to do next",
+                                        "id": "Db2onCloud-what2"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#segment",
+                                "label": "Segment",
+                                "id": "Db2onCloud-segment",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#data_studio",
+                                "label": "Data Studio",
+                                "id": "Db2onCloud-data_studio",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq3",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq3"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc3",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc3"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#dsm",
+                                "label": "Data Server Manager (DSM)",
+                                "id": "Db2onCloud-dsm",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq4",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq4"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc4",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc4"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#ida",
+                                "label": "InfoSphere Data Architect",
+                                "id": "Db2onCloud-ida",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq5",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq5"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc5",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc5"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#aginity_wb",
+                                "label": "Aginity Workbench",
+                                "id": "Db2onCloud-aginity_wb",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq6",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq6"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc6",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc6"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data.html#clpplus",
+                                "label": "CLPPlus",
+                                "id": "Db2onCloud-clpplus",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#prereq7",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq7"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#proc7",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc7"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#results7",
+                                        "label": "Results",
+                                        "id": "Db2onCloud-results7"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data.html#examples",
+                                        "label": "Examples",
+                                        "id": "Db2onCloud-examples",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/connecting/data.html#example-1",
+                                                "label": "Example 1",
+                                                "id": "Db2onCloud-example-1"
+                                            },
+                                            {
+                                                "href": "services/Db2onCloud/connecting/data.html#example-2",
+                                                "label": "Example 2",
+                                                "id": "Db2onCloud-example-2"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/vis_bi.html#data_vis_bi",
+                        "label": "Data visualization/BI",
+                        "id": "Db2onCloud-data_vis_bi",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/vis_bi.html#cognos",
+                                "label": "Cognos Analytics",
+                                "id": "Db2onCloud-cognos",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/vis_bi.html#looker",
+                                "label": "Looker",
+                                "id": "Db2onCloud-looker",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/vis_bi.html#tableau",
+                                "label": "Tableau",
+                                "id": "Db2onCloud-tableau",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#prereq8",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq8"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#proc8",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc8"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/vis_bi.html#excel",
+                                "label": "Microsoft Excel",
+                                "id": "Db2onCloud-excel",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#prereq9",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq9"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#proc9",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc9"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#results2",
+                                        "label": "Results",
+                                        "id": "Db2onCloud-results2"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/vis_bi.html#esri_arcgis",
+                                "label": "Esri ArcGIS for Desktop",
+                                "id": "Db2onCloud-esri_arcgis",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#prereq10",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq10"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#proc10",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc10"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/vis_bi.html#results3",
+                                        "label": "Results",
+                                        "id": "Db2onCloud-results3"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/connecting/data_sci.html#ds",
+                        "label": "Data science",
+                        "id": "Db2onCloud-ds",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/connecting/data_sci.html#watson_studio",
+                                "label": "Watson Studio",
+                                "id": "Db2onCloud-watson_studio",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#to-create-a-new-connection-in-an-ibm-watson-project-",
+                                        "label": "To create a new connection in an IBM Watson project:",
+                                        "id": "Db2onCloud-to-create-a-new-connection-in-an-ibm-watson-project-"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#to-create-a-new-connection-in-a-legacy-project-",
+                                        "label": "To create a new connection in a legacy project:",
+                                        "id": "Db2onCloud-to-create-a-new-connection-in-a-legacy-project-"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data_sci.html#spss_stats",
+                                "label": "SPSS Statistics",
+                                "id": "Db2onCloud-spss_stats",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#prereq11",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq11"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#proc11",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc11"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data_sci.html#sas",
+                                "label": "SAS",
+                                "id": "Db2onCloud-sas",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#prereq12",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq12"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#proc12",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc12"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/connecting/data_sci.html#r_dev_env",
+                                "label": "R development environment",
+                                "id": "Db2onCloud-r_dev_env",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#prereq13",
+                                        "label": "Prerequisites",
+                                        "id": "Db2onCloud-prereq13"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/connecting/data_sci.html#proc13",
+                                        "label": "Procedure",
+                                        "id": "Db2onCloud-proc13"
                                     }
                                 ],
                                 "properties": [
@@ -1091,7 +2013,7 @@
                 ]
             },
             {
-                "href": "http://ibm.biz/db2oc_api",
+                "href": "https://cloud.ibm.com/apidocs/db2-on-cloud",
                 "label": "REST API",
                 "properties": [
                     {

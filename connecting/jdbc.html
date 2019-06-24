@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="Define a connection between a Java™ application and the Db2 on Cloud database.">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/connecting/jdbc.md">
+  <meta name="github.issue" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Connecting programmatically with JDBC</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="con_prog_jdbc" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-con_prog_jdbc">
+        <h1 id="con_prog_jdbc">Connecting programmatically with JDBC</h1>
+        <p class="shortdesc">Define a connection between a Java™ application and the Db2 on Cloud database.</p>
+        <section id="section-prereq61">
+          <h2 id="prereq61">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Before you can connect to your database, you must perform the following steps:
+
+- [Verify prerequisites](prereqs.html), including installing driver packages, configuring your local environment, and downloading SSL certificates (if needed)
+- Collect [connection information](credentials.html), including database details such as host name and port numbers, and connection credentials such as user ID and password -->
+        </section>
+        <section id="section-proc61">
+          <h2 id="proc61">Procedure</h2>
+          <p>In each Java application, specify the user ID and password by including the <strong>DriverManager.getConnection</strong> method, and then include one of the following JDBC URL strings:</p>
+          <ul>
+            <li>
+              <p>For a connection with SSL:</p>
+              <p><code>jdbc:db2://&lt;host_name&gt;:50001/BLUDB:sslConnection=true;</code></p>
+            </li>
+            <li>
+              <p>For a connection without SSL:</p>
+              <p><code>jdbc:db2://&lt;host_name&gt;:50000/BLUDB</code></p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

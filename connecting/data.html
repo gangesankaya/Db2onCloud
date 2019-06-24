@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2019-03-29">
+  <meta name="dcterms.date" content="2019-03-29">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="You can also connect external applications and tools to Db2 on Cloud and use them to further manage or analyze your data. ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/connecting/data.md">
+  <meta name="github.issue" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Data integration</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="data_int" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-data_int">
+        <h1 id="data_int">Data integration</h1>
+        <p class="shortdesc">You can also connect external applications and tools to Db2 on Cloud and use them to further manage or analyze your data. </p>
+        <section id="section-datastage">
+          <h2 id="datastage">DataStage</h2>
+          <p class="shortdesc">These instructions explain how to define a connection without SSL between IBM® InfoSphere® DataStage®
+            <!--version 9.1 and later -->and a Db2 on Cloud database by cataloging the database and defining a connection object, or how to create a connection with SSL by using a digital certificate that is issued by a third party.</p>
+          <section id="section-prereq1">
+            <h3 id="prereq1">Prerequisites</h3>
+            <p class="important">It is strongly advised that you update DataStage to the most recent version so that you can take advantage of external tables to load your data into Db2 on Cloud.</p>
+            <p>If you don’t already have a data server client installed, download and install the IBM Data Server Client
+              <!--Version 10.5 -->that is appropriate for your client machine’s operating system: <a href="https://www.ibm.com/marketing/iwm/iwm/web/preLogin.do?source=swg-idsc97" target="_blank" class="external">IBM Data Server Client</a>.</p>
+            <p>To make connections with the SSL protocol, download and install the 32-bit GSKit V8. Click the OS tab that is appropriate for your client machine’s operating system: <a href="http://www.ibm.com/support/docview.wss?uid=swg21631462" target="_blank"
+                class="external">GSKit V8 - Install, Uninstall and Upgrade instructions</a>. For the following operating systems, ensure that you add the GSKit installation directory path to the OS-specific path environment variable:</p>
+            <ul>
+              <li>AIX®: <strong>LIBPATH</strong>
+                <ul>
+                  <li><code>/usr/opt/ibm/gsk8/lib</code></li>
+                </ul>
+              </li>
+              <li>Linux: <strong>LD_LIBRARY_PATH</strong>
+                <ul>
+                  <li><code>/usr/local/ibm/gsk8/lib</code></li>
+                </ul>
+              </li>
+              <li>UNIX: <strong>LD_LIBRARY_PATH</strong>
+                <ul>
+                  <li><code>/opt/ibm/gsk8/lib</code></li>
+                </ul>
+              </li>
+              <li>Windows: <strong>PATH</strong>
+                <ul>
+                  <li><code>&lt;installation_directory&gt;\gsk8\bin</code></li>
+                  <li><code>&lt;installation_directory&gt;\gsk8\lib</code></li>
+                </ul>
+              </li>
+            </ul>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc1">
+            <h3 id="proc1">Procedure</h3>
+            <ul>
+              <li>
+                <p>To create a connection with SSL, complete the following steps:</p>
+                <ol>
+                  <li>
+                    <p>Open a command line or terminal and make a new directory in the DataStage system to store the SSL certificate and key files.</p>
+                    <p><code># /home/db2inst2&gt; mkdir SSL</code></p>
+                    <p><code># /home/db2inst2&gt; cd SSL</code></p>
+                  </li>
+                  <li>
+                    <p>In the Db2 on Cloud web console, download the SSL certificate from the <strong>Connect your applications to the database</strong> page.</p>
+                    <p>a. From the main menu, click <strong>Connect</strong>.</p>
+                    <p>b. Click <strong>Connection with SSL</strong>, and then click the <strong>SSL certificate (1 KB)</strong> link.</p>
+                    <p>c. Save the <code>DigiCertGlobalRootCA.crt</code> certificate into the SSL directory that you made in step 1.</p>
+                  </li>
+                  <li>
+                    <p>Create a client keystore database in the DataStage system by using the <strong>gsk8capicmd_64</strong> utility.</p>
+                    <p><code># /home/db2inst2/SSL&gt; gsk8capicmd_64 -keydb -create -db &lt;keystore_db.kdb&gt; -pw &lt;ks_db_password&gt; -stash</code></p>
+                    <p>where <code>&lt;keystore_db.kdb&gt;</code> represents the client keystore database and <code>&lt;ks_db_password&gt;</code> represents the password for the client keystore database.</p>
+                  </li>
+                  <li>
+                    <p>Add the certificate to the client keystore database.</p>
+                    <p><code># /home/db2inst2/SSL&gt; gsk8capicmd_64 -cert -add -db &lt;keystore_db.kdb&gt; -pw &lt;ks_db_password&gt; -label BLUDB_SSL -file DigiCertGlobalRootCA.crt</code></p>
+                    <p>where <code>&lt;keystore_db.kdb&gt;</code> represents the client keystore database and <code>&lt;ks_db_password&gt;</code> represents the password for the client keystore database.</p>
+                  </li>
+                  <li>
+                    <p>Configure the Db2 client on the DataStage server.</p>
+                    <p>a. Update the SSL configuration parameters in the database manager.</p>
+                    <p><code># /home/db2inst2&gt; db2 update dbm cfg using SSL_CLNT_KEYDB /home/db2inst2/SSL/&lt;keystore_db.kdb&gt;</code></p>
+                    <p>where <code>&lt;keystore_db.kdb&gt;</code> represents the client keystore database.</p>
+                    <p><code># /home/db2inst2&gt; db2 update dbm cfg using SSL_CLNT_STASH /home/db2inst2/SSL/&lt;keystore_db.sth&gt;</code></p>
+                    <p>where <code>&lt;keystore_db.sth&gt;</code> represents the client keystore database password stash.</p>
+                    <p>b. Catalog the target node with the SSL security option and then the BLUDB database at that target node.</p>
+                    <p><code># /home/db2inst2&gt; db2 catalog tcpip node &lt;node_name&gt; remote &lt;IP_addr_of_BLUDB_database_server&gt; server 50001 security SSL</code></p>
+                    <p>where <code>&lt;node_name&gt;</code> represents your name for the target node and <code>&lt;IP_addr_of_BLUDB_database_server&gt;</code> represents the IP address of the BLUDB database server,</p>
+                    <p><code># /home/db2inst2&gt; db2 catalog db BLUDB as &lt;db_alias&gt; at node &lt;node_name&gt;</code></p>
+                    <p>where <code>&lt;db_alias&gt;</code> is your name for the Db2 on Cloud database.</p>
+                  </li>
+                  <li>
+                    <p>Add read and execute permissions on the files in the SSL directory for everyone. The DataStage user who runs the jobs needs to access these files to make SSL connections to the Db2 database.</p>
+                    <p><code># /home/db2inst2/SSL&gt; chmod 655 /home/db2inst2/SSL/*</code></p>
+                  </li>
+                  <li>
+                    <p>Test the SSL connection in one of the following ways:</p>
+                    <ul>
+                      <li>
+                        <p>Test the connection by using CLP. Issue the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2 connect to &lt;db_alias&gt; user &lt;user_id&gt;</code></p>
+                        <p>where <code>&lt;db_alias&gt;</code> is your name for the Db2 on Cloud database and <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID. You are prompted to enter your password.</p>
+                      </li>
+                      <li>
+                        <p>Test the connection by using CLI. Issue the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2cli validate -dsn &lt;alias&gt; -connect -user &lt;user_id&gt; -passwd &lt;password&gt;</code></p>
+                        <p> where <code>&lt;alias&gt;</code> is an alias that you created by using the <strong>db2cli writecfg</strong> command, <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID, and <code>&lt;password&gt;</code> is your Db2 on Cloud
+                          password.</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <p>To create a connection without SSL, catalog the target Db2 on Cloud database by completing the following steps:</p>
+                <ol>
+                  <li>
+                    <p>Catalog the target Db2 on Cloud node so that client applications can connect to it. Run the following CLP commands:</p>
+                    <p><code>db2 catalog tcpip node &lt;node_name&gt; remote &lt;IP_address_of_BLUDB_database_server&gt; server &lt;port_number_of_BLUDB_database&gt;</code></p>
+                    <p>where <code>&lt;node_name&gt;</code> represents your name for the node, <code>&lt;IP_address_of_BLUDB_database_server&gt;</code> represents the IP address of the BLUDB database server, and <code>&lt;port_number_of_BLUDB_database&gt;</code>                      represents the port number of the BLUDB database.</p>
+                  </li>
+                  <li>
+                    <p>Catalog the remote Db2 on Cloud database so that client applications can connect to it. Run the following command:</p>
+                    <p><code>db2 catalog db BLUDB as &lt;db_alias&gt; at node &lt;node_name&gt;</code></p>
+                    <p>where <code>&lt;db_alias&gt;</code> represents your name for the Db2 on Cloud database and <code>&lt;node_name&gt;</code> represents your name for the node.</p>
+                  </li>
+                  <li>
+                    <p>Test the non-SSL connection in one of the following ways:</p>
+                    <ul>
+                      <li>
+                        <p>Test the connection by using CLP. Issue the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2 connect to &lt;db_alias&gt; user &lt;user_id&gt;</code></p>
+                        <p>where <code>&lt;db_alias&gt;</code> is your name for the Db2 on Cloud database and <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID. You are prompted to enter your password.</p>
+                        <p><code>db2 list tables</code></p>
+                      </li>
+                      <li>
+                        <p>Test the connection by using CLI. Issue the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2cli validate -dsn &lt;alias&gt; -connect -user &lt;user_id&gt; -passwd &lt;password&gt;</code></p>
+                        <p>where <code>&lt;alias&gt;</code> is an alias that you created by using the <strong>db2cli writecfg</strong> command, <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID, and <code>&lt;password&gt;</code> is your Db2 on Cloud
+                          password.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>Use the <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-db_details_cxn_creds#db_details_cxn_creds">connection information</a> that you collected beforehand to define a connection in the DataStage client. On the <strong>Parameters</strong>                      tab, you must select the <strong>DB2 Connector</strong> for the <strong>Connect using Staging Type</strong> field.</p>
+                    <p>For details about defining a connection in DataStage, see the following DataStage documentation topics: </p>
+                    <ul>
+                      <li><a href="https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.3.0/com.ibm.swg.im.iis.ds.design.doc/topics/t_ddesref_Creating_a_Data_Connection_Object_Manually.html" target="_blank" class="external">Creating a data connection object manually</a></li>
+                      <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_11.7.0/com.ibm.swg.im.iis.conn.common.usage.doc/topics/t_configuring_db2conn.html" target="_blank" class="external">Configuring access to Db2 databases</a></li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section id="section-informatica">
+          <h2 id="informatica">Informatica</h2>
+          <p class="shortdesc">You can connect Informatica to Db2 on Cloud to help you manage your data.</p>
+          <p>Watch this video to see how to integrate Db2 on Cloud with Informatica Cloud.</p>
+          <iframe class="embed-responsive-item" id="youtubeplayer1" title="DB2 Connections - Lightening Fast How-To with Informatica Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/embed/TUiS_HstLnU?rel=0" frameborder="0" webkitallowfullscreen
+            mozallowfullscreen allowfullscreen> </iframe>
+          <!-- To configure a native Db2 connection to connect to Db2 on Cloud, perform the following steps:
+
+1. Run the `odbcad32.exe` file from your local system.
+The ODBC Data Sources Administrator dialog box appears.
+
+2. Create the 32-bit ODBC Data Source Name using the DataDirect Db2 drivers.
+
+3. In the ODBC DB2 Wire Protocol Setup dialog box, click **Security** tab.
+
+4. Set the value of the `Authentication Method` property as `1 -Encrypt Password`. The following image shows the **Security** tab in the ODBC DB2 Wire Protocol Setup dialog box where you can set the `Authentication Method` property:
+
+   ![ODBC Db2 Wire Protocol Driver Setup - Security tab](images/odbc_driver.png)
+
+5. In the ODBC DB2 Wire Protocol Setup dialog box, click **Modify Bindings** tab.
+
+6. Enter your user name in the Package Collection property. The following image shows the **Modify Bindings** tab in the ODBC DB2 Wire Protocol Setup dialog box where you can set the `Package Collection` property: 
+
+   ![ODBC Db2 Wire Protocol Driver Setup - Modify Bindings tab](images/odbc_driver_2.png)
+
+7. In the PowerCenter Designer, use the data source name that you created to import the metadata.
+
+8. In the PowerCenter Workflow Manager, create the required workflow.
+
+9. Ensure that you have the Db2 on Cloud compatible 11.x Db2 clients when you run the workflow.
+
+**Note**: If you want to set the authentication type when you create the Db2 client catalog, you could specify the value of the `AUTHENTICATION TYPE` property as `SERVER_ENCRYPT`. -->
+          <!-- Watch this video to see how to integrate Db2 and Salesforce with Informatica Cloud.
+
+<iframe class="embed-responsive-item" id="youtubeplayer2" title="Integrate Db2 and Salesforce with Informatica Cloud" type="text/html" width="640" height="390" src="//www.youtube.com/watch?v=RGTLweZvKP8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe> -->
+          <!-- [Informatica](https://kb.informatica.com/howto/6/Pages/20/522402.aspx?myk=Connect%20to%20Db2){:external} -->
+        </section>
+        <section id="section-lift">
+          <h2 id="lift">Lift</h2>
+          <p>Use Lift to migrate your data into Db2 on Cloud.</p>
+          <p><a href="https://www.lift-cli.cloud.ibm.com/#docs" target="_blank" class="external">Lift</a></p>
+        </section>
+        <section id="section-idr">
+          <h2 id="idr">InfoSphere Data Replication</h2>
+          <p class="shortdesc">You can connect IBM® InfoSphere® Data Replication
+            <!--version 11.3.3.3-36 or later -->to a Db2 on Cloud database. This capability applies to both SMP and MPP environments. It does not apply to the Entry plan of Db2 on Cloud. </p>
+          <section id="section-overview2">
+            <h3 id="overview2">Overview</h3>
+            <p>Ideally, when you connect IBM InfoSphere Data Replication to Db2 on Cloud, IBM InfoSphere Data Replication is in the same IBM Cloud Data Center as Db2 on Cloud or is colocated with Db2 on Cloud. IBM InfoSphere Data Replication connects from
+              a local server to the remote Db2 on Cloud instance.</p>
+            <p>When you use Db2 on Cloud as a connection target, the performance of IBM InfoSphere Data Replication partly depends on the bandwidth of the network that separates its target engine from the Db2 on Cloud instance. Physical distance also affects
+              performance: ideally, IBM InfoSphere Data Replication is as close as possible to the Db2 on Cloud instance. Network topology also affects performance. For example, ideally, the IBM InfoSphere Data Replication target engine runs on a VM in
+              the same VPN (security domain) as the target instance. The fewer the network nodes (for example, firewalls or routers) to traverse, the better. </p>
+          </section>
+          <section id="section-prereq2">
+            <h3 id="prereq2">Prerequisites</h3>
+            <p>If you intend to connect by using the SSL protocol, download and install GSKit V8. See <a href="http://www.ibm.com/support/docview.wss?uid=swg21631462" target="_blank" class="external">GSKit V8 - Install, Uninstall and Upgrade instructions</a>.
+              Click the operating system tab that applies to your client machine’s operating system. If you are installing the GSKit on a Windows computer, ensure that you specify the GSKit installation directory path (<code>&lt;installation_directory&gt;\gsk8\bin</code>)
+              for the <strong><code>PATH</code></strong> environment variable.</p>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+            <p>If you intend to connect by using the SSL protocol, download the <code>DigiCertGlobalRootCA.crt</code> SSL certificate from the web console to a directory on the client machine. To download the certificate, click <strong>Connection &gt; Connection Information</strong>              and then click the <strong>Connection with SSL</strong> tab.</p>
+          </section>
+          <section id="section-proc2">
+            <h3 id="proc2">Procedure</h3>
+            <ol>
+              <li>
+                <p>Choose one of the following approaches to make your connection:</p>
+                <ul>
+                  <li>
+                    <p>To create a connection with SSL, complete the following steps:</p>
+                    <p>a. Issue the following command:</p>
+                    <p><code>cd /&lt;ssl_directory_name&gt;/ssl</code></p>
+                    <p>where <code>/&lt;ssl_directory_name&gt;/ssl</code> is the path to the directory into which you downloaded the <code>DigiCertGlobalRootCA.crt</code> SSL certificate.</p>
+                    <p>b. Create a client key database and a stash file by using the <strong>GSKCapiCmd</strong> tool. For example, the following command creates a client key database called <code>dashclient.kdb</code> and a stash file called <code>dashclient.sth</code>:</p>
+                    <p><code>gsk8capicmd_64 -keydb -create -db &quot;dashclient.kdb&quot; -pw &quot;passw0rdpw0&quot; -stash</code></p>
+                    <p>where <code>passw0rdpw0</code> is a password. The <strong>-stash</strong> option creates a stash file in the same path as that of the client key database, with a file extension of <code>.sth</code>. At connection time, GSKit uses the
+                      stash file to obtain the password to the client key database.</p>
+                    <p>c. Add the certificate to the client key database. For example, the following <strong>gsk8capicmd</strong> command imports the certificate from the <code>/&lt;ssl_directory_name&gt;/ssl/DigiCertGlobalRootCA.crt</code> file into the
+                      client key database called <code>dashclient.kdb</code>:</p>
+                    <p><code>gsk8capicmd_64 -cert -add -db &quot;dashclient.kdb&quot; -pw &quot;passw0rdpw0&quot; -label &quot;DigiCert&quot; -file &quot;/&lt;ssl_directory_name&gt;/ssl/DigiCertGlobalRootCA.crt&quot; -format ascii -fips</code></p>
+                    <p>d. Update the values of the <code>SSL_CLNT_KEYDB</code> and <code>SSL_CLNT_STASH</code> database manager configuration parameters on the client to specify the client key database and the stash file. Examples follow:</p>
+                    <p><code>db2 update dbm cfg using SSL_CLNT_KEYDB /&lt;ssl_directory_name&gt;/ssl/dashclient.kdb</code></p>
+                    <p><code>db2 update dbm cfg using SSL_CLNT_STASH /&lt;ssl_directory_name&gt;/ssl/dashclient.sth</code></p>
+                    <p>e. Catalog the Db2 on Cloud node so that client applications can connect to it. Issue the following command:</p>
+                    <p><code>db2 catalog tcpip node &lt;node_name&gt; remote &lt;Db2_Warehouse_IP_address&gt; server &lt;port_number&gt; security ssl</code></p>
+                    <p>where:</p>
+                    <p><code>&lt;node_name&gt;</code> is your name for the node.</p>
+                    <p><code>&lt;Db2_Warehouse_IP_address&gt;</code> is the IP address of the Db2 on Cloud server.</p>
+                    <p><code>&lt;port_number&gt;</code> is the port that is used to connect to Db2 on Cloud by using an SSL connection. If you are using the default port, specify <code>50001</code>.</p>
+                    <p>f. Catalog the remote Db2 on Cloud database so that client applications can connect to it. Issue the following command:</p>
+                    <p><code>db2 catalog database bludb as &lt;db_alias&gt; at node &lt;node_name&gt;</code></p>
+                    <p>where <code>db_alias</code> is your name for the Db2 on Cloud database.</p>
+                    <p>g. Test the SSL connection in one of the following ways:</p>
+                    <ul>
+                      <li>
+                        <p>Test the connection using CLP by issuing the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2 connect to &lt;db_alias&gt; user &lt;user_id&gt;</code></p>
+                        <p>where <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID. You are prompted to enter your password.</p>
+                      </li>
+                      <li>
+                        <p>Test the connection using CLI by issuing the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2cli validate -dsn &lt;alias&gt; -connect -user &lt;user_id&gt; -passwd &lt;password&gt;</code></p>
+                        <p>where <code>&lt;alias&gt;</code> is a DSN alias that you created by using the <strong>db2cli writecfg</strong> command, <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID, and <code>&lt;password&gt;</code> is your Db2 on
+                          Cloud database password.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>To create a connection without SSL, complete the following steps:</p>
+                    <p>a. Catalog the Db2 on Cloud node so that client applications can connect to it. Issue the following command:</p>
+                    <p><code>db2 catalog tcpip node &lt;node_name&gt; remote &lt;Db2_Warehouse_IP_address&gt; server &lt;port_number&gt;</code></p>
+                    <p>where:</p>
+                    <p><code>&lt;node_name&gt;</code> is your name for the node.</p>
+                    <p><code>&lt;Db2_Warehouse_IP_address&gt;</code> is the IP address of the Db2 on Cloud server.</p>
+                    <p><code>&lt;port_number&gt;</code> is the port that is used to connect to Db2 on Cloud without using an SSL connection. If you are using the default port, specify <code>50000</code>.</p>
+                    <p>b. Catalog the remote Db2 on Cloud database so that client applications can connect to it. Issue the following command:</p>
+                    <p><code>db2 catalog database bludb as &lt;db_alias&gt; at node &lt;node_name&gt;</code></p>
+                    <p>where <code>&lt;db_alias&gt;</code> is your name for the Db2 on Cloud database.</p>
+                    <p>c. Test the non-SSL connection in one of the following ways:</p>
+                    <ul>
+                      <li>
+                        <p>Test the connection using CLP by issuing the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2 connect to &lt;db_alias&gt; user &lt;user_id&gt;</code></p>
+                        <p>where <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID. You are prompted to enter your password.</p>
+                      </li>
+                      <li>
+                        <p>Test the connection using CLI by issuing the following command to connect to the Db2 on Cloud database:</p>
+                        <p><code>db2cli validate -dsn &lt;alias&gt; -connect -user &lt;user_id&gt; -passwd &lt;password&gt;</code></p>
+                        <p>where <code>&lt;alias&gt;</code> is a DSN alias that you created by using the <strong>db2cli writecfg</strong> command, <code>&lt;user_id&gt;</code> is your Db2 on Cloud user ID, and <code>&lt;password&gt;</code> is your Db2 on
+                          Cloud password.</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>Launch the InfoSphere Data Replication configuration tool and perform the following steps. The values that are shown in the screen captures are examples.</p>
+                <p>a. Add a source instance to point to your source database by using the <strong>Instance Configuration</strong> tab:</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_source_instance.jpg" alt="IIDR New Instance - Source instance" title="Source instance configuration">
+                    <figcaption>Figure 1. IIDR New Instance - Source instance</figcaption>
+                  </figure>
+                </p>
+                <p>b. Add a target instance to point to your target Db2 database by using the <strong>Instance Configuration</strong> tab. If you are not using IBM InfoSphere Data Replication 11.3.3.3-50 or later, do not select the <strong>Specify refresh loader path</strong>                  check box.</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_target_instance.jpg" alt="IIDR New Instance - Target instance" title="Target instance configuration">
+                    <figcaption>Figure 2. IIDR New Instance - Target instance</figcaption>
+                  </figure>
+                </p>
+                <p>c. Start each instance:</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_instances.jpg" alt="IIDR Configuration Tool" title="IIDR Configuration Tool listing source and target instances">
+                    <figcaption>Figure 3. IIDR Configuration Tool</figcaption>
+                  </figure>
+                </p>
+              </li>
+              <li>
+                <p>Launch the InfoSphere Data Replication management console and use Access Manager to complete the following steps:</p>
+                <p>a. Create a datastore to connect to your source instance by using the <strong>Datastore</strong> tab. Because a Db2 database was not originally supported as a source database, you must provide user and password information for the source
+                  database by clicking <strong>Connection Parameters</strong>.</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_source_datastore.jpg" alt="Datastore Properties - Source" title="Source datastore properties">
+                    <figcaption>Figure 4. View of source datastore properties</figcaption>
+                  </figure>
+                </p>
+                <p>b. Create a datastore to connect to your target instance by using the <strong>Datastore</strong> tab. You must provide user and password information by clicking <strong>Connection Parameters</strong>.</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_target_datastore.jpg" alt="Datastore Properties - Target" title="Target datastore properties">
+                    <figcaption>Figure 5. View of target datastore properties</figcaption>
+                  </figure>
+                </p>
+                <p>c. If the user (for example, admin) that will connect to the Access Server does not exist, create that user:</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_management_user.jpg" alt="New User" title="New User creation tool">
+                    <figcaption>Figure 6. View of New User creation tool</figcaption>
+                  </figure>
+                </p>
+                <p>d. Click the <strong>Access Manager</strong> tab.</p>
+                <p>e. On the <strong>Datastore Management</strong> tab, assign the user to both the source and target datastores by right-clicking each datastore and then clicking <strong>Assign User</strong>. Ensure that the credentials for accessing each
+                  instance are correct.</p>
+                <p>
+                  <figure>
+                    <img src="images/IIDR_management_assign_user.jpg" alt="IIDR Management Console - Access Manager" title="Access Manager console">
+                    <figcaption>Figure 7. IIDR Management Console - Access Manager</figcaption>
+                  </figure>
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section id="section-what2">
+            <h3 id="what2">What to do next</h3>
+            <p>Define a subscription and perform data replication. For information, see:</p>
+            <ul>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/learn_how/loaddata_iidr.html" target="_blank" class="external">Loading data from InfoSphere Data Replication</a> </li>
+            </ul>
+          </section>
+        </section>
+        <section id="section-segment">
+          <h2 id="segment">Segment</h2>
+          <p class="shortdesc">You can integrate Segment with a Db2 on Cloud database. Segment is a single platform that collects, stores, and routes your user data to hundreds of tools.</p>
+          <p><a href="https://segment.com/docs/destinations/db2/" target="_blank" class="external">Segment</a></p>
+        </section>
+        <section id="section-data_studio">
+          <h2 id="data_studio">Data Studio</h2>
+          <p class="shortdesc">These instructions explain how to create a connection from IBM® Data Studio
+            <!--version 4.1.x -->to a Db2 on Cloud database.</p>
+          <section id="section-prereq3">
+            <h3 id="prereq3">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc3">
+            <h3 id="proc3">Procedure</h3>
+            <ol>
+              <li>
+                <p>In Data Studio, click <strong>All Databases &gt; New Connection to a database</strong>.</p>
+              </li>
+              <li>
+                <p>On the <strong>Local</strong> tab, select <strong>DB2 for Linux, UNIX, and Windows</strong> as the database manager.</p>
+              </li>
+              <li>
+                <p>On the <strong>General</strong> tab, enter the following values:</p>
+                <ul>
+                  <li><em>Database</em>: <code>BLUDB</code></li>
+                  <li><em>Host</em>: The host name.</li>
+                  <li><em>Port</em>: For a connection without SSL, enter <code>50000</code>. For a connection with SSL, enter <code>50001</code>. </li>
+                  <li><em>User name</em>: The user name that you use to log in.</li>
+                  <li><em>Password</em>: The password that you use to log in.</li>
+                </ul>
+              </li>
+              <li>
+                <p>For an SSL connection, click the <strong>Optional</strong> tab, and then click <strong>Add</strong>. For the <code>sslConnection</code> property, specify <code>true</code>.</p>
+              </li>
+              <li>
+                <p>[<em>Optional</em>]: Click <strong>Test Connection</strong> to verify that the connection succeeded.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-dsm">
+          <h2 id="dsm">Data Server Manager (DSM)</h2>
+          <p class="shortdesc">A connection between your IBM® Data Server Manager and your Db2 on Cloud database enables you to monitor and manage the database from the Data Server Manager web console. </p>
+          <section id="section-prereq4">
+            <h3 id="prereq4">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc4">
+            <h3 id="proc4">Procedure</h3>
+            <!--The connection procedure was tested on Data Server Manager version 1.1. The same procedure applies to all of the other versions of the Data Server Manager software.
+-->
+            <p>To create a connection, complete the following steps:</p>
+            <ol>
+              <li>
+                <p>Log in to your Data Server Manager web console.</p>
+              </li>
+              <li>
+                <p>In the Data Server Manager web console, go to <strong>Set Up &gt; Database Connections</strong>.</p>
+              </li>
+              <li>
+                <p>Click the <img src="images/icon_R_plus.gif" alt="+ sign inside a circle" title="Add icon"> icon to add a database connection. On the <strong>Add Database Connection</strong> page under the <strong>Database Connection</strong> tab, enter
+                  the required information in the following fields:</p>
+                <ul>
+                  <li><em>Database connection name</em>: The name must be unique to Data Server Manager</li>
+                  <li><em>Data server type</em>: From the drop-down menu, select <strong>DB2 for Linux, UNIX, and Windows</strong></li>
+                  <li><em>Database name</em>: <code>BLUDB</code></li>
+                  <li><em>Host name</em>: Enter the Db2 on Cloud host name </li>
+                  <li><em>Port number</em>: For a connection without SSL, enter <code>50000</code>. For a connection with SSL, enter <code>50001</code>. </li>
+                  <li><em>JDBC security</em>: From the drop-down menu, select <strong>Clear text password</strong></li>
+                  <li><em>User ID</em>: Your Db2 on Cloud user ID </li>
+                  <li><em>Password</em>: Your Db2 on Cloud password </li>
+                </ul>
+              </li>
+              <li>
+                <p>For a connection with SSL, select the <strong>Advanced JDBC Properties</strong> tab. Enter the required information in the following fields:</p>
+                <ul>
+                  <li><em>Property</em>: <code>sslConnection</code></li>
+                  <li>
+                    <p><em>Value</em>: <code>true</code></p>
+                    <p>Click the <strong>Add</strong> button. Select the <strong>Database Connection</strong> tab.</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>Test the connection by clicking the <strong>Test Connection</strong> button. If the connection is successful, click <strong>OK</strong>.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-ida">
+          <h2 id="ida">InfoSphere Data Architect</h2>
+          <p class="shortdesc">These instructions explain how to create a connection from InfoSphere® Data Architect
+            <!--version 9.1.x -->to a Db2 on Cloud database.</p>
+          <section id="section-prereq5">
+            <h3 id="prereq5">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc5">
+            <h3 id="proc5">Procedure</h3>
+            <ol>
+              <li>
+                <p>In the Data Source Explorer view of InfoSphere Data Architect, right-click <strong>Database Connections</strong>, then select <strong>New</strong>.</p>
+              </li>
+              <li>
+                <p>On the <strong>Local</strong> tab, select <strong>DB2 for Linux, UNIX, and Windows</strong> as the database manager.</p>
+              </li>
+              <li>
+                <p>On the <strong>General</strong> tab, enter the following values:</p>
+                <ul>
+                  <li><em>Database</em>: <code>BLUDB</code></li>
+                  <li><em>Host</em>: The host name that you collected beforehand.</li>
+                  <li><em>Port</em>: For a connection without SSL, enter <code>50000</code>. For a connection with SSL, enter <code>50001</code>. </li>
+                  <li><em>User name</em>: The user ID that you collected beforehand.</li>
+                  <li><em>Password</em>: The password that you collected beforehand.</li>
+                </ul>
+              </li>
+              <li>
+                <p>For an SSL connection, click the <strong>Optional</strong> tab. Enter an <code>sslConnection</code> property and specify a value of <code>true</code>. Click <strong>Add</strong>.</p>
+              </li>
+              <li>
+                <p>[<em>Optional</em>]: Click <strong>Test Connection</strong> to verify that the connection succeeded.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-aginity_wb">
+          <h2 id="aginity_wb">Aginity Workbench</h2>
+          <p class="shortdesc">These instructions explain how to connect Aginity Workbench
+            <!--4.3 -->to a Db2 on Cloud database. You can use Aginity Workbench to migrate IBM PureData for Analytics (Netezza) data models and data to Db2 on Cloud.</p>
+          <section id="section-prereq6">
+            <h3 id="prereq6">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          </section>
+          <section id="section-proc6">
+            <h3 id="proc6">Procedure</h3>
+            <ol>
+              <li>
+                <p>Download and install Aginity Workbench.</p>
+              </li>
+              <li>
+                <p>Determine your ODBC DSN from the connection information that you noted earlier.</p>
+              </li>
+              <li>
+                <p>Launch Aginity Workbench. If the database connection dialog box does not open automatically, open it by clicking <strong>Connect</strong> on the toolbar.</p>
+              </li>
+              <li>
+                <p><a href="https://www.aginity.com/documentation/WB/dashDB/Default.htm#Aginity_Topics/Aginity_Workbench/Database_Connection_Dialog_Box.htm" target="_blank" class="external">Establish a database connection</a>. Use the host name, user ID,
+                  and password from the connection information that you noted earlier.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section id="section-clpplus">
+          <h2 id="clpplus">CLPPlus</h2>
+          <p class="shortdesc">Command line processor plus (CLPPlus) is included in the Db2 driver package. CLPPlus provides a command-line interface that you can use to connect to a Db2 on Cloud database. You can use CLPPlus to define, edit, and run statements, scripts,
+            and commands.</p>
+          <section id="section-prereq7">
+            <h3 id="prereq7">Prerequisites</h3>
+            <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+            <p>To use CLPPlus, ensure that a software development kit (SDK) or a Java runtime environment (JRE) for Java Version 1.5.0 or later is installed on your computer and that environment variables are set as follows:</p>
+            <ul>
+              <li>The <code>JAVA_HOME</code> environment variable is set to the Java installation directory on your computer.</li>
+              <li>The <code>PATH</code> environment variable setting includes the <code>bin</code> subdirectory of the Java installation directory on your computer.</li>
+            </ul>
+          </section>
+          <section id="section-proc7">
+            <h3 id="proc7">Procedure</h3>
+            <ol>
+              <li>
+                <p>In a command shell on Linux operating systems, at the Windows command prompt, or in the DB2 command window on Windows operating systems, run the following commands:</p>
+                <p>These commands create new entries in the driver configuration file (<code>db2dsdriver.cfg</code>) on your computer and set the connection attributes. You need to do this step only one time.</p>
+                <ul>
+                  <li>
+                    <p>For a connection with SSL:</p>
+                    <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50001 -parameter &quot;SecurityTransportMode=SSL&quot;</code></p>
+                    <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50001</code> </p>
+                    <p>where:</p>
+                    <ul>
+                      <li><code>&lt;hostname&gt;</code> is the host name of the server.</li>
+                      <li><code>&lt;alias&gt;</code> is an alias that you choose.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>For a connection without SSL:</p>
+                    <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+                    <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>To start CLPPlus with a connection to a Db2 on Cloud database that uses the entries in the <code>db2dsdriver.cfg</code> file, run the following command:</p>
+                <ul>
+                  <li>
+                    <p>Windows environments: </p>
+                    <p><code>clpplus &lt;userid&gt;@&lt;alias&gt;</code></p>
+                  </li>
+                  <li>
+                    <p>Linux environments:</p>
+                    <p><code>clpplus -nw &lt;userid&gt;@&lt;alias&gt;</code></p>
+                    <p>where:</p>
+                    <ul>
+                      <li><code>&lt;userid&gt;</code> is the user ID from the connect credentials you collected beforehand.</li>
+                      <li><code>&lt;alias&gt;</code> is the alias that you created with the <strong>db2cli writecfg</strong> command.</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>Running this command opens a CLPPlus window.</p>
+              </li>
+              <li>
+                <p>In the CLPPlus window, enter your password. The database information is displayed, followed by an SQL prompt. Sample output follows:</p>
+              </li>
+            </ol>
+            <pre><code class="hljs">   Hostname = 192.0.2.0
+   Database server = DB2/LINUXX8664  SQL10054
+   SQL authorization ID = smith
+   Local database alias = BLUDB
+   Port = 50001
+
+   SQL&gt;
+</code></pre>
+          </section>
+          <section id="section-results7">
+            <h3 id="results7">Results</h3>
+            <p>You can now enter CLPPlus commands or SELECT statements and run scripts to work with the data in the database.</p>
+          </section>
+          <section id="section-examples">
+            <h3 id="examples">Examples</h3>
+            <p>The following examples use a short script that retrieves rows from the sample table <code>GOSALES.BRANCH</code>. The script file is named <code>cities.sql</code> and is on the local Windows computer in the <code>C:\temp directory</code>. The
+              <code>cities.sql</code> file contains the following text:</p>
+            <pre><code class="hljs">SET ECHO ON
+SELECT branch_code, city from GOSALES.BRANCH;
+</code></pre>
+            <section id="section-example-1">
+              <h4 id="example-1">Example 1</h4>
+              <p>To run the script interactively:</p>
+              <ol>
+                <li>
+                  <p>Start CLPPlus with your user ID and the alias that you created in the <code>db2dsdriver.cfg</code> file by running the following command:</p>
+                  <p><code>clpplus &lt;user_id&gt;@&lt;alias&gt;</code></p>
+                </li>
+                <li>Enter your password.</li>
+                <li>
+                  <p>At the SQL prompt, enter the following text:</p>
+                  <p><code>start C:\temp\cities.sql</code></p>
+                </li>
+              </ol>
+            </section>
+            <section id="section-example-2">
+              <h4 id="example-2">Example 2</h4>
+              <p>Start CLPPlus with your user ID and the alias that you created in the <code>db2dsdriver.cfg</code> file and run the script in one step:</p>
+              <p><code>clpplus &lt;user_id&gt;/&lt;password&gt;@&lt;alias&gt; @C:\temp\cities.sql</code></p>
+              <p>Sample output from the <code>cities.sql</code> script follows:</p>
+              <pre><code class="hljs">BRANCH_CODE CITY
+----------- --------------------------------------------------
+          6 Paris
+          7 Milano
+          9 Amsterdam
+         13 Hamburg
+         14 München
+         15 Kista
+         17 Calgary
+         18 Toronto
+         19 Boston
+         20 Seattle
+         21 Los Angeles
+         22 Miami
+         23 Lyon
+         24 Distrito Federal
+         25 Tokyo
+         26 Osaka City
+         28 Melbourne
+         29 Bilbao
+         30 Sao Paulo
+         31 Kuopio
+         32 Seoul
+         33 Singapore
+
+BRANCH_CODE CITY
+----------- --------------------------------------------------
+         34 Shanghai
+         35 London
+         36 Birmingham
+         37 Zürich
+         38 Heverlee
+         39 Wien
+         40 Geneve
+
+29 rows were retrieved.
+</code></pre>
+            </section>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="To connect local applications and tools to your Db2 on Cloud database, you need to configure your environment.  ">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/connecting/driver_pkg_cfg.md">
+  <meta name="github.issue" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Configuring your local environment</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="cfg_loc_env" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-cfg_loc_env">
+        <h1 id="cfg_loc_env">Configuring your local environment</h1>
+        <p class="shortdesc">To connect local applications and tools to your Db2 on Cloud database, you need to configure your environment. </p>
+        <section id="section-prereq21">
+          <h2 id="prereq21">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- 1. Install the Db2 driver package for your operating system.
+
+   - [Installing on Windows](install_win.html)
+   - [Installing on Linux or PowerLinux](install_linux.html)
+   - [Installing on Mac OS X](install_mac.html)
+2. Decide whether or not you will be using Secure Sockets Layer (SSL) to connect to your database.
+3. Collect database details and connect credentials, including the host name of your server, and your database user ID and password. -->
+        </section>
+        <section id="section-proc21">
+          <h2 id="proc21">Procedure</h2>
+          <ol>
+            <li>
+              <p>Add entries to the driver configuration file, <code>db2dsdriver.cfg</code>, for your database.</p>
+              <p>The configuration steps are different depending on whether or not you want to connect to your database using SSL:</p>
+              <p><strong>With SSL</strong></p>
+              <p>To connect your applications and tools to your database using SSL, enter the following commands in a command shell on Linux operating systems, at the Windows command prompt, or in a DB2 command window: </p>
+              <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50001</code></p>
+              <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50001</code></p>
+              <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50001 -parameter &quot;SecurityTransportMode=SSL&quot;</code></p>
+              <p> where:</p>
+              <ul>
+                <li><code>&lt;hostname&gt;</code> is the host name of your server.</li>
+                <li><code>&lt;alias&gt;</code> is an alias that you choose. The alias cannot be the same as the database name, <code>BLUDB</code>. If you want to have spaces in the alias, surround the alias with double quotes.</li>
+              </ul>
+              <p><strong>Without SSL</strong></p>
+              <p>To connect your applications and tools to your database without using SSL, enter the following commands in a command shell on Linux operating systems, at the Windows command prompt, or in a DB2 command window: </p>
+              <p><code>db2cli writecfg add -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+              <p><code>db2cli writecfg add -dsn &lt;alias&gt; -database BLUDB -host &lt;hostname&gt; -port 50000</code></p>
+              <p> where:</p>
+              <ul>
+                <li><code>&lt;hostname&gt;</code> is the host name of your server.</li>
+                <li><code>&lt;alias&gt;</code> is an alias that you choose. The alias cannot be the same as the database name, <code>BLUDB</code>. If you want to have spaces in the alias, surround the alias with double quotes.</li>
+              </ul>
+            </li>
+            <li>
+              <p>Test connecting by issuing the <strong>db2cli validate</strong> command from the command prompt:</p>
+              <p><code>db2cli validate -dsn &lt;alias&gt; -connect -user &lt;userid&gt; -passwd &lt;password&gt;</code></p>
+              <p>where: </p>
+              <ul>
+                <li><code>&lt;alias&gt;</code> is an alias you created with the <strong>db2cli writecfg</strong> command.</li>
+                <li><code>&lt;userid&gt;</code> is your Db2 user ID.</li>
+                <li><code>&lt;password&gt;</code> is your Db2 password.</li>
+              </ul>
+            </li>
+            <li>
+              <p>[<em>Optional</em>] To be able to connect local ODBC applications and tools to your database, register the DSN with the ODBC driver manger:</p>
+              <p>Run the following command from a command line: </p>
+              <p><code>db2cli registerdsn -add -dsn &lt;alias&gt;</code></p>
+              <p>where: </p>
+              <ul>
+                <li><code>&lt;alias&gt;</code> is an alias you created with the <strong>db2cli writecfg</strong> command.</li>
+              </ul>
+              <p>By default, the DSN is created as a user DSN.</p>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

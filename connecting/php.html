@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="DC.Publisher" content="IBM Corporation">
+  <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
+  <meta name="IBM.Country" content="ZZ">
+  <meta name="DC.date" content="2018-09-25">
+  <meta name="dcterms.date" content="2018-09-25">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="subcollection" content="Db2onCloud">
+  <meta name="description" content="Define a connection between a PHP application and a Db2 on Cloud database.">
+  <meta name="source.format" content="markdown">
+
+  <meta name="github.edit" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/blob/staging/connecting/php.md">
+  <meta name="github.issue" content="yes" repo="https://github.ibm.com/Bluemix-Docs/Db2onCloud/issues/new">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title>Connecting programmatically with PHP</title>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="con_prog_php" role="article">
+      <!-- Attribute definitions -->
+      <section id="section-con_prog_php">
+        <h1 id="con_prog_php">Connecting programmatically with PHP</h1>
+        <p class="shortdesc">Define a connection between a PHP application and a Db2 on Cloud database.</p>
+        <section id="section-prereq101">
+          <h2 id="prereq101">Prerequisites</h2>
+          <p>Before attempting to connect to your Db2 on Cloud database, verify that you have the necessary <a href="/docs/services/Db2onCloud/connecting?topic=Db2onCloud-connect_ov#prereqs">prerequisites</a>.</p>
+          <!-- Before you can connect to your database, you must perform the following steps:
+
+- [Verify prerequisites](prereqs.html), including installing driver packages, configuring your local environment, and downloading SSL certificates (if needed)
+- Collect [connection information](credentials.html), including database details such as host name and port numbers, and connection credentials such as user ID and password -->
+        </section>
+        <section id="section-proc101">
+          <h2 id="proc101">Procedure</h2>
+          <section id="section-scen1">
+            <h3 id="scen1">Scenario 1: Connecting from outside IBM Cloud:</h3>
+            <ol>
+              <li>
+                <p>Download the <a href="/docs/services/Db2onCloud?topic=Db2onCloud-dr_pkg#dr_pkg">Db2 driver package</a> from the web console, and then install the driver package on the machine where your PHP application will run.</p>
+              </li>
+              <li>
+                <p>Use the <a href="http://php.net/manual/en/function.odbc-connect.php" target="_blank" class="external"><code>odbc_connect</code> function</a> to connect to the BLUDB database.</p>
+                <p>PHP code example:</p>
+                <pre><code class="hljs">&lt;?php
+$database = &quot;BLUDB&quot;;        # Get these database details from
+$hostname = &quot;&lt;Host-name&gt;&quot;;  # the web console
+$user     = &quot;&lt;User-ID &gt;&quot;;   #
+$password = &quot;&lt;Password&gt;&quot;;   #
+$port     = 50000;          #
+$ssl_port = 50001;          #
+# Build the connection string
+#
+$driver  = &quot;DRIVER={IBM DB2 ODBC DRIVER};&quot;;
+$dsn     = &quot;DATABASE=$database; &quot; .
+           &quot;HOSTNAME=$hostname;&quot; .
+           &quot;PORT=$port; &quot; .
+           &quot;PROTOCOL=TCPIP; &quot; .
+           &quot;UID=$user;&quot; .
+           &quot;PWD=$password;&quot;;
+$ssl_dsn = &quot;DATABASE=$database; &quot; .
+           &quot;HOSTNAME=$hostname;&quot; .
+           &quot;PORT=$ssl_port; &quot; .
+           &quot;PROTOCOL=TCPIP; &quot; .
+           &quot;UID=$user;&quot; .
+           &quot;PWD=$password;&quot; .
+           &quot;SECURITY=SSL;&quot;;
+$conn_string = $driver . $dsn;     # Non-SSL
+$conn_string = $driver . $ssl_dsn; # SSL
+# Connect
+#
+$conn = odbc_connect( $conn_string, &quot;&quot;, &quot;&quot; );
+if( $conn )
+{
+    echo &quot;Connection succeeded.&quot;;
+    # Disconnect
+    #
+    odbc_close( $conn );
+}
+else
+{
+    echo &quot;Connection failed.&quot;;
+}
+?&gt;
+</code></pre>
+                <p>Saving this PHP code example to a script file called <code>C:\sample.php</code> and then running the script from a command line produces the following output:</p>
+                <pre><code class="hljs">C:\&gt; php –f sample.php
+
+Connection succeeded.
+</code></pre>
+              </li>
+            </ol>
+          </section>
+          <section id="section-scen2">
+            <h3 id="scen2">Scenario 2: Connecting from a PHP web app in IBM Cloud</h3>
+            <ol>
+              <li>
+                <p>From the IBM Cloud catalog, create a new PHP App.</p>
+              </li>
+              <li>
+                <p>From the &quot;Getting Started&quot; section of the new PHP App in your IBM Cloud dashboard, download the App starter code to your local work directory.</p>
+              </li>
+              <li>
+                <p>In your IBM Cloud dashboard, create a new connection from your Db2 service to your new PHP App. (Creating this Connection in IBM Cloud makes the <code>VCAP_SERVICES</code> environment variable available to your PHP App. The <code>VCAP_SERVICES</code>                  environment variable contains database details for your Db2 service. Using <code>VCAP_SERVICES</code> is more convenient than hard-coding the database details in your PHP App.)</p>
+              </li>
+              <li>
+                <p>In your local working directory, update the <code>index.php</code> file to connect to the BLUDB database by using the <a href="http://php.net/manual/en/function.db2-connect.php" target="_blank" class="external"><code>db2_connect</code> function</a>.</p>
+                <p>Example:</p>
+                <pre><code class="hljs">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;PHP Starter Application&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+if( getenv( &quot;VCAP_SERVICES&quot; ) )
+{
+    # Get database details from the VCAP_SERVICES environment variable
+    #
+    # *This can only work if you have used the Bluemix dashboard to 
+    # create a connection from your dashDB service to your PHP App.
+    #
+    $details  = json_decode( getenv( &quot;VCAP_SERVICES&quot; ), true );
+    $dsn      = $details [ &quot;dashDB&quot; ][0][ &quot;credentials&quot; ][ &quot;dsn&quot; ];
+    $ssl_dsn  = $details [ &quot;dashDB&quot; ][0][ &quot;credentials&quot; ][ &quot;ssldsn&quot; ];
+    # Build the connection string
+    #
+    $driver = &quot;DRIVER={IBM DB2 ODBC DRIVER};&quot;;
+    $conn_string = $driver . $dsn;     # Non-SSL
+    $conn_string = $driver . $ssl_dsn; # SSL
+    $conn = db2_connect( $conn_string, &quot;&quot;, &quot;&quot; );
+    if( $conn )
+    {
+        echo &quot;&lt;p&gt;Connection succeeded.&lt;/p&gt;&quot;;
+        db2_close( $conn );
+    }
+    else
+    {
+        echo &quot;&lt;p&gt;Connection failed.&lt;/p&gt;&quot;;
+    }
+}
+else
+{
+    echo &quot;&lt;p&gt;No credentials.&lt;/p&gt;&quot;;
+}
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+              </li>
+              <li>
+                <p>From your local working directory, push the updates to IBM Cloud by following the instructions in the &quot;Getting Started&quot; section of the PHP App in your IBM Cloud dashboard. Then restart the App in IBM Cloud and view the App in
+                  a browser.</p>
+              </li>
+            </ol>
+          </section>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
