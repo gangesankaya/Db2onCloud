@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"
             },
             {
                 "name": "path",
@@ -25,9 +25,9 @@
         ],
         "topics": [
             {
-                "href": "services/Db2onCloud/getting-started.html#getting_started_db2oncloud",
+                "href": "services/Db2onCloud/getting-started.html#getting-started",
                 "label": "시작하기 튜토리얼",
-                "id": "Db2onCloud-getting_started_db2oncloud",
+                "id": "Db2onCloud-getting-started",
                 "topics": [
                     {
                         "href": "services/Db2onCloud/getting-started.html#interfaces",

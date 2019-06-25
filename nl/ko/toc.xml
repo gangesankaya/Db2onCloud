@@ -4,9 +4,9 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting_started_db2oncloud#getting_started_db2oncloud"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"/>
   <property name="path" value="services/Db2onCloud"/>
-  <topic href="getting-started.html#getting_started_db2oncloud" label="시작하기 튜토리얼" id="getting_started_db2oncloud">
+  <topic href="getting-started.html#getting-started" label="시작하기 튜토리얼" id="getting-started">
     <property name="navgroup" value="learn"/>
     <topic href="getting-started.html#interfaces" label="인터페이스" id="interfaces">
       <property name="type" value="anchor"/>
