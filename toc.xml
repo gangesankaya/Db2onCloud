@@ -352,9 +352,9 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic label="Amazon Web services">
+  <topic label="Amazon Web Services">
     <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Amazon Web services"/>
+    <property name="topicgroup" value="Amazon Web Services"/>
     <topic href="aws_overview.html#aws_overview" label="Overview" id="aws_overview">
       <topic href="aws_overview.html#aws_rds" label="Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)" id="aws_rds">
         <property name="type" value="anchor"/>

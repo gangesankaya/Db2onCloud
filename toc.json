@@ -1423,11 +1423,11 @@
                 ]
             },
             {
-                "label": "Amazon Web services",
+                "label": "Amazon Web Services",
                 "properties": [
                     {
                         "name": "topicgroup",
-                        "value": "Amazon Web services"
+                        "value": "Amazon Web Services"
                     },
                     {
                         "name": "navgroup",
