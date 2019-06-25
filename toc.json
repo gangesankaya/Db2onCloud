@@ -389,12 +389,12 @@
                             },
                             {
                                 "href": "services/Db2onCloud/connecting/connectivity_options.html#vpn",
-                                "label": "Connecting to a private endpoint: virtual private network (VPN)",
+                                "label": "Connecting to a virtual private network (VPN) endpoint",
                                 "id": "Db2onCloud-vpn",
                                 "topics": [
                                     {
                                         "href": "services/Db2onCloud/connecting/connectivity_options.html#priv_endpt_vpn_steps",
-                                        "label": "How to connect to a private endpoint with a VPN",
+                                        "label": "How to connect to a VPN endpoint",
                                         "id": "Db2onCloud-priv_endpt_vpn_steps"
                                     }
                                 ],
