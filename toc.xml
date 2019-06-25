@@ -95,9 +95,9 @@
         <property name="type" value="anchor"/>
         <topic href="connecting/connectivity_options.html#priv_endpt_steps" label="How to connect to a private endpoint with IBM Cloud Service Endpoint" id="priv_endpt_steps"></topic>
       </topic>
-      <topic href="connecting/connectivity_options.html#vpn" label="Connecting to a private endpoint: virtual private network (VPN)" id="vpn">
+      <topic href="connecting/connectivity_options.html#vpn" label="Connecting to a virtual private network (VPN) endpoint" id="vpn">
         <property name="type" value="anchor"/>
-        <topic href="connecting/connectivity_options.html#priv_endpt_vpn_steps" label="How to connect to a private endpoint with a VPN" id="priv_endpt_vpn_steps"></topic>
+        <topic href="connecting/connectivity_options.html#priv_endpt_vpn_steps" label="How to connect to a VPN endpoint" id="priv_endpt_vpn_steps"></topic>
       </topic>
     </topic>
     <topic href="connecting/credentials.html#db_details_cxn_creds" label="Database details and connection credentials" id="db_details_cxn_creds">
