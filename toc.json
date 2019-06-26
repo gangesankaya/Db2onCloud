@@ -125,115 +125,245 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/iam.html#iam",
-                "label": "Identity and access management (IAM) on IBM Cloud",
-                "id": "Db2onCloud-iam",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/iam.html#enabled",
-                        "label": "Is IAM enabled on your instance?",
-                        "id": "Db2onCloud-enabled",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#features",
-                        "label": "Features of IBM Cloud IAM",
-                        "id": "Db2onCloud-features",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#connect_user",
-                        "label": "Client connections and user logins",
-                        "id": "Db2onCloud-connect_user",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#sup-if",
-                        "label": "Supported interfaces",
-                        "id": "Db2onCloud-sup-if",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/iam.html#odbc-clpplus",
-                                "label": "ODBC, CLP, and CLPPLUS",
-                                "id": "Db2onCloud-odbc-clpplus"
-                            },
-                            {
-                                "href": "services/Db2onCloud/iam.html#jdbc",
-                                "label": "JDBC",
-                                "id": "Db2onCloud-jdbc"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#console-ux",
-                        "label": "Console user experience",
-                        "id": "Db2onCloud-console-ux",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#api",
-                        "label": "REST API experience",
-                        "id": "Db2onCloud-api",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#fed_ibmid",
-                        "label": "IBMid federation",
-                        "id": "Db2onCloud-fed_ibmid",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/iam.html#restrictions",
-                        "label": "Restrictions",
-                        "id": "Db2onCloud-restrictions",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
+                "label": "Security",
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Security"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/iam.html#iam",
+                        "label": "Identity and access management (IAM) on IBM Cloud",
+                        "id": "Db2onCloud-iam",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/iam.html#enabled",
+                                "label": "Is IAM enabled on your instance?",
+                                "id": "Db2onCloud-enabled",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#features",
+                                "label": "Features of IBM Cloud IAM",
+                                "id": "Db2onCloud-features",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#connect_user",
+                                "label": "Client connections and user logins",
+                                "id": "Db2onCloud-connect_user",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#sup-if",
+                                "label": "Supported interfaces",
+                                "id": "Db2onCloud-sup-if",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/iam.html#odbc-clpplus",
+                                        "label": "ODBC, CLP, and CLPPLUS",
+                                        "id": "Db2onCloud-odbc-clpplus"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/iam.html#jdbc",
+                                        "label": "JDBC",
+                                        "id": "Db2onCloud-jdbc"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#console-ux",
+                                "label": "Console user experience",
+                                "id": "Db2onCloud-console-ux",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#api",
+                                "label": "REST API experience",
+                                "id": "Db2onCloud-api",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#fed_ibmid",
+                                "label": "IBMid federation",
+                                "id": "Db2onCloud-fed_ibmid",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/iam.html#restrictions",
+                                "label": "Restrictions",
+                                "id": "Db2onCloud-restrictions",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
+                        "label": "Managing users",
+                        "id": "Db2onCloud-user_mgmt"
+                    },
+                    {
+                        "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
+                        "label": "Security compliances"
+                    },
+                    {
+                        "href": "services/Db2onCloud/key_protect.html#key-protect",
+                        "label": "IBM Key Protect",
+                        "id": "Db2onCloud-key-protect",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_prereqs",
+                                "label": "Prerequisites",
+                                "id": "Db2onCloud-kp_prereqs",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_gs",
+                                "label": "Getting started",
+                                "id": "Db2onCloud-kp_gs",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_instance",
+                                        "label": "Creating an IBM Key Protect instance",
+                                        "id": "Db2onCloud-kp_instance",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_1",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_1"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_key",
+                                        "label": "Creating an encryption key in Key Protect",
+                                        "id": "Db2onCloud-kp_key",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_2",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_grant",
+                                        "label": "Granting service authorization",
+                                        "id": "Db2onCloud-kp_grant",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_3",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_3"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/key_protect.html#kp_cfg_key",
+                                        "label": "Configuring a Db2 service instance to use Key Protect root key",
+                                        "id": "Db2onCloud-kp_cfg_key",
+                                        "topics": [
+                                            {
+                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_4",
+                                                "label": "Procedure",
+                                                "id": "Db2onCloud-kp_proc_4"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_rotate",
+                                "label": "Rotating the key in Key Protect",
+                                "id": "Db2onCloud-kp_rotate",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_rm_auth",
+                                "label": "Removing the authorization of Db2 on Cloud service to access Key Protect",
+                                "id": "Db2onCloud-kp_rm_auth",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/key_protect.html#kp_del_root_key",
+                                "label": "Deleting the root key in Key Protect",
+                                "id": "Db2onCloud-kp_del_root_key",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -1377,6 +1507,67 @@
                 ]
             },
             {
+                "label": "Loading your data",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Loading your data"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/dcw.html#dcw",
+                        "label": "Assessing your database compatibility",
+                        "id": "Db2onCloud-dcw"
+                    },
+                    {
+                        "href": "services/Db2onCloud/migration.html#migration",
+                        "label": "Migrating data to IBM Cloud",
+                        "id": "Db2onCloud-migration",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/migration.html#cos",
+                                "label": "Loading data from object store",
+                                "id": "Db2onCloud-cos",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/migration.html#onprem",
+                                "label": "Migrating data from on-premises system",
+                                "id": "Db2onCloud-onprem",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/migration.html#lift",
+                                        "label": "Lift CLI",
+                                        "id": "Db2onCloud-lift"
+                                    },
+                                    {
+                                        "href": "services/Db2onCloud/migration.html#mdms",
+                                        "label": "IBM Cloud Mass Data Migration",
+                                        "id": "Db2onCloud-mdms"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "href": "services/Db2onCloud/free_plan.html#free_plan",
                 "label": "Free plan",
                 "id": "Db2onCloud-free_plan",
@@ -1419,49 +1610,6 @@
                     {
                         "name": "navgroup",
                         "value": "learn"
-                    }
-                ]
-            },
-            {
-                "label": "Amazon Web Services",
-                "properties": [
-                    {
-                        "name": "topicgroup",
-                        "value": "Amazon Web Services"
-                    },
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ],
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/aws_overview.html#aws_overview",
-                        "label": "Overview",
-                        "id": "Db2onCloud-aws_overview",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/aws_overview.html#aws_rds",
-                                "label": "Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)",
-                                "id": "Db2onCloud-aws_rds",
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/gs.html#aws_gs",
-                        "label": "Getting started",
-                        "id": "Db2onCloud-aws_gs"
-                    },
-                    {
-                        "href": "services/Db2onCloud/feat_specs.html#aws_fs",
-                        "label": "Features & specs",
-                        "id": "Db2onCloud-aws_fs"
                     }
                 ]
             },
@@ -1515,6 +1663,49 @@
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ]
+            },
+            {
+                "label": "Amazon Web Services",
+                "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Amazon Web Services"
+                    },
+                    {
+                        "name": "navgroup",
+                        "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/aws_overview.html#aws_overview",
+                        "label": "Overview",
+                        "id": "Db2onCloud-aws_overview",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/aws_overview.html#aws_rds",
+                                "label": "Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)",
+                                "id": "Db2onCloud-aws_rds",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/gs.html#aws_gs",
+                        "label": "Getting started",
+                        "id": "Db2onCloud-aws_gs"
+                    },
+                    {
+                        "href": "services/Db2onCloud/feat_specs.html#aws_fs",
+                        "label": "Features & specs",
+                        "id": "Db2onCloud-aws_fs"
                     }
                 ]
             },
@@ -1603,203 +1794,6 @@
                     {
                         "name": "navgroup",
                         "value": "learn"
-                    }
-                ]
-            },
-            {
-                "label": "Loading your data",
-                "properties": [
-                    {
-                        "name": "topicgroup",
-                        "value": "Loading your data"
-                    },
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ],
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/dcw.html#dcw",
-                        "label": "Assessing your database compatibility",
-                        "id": "Db2onCloud-dcw"
-                    },
-                    {
-                        "href": "services/Db2onCloud/migration.html#migration",
-                        "label": "Migrating data to IBM Cloud",
-                        "id": "Db2onCloud-migration",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/migration.html#cos",
-                                "label": "Loading data from object store",
-                                "id": "Db2onCloud-cos",
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            },
-                            {
-                                "href": "services/Db2onCloud/migration.html#onprem",
-                                "label": "Migrating data from on-premises system",
-                                "id": "Db2onCloud-onprem",
-                                "topics": [
-                                    {
-                                        "href": "services/Db2onCloud/migration.html#lift",
-                                        "label": "Lift CLI",
-                                        "id": "Db2onCloud-lift"
-                                    },
-                                    {
-                                        "href": "services/Db2onCloud/migration.html#mdms",
-                                        "label": "IBM Cloud Mass Data Migration",
-                                        "id": "Db2onCloud-mdms"
-                                    }
-                                ],
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "label": "Security",
-                "properties": [
-                    {
-                        "name": "topicgroup",
-                        "value": "Security"
-                    },
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ],
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/user_mgmt.html#user_mgmt",
-                        "label": "Managing users",
-                        "id": "Db2onCloud-user_mgmt"
-                    },
-                    {
-                        "href": "https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html",
-                        "label": "Security compliances"
-                    },
-                    {
-                        "href": "services/Db2onCloud/key_protect.html#key-protect",
-                        "label": "IBM Key Protect",
-                        "id": "Db2onCloud-key-protect",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/key_protect.html#kp_prereqs",
-                                "label": "Prerequisites",
-                                "id": "Db2onCloud-kp_prereqs",
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            },
-                            {
-                                "href": "services/Db2onCloud/key_protect.html#kp_gs",
-                                "label": "Getting started",
-                                "id": "Db2onCloud-kp_gs",
-                                "topics": [
-                                    {
-                                        "href": "services/Db2onCloud/key_protect.html#kp_instance",
-                                        "label": "Creating an IBM Key Protect instance",
-                                        "id": "Db2onCloud-kp_instance",
-                                        "topics": [
-                                            {
-                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_1",
-                                                "label": "Procedure",
-                                                "id": "Db2onCloud-kp_proc_1"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "href": "services/Db2onCloud/key_protect.html#kp_key",
-                                        "label": "Creating an encryption key in Key Protect",
-                                        "id": "Db2onCloud-kp_key",
-                                        "topics": [
-                                            {
-                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_2",
-                                                "label": "Procedure",
-                                                "id": "Db2onCloud-kp_proc_2"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "href": "services/Db2onCloud/key_protect.html#kp_grant",
-                                        "label": "Granting service authorization",
-                                        "id": "Db2onCloud-kp_grant",
-                                        "topics": [
-                                            {
-                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_3",
-                                                "label": "Procedure",
-                                                "id": "Db2onCloud-kp_proc_3"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "href": "services/Db2onCloud/key_protect.html#kp_cfg_key",
-                                        "label": "Configuring a Db2 service instance to use Key Protect root key",
-                                        "id": "Db2onCloud-kp_cfg_key",
-                                        "topics": [
-                                            {
-                                                "href": "services/Db2onCloud/key_protect.html#kp_proc_4",
-                                                "label": "Procedure",
-                                                "id": "Db2onCloud-kp_proc_4"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            },
-                            {
-                                "href": "services/Db2onCloud/key_protect.html#kp_rotate",
-                                "label": "Rotating the key in Key Protect",
-                                "id": "Db2onCloud-kp_rotate",
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            },
-                            {
-                                "href": "services/Db2onCloud/key_protect.html#kp_rm_auth",
-                                "label": "Removing the authorization of Db2 on Cloud service to access Key Protect",
-                                "id": "Db2onCloud-kp_rm_auth",
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            },
-                            {
-                                "href": "services/Db2onCloud/key_protect.html#kp_del_root_key",
-                                "label": "Deleting the root key in Key Protect",
-                                "id": "Db2onCloud-kp_del_root_key",
-                                "properties": [
-                                    {
-                                        "name": "type",
-                                        "value": "anchor"
-                                    }
-                                ]
-                            }
-                        ]
                     }
                 ]
             },

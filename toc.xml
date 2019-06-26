@@ -31,33 +31,67 @@
   <topic href="features_specs.html#fs" label="Features &amp; specs" id="fs">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="iam.html#iam" label="Identity and access management (IAM) on IBM Cloud" id="iam">
+  <topic label="Security">
     <property name="navgroup" value="learn"/>
-    <topic href="iam.html#enabled" label="Is IAM enabled on your instance?" id="enabled">
-      <property name="type" value="anchor"/>
+    <property name="topicgroup" value="Security"/>
+    <topic href="iam.html#iam" label="Identity and access management (IAM) on IBM Cloud" id="iam">
+      <topic href="iam.html#enabled" label="Is IAM enabled on your instance?" id="enabled">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="iam.html#features" label="Features of IBM Cloud IAM" id="features">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="iam.html#connect_user" label="Client connections and user logins" id="connect_user">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="iam.html#sup-if" label="Supported interfaces" id="sup-if">
+        <property name="type" value="anchor"/>
+        <topic href="iam.html#odbc-clpplus" label="ODBC, CLP, and CLPPLUS" id="odbc-clpplus"></topic>
+        <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
+      </topic>
+      <topic href="iam.html#console-ux" label="Console user experience" id="console-ux">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="iam.html#api" label="REST API experience" id="api">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="iam.html#fed_ibmid" label="IBMid federation" id="fed_ibmid">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
+        <property name="type" value="anchor"/>
+      </topic>
     </topic>
-    <topic href="iam.html#features" label="Features of IBM Cloud IAM" id="features">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="iam.html#connect_user" label="Client connections and user logins" id="connect_user">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="iam.html#sup-if" label="Supported interfaces" id="sup-if">
-      <property name="type" value="anchor"/>
-      <topic href="iam.html#odbc-clpplus" label="ODBC, CLP, and CLPPLUS" id="odbc-clpplus"></topic>
-      <topic href="iam.html#jdbc" label="JDBC" id="jdbc"></topic>
-    </topic>
-    <topic href="iam.html#console-ux" label="Console user experience" id="console-ux">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="iam.html#api" label="REST API experience" id="api">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="iam.html#fed_ibmid" label="IBMid federation" id="fed_ibmid">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="iam.html#restrictions" label="Restrictions" id="restrictions">
-      <property name="type" value="anchor"/>
+    <topic href="user_mgmt.html#user_mgmt" label="Managing users" id="user_mgmt"></topic>
+    <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Security compliances"/>
+    <topic href="key_protect.html#key-protect" label="IBM Key Protect" id="key-protect">
+      <topic href="key_protect.html#kp_prereqs" label="Prerequisites" id="kp_prereqs">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="key_protect.html#kp_gs" label="Getting started" id="kp_gs">
+        <property name="type" value="anchor"/>
+        <topic href="key_protect.html#kp_instance" label="Creating an IBM Key Protect instance" id="kp_instance">
+          <topic href="key_protect.html#kp_proc_1" label="Procedure" id="kp_proc_1"></topic>
+        </topic>
+        <topic href="key_protect.html#kp_key" label="Creating an encryption key in Key Protect" id="kp_key">
+          <topic href="key_protect.html#kp_proc_2" label="Procedure" id="kp_proc_2"></topic>
+        </topic>
+        <topic href="key_protect.html#kp_grant" label="Granting service authorization" id="kp_grant">
+          <topic href="key_protect.html#kp_proc_3" label="Procedure" id="kp_proc_3"></topic>
+        </topic>
+        <topic href="key_protect.html#kp_cfg_key" label="Configuring a Db2 service instance to use Key Protect root key" id="kp_cfg_key">
+          <topic href="key_protect.html#kp_proc_4" label="Procedure" id="kp_proc_4"></topic>
+        </topic>
+      </topic>
+      <topic href="key_protect.html#kp_rotate" label="Rotating the key in Key Protect" id="kp_rotate">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="key_protect.html#kp_rm_auth" label="Removing the authorization of Db2 on Cloud service to access Key Protect" id="kp_rm_auth">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="key_protect.html#kp_del_root_key" label="Deleting the root key in Key Protect" id="kp_del_root_key">
+        <property name="type" value="anchor"/>
+      </topic>
     </topic>
   </topic>
   <topic label="Connecting">
@@ -340,6 +374,21 @@
     </topic>
     <topic href="cdc.html#cdc" label="InfoSphere CDC" id="cdc"></topic>
   </topic>
+  <topic label="Loading your data">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="Loading your data"/>
+    <topic href="dcw.html#dcw" label="Assessing your database compatibility" id="dcw"></topic>
+    <topic href="migration.html#migration" label="Migrating data to IBM Cloud" id="migration">
+      <topic href="migration.html#cos" label="Loading data from object store" id="cos">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="migration.html#onprem" label="Migrating data from on-premises system" id="onprem">
+        <property name="type" value="anchor"/>
+        <topic href="migration.html#lift" label="Lift CLI" id="lift"></topic>
+        <topic href="migration.html#mdms" label="IBM Cloud Mass Data Migration" id="mdms"></topic>
+      </topic>
+    </topic>
+  </topic>
   <topic href="free_plan.html#free_plan" label="Free plan" id="free_plan">
     <property name="navgroup" value="learn"/>
     <topic href="free_plan.html#architecture" label="Architecture" id="architecture">
@@ -351,17 +400,6 @@
     <topic href="free_plan.html#fp_restrictions" label="Free plan restrictions" id="fp_restrictions">
       <property name="type" value="anchor"/>
     </topic>
-  </topic>
-  <topic label="Amazon Web Services">
-    <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Amazon Web Services"/>
-    <topic href="aws_overview.html#aws_overview" label="Overview" id="aws_overview">
-      <topic href="aws_overview.html#aws_rds" label="Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)" id="aws_rds">
-        <property name="type" value="anchor"/>
-      </topic>
-    </topic>
-    <topic href="gs.html#aws_gs" label="Getting started" id="aws_gs"></topic>
-    <topic href="feat_specs.html#aws_fs" label="Features &amp; specs" id="aws_fs"></topic>
   </topic>
   <topic href="plans_pricing.html#plans_pricing" label="Plans and pricing" id="plans_pricing">
     <property name="navgroup" value="learn"/>
@@ -375,6 +413,17 @@
   </topic>
   <topic href="flex_scaling.html#scale" label="Flexible scaling" id="scale">
     <property name="navgroup" value="learn"/>
+  </topic>
+  <topic label="Amazon Web Services">
+    <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="Amazon Web Services"/>
+    <topic href="aws_overview.html#aws_overview" label="Overview" id="aws_overview">
+      <topic href="aws_overview.html#aws_rds" label="Db2 on Cloud for Amazon Web Services vs Amazon Relational Database Service (RDS)" id="aws_rds">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="gs.html#aws_gs" label="Getting started" id="aws_gs"></topic>
+    <topic href="feat_specs.html#aws_fs" label="Features &amp; specs" id="aws_fs"></topic>
   </topic>
   <topic href="br.html#bnr" label="Backup and restore" id="bnr">
     <property name="navgroup" value="learn"/>
@@ -396,56 +445,6 @@
     <topic href="ha.html#faq" label="FAQ" id="faq">
       <property name="type" value="anchor"/>
       <topic href="ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-" label="What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?" id="what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-"></topic>
-    </topic>
-  </topic>
-  <topic label="Loading your data">
-    <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Loading your data"/>
-    <topic href="dcw.html#dcw" label="Assessing your database compatibility" id="dcw"></topic>
-    <topic href="migration.html#migration" label="Migrating data to IBM Cloud" id="migration">
-      <topic href="migration.html#cos" label="Loading data from object store" id="cos">
-        <property name="type" value="anchor"/>
-      </topic>
-      <topic href="migration.html#onprem" label="Migrating data from on-premises system" id="onprem">
-        <property name="type" value="anchor"/>
-        <topic href="migration.html#lift" label="Lift CLI" id="lift"></topic>
-        <topic href="migration.html#mdms" label="IBM Cloud Mass Data Migration" id="mdms"></topic>
-      </topic>
-    </topic>
-  </topic>
-  <topic label="Security">
-    <property name="navgroup" value="learn"/>
-    <property name="topicgroup" value="Security"/>
-    <topic href="user_mgmt.html#user_mgmt" label="Managing users" id="user_mgmt"></topic>
-    <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Security compliances"/>
-    <topic href="key_protect.html#key-protect" label="IBM Key Protect" id="key-protect">
-      <topic href="key_protect.html#kp_prereqs" label="Prerequisites" id="kp_prereqs">
-        <property name="type" value="anchor"/>
-      </topic>
-      <topic href="key_protect.html#kp_gs" label="Getting started" id="kp_gs">
-        <property name="type" value="anchor"/>
-        <topic href="key_protect.html#kp_instance" label="Creating an IBM Key Protect instance" id="kp_instance">
-          <topic href="key_protect.html#kp_proc_1" label="Procedure" id="kp_proc_1"></topic>
-        </topic>
-        <topic href="key_protect.html#kp_key" label="Creating an encryption key in Key Protect" id="kp_key">
-          <topic href="key_protect.html#kp_proc_2" label="Procedure" id="kp_proc_2"></topic>
-        </topic>
-        <topic href="key_protect.html#kp_grant" label="Granting service authorization" id="kp_grant">
-          <topic href="key_protect.html#kp_proc_3" label="Procedure" id="kp_proc_3"></topic>
-        </topic>
-        <topic href="key_protect.html#kp_cfg_key" label="Configuring a Db2 service instance to use Key Protect root key" id="kp_cfg_key">
-          <topic href="key_protect.html#kp_proc_4" label="Procedure" id="kp_proc_4"></topic>
-        </topic>
-      </topic>
-      <topic href="key_protect.html#kp_rotate" label="Rotating the key in Key Protect" id="kp_rotate">
-        <property name="type" value="anchor"/>
-      </topic>
-      <topic href="key_protect.html#kp_rm_auth" label="Removing the authorization of Db2 on Cloud service to access Key Protect" id="kp_rm_auth">
-        <property name="type" value="anchor"/>
-      </topic>
-      <topic href="key_protect.html#kp_del_root_key" label="Deleting the root key in Key Protect" id="kp_del_root_key">
-        <property name="type" value="anchor"/>
-      </topic>
     </topic>
   </topic>
   <topic href="audit.html#aud-log-mon" label="Auditing, logging, and monitoring" id="aud-log-mon">
