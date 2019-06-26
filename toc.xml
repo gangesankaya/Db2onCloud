@@ -7,7 +7,7 @@
   <property name="arm" value="1920570"/>
   <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"/>
   <property name="path" value="services/Db2onCloud"/>
-  <topic href="getting-started.html#getting-started" label="Getting started tutorial" id="getting-started">
+  <topic href="getting-started.html#getting-started" label="Getting started with Db2 on Cloud" id="getting-started">
     <property name="navgroup" value="learn"/>
     <topic href="getting-started.html#interfaces" label="Interfaces" id="interfaces">
       <property name="type" value="anchor"/>
