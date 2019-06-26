@@ -114,13 +114,143 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/features_specs.html#fs",
                 "label": "Features & specs",
-                "id": "Db2onCloud-fs",
                 "properties": [
+                    {
+                        "name": "topicgroup",
+                        "value": "Features & specs"
+                    },
                     {
                         "name": "navgroup",
                         "value": "learn"
+                    }
+                ],
+                "topics": [
+                    {
+                        "href": "services/Db2onCloud/features_specs.html#fs",
+                        "label": "Features & specs",
+                        "id": "Db2onCloud-fs"
+                    },
+                    {
+                        "href": "https://ibm.biz/db2oncloud-features",
+                        "label": "Features and advantages"
+                    },
+                    {
+                        "href": "services/Db2onCloud/flex_scaling.html#scale",
+                        "label": "Flexible scaling",
+                        "id": "Db2onCloud-scale"
+                    },
+                    {
+                        "href": "services/Db2onCloud/br.html#bnr",
+                        "label": "Backup and restore",
+                        "id": "Db2onCloud-bnr",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/br.html#point-in-time",
+                                "label": "Point-in-time restore",
+                                "id": "Db2onCloud-point-in-time",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/ha.html#ha",
+                        "label": "High availability (HA)",
+                        "id": "Db2onCloud-ha",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/ha.html#rule_14",
+                                "label": "Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)",
+                                "id": "Db2onCloud-rule_14",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/ha.html#add_dr",
+                                "label": "How to add a Geo-Replicated Disaster Recovery Node",
+                                "id": "Db2onCloud-add_dr",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/ha.html#manage_ha_dr",
+                                "label": "Managing high availability and disaster recovery nodes",
+                                "id": "Db2onCloud-manage_ha_dr",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/ha.html#faq",
+                                "label": "FAQ",
+                                "id": "Db2onCloud-faq",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-",
+                                        "label": "What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?",
+                                        "id": "Db2onCloud-what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/audit.html#aud-log-mon",
+                        "label": "Auditing, logging, and monitoring",
+                        "id": "Db2onCloud-aud-log-mon",
+                        "topics": [
+                            {
+                                "href": "services/Db2onCloud/audit.html#auditing",
+                                "label": "Auditing",
+                                "id": "Db2onCloud-auditing",
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            },
+                            {
+                                "href": "services/Db2onCloud/audit.html#log_mon",
+                                "label": "Logging and monitoring",
+                                "id": "Db2onCloud-log_mon",
+                                "topics": [
+                                    {
+                                        "href": "services/Db2onCloud/audit.html#basic_overview",
+                                        "label": "A basic overview:",
+                                        "id": "Db2onCloud-basic_overview"
+                                    }
+                                ],
+                                "properties": [
+                                    {
+                                        "name": "type",
+                                        "value": "anchor"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -1656,17 +1786,6 @@
                 ]
             },
             {
-                "href": "services/Db2onCloud/flex_scaling.html#scale",
-                "label": "Flexible scaling",
-                "id": "Db2onCloud-scale",
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
                 "label": "Amazon Web Services",
                 "properties": [
                     {
@@ -1706,136 +1825,6 @@
                         "href": "services/Db2onCloud/feat_specs.html#aws_fs",
                         "label": "Features & specs",
                         "id": "Db2onCloud-aws_fs"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/br.html#bnr",
-                "label": "Backup and restore",
-                "id": "Db2onCloud-bnr",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/br.html#point-in-time",
-                        "label": "Point-in-time restore",
-                        "id": "Db2onCloud-point-in-time",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/ha.html#ha",
-                "label": "High availability (HA)",
-                "id": "Db2onCloud-ha",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/ha.html#rule_14",
-                        "label": "Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)",
-                        "id": "Db2onCloud-rule_14",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/ha.html#add_dr",
-                        "label": "How to add a Geo-Replicated Disaster Recovery Node",
-                        "id": "Db2onCloud-add_dr",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/ha.html#manage_ha_dr",
-                        "label": "Managing high availability and disaster recovery nodes",
-                        "id": "Db2onCloud-manage_ha_dr",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/ha.html#faq",
-                        "label": "FAQ",
-                        "id": "Db2onCloud-faq",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-",
-                                "label": "What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?",
-                                "id": "Db2onCloud-what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "services/Db2onCloud/audit.html#aud-log-mon",
-                "label": "Auditing, logging, and monitoring",
-                "id": "Db2onCloud-aud-log-mon",
-                "topics": [
-                    {
-                        "href": "services/Db2onCloud/audit.html#auditing",
-                        "label": "Auditing",
-                        "id": "Db2onCloud-auditing",
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    },
-                    {
-                        "href": "services/Db2onCloud/audit.html#log_mon",
-                        "label": "Logging and monitoring",
-                        "id": "Db2onCloud-log_mon",
-                        "topics": [
-                            {
-                                "href": "services/Db2onCloud/audit.html#basic_overview",
-                                "label": "A basic overview:",
-                                "id": "Db2onCloud-basic_overview"
-                            }
-                        ],
-                        "properties": [
-                            {
-                                "name": "type",
-                                "value": "anchor"
-                            }
-                        ]
-                    }
-                ],
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
                     }
                 ]
             },
@@ -1899,16 +1888,6 @@
             {
                 "href": "https://www.youtube.com/watch?v=abmWJYe7Kcc",
                 "label": "Walk-through video",
-                "properties": [
-                    {
-                        "name": "navgroup",
-                        "value": "learn"
-                    }
-                ]
-            },
-            {
-                "href": "https://ibm.biz/db2oncloud-features",
-                "label": "Features and advantages",
                 "properties": [
                     {
                         "name": "navgroup",

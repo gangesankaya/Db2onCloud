@@ -28,8 +28,41 @@
       <property name="type" value="anchor"/>
     </topic>
   </topic>
-  <topic href="features_specs.html#fs" label="Features &amp; specs" id="fs">
+  <topic label="Features & specs">
     <property name="navgroup" value="learn"/>
+    <property name="topicgroup" value="Features & specs"/>
+    <topic href="features_specs.html#fs" label="Features &amp; specs" id="fs"></topic>
+    <topic href="https://ibm.biz/db2oncloud-features" label="Features and advantages"/>
+    <topic href="flex_scaling.html#scale" label="Flexible scaling" id="scale"></topic>
+    <topic href="br.html#bnr" label="Backup and restore" id="bnr">
+      <topic href="br.html#point-in-time" label="Point-in-time restore" id="point-in-time">
+        <property name="type" value="anchor"/>
+      </topic>
+    </topic>
+    <topic href="ha.html#ha" label="High availability (HA)" id="ha">
+      <topic href="ha.html#rule_14" label="Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)" id="rule_14">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="ha.html#add_dr" label="How to add a Geo-Replicated Disaster Recovery Node" id="add_dr">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="ha.html#manage_ha_dr" label="Managing high availability and disaster recovery nodes" id="manage_ha_dr">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="ha.html#faq" label="FAQ" id="faq">
+        <property name="type" value="anchor"/>
+        <topic href="ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-" label="What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?" id="what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-"></topic>
+      </topic>
+    </topic>
+    <topic href="audit.html#aud-log-mon" label="Auditing, logging, and monitoring" id="aud-log-mon">
+      <topic href="audit.html#auditing" label="Auditing" id="auditing">
+        <property name="type" value="anchor"/>
+      </topic>
+      <topic href="audit.html#log_mon" label="Logging and monitoring" id="log_mon">
+        <property name="type" value="anchor"/>
+        <topic href="audit.html#basic_overview" label="A basic overview:" id="basic_overview"></topic>
+      </topic>
+    </topic>
   </topic>
   <topic label="Security">
     <property name="navgroup" value="learn"/>
@@ -411,9 +444,6 @@
       <topic href="plans_pricing.html#examples" label="Billing examples" id="examples"></topic>
     </topic>
   </topic>
-  <topic href="flex_scaling.html#scale" label="Flexible scaling" id="scale">
-    <property name="navgroup" value="learn"/>
-  </topic>
   <topic label="Amazon Web Services">
     <property name="navgroup" value="learn"/>
     <property name="topicgroup" value="Amazon Web Services"/>
@@ -424,38 +454,6 @@
     </topic>
     <topic href="gs.html#aws_gs" label="Getting started" id="aws_gs"></topic>
     <topic href="feat_specs.html#aws_fs" label="Features &amp; specs" id="aws_fs"></topic>
-  </topic>
-  <topic href="br.html#bnr" label="Backup and restore" id="bnr">
-    <property name="navgroup" value="learn"/>
-    <topic href="br.html#point-in-time" label="Point-in-time restore" id="point-in-time">
-      <property name="type" value="anchor"/>
-    </topic>
-  </topic>
-  <topic href="ha.html#ha" label="High availability (HA)" id="ha">
-    <property name="navgroup" value="learn"/>
-    <topic href="ha.html#rule_14" label="Brazil: Supplementary Rule 14 (applies to systems provisioned for the Brazilian federal government)" id="rule_14">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="ha.html#add_dr" label="How to add a Geo-Replicated Disaster Recovery Node" id="add_dr">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="ha.html#manage_ha_dr" label="Managing high availability and disaster recovery nodes" id="manage_ha_dr">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="ha.html#faq" label="FAQ" id="faq">
-      <property name="type" value="anchor"/>
-      <topic href="ha.html#what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-" label="What are the changes required for an application using Db2 to work with the DR node after takeover? Does the DNS name or the IP address change after takeover?" id="what-are-the-changes-required-for-an-application-using-db2-to-work-with-the-dr-node-after-takeover-does-the-dns-name-or-the-ip-address-change-after-takeover-"></topic>
-    </topic>
-  </topic>
-  <topic href="audit.html#aud-log-mon" label="Auditing, logging, and monitoring" id="aud-log-mon">
-    <property name="navgroup" value="learn"/>
-    <topic href="audit.html#auditing" label="Auditing" id="auditing">
-      <property name="type" value="anchor"/>
-    </topic>
-    <topic href="audit.html#log_mon" label="Logging and monitoring" id="log_mon">
-      <property name="type" value="anchor"/>
-      <topic href="audit.html#basic_overview" label="A basic overview:" id="basic_overview"></topic>
-    </topic>
   </topic>
   <topic href="maintenance.html#maint_note_pol" label="Maintenance and notification policies" id="maint_note_pol">
     <property name="navgroup" value="learn"/>
@@ -473,9 +471,6 @@
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.youtube.com/watch?v=abmWJYe7Kcc" label="Walk-through video">
-    <property name="navgroup" value="learn"/>
-  </topic>
-  <topic href="https://ibm.biz/db2oncloud-features" label="Features and advantages">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="What's new">
