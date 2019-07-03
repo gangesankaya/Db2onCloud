@@ -96,7 +96,7 @@
       </topic>
     </topic>
     <topic href="user_mgmt.html#user_mgmt" label="Managing users" id="user_mgmt"></topic>
-    <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Security compliances"/>
+    <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Security compliances"/>
     <topic href="key_protect.html#key-protect" label="IBM Key Protect" id="key-protect">
       <topic href="key_protect.html#kp_prereqs" label="Prerequisites" id="kp_prereqs">
         <property name="type" value="anchor"/>
@@ -476,13 +476,13 @@
   <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="What's new">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Frequently asked questions">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Frequently asked questions">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Db2 on Cloud Knowledge Center">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="Guided demo: Complete common tasks through the web console">
@@ -503,7 +503,7 @@
   <topic href="https://cloud.ibm.com/apidocs/db2-on-cloud" label="REST API">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL reference">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL reference">
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="Help and support" id="help_support">
