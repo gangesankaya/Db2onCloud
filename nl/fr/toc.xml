@@ -209,16 +209,16 @@
   <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="Nouveautés">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Questions fréquemment posées">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Questions fréquemment posées">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Conformités à la sécurité">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Conformités à la sécurité">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="Guided demo: Complete common tasks through the web console">
@@ -239,7 +239,7 @@
   <topic href="http://ibm.biz/db2oc_api" label="REST API">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="Structured Query Language (SQL)">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="Structured Query Language (SQL)">
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="Aide et support" id="help_support">

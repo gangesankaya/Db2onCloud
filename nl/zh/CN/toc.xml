@@ -209,16 +209,16 @@
   <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="新增内容">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="常见问题">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/managed_service.html" label="常见问题">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM 开发者答案">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="安全合规性">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="安全合规性">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="步骤演示：通过 Web 控制台完成常见任务">
@@ -239,7 +239,7 @@
   <topic href="http://ibm.biz/db2oc_api" label="REST API">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL 参考">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL 参考">
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="帮助和支持" id="help_support">

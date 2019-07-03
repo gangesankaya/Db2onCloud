@@ -209,16 +209,16 @@
   <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="Novità">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Domande frequenti">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/managed_service.html" label="Domande frequenti">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM Developer Answers">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Conformità di sicurezza">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="Conformità di sicurezza">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="Guided demo: Complete common tasks through the web console">
@@ -239,7 +239,7 @@
   <topic href="http://ibm.biz/db2oc_api" label="API REST">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="Riferimento SQL">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="Riferimento SQL">
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="Aiuto e supporto" id="help_support">

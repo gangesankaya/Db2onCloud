@@ -209,16 +209,16 @@
   <topic href="https://www.ibm.com/support/docview.wss?uid=swg21961758" label="새로운 기능">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.doc/managed_service.html" label="자주 묻는 질문(FAQ)">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/managed_service.html" label="자주 묻는 질문(FAQ)">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://developer.ibm.com/answers/index.html" label="IBM 개발자 답변">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="보안 준수">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances_summary.html" label="보안 준수">
     <property name="navgroup" value="learn"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.kc.doc/welcome.html" label="Knowledge Center">
     <property name="navgroup" value="learn"/>
   </topic>
   <topic href="https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud" label="안내 데모: 웹 콘솔을 통해 공통 태스크 완료">
@@ -239,7 +239,7 @@
   <topic href="http://ibm.biz/db2oc_api" label="REST API">
     <property name="navgroup" value="howto"/>
   </topic>
-  <topic href="https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL 참조서">
+  <topic href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/c0004100.html" label="SQL 참조서">
     <property name="navgroup" value="howto"/>
   </topic>
   <topic href="help.html#help_support" label="도움 및 지원" id="help_support">
