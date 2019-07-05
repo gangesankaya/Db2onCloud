@@ -6,8 +6,8 @@
   <meta name="DC.Publisher" content="IBM Corporation">
   <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2019-01-21">
-  <meta name="dcterms.date" content="2019-01-21">
+  <meta name="DC.date" content="2019-07-05">
+  <meta name="dcterms.date" content="2019-07-05">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
   <meta name="description" content="Identity and access management (IAM) enables you to securely authenticate users for platform services and control access to resources consistently across the IBM Cloud platform. For example, with only a single login to IBM Cloud with your IBMid, you have access to any of your service consoles and their applications without having to log in to each of them separately.">
@@ -202,6 +202,43 @@ Connection conn = dataSource.getConnection( &quot;&lt;IBMid&gt;&quot;, &quot;&lt
             is completed, the user is redirected back to the console. Before such login can be successful, the IBMid user must be added to each database service instance by the database administrator through the console or REST API. Just like for a non-IBMid
             user, a user ID for the database service instance must be entered at the same time that the IBMid user is added. The user ID needs to be unique within the database service instance. This user ID is also the authorization (AUTH) ID within the
             database.</p>
+          <p>To add a user with either an IBMid or a service ID by using the web console, complete the following steps:</p>
+          <ol>
+            <li>
+              <p>Log in as a user who has administrator privileges.</p>
+            </li>
+            <li>
+              <p>From the right drop-down menu, select <strong>Manage Users</strong>.</p>
+              <p>
+                <figure>
+                  <img src="images/manage_users.png" alt="View of the web console dashboard page and drop-down menu" title="Web console drop-down menu">
+                  <figcaption>Figure 1. Selecting Manage Users page from drop-down menu</figcaption>
+                </figure>
+              </p>
+            </li>
+            <li>
+              <p>With the <strong>Users</strong> tab selected, click <strong>Add</strong>.</p>
+              <p>
+                <figure>
+                  <img src="images/add_users.png" alt="View of the web console Manage Users page" title="Web console Manage Users page">
+                  <figcaption>Figure 2. Clicking Add to create a user</figcaption>
+                </figure>
+              </p>
+            </li>
+            <li>
+              <p>Select <strong>Add IBMid user</strong>.</p>
+              <p>
+                <figure>
+                  <img src="images/add_ibmid_user.png" alt="View of the web console Add IBMid user page" title="Creating an IBMid user">
+                  <figcaption>Figure 3. Creating an IBMid user</figcaption>
+                </figure>
+              </p>
+            </li>
+            <li>
+              <p>Enter a <strong>User ID</strong> and an <strong>IBMid</strong> in the provided fields. Click <strong>Create</strong>.</p>
+              <p class="note">The <strong>IBMid</strong> field can be used to specify either an IBMid or a service ID for the user.</p>
+            </li>
+          </ol>
         </section>
         <section id="section-api">
           <h2 id="api">REST API experience</h2>
