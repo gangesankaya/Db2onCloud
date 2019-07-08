@@ -31,12 +31,14 @@
       <section id="section-bnr">
         <h1 id="bnr">Copia de seguridad y restauración</h1>
         <p class="shortdesc">Para los planes de pago, se realizan copias de seguridad cifradas de la base de datos a diario. Se conserva una copia de seguridad diaria para cada uno de los últimos 14 días.</p>
-        <p>Además de las copias de seguridad estándar, puede utilizar <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>          para conservar datos históricos para sus propios fines. También puede realizar sus propias exportaciones mediante IBM Data Studio o cualquier herramienta de Db2.</p>
+        <p>Además de las copias de seguridad estándar, puede utilizar
+          <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a> para el mantenimiento de datos históricos por otros motivos, como la
+          consulta instantánea de datos antiguos o para simplificar la auditoría. También puede realizar sus propias exportaciones mediante IBM Data Studio o cualquier herramienta de Db2.</p>
         <p>Para obtener información sobre restauraciones en un punto en el tiempo, consulte <a href="#point-in-time">Restauración en un punto en el tiempo</a>.</p>
         <p>Normalmente, todos los planes de pago hacen uso de IBM Cloud Object Storage (COS) para mantener las copias de seguridad externas en tres centros de datos distintos. Sin embargo, es posible que Sídney y ciertos centros de datos más pequeños no
           den soporte a la replicación externa con IBM COS en este momento. Consulte la <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">documentación de IBM COS</a> de su región para determinar qué regiones
           dan soporte a la replicación externa.</p>
-        <p>También puede utilizar la <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">CLI de IBM Lift <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a> para importar datos a Db2 on Cloud.</p>
+        <p>También puede utilizar la <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank" class="external">CLI de IBM Lift</a> para importar datos en Db2 on Cloud.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Restauración de punto en el tiempo</h2>
           <p>Db2 on Cloud ha añadido la capacidad de restaurar a un punto en el tiempo. Puede restaurar desde sus copias de seguridad a un punto exacto en el tiempo. A día de hoy, para la mayoría de clientes, tiene que solicitar soporte para activar esta
@@ -53,26 +55,27 @@
               <p>Seleccione la estrategia de restauración de <strong>Punto en el tiempo</strong> y seleccione un punto en el tiempo al que desea restaurar la base de datos. El proceso de restauración a un punto en el tiempo selecciona la copia de seguridad
                 más cercana al punto en el tiempo que ha solicitado, de entre la agrupación de copias de seguridad retenidas que se han hecho durante los 14 días anteriores. </p>
               <p class="note">El proceso de restauración a un punto en el tiempo invalida cualquier copia de seguridad retenida anteriormente con fechas posteriores al punto en el tiempo seleccionado debido a la divergencia resultante en la línea de tiempo.</p>
-              <p><img src="images/pit_restore_1.png" alt="Vista de la selección resaltada de la estrategia de restauración de punto en el tiempo"></p>
+              <p><img src="images/pit_restore_1.png" alt="Ver la selección resaltada de la estrategia de restauración de punto en el tiempo" title="Página de la consola de copia de seguridad y restauración"></p>
             </li>
             <li>
-              <p>Confirme que desea continuar con sus selecciones de restauración. Después de iniciar la operación de restauración, no podrá cambiar la solicitud.<br><img src="images/pit_restore_2.png" alt="Vista del diálogo de confirmación de restauración a un punto en el tiempo"></p>
+              <p>Confirme que desea continuar con sus selecciones de restauración. Después de iniciar la operación de restauración, no podrá cambiar la solicitud.<br><img src="images/pit_restore_2.png" alt="Ver el diálogo de confirmación de restauración en punto en el tiempo"
+                  title="Diálogo de confirmación"></p>
             </li>
             <li>
-              <p>Se está inicializando el proceso de restauración.
-                <img src="images/pit_restore_3.png" alt="Vista de la inicialización de la restauración a un punto en el tiempo"></p>
+              <p>El proceso de restauración se está inicializando.
+                <img src="images/pit_restore_3.png" alt="Ver la inicialización de restauración de punto en el tiempo" title="Inicialización de restauración de punto en el tiempo"></p>
             </li>
             <li>
               <p>Restaurando la base de datos al punto en el tiempo seleccionado.
-                <img src="images/pit_restore_4.png" alt="Vista del progreso de la restauración a un punto en el tiempo"></p>
+                <img src="images/pit_restore_4.png" alt="Ver el progreso de la restauración a unpunto en el tiempo" title="Progreso de la restauración"></p>
             </li>
             <li>
               <p>Se está creando un nuevo punto de copia de seguridad. La base de datos restaurada a un punto en el tiempo está lista para ser utilizada.
-                <img src="images/pit_restore_5.png" alt="Vista de la creación del nuevo punto de copia de seguridad"></p>
+                <img src="images/pit_restore_5.png" alt="Vista de la creación de un punto de copia de seguridad" title="Creación de un punto de copia de seguridad"></p>
             </li>
             <li>
               <p>La operación de restauración se ha completado con éxito.
-                <img src="images/pit_restore_6.png" alt="Vista de la finalización satisfactoria de la operación de restauración"></p>
+                <img src="images/pit_restore_6.png" alt="Vista de la finalización correcta de la restauración" title="Se ha completado correctamente"></p>
             </li>
           </ol>
         </section>

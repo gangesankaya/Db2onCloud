@@ -35,7 +35,7 @@ disponibilidade com um SLA de 99,99% . ">
         <p>Os planos de alta disponibilidade padrão sem um nó de recuperação de desastre (DR) fornecem failover e atualizações contínuos. Eles são gerenciados para você usando nova rota do cliente automática (ACR) e IPs móveis.</p>
         <p>Além disso, é possível incluir um Nó de recuperação de desastre geo-replicado. Essa opção de nó DR externo fornece a capacidade de sincronizar rapidamente seus dados em tempo real para um nó de banco de dados em um centro de dados externo do IBM
           Cloud de sua escolha. </p>
-        <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank">Lista de locais de datacenter nos quais os nós DR estão disponíveis. <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a></p>
+        <p><a href="https://developer.ibm.com/answers/questions/366888/what-locations-cities-or-countries-is-dashdb-avail.html" target="_blank" class="external">Listade locais de data centers no quais os nós DR estão disponíveis.</a></p>
         <p>O Db2 on Cloud usa a tecnologia Db2 High Availability Disaster Recovery (HADR) no modo <code>ASYNC</code> para alcançar o recurso do nó DR externo e fornece <code>Leitura em espera</code> no nó DR.</p>
         <section id="section--brasil-regra-suplementar-14-aplica-se-aos-sistemas-fornecidos-para-o-governo">
           <h2 id="-brasil-regra-suplementar-14-aplica-se-aos-sistemas-fornecidos-para-o-governo"><strong>Brasil: Regra Suplementar 14</strong> (aplica-se aos sistemas fornecidos para o governo</h2>
@@ -62,15 +62,15 @@ disponibilidade com um SLA de 99,99% . ">
           <h2 id="manage_ha_dr">Gerenciando nós de alta disponibilidade e de recuperação de desastre</h2>
           <p>Para nós de alta disponibilidade padrão, que não são externos, o failover é gerenciado para você pela IBM. A IBM monitora o funcionamento de seu servidor, failover e failback, conforme necessário, incluindo atualizações contínuas e ajuste de
             escala para manter o maior tempo de atividade possível.</p>
-          <p>Para Geo-Replicated Disaster Recovery (HADR), deve-se executar failover manualmente usando <strong>Gerenciar recuperação de desastre</strong> no console. Além disso, é possível executar failover usando uma API, conforme descrito <a href="https://developer.ibm.com/answers/questions/457901/where-can-i-find-api-documentation-for-db2-on-clou.html"
-              target="_blank">aqui<img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</p>
+          <p>Para Geo-Replicated Disaster Recovery (HADR), deve-se executar failover manualmente usando <strong>Gerenciar recuperação de desastre</strong> no console. Além disso, é possível executar o failover usando uma API, conforme descrito <a href="https://developer.ibm.com/answers/questions/457901/where-can-i-find-api-documentation-for-db2-on-clou.html"
+              target="_blank" class="external">aqui</a>.</p>
         </section>
         <section id="section-faq">
           <h2 id="faq">FAQ</h2>
           <section id="section-quais-s-o-as-mudan-as-necess-rias-para-que-um-aplicativo-que-usa-o-db2-funcione-com-o-n-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-">
             <h3 id="quais-s-o-as-mudan-as-necess-rias-para-que-um-aplicativo-que-usa-o-db2-funcione-com-o-n-de-dr-ap-s-o-controle-o-nome-dns-ou-o-endere-o-ip-mudam-ap-s-o-controle-">Quais são as mudanças necessárias para que um aplicativo que usa o Db2 funcione com o nó de DR após o controle? O nome DNS ou o endereço IP mudam após o controle?</h3>
             <p><strong>R</strong>: Não. Você tem dois nomes de host que podem ser resolvidos. Se seu app estiver configurado para usar o Db2 ACR (Active Connection Reroute), então, seu app será roteado novamente para o novo nó primário.</p>
-            <p>Para obter mais informações sobre o Nó de recuperação de desastre geo-replicado, clique <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank">aqui<img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>.</p>
+            <p>Para obter mais informações sobre o Geo-Replicated Disaster Recovery Node, clique <a href="https://developer.ibm.com/answers/questions/458385/frequently-asked-questions-for-db2-on-cloud-hadr-g.html" target="_blank" class="external">aqui</a>.</p>
           </section>
         </section>
       </section>

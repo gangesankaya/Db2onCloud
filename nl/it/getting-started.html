@@ -6,11 +6,11 @@
   <meta name="DC.Publisher" content="IBM Corporation">
   <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2019-04-30">
-  <meta name="dcterms.date" content="2019-04-30">
+  <meta name="DC.date" content="2019-05-23">
+  <meta name="dcterms.date" content="2019-05-23">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
-  <meta name="description" content="IBM&reg; Db2&reg; on Cloud è un database SQL di cui viene eseguito il provisioning nel cloud per te. Puoi utilizzare Db2 on Cloud come useresti qualsiasi software database ma senza dover sostenere l'onore del tempo e dei costi necessari per la configurazione dell'hardware o l'installazione e la manutenzione del software.">
+  <meta name="description" content="IBM&reg; Db2&reg; on Cloud è un database SQL di cui viene eseguito il provisioning nel cloud per te. Puoi utilizzare Db2 on Cloud come useresti qualsiasi software database ma senza dover sostenere l'onore del tempo e dei costi necessari per la configurazione dell'hardware o l'installazione e la manutenzione del software. ">
   <meta name="source.format" content="markdown">
 
 
@@ -31,11 +31,11 @@
       <section id="section-getting-started">
         <h1 id="getting-started">Esercitazione introduttiva</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud è un database SQL di cui viene eseguito il provisioning nel cloud per te. Puoi utilizzare Db2 on Cloud come useresti qualsiasi software database ma senza dover sostenere l&#39;onore del tempo e dei costi necessari per
-          la configurazione dell&#39;hardware o l&#39;installazione e la manutenzione del software.</p>
+          la configurazione dell&#39;hardware o l&#39;installazione e la manutenzione del software. </p>
         <p class="important">Crea le credenziali. Per chi non ha esperienza con IBM Cloud, dopo la creazione del servizio è necessario creare un nome utente e una password facendo clic sul pulsante <strong>Create Credentials</strong> quando avvii il servizio. Tecnicamente,
           puoi accedere alla console web senza credenziali, ma hai bisogno di nome utente e password per utilizzare molti degli strumenti Db2.</p>
-        <p>Puoi anche installare un database db2 locale utilizzando il <a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions" target="_blank">download di Db2 Developer Edition gratuito <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>.
-          Installa rapidamente una Developer Edition di Db2 pronta per l&#39;uso all&#39;interno di un contenitore Docker (Docker non richiesto; installa automaticamente qualsiasi componente necessario). </p>
+        <p>Puoi anche installare un database db2 locale utilizzando il <a href="https://www.ibm.com/us-en/marketplace/ibm-db2-direct-and-developer-editions" target="_blank" class="external">download di Db2 Developer Edition gratuito</a>. Installa rapidamente
+          una Developer Edition di Db2 pronta per l&#39;uso all&#39;interno di un contenitore Docker (Docker non richiesto; installa automaticamente qualsiasi componente necessario). </p>
         <section id="section-interfaces">
           <h2 id="interfaces">Interfacce</h2>
           <p class="shortdesc">Puoi lavorare con il tuo database Db2 on Cloud nei seguenti modi:</p>
@@ -50,7 +50,7 @@
             <p class="shortdesc">La console web fornisce un&#39;interfaccia grafica per tutto quello che ti serve per utilizzare il tuo database, tra cui: funzionalità di carico, un editor SQL, dei download di driver e altro ancora.</p>
             <!-- ![View of Db2 on Cloud web console dashboard page](images/console_v2.png) -->
             <!-- ![View of Db2 Warehouse on Cloud web console dashboard page](images/console_v2.jpg) -->
-            <!-- Click the link to take a tour of the Db2 web console: [General tour ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-general-quick-tour){:new_window}. -->
+            <!-- Click the link to take a tour of the Db2 web console: [General tour](http://ibm.biz/dashdb-general-quick-tour){:external}. -->
             <p>Puoi accedere alla tua console web Db2 on Cloud nei seguenti modi:</p>
             <ul>
               <li>Dal tuo dashboard IBM Cloud - puoi aprire la console web dalla pagina Dettagli del servizio per il tuo servizio IBM Db2 on Cloud.</li>
@@ -58,30 +58,34 @@
             </ul>
             <!-- ###REST APIs
 
-With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/dashdb-api){:new_window}.
+With Db2 Warehouse plans, you can perform tasks related to file management, loading data, and running R scripts by using the [Db2 Warehouse REST API](http://ibm.biz/dashdb-api){:external}.
 {: shortdesc} -->
           </section>
           <section id="section-connect_apps">
             <h3 id="connect_apps">Installazione dei driver e dei client della riga di comando Db2 sul tuo computer</h3>
-            <p class="shortdesc">Nella maggior parte dei casi, gli utenti tendono ad utilizzare solo l&#39;API REST o a installare i driver per un framework, ad esempio con il comando <code>pip</code> di Python.</p>
-            <p class="note">Per installare i pacchetti di driver Python per MacOS, devi utilizzare il comando <code>pip</code> con l&#39;opzione <code>--no-cache-dir</code>. Per istruzioni dettagliate, vedi: <a href="https://ibm.biz/db2-drivers-python" target="_blank">Python support for IBM DB2 and IBM Informix <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a></p>
-            <!-- Drivers on site are broken so taking out this one -Simon. 1. Download the [driver package ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html){:new_window} from the Connection info page of the Db2 on Cloud web console.-->
+            <p class="shortdesc">Nella maggior parte dei casi, gli utenti tendono ad utilizzare solo l&#39;API REST o a installare i driver per un framework, ad esempio con il comando <code>pip</code> di Python. </p>
+            <p class="note">Per installare i pacchetti di driver Python per MacOS, devi utilizzare il comando <code>pip</code> con l&#39;opzione <code>--no-cache-dir</code>. Per istruzioni dettagliate, vedi: <a href="https://ibm.biz/db2-drivers-python" target="_blank"
+                class="external">Python support for IBM DB2 and IBM Informix</a>.</p>
+            <p class="note">Se stai eseguendo del lavoro di data science con Python, o vuoi supporto per frame di dati, analisi nel database o utilizzo di Watson Studio, potresti voler usare il seguente driver alternativo, che pone l&#39;accento sul supporto per una
+              gamma di funzioni di data science: <a href="https://pypi.org/project/ibmdbpy/" target="_blank" class="external">ibmdbpy 0.1.5</a>.</p>
+            <!-- Drivers on site are broken so taking out this one -Simon. 1. Download the [driver package](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package.html){:external} from the Connection info page of the Db2 on Cloud web console.-->
             <p>Per installare i driver di framework Python o Node.js, fai clic su uno dei seguenti link:</p>
             <ul>
-              <li><a href="https://ibm.biz/db2-drivers-python" target="_blank">Driver Python <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a></li>
-              <li><a href="https://ibm.biz/db2-drivers-node" target="_blank">Driver Node.js <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a></li>
+              <li><a href="https://ibm.biz/db2-drivers-python" target="_blank" class="external">Driver Python</a></li>
+              <li><a href="https://ibm.biz/db2-drivers-node" target="_blank" class="external">Driver Node.js</a></li>
             </ul>
-            <p class="note">Per installare l&#39;ORM Node.js ORM denominata Sequelize, fai clic sul seguente link:
-              <a href="https://github.com/ibmdb/sequelize" target="_blank">Sequelize <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a></p>
+            <p class="note">Per installare l&#39;ORM Node.js denominato Sequelize, fai clic sul seguente link:
+              <a href="https://github.com/ibmdb/sequelize" target="_blank" class="external">Sequelize</a></p>
             <p>Per ulteriori opzioni di installazione del driver, tra cui Java, Go, Jupyter Notebook, Ruby, PHP e altro, fai clic sul seguente link: </p>
             <ul>
-              <li><a href="https://github.com/ibmdb" target="_blank">ibmdb <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a></li>
+              <li><a href="https://github.com/ibmdb" target="_blank" class="external">ibmdb</a></li>
             </ul>
             <p>Presumendo che hai già installato i driver di framework, puoi tralasciare i seguenti passi. Tuttavia, i power user potrebbero voler utilizzare il client della riga di comando Db2 per gestire i propri database e utilizzare i comandi Db2. Inoltre,
               alcune applicazioni ODBC o JDBC possono trarre vantaggio da un&#39;installazione generale dei driver Db2. In questo caso, effettua le operazioni riportate di seguito:</p>
             <ol>
-              <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank">Installa il pacchetto di driver <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>                sul computer dove sono in esecuzione le tue applicazioni e i tuoi strumenti.</li>
-              <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank">Configura i file di driver <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>                per il tuo database Db2 on Cloud.</li>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_install.html" target="_blank" class="external">Installa il pacchetto driver</a> sul computer dove sono in esecuzione
+                le tue applicazioni o i tuoi strumenti.</li>
+              <li><a href="https://www.ibm.com/support/knowledgecenter/en/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_driver_package_config.html" target="_blank" class="external">Configura i file del driver</a> per il tuo database Db2 on Cloud.</li>
             </ol>
           </section>
           <section id="section-data_src">
@@ -134,15 +138,15 @@ With Db2 Warehouse plans, you can perform tasks related to file management, load
           <h2 id="samples">Esempi</h2>
           <p class="shortdesc">Sono qui riportati dei link ad esempi che illustrano come stabilire una connessione al tuo database Db2 on Cloud da applicazioni in linguaggi differenti:</p>
           <ul>
-            <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting__net_applications.html" target="_blank">.NET <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>
-              <!-- * [JAVA ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_java.html){:new_window} -->
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting__net_applications.html" target="_blank" class="external">.NET</a>
+              <!-- * [JAVA](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_java.html){:external} -->
             </li>
-            <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_jdbc_applications.html" target="_blank">JDBC <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>
-              <!-- * [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_nodejs.html){:new_window} -->
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_jdbc_applications.html" target="_blank" class="external">JDBC</a>
+              <!-- * [Node.js](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_nodejs.html){:external} -->
             </li>
-            <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank">PHP <img src="../../icons/launch-glyph.svg" alt="Icona di link esterno" title="Icona di link esterno"></a>
-              <!-- * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:new_window} -->
-              <!-- * [Db2 on Cloud samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld){:new_window} -->
+            <li><a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_php.html" target="_blank" class="external">PHP</a>
+              <!-- * [Python](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_connecting_python.html){:external} -->
+              <!-- * [Db2 on Cloud samples on GitHub](https://github.com/IBM-Bluemix/dashdb-nodejs-helloworld){:external} -->
             </li>
           </ul>
         </section>

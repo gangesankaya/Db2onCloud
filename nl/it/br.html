@@ -31,11 +31,12 @@
       <section id="section-bnr">
         <h1 id="bnr">Backup e ripristino</h1>
         <p class="shortdesc">Per i piani a pagamento, i backup crittografati del database vengono eseguiti giornalmente. Un backup giornaliero viene conservato per ognuno degli ultimi 14 giorni.</p>
-        <p>In aggiunta ai backup standard, puoi utilizzare <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>          per conservare i dati cronologici per altri scopi, come ad esempio una query istantanea di dati precedenti o un controllo semplificato. Puoi anche eseguire le tue esportazioni utilizzando IBM Data Studio o un qualsiasi strumento Db2.</p>
+        <p>In aggiunta ai backup standard, puoi utilizzare <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a> per conservare i dati cronologici
+          per altri scopi, come ad esempio una query istantanea di dati precedenti o un controllo semplificato. Puoi anche eseguire le tue esportazioni utilizzando IBM Data Studio o un qualsiasi strumento Db2.</p>
         <p>Per informazioni sui ripristini del punto temporale, consulta <a href="#point-in-time">Ripristino del punto temporale</a>.</p>
         <p>Tutti i piani a pagamento normalmente utilizzano IBM Cloud Object Storage (COS) per conservare i backup offsite in 3 diversi data center. Tuttavia, Sydney e alcuni data center più piccoli potrebbero non supportare la replica offsite con IBM COS
           in questo momento. Consulta la <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">Documentazione IBM COS</a> per la tua regione per determinare quali regioni supportano la replica offsite.</p>
-        <p>Puoi anche utilizzare l&#39;<a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a> per importare i dati in Db2 on Cloud.</p>
+        <p>Puoi anche utilizzare la <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank" class="external">IBM Lift CLI</a> per importare i dati in Db2 on Cloud.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Ripristino del punto temporale</h2>
           <p>Db2 on Cloud ha aggiunto una funzionalità di ripristino del punto temporale. Puoi eseguire il ripristino in un punto nel tempo esatto dai tuoi backup. Oggi, per la maggior parte dei clienti, devi richiedere del supporto per attivare questa funzione.
@@ -52,26 +53,27 @@
               <p>Seleziona la strategia di ripristino <strong>Point in Time</strong> e seleziona un data del punto temporale in cui vuoi ripristinare il database. Il processo di ripristino del punto temporale seleziona il backup più vicino alla tua data
                 di punto temporale richiesta al di fuori del pool di backup conservati effettuati durante i precedenti 14 giorni. </p>
               <p class="note">Il processo di ripristino del punto temporale annulla la validità di tutti i backup conservati precedentemente con delle date successive alla data del punto temporale selezionata a causa di una divergenza risultante nella sequenza temporale.</p>
-              <p><img src="images/pit_restore_1.png" alt="Vista della selezione evidenziata della strategia di ripristino del punto temporale"></p>
+              <p><img src="images/pit_restore_1.png" alt="Vista della selezione evidenziata della strategia di ripristino del punto temporale" title="Pagina della console di backup e ripristino"></p>
             </li>
             <li>
-              <p>Conferma di voler continuare con le tue selezioni di ripristino. Dopo aver avviato l&#39;operazione di ripristino, non puoi modificare la richiesta.<br><img src="images/pit_restore_2.png" alt="Vista della finestra di dialogo della conferma del ripristino del punto temporale"></p>
+              <p>Conferma di voler continuare con le tue selezioni di ripristino. Dopo aver avviato l&#39;operazione di ripristino, non puoi modificare la richiesta.<br><img src="images/pit_restore_2.png" alt="Vista della finestra di dialogo di conferma del ripristino di punto temporale"
+                  title="Finestra di dialogo di conferma"></p>
             </li>
             <li>
-              <p>Il processo di ripristino viene inizializzato.
-                <img src="images/pit_restore_3.png" alt="Vista dell&#39;inizializzazione del ripristino del punto temporale"></p>
+              <p>Il processo di ripristino è in fase di inizializzazione.
+                <img src="images/pit_restore_3.png" alt="Vista dell&#39;inizializzazione del ripristino di punto temporale" title="Inizializzazione del ripristino di punto temporale"></p>
             </li>
             <li>
               <p>Ripristino del database al punto temporale selezionato.
-                <img src="images/pit_restore_4.png" alt="Vista dell&#39;avanzamento del ripristino del punto temporale"></p>
+                <img src="images/pit_restore_4.png" alt="Vista dell&#39;avanzamento del ripristino di punto temporale" title="Avanzamento del ripristino"></p>
             </li>
             <li>
-              <p>Stai creando un nuovo punto di backup. Il database ripristinato al punto temporale è pronto per l&#39;utilizzo.
-                <img src="images/pit_restore_5.png" alt="Vista della creazione di un nuovo punto di backup"></p>
+              <p>Stai creando un nuovo punto di backup. Il database ripristinato al punto temporale è pronto per l&#39;uso.
+                <img src="images/pit_restore_5.png" alt="Vista della creazione di un punto di backup" title="Creazione di un punto di backup"></p>
             </li>
             <li>
-              <p>L&#39;operazione di ripristino è terminata correttamente.
-                <img src="images/pit_restore_6.png" alt="Vista del corretto completamento dell&#39;operazione di ripristino"></p>
+              <p>L&#39;operazione di ripristino è stata completata correttamente.
+                <img src="images/pit_restore_6.png" alt="Vista dell&#39;operazione di ripristino completata correttamente" title="Operazione completata correttamente"></p>
             </li>
           </ol>
         </section>

@@ -4,7 +4,7 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started#getting-started"/>
   <property name="path" value="services/Db2onCloud"/>
   <topic href="getting-started.html#getting-started" label="Esercitazione introduttiva" id="getting-started">
     <property name="navgroup" value="learn"/>
@@ -67,7 +67,7 @@
         <property name="type" value="anchor"/>
         <topic href="connecting.html#cfg_env" label="Configurazione dell&#39;ambiente" id="cfg_env"></topic>
       </topic>
-      <topic href="connecting.html#conx_prgrm" label="Collegamento in modo programmatico" id="conx_prgrm">
+      <topic href="connecting.html#conx_prgrm" label="Connessione in modo programmatico" id="conx_prgrm">
         <property name="type" value="anchor"/>
       </topic>
       <topic href="connecting.html#conx_apps_tools" label="Collegamento di applicazioni e strumenti" id="conx_apps_tools">
@@ -109,6 +109,7 @@
         <property name="type" value="anchor"/>
       </topic>
     </topic>
+    <topic href="cdc.html#cdc" label="InfoSphere CDC" id="cdc"></topic>
   </topic>
   <topic href="free_plan.html#free_plan" label="Piano gratuito" id="free_plan">
     <property name="navgroup" value="learn"/>

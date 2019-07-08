@@ -35,18 +35,18 @@
           <h2 id="pub_endpt">Verbindung zu einem öffentlichen Endpunkt herstellen (Standardoption)</h2>
           <p>Wie bei jedem öffentlichen Cloud-Service können Sie Ihre Anwendung über einen öffentlichen Hostnamen verbinden, der dann angegeben wird, wenn Ihr Service bereitgestellt wird. Der Zugriff auf Ihre Daten wird durch strikte Authentifizierung, umfangreiche
             Db2-Berechtigungsoptionen und Zugriffssteuerung, Verschlüsselung für die Datenübertragung und für ruhende Daten sowie durch Verfahren zur Sicherheit und Konformität von IBM für Entwicklung und Betrieb geschützt. Optionales IP-Whitelisting
-            wird angeboten. Erstellen Sie einen IBM Supportfall, wenn Sie IP-Whitelisting aktivieren möchten. </p>
+            wird angeboten. Erstellen Sie einen IBM Supportfall, wenn Sie IP-Whitelisting aktivieren möchten.</p>
           <section id="section-pub_endpt_steps">
             <h3 id="pub_endpt_steps">Verbindung zu einem öffentlichen Endpunkt herstellen:</h3>
             <p>Der einfachste Weg, um eine Verbindung zu Ihren Daten herzustellen, besteht darin, den Namen des öffentlichen Hosts zu verwenden, der in Ihrem Begrüßungsschreiben angegeben wurde. Sie können Ihren Hostnamen und die Berechtigungsnachweise auch
-              auf die folgende Weise erhalten: </p>
+              auf die folgende Weise erhalten:</p>
             <ol>
               <li>Melden Sie sich bei Db2 on Cloud an und klicken Sie auf Ihre Serviceinstanz.</li>
               <li>Klicken Sie auf <strong>Serviceberechtigungsnachweise</strong>.</li>
               <li>Klicken Sie auf <strong>Neuer Berechtigungsnachweis</strong> und anschließend auf <strong>Hinzufügen</strong>.</li>
               <li>Nachdem die Berechtigungsnachweise erstellt wurden, klicken Sie unter der Spalte <code>Aktionen</code> auf <strong>Berechtigungsnachweise anzeigen</strong>.</li>
               <li>
-                <p>Notieren Sie in dem folgenden JSON-Dokumentbeispiel den Inhalt der Felder für Hostname, Kennwort und Benutzername. Sie verwenden diese drei Komponenten bei der Herstellung der Verbindung zum öffentlichen Endpunkt: </p>
+                <p>Notieren Sie in dem folgenden JSON-Dokumentbeispiel den Inhalt der Felder für Hostname, Kennwort und Benutzername. Sie verwenden diese drei Komponenten bei der Herstellung der Verbindung zum öffentlichen Endpunkt:</p>
                 <pre><code class="hljs">{
   &quot;hostname&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
   &quot;password&quot;: &quot;DTPY7KXxhp_pKtjLSt&quot;,
@@ -62,7 +62,7 @@
   &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
 }
 </code></pre>
-                <p><img src="images/public_connection.png" alt="Zugriff durch das öffentliches Netz auf IBM Cloud"></p>
+                <p><img src="images/public_connection.png" alt="Öffentlicher Netzzugriff auf IBM Cloud" title="Grafische Ansicht einer Benutzer-zu-Cloud-Verbindung"></p>
               </li>
             </ol>
           </section>
@@ -70,14 +70,14 @@
         <section id="section-priv_endpt">
           <h2 id="priv_endpt">Verbindung zu einem privaten Endpunkt herstellen: IBM Cloud-Serviceendpunkt</h2>
           <p>Wenn Sie in Ihrem IBM Cloud-Konto eine Anwendung bereitgestellt haben und diese mit Ihrer Datenbank verbinden möchten, ohne dass der Datenverkehr über öffentliche Netze fließt, können Sie die Option <strong>IBM Cloud-Serviceendpunkt</strong>            beim Bestellen Ihrer Datenbank verwenden. Wenn der Service bereitgestellt wird, wird Ihnen ein privater Hostname angegeben, zu dem Sie nur innerhalb Ihres IBM Cloud-Kontos eine Verbindung herstellen können. </p>
-          <p>Weitere Informationen zur Option des IBM Cloud-Serviceendpunkts finden Sie in <a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">Serviceendpunkt: Produktinformationen</a>. </p>
+          <p>Weitere Informationen zur Option des IBM Cloud-Serviceendpunkts finden Sie in <a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">Serviceendpunkt: Produktinformationen</a>.</p>
           <section id="section-priv_endpt_steps">
             <h3 id="priv_endpt_steps">Verbindung zu einem privaten Endpunkt mit IBM Cloud-Serviceendpunkt herstellen</h3>
             <p>Die Kommunikation mit privaten Netzen und Endpunkten erfolgt über den IBM Cloud-Serviceendpunktservice. Der Serviceendpunktservice erleichtert eine schnelle und sichere Weiterleitung des Datenverkehrs im Netz zwischen unterschiedlichen IBM
               Cloud-Services und Ihrer Datenbank über das private Netzbackplane von IBM Cloud. Diese Weiterleitung im Netz gewährleistet, dass Ihre Daten niemals in das öffentliche Internet gelangen. </p>
             <p>Voraussetzung für den Einstieg in die Nutzung des Serviceendpunkts ist, dass Ihr IBM Cloud-Konto für VRF (Virtual Routing and Forwarding) aktiviert ist. Informationen dazu, wie Sie Ihr Konto aktivieren können, finden Sie in <a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">Ihr Konto mit IBM Cloud CLI für Serviceendpunkt aktivieren</a>.</p>
-            <p>Nachdem Ihr Konto für VRF aktiviert wurde und der Serviceendpunkt aktiviert ist, befolgen Sie die Anweisungen in Ihrem Begrüßungsschreiben. </p>
-            <p>Jetzt ist es an der Zeit, Ihre Db2 on Cloud-Instanz ausgehend von Ihrem IBM Cloud-Konto mithilfe der privaten Netzadresse zu verbinden, die in Ihrem Begrüßungsschreiben angegeben ist. </p>
+            <p>Nachdem Ihr Konto für VRF aktiviert wurde und der Serviceendpunkt aktiviert ist, befolgen Sie die Anweisungen in Ihrem Begrüßungsschreiben.</p>
+            <p>Jetzt ist es an der Zeit, Ihre Db2 on Cloud-Instanz ausgehend von Ihrem IBM Cloud-Konto mithilfe der privaten Netzadresse zu verbinden, die in Ihrem Begrüßungsschreiben angegeben ist.</p>
           </section>
         </section>
         <section id="section-vpn">
@@ -87,8 +87,8 @@
             IBM Cloud.</p>
           <section id="section-priv_endpt_vpn_steps">
             <h3 id="priv_endpt_vpn_steps">Verbindung zu einem privaten Endpunkt mit einem VPN herstellen</h3>
-            <p>Um eine VPN-Verbindung zu Ihren Clouddaten hinter einem öffentlichen Endpunkt herzustellen, <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">erstellen Sie einen IBM Cloud-Supportfall <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>,
-              der folgende Details enthält: </p>
+            <p>Um eine VPN-Verbindung zu Ihren Clouddaten hinter einem öffentlichen Endpunkt herzustellen, <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank" class="external">erstellen Sie einen IBM Cloud-Supportfall</a>, der folgende
+              Details enthält:</p>
             <ul>
               <li><strong>Art des Supports</strong>: Technisch </li>
               <li><strong>Kategorie</strong>: Datenbanken </li>
@@ -126,9 +126,8 @@
                 </ul>
               </li>
             </ul>
-            <p>Nach dem Eingang Ihrer Anforderung werden IBM Cloud-Techniker die entsprechenden Firewall-Ports öffnen und die angegebene IP-Adresse in die Whitelist aufnehmen. Die Kommunikation und Auflösung der Anforderung erfolgt über ein IBM Cloud-Supportfallticket.
-              </p>
-            <p><img src="images/public_connection_vpn.png" alt="Zugriff durch das öffentliches Netz auf IBM Cloud"></p>
+            <p>Nach dem Eingang Ihrer Anforderung werden IBM Cloud-Techniker die entsprechenden Firewall-Ports öffnen und die angegebene IP-Adresse in die Whitelist aufnehmen. Die Kommunikation und Auflösung der Anforderung erfolgt über ein IBM Cloud-Supportfallticket.</p>
+            <p><img src="images/public_connection_vpn.png" alt="Öffentlicher Netzzugriff auf IBM Cloud über VPN" title="Grafische Ansicht einer Benutzer-zu-Cloud-Verbindung"></p>
           </section>
         </section>
       </section>

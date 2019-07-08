@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting-started#getting-started"
             },
             {
                 "name": "path",
@@ -442,6 +442,11 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/cdc.html#cdc",
+                        "label": "Capture de données de changement (CDC) InfoSphere",
+                        "id": "Db2onCloud-cdc"
                     }
                 ]
             },

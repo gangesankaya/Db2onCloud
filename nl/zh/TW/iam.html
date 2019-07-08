@@ -43,16 +43,16 @@
           <p><strong>IBM ID</strong></p>
           <p>資料庫管理者必須透過主控台或 REST API 將擁有 IBM ID 的使用者新增至每個資料庫服務實例，這些使用者才能連接至特定資料庫服務實例。就像非 IBM ID 使用者一樣，必須在新增 IBM ID 使用者的同時，輸入資料庫服務實例的使用者 ID。這個使用者 ID 在資料庫服務實例內必須是唯一的。這個使用者 ID 也是資料庫內的授權 (AUTH) ID。資料庫管理者可以根據 AUTH ID 授與及撤銷許可權。</p>
           <p><strong>服務 ID</strong></p>
-          <p>服務 ID 識別服務或應用程式的方式，與使用者 ID 識別使用者的方式類似。服務 ID 是應用程式可用來向 IBM Cloud 服務進行鑑別的 ID。服務 ID 代表有別於擁有之 IBM ID 的實體。因此，可以授與資料庫內服務 ID 特有的不同權限及許可權。服務 ID 沒有密碼。您必須為每個服務 ID 建立 API 金鑰，才能讓服務 ID 連接至資料庫服務實例。如需服務 ID 的相關資訊，請參閱：<a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/"
-              target="_blank">IBM Cloud IAM 服務 ID 及 API 金鑰簡介 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+          <p>服務 ID 識別服務或應用程式的方式，與使用者 ID 識別使用者的方式類似。服務 ID 是應用程式可用來向 IBM Cloud 服務進行鑑別的 ID。服務 ID 代表有別於擁有之 IBM ID 的實體。因此，可以授與資料庫內服務 ID 特有的不同權限及許可權。服務 ID 沒有密碼。您必須為每個服務 ID 建立 API 金鑰，才能讓服務 ID 連接至資料庫服務實例。如需服務 ID 的相關資訊，請參閱 <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/"
+              target="_blank" class="external">Introducing IBM Cloud IAM Service IDs and API Keys</a>。</p>
         </section>
         <section id="section-connect_user">
           <h2 id="connect_user">用戶端連線及使用者登入</h2>
           <p><strong>必備項目</strong>：Db2 Client 11.1 版 FP3 以及更新版本。</p>
           <p>下列方法可用於 IAM 鑑別：</p>
           <p><strong>存取記號</strong></p>
-          <p>應用程式可以使用 API 金鑰透過 REST API 直接從 IAM 服務取得存取記號。如需相關資訊，請參閱：<a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank">使用 API 金鑰取得 IBM Cloud IAM 記號 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。存取記號在其到期前的預設有效期間為
-            60 分鐘。如果記號已過期，則 Db2 伺服器不容許建立連線。在建立連線之後，不會檢查記號是否到期。就像在 IAM 整合之前一樣，連線將保持連接，直到應用程式中斷連接或連線因其他原因而終止。</p>
+          <p>應用程式可以使用 API 金鑰透過 REST API 直接從 IAM 服務取得存取記號。如需相關資訊，請參閱：<a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank" class="external">使用 API 金鑰取得 IBM Cloud IAM 記號</a>。存取記號在其到期前的預設有效期間為 60 分鐘。如果記號已過期，則 Db2 伺服器不容許建立連線。在建立連線之後，不會檢查記號是否到期。就像在
+            IAM 整合之前一樣，連線將保持連接，直到應用程式中斷連接或連線因其他原因而終止。</p>
           <pre><code class="hljs">curl -k -X POST \
   --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
   --header &quot;Accept: application/json&quot; \
@@ -63,7 +63,7 @@
           <p>存取記號可向資料庫識別 IBM ID 使用者或服務 ID。資料庫伺服器會先驗證存取記號的有效性，再接受存取記號。如果應用程式需要連接至多個資料庫服務實例或其他 IBM Cloud 服務實例，這是最好的方法，因為它會將與 IAM 服務的通訊降到最少以驗證存取記號。</p>
           <p><strong>API 金鑰</strong></p>
           <p>您可以為每個 IBM ID 使用者或服務 ID 建立多個 API 金鑰。每個 API 金鑰通常是針對單一應用程式建立的。只要擁有的 IBM ID 或服務 ID 新增為資料庫服務實例的使用者，就容許應用程式連接至相同的資料庫服務實例。API 金鑰在資料庫內具有與所擁有 IBM ID 或服務 ID 相同的權限及許可權。如果不再容許應用程式連接至資料庫，則可以移除相對應的 API 金鑰。比起使用存取記號，這個鑑別方法在應用程式中所需的變更較少，因為它不需要與 IAM 服務直接互動。如需建立及管理
-            API 金鑰的相關資訊，請參閱：<a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">管理使用者 API 金鑰 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+            API 金鑰的相關資訊，請參閱：<a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank" class="external">管理使用者 API 金鑰</a>。</p>
           <p><strong>IBM ID/密碼</strong></p>
           <p>IBM ID/密碼可用來登入主控台，也可以利用容許使用者 ID/密碼的相同方法在應用程式內使用。聯合 IBM ID 時會發生異常狀況，因為無法完成重新導向至組織登入頁面的作業。不過，讓應用程式建立資料庫服務實例連線的建議方法是使用存取記號。</p>
         </section>
@@ -117,8 +117,7 @@
                 <p> <strong>IBM ID/密碼</strong></p>
                 <p> 在 CLPPLUS 命令提示字元或 Script 中執行下列指令，使用 IBM ID/密碼連接至資料庫伺服器 <code>&lt;database_server_name&gt;</code>：</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
-                <p> 如需使用 CLP 連接至資料庫伺服器的詳細資料，請參閱：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT（類型 2）陳述式 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。
-                  </p>
+                <p> 如需使用 CLP 連接至資料庫伺服器的詳細資料，請參閱：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank" class="external">CONNECT (type 2) statement</a>。 </p>
               </li>
               <li>
                 <p>CLPPLUS CONNECT 陳述式可以包含下列其中一項：</p>
@@ -131,7 +130,7 @@
                 <p> <strong>IBM ID/密碼</strong></p>
                 <p> 在 CLPPLUS 命令提示字元或 Script 中執行下列指令，以使用 IBM ID/密碼連接至 DSN 別名 (<code>@&lt;data_source_name&gt;</code>)：</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> 如需使用 CLPPLUS 連接至 DSN 別名的詳細資料，請參閱：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlus 中的 DSN 別名 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+                <p> 如需使用 CLPPLUS 連接至 DSN 別名的詳細資料，請參閱：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank" class="external">DSN aliases in CLPPlus</a>。</p>
               </li>
             </ul>
           </section>
@@ -216,12 +215,12 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
 </code></pre>
             </li>
           </ul>
-          <p>如需服務 API 的詳細資料，請參閱：<a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。</p>
+          <p>如需服務 API 的詳細資料，請參閱：<a href="http://ibm.biz/db2oc_api" target="_blank" class="external">Db2 on Cloud REST API</a>。</p>
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">IBM ID 聯合</h2>
-          <p>若要使用您自己的身分提供者（例如 LDAP），您必須先使用 IBM ID 聯合 LDAP 伺服器。如需使用 IBM ID 聯合 LDAP 伺服器的指示，請參閱：<a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示" title="外部鏈結圖示"></a>。在
-            IBM ID 聯合完成且資料庫管理者將容許的使用者新增至資料庫服務實例之後，這些使用者就可以使用他們的公司使用者 ID 和密碼登入主控台。或者，這些使用者可以使用代表其使用者 ID 的存取記號或 API 金鑰，透過其中一個支援的資料庫用戶端介面連接至資料庫服務實例。</p>
+          <p>若要使用您自己的身分提供者（例如 LDAP），您必須先使用 IBM ID 聯合 LDAP 伺服器。如需使用 IBM ID 聯合 LDAP 伺服器的指示，請參閱：<a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide" target="_blank" class="external">IBMid Enterprise Federation Adoption Guide</a>。在 IBM
+            ID 聯合完成且資料庫管理者將容許的使用者新增至資料庫服務實例之後，這些使用者就可以使用他們的公司使用者 ID 和密碼登入主控台。或者，這些使用者可以使用代表其使用者 ID 的存取記號或 API 金鑰，透過其中一個支援的資料庫用戶端介面連接至資料庫服務實例。</p>
         </section>
         <section id="section-restrictions">
           <h2 id="restrictions">限制</h2>

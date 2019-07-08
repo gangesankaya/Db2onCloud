@@ -33,17 +33,18 @@
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud はアプリケーションの接続要件に応じて、複数のセキュアな接続オプションを提供します。 </p>
         <section id="section-pub_endpt">
           <h2 id="pub_endpt">パブリック・エンドポイントへの接続 (デフォルト・オプション)</h2>
-          <p>他のパブリック・クラウド・サービスと同様に、サービスのプロビジョニング時に提供されるパブリック・ホスト名を使用してアプリケーションを接続できます。データへのアクセスは、強力な認証、広範な Db2 認証オプションとアクセス制御、通信中の暗号化、および開発と運用のための IBM のセキュリティーおよびコンプライアンスの取り組みによって保護されています。オプションで IP ホワイトリスティングを使用できます。IP ホワイトリスティングを有効にする場合は、IBM サポート Case を作成してください。</p>
+          <p>他のパブリック・クラウド・サービスと同様に、サービスのプロビジョニング時に提供されるパブリック・ホスト名を使用してアプリケーションを接続できます。 データへのアクセスは、強力な認証、広範な Db2 認証オプションとアクセス制御、通信中の暗号化、および開発と運用のための IBM のセキュリティーおよびコンプライアンスの取り組みによって保護されています。 オプションで IP ホワイトリスティングを使用できます。 IP ホワイトリスティングを有効にする場合は、IBM サポート Case
+            を作成してください。</p>
           <section id="section-pub_endpt_steps">
             <h3 id="pub_endpt_steps">パブリック・エンドポイントに接続する方法:</h3>
-            <p>データに接続する最も簡単な方法は、ウェルカム・レターに記載されているパブリック・ホスト名を使用することです。ホスト名と資格情報は次の方法でも取得できます。</p>
+            <p>データに接続する最も簡単な方法は、ウェルカム・レターに記載されているパブリック・ホスト名を使用することです。 ホスト名と資格情報は次の方法でも取得できます。</p>
             <ol>
               <li>Db2 on Cloud にログインし、サービス・インスタンスをクリックします。</li>
               <li><strong>「サービス資格情報」</strong>をクリックします。</li>
               <li><strong>「新規資格情報」</strong>をクリックし、<strong>「追加 (Add)」</strong>をクリックします。</li>
               <li>資格情報が作成されたら、<code>「アクション」</code>列で<strong>「資格情報の表示」</strong>をクリックします。</li>
               <li>
-                <p>以下の JSON 資料の例では、ホスト名、パスワード、およびユーザー名の各フィールドの内容に注目してください。パブリック・エンドポイント接続を確立する際に、これら 3 つのコンポーネントを使用します。</p>
+                <p>以下の JSON 資料の例では、ホスト名、パスワード、およびユーザー名の各フィールドの内容に注目してください。 パブリック・エンドポイント接続を確立する際に、これら 3 つのコンポーネントを使用します。</p>
                 <pre><code class="hljs">{
   &quot;hostname&quot;: &quot;dashdb-enterprise-xxxxxxx.services.dal.bluemix.net&quot;,
   &quot;password&quot;: &quot;DTPY7KXxhp_pKtjLSt&quot;,
@@ -59,30 +60,31 @@
   &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
 }
 </code></pre>
-                <p><img src="images/public_connection.png" alt="IBM Cloud"></p>
+                <p><img src="images/public_connection.png" alt="IBM Cloud" title="ユーザーからクラウドへの接続を示すグラフィカル・ビュー"></p>
               </li>
             </ol>
           </section>
         </section>
         <section id="section-priv_endpt">
           <h2 id="priv_endpt">プライベート・エンドポイントへの接続: IBM Cloud サービス・エンドポイント</h2>
-          <p>アプリケーションが IBM Cloud アカウントでデプロイされており、データベース・トラフィックがいずれのパブリック・ネットワークも経由することなくデータベースに接続するようにしたい場合、データベースを注文する際に <strong>IBM Cloud サービス・エンドポイント</strong>・オプションを使用することができます。サービスのプロビジョニング時にプライベート・ホスト名が提供され、自分の IBM Cloud アカウント内からのみ接続できます。 </p>
+          <p>アプリケーションが IBM Cloud アカウントでデプロイされており、データベース・トラフィックがいずれのパブリック・ネットワークも経由することなくデータベースに接続するようにしたい場合、データベースを注文する際に <strong>IBM Cloud サービス・エンドポイント</strong>・オプションを使用することができます。 サービスのプロビジョニング時にプライベート・ホスト名が提供され、自分の IBM Cloud アカウント内からのみ接続できます。 </p>
           <p>IBM Cloud サービス・エンドポイント・オプションについて詳しくは、<a href="/docs/services/service-endpoint?topic=service-endpoint-about#about">サービス・エンドポイント: 概要</a>を参照してください。</p>
           <section id="section-priv_endpt_steps">
             <h3 id="priv_endpt_steps">IBM Cloud サービス・エンドポイントを使用してプライベート・エンドポイントに接続する方法</h3>
-            <p>プライベート・ネットワークおよびエンドポイント通信は、IBM Cloud サービス・エンドポイント・サービスを経由して実行されます。このサービス・エンドポイント・サービスを使用すると、IBM Cloud プライベート・ネットワーク・バックプレーンを介して、さまざまな IBM Cloud サービスとデータベースの間のネットワーク・トラフィックを迅速かつ安全にルーティングできます。このネットワーク・ルーティングにより、データがパブリック・インターネットに流出しないことが保証されます。
+            <p>プライベート・ネットワークおよびエンドポイント通信は、IBM Cloud サービス・エンドポイント・サービスを経由して実行されます。 このサービス・エンドポイント・サービスを使用すると、IBM Cloud プライベート・ネットワーク・バックプレーンを介して、さまざまな IBM Cloud サービスとデータベースの間のネットワーク・トラフィックを迅速かつ安全にルーティングできます。 このネットワーク・ルーティングにより、データがパブリック・インターネットに流出しないことが保証されます。
               </p>
-            <p>サービス・エンドポイントの使用を開始するには、IBM Cloud アカウントで仮想ルーティングおよび転送 (VRF) を有効にする必要があります。アカウントを有効にするには、<a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">IBM Cloud CLI を使用してサービス・エンドポイントを使用するためにアカウントを有効にする</a>を参照してください。</p>
+            <p>サービス・エンドポイントの使用を開始するには、IBM Cloud アカウントで仮想ルーティングおよび転送 (VRF) を有効にする必要があります。 アカウントを有効にするには、<a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">IBM Cloud CLI を使用してサービス・エンドポイントを使用するためにアカウントを有効にする</a>を参照してください。</p>
             <p>アカウントで VRF が有効になり、サービス・エンドポイントが有効になったら、ウェルカム・レターに記載されている手順に従ってください。</p>
             <p>これで、ウェルカム・レターで指定されているプライベート・ネットワーク・アドレスを経由して、IBM Cloud アカウント内から Db2 on Cloud インスタンスに接続できるようになります。</p>
           </section>
         </section>
         <section id="section-vpn">
           <h2 id="vpn">プライベート・エンドポイントへの接続: 仮想プライベート・ネットワーク (VPN)</h2>
-          <p>パブリック・インターネットにアクセスせずに IBM Cloud の外部にあるプライベート・ネットワーク上にデプロイされたアプリケーションがあり、仮想プライベート・ネットワーク (VPN) を介してそれをデータベースに接続したい場合、サービスを注文する時点で、または IBM サポート Case を開くことによって、その要求を行うことができます。ユーザーのネットワーク・エンジニアがプライベート・ネットワークと IBM Cloud の間に VPN トンネルを設定する際には、IBM ネットワーク・エンジニアがサポートします。</p>
+          <p>パブリック・インターネットにアクセスせずに IBM Cloud の外部にあるプライベート・ネットワーク上にデプロイされたアプリケーションがあり、仮想プライベート・ネットワーク (VPN) を介してそれをデータベースに接続したい場合、サービスを注文する時点で、または IBM サポート Case を開くことによって、その要求を行うことができます。 ユーザーのネットワーク・エンジニアがプライベート・ネットワークと IBM Cloud の間に VPN トンネルを設定する際には、IBM
+            ネットワーク・エンジニアがサポートします。</p>
           <section id="section-priv_endpt_vpn_steps">
             <h3 id="priv_endpt_vpn_steps">VPN を使用してプライベート・エンドポイントに接続する方法</h3>
-            <p>パブリック・エンドポイントの背後でクラウド・データベースへの VPN 接続を確立するには、以下の詳細を含む <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">IBM Cloud サポート Case を作成します<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a>。</p>
+            <p>パブリック・エンドポイントの背後でクラウド・データベースへの VPN 接続を確立するには、以下の詳細を含む <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank" class="external">IBM Cloud サポート Case</a> を作成します。</p>
             <ul>
               <li><strong>サポートのタイプ</strong>: テクニカル </li>
               <li><strong>カテゴリー</strong>: データベース </li>
@@ -120,8 +122,8 @@
                 </ul>
               </li>
             </ul>
-            <p>要求を受け取った後、IBM Cloud 技術者は適切なファイアウォール・ポートを開き、提供された IP アドレスをホワイトリストに追加します。要求に対するコミュニケーションや解決策は、IBM Cloud サポート Case チケットを通じて行われます。</p>
-            <p><img src="images/public_connection_vpn.png" alt="IBM Cloud"></p>
+            <p>要求を受け取った後、IBM Cloud 技術者は適切なファイアウォール・ポートを開き、提供された IP アドレスをホワイトリストに追加します。 要求に対するコミュニケーションや解決策は、IBM Cloud サポート Case チケットを通じて行われます。</p>
+            <p><img src="images/public_connection_vpn.png" alt="VPN を介した IBM Cloud へのパブリック・ネットワーク・アクセス" title="ユーザーからクラウドへの接続を示すグラフィカル・ビュー"></p>
           </section>
         </section>
       </section>

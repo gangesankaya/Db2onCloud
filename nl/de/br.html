@@ -31,13 +31,13 @@
       <section id="section-bnr">
         <h1 id="bnr">Sicherung und Wiederherstellung</h1>
         <p class="shortdesc">Bei kostenpflichtigen Plänen werden täglich verschlüsselte Sicherungen der Datenbank durchgeführt. Eine tägliche Sicherung wird für jeden der letzten 14 Tage aufbewahrt.</p>
-        <p>Zusätzlich zu Standardsicherungen können Sie mithilfe der <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a>          Langzeitdaten für andere Zwecke speichern, z. B. für schnelle Abfragen alter Daten oder für die vereinfachte Durchführung von Audits. Darüber hinaus können Sie mithilfe von IBM Data Studio oder einem beliebigen Db2-Tool eigene Exporte durchführen.</p>
+        <p>Zusätzlich zu Standardsicherungen können Sie mithilfe der <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a> Langzeitdaten
+          für andere Zwecke speichern, z. B. für schnelle Abfragen alter Daten oder für die vereinfachte Durchführung von Audits. Darüber hinaus können Sie mithilfe von IBM Data Studio oder einem beliebigen Db2-Tool eigene Exporte durchführen.</p>
         <p>Informationen zur zeitpunktgesteuerten Wiederherstellungen finden Sie in <a href="#point-in-time">Zeitpunktgesteuerte Wiederherstellung</a>.</p>
         <p>In allen kostenpflichtigen Plänen wird normalerweise IBM Cloud Object Storage (COS) verwendet, um Sicherungen an 3 verschiedene Rechenzentren auszulagern. Sydney und bestimmte kleinere Rechenzentren unterstützten jedoch zum gegenwärtigen Zeitpunkt
           möglicherweise keine ausgelagerte Replikation mit IBM COS. In der <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">Dokumentation zu IBM COS</a> für die jeweilige Region finden Sie Informationen
           dazu, welche Regionen die ausgelagerte Replikation unterstützen.</p>
-        <p>Sie können auch die <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift-Befehlszeilenschnittstelle <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link" title="Symbol für externen Link"></a> verwenden, um Daten
-          in Db2 on Cloud zu importieren.</p>
+        <p>Sie können auch die <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank" class="external">IBM Lift-Befehlszeilenschnittstelle</a> verwenden, um Daten in Db2 on Cloud zu importieren.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Zeitpunktgesteuerte Wiederherstellung</h2>
           <p>Db2 on Cloud ist nun eine Funktion zur zeitpunktgesteuerten Wiederherstellung verfügbar. Diese ermöglicht die Wiederherstellung der gesicherten Daten für einen exakten Zeitpunkt. Derzeit müssen die meisten Kunden Unterstützung zur Aktivierung
@@ -55,27 +55,27 @@
                 die Sicherung, die dem gewünschten Datum am nächsten liegt, aus dem Pool der gespeicherten Sicherungen aus, die während der vorherigen 14 Tage erstellt wurden. </p>
               <p class="note">Der zeitpunktgesteuerte Wiederherstellungsprozess legt alle zuvor gespeicherten Sicherungen, deren Datum nach dem für die zeitpunktgesteuerte Wiederherstellung ausgewählten Datum liegt, als ungültig fest, da sich eine Abweichung in der Zeitachse
                 ergibt.</p>
-              <p><img src="images/pit_restore_1.png" alt="Ansicht der hervorgehobenen Auswahl für die zeitpunktgesteuerte Wiederherstellungsstrategie"></p>
+              <p><img src="images/pit_restore_1.png" alt="Ansicht der hervorgehobenen Auswahl der Strategie zur punktuellen Wiederherstellung" title="Konsolenseite zur Sicherung und Wiederherstellung"></p>
             </li>
             <li>
               <p>Bestätigen Sie, dass Sie den Vorgang mit den ausgewählten Wiederherstellungsoptionen fortsetzen möchten. Nach dem Initiieren der Wiederherstellungsoperation können Sie die Anforderung nicht mehr ändern.<br><img src="images/pit_restore_2.png"
-                  alt="Ansicht des Bestätigungsdialogs für die zeitpunktgesteuerte Wiederherstellung"></p>
+                  alt="Ansicht des Bestätigungsdialogs zur punktuellen Wiederherstellung" title="Bestätigungsdialog"></p>
             </li>
             <li>
               <p>Der Wiederherstellungsprozess wird initialisiert.
-                <img src="images/pit_restore_3.png" alt="Ansicht der Initialisierung der zeitpunktgesteuerten Wiederherstellung"></p>
+                <img src="images/pit_restore_3.png" alt="Ansicht der Initialisierung einer punktuellen Wiederherstellung" title="Initialisierung einer punktuellen Wiederherstellung"></p>
             </li>
             <li>
               <p>Die Datenbank wird am ausgewählten Zeitpunkt wiederhergestellt.
-                <img src="images/pit_restore_4.png" alt="Ansicht des Fortschritts der zeitpunktgesteuerten Wiederherstellung"></p>
+                <img src="images/pit_restore_4.png" alt="Ansicht des Fortschritts der punktuellen Wiederherstellung" title="Fortschritt der Wiederherstellung"></p>
             </li>
             <li>
               <p>Es wird ein neuer Sicherungspunkt erstellt. Die zeitpunktgesteuert wiederhergestellte Datenbank ist zur Verwendung bereit.
-                <img src="images/pit_restore_5.png" alt="Ansicht der Erstellung des neuen Sicherungspunkts"></p>
+                <img src="images/pit_restore_5.png" alt="Ansicht der Erstellung eines Backup-Punkts" title="Erstellung eines Backup-Punkts"></p>
             </li>
             <li>
               <p>Die Wiederherstellungsoperation wurde erfolgreich abgeschlossen.
-                <img src="images/pit_restore_6.png" alt="Ansicht des erfolgreichen Abschlusses der Wiederherstellungsoperation"></p>
+                <img src="images/pit_restore_6.png" alt="Ansicht des erfolgreichen Abschlusses der Wiederherstellung" title="Erfolgreicher Abschluss"></p>
             </li>
           </ol>
         </section>

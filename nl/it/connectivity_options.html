@@ -61,7 +61,7 @@
   &quot;ssljdbcurl&quot;: &quot;jdbc:db2://dashdb-enterprise-xxxxxxx.services.dal.bluemix.net:50001/BLUDB:sslConnection=true;&quot;
 }
 </code></pre>
-                <p><img src="images/public_connection.png" alt="Accesso di rete pubblica a IBM Cloud"></p>
+                <p><img src="images/public_connection.png" alt="Accesso di rete pubblica a IBM Cloud" title="Vista geografica della connessione da utente al cloud"></p>
               </li>
             </ol>
           </section>
@@ -73,7 +73,7 @@
           <section id="section-priv_endpt_steps">
             <h3 id="priv_endpt_steps">Come stabilire una connessione a un endpoint privato con IBM Cloud Service Endpoint</h3>
             <p>Le comunicazioni di rete privata ed endpoint avvengono mediante il servizio IBM Cloud Service Endpoint. Il servizio Service Endpoint rende facile instradare rapidamente e in modo protetto il traffico di rete tra diversi servizi IBM Cloud e
-              il tuo database sul backplane di rete privata IBM Cloud.Questo instradamento di rete garantisce che i tuoi dati non vadano mai sull&#39;internet pubblico. </p>
+              il tuo database sul backplane di rete privata IBM Cloud. Questo instradamento di rete garantisce che i tuoi dati non vadano mai sull&#39;internet pubblico. </p>
             <p>Per iniziare a lavorare con Service Endpoint, il tuo account IBM Cloud deve essere abilitato per VRF (virtual routing and forwarding). Per fare in modo che il tuo account venga abilitato, vedi <a href="/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps">Enabling your account for using Service Endpoint by using IBM Cloud CLI</a>.</p>
             <p>Dopo che il tuo account è stato abilitato a VRF e Service Endpoint è stato abilitato, attieniti alle istruzioni che erano state fornite nella tua lettera di benvenuto.</p>
             <p>Ora è il momento di stabilire una connessione alla tua istanza Db2 on Cloud dall&#39;interno del tuo account IBM Cloud mediante l&#39;indirizzo di rete privato che era stato fornito nella tua lettera di benvenuto.</p>
@@ -85,7 +85,7 @@
             quando ordini il servizio oppure aprendo un caso di supporto IBM. Gli ingegneri di rete IBM assisteranno i tuoi ingegneri di rete per configurare il tunnel VPN tra la tua rete privata e IBM Cloud.</p>
           <section id="section-priv_endpt_vpn_steps">
             <h3 id="priv_endpt_vpn_steps">Come connettersi a un endpoint privato con una VPN</h3>
-            <p>Per stabilire una connessione VPN al tuo database cloud dietro un endpoint pubblico, <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank">crea un caso di supporto IBM Cloud <img src="../../icons/launch-glyph.svg" alt="Icona link esterno" title="Icona link esterno"></a>              che include i seguenti dettagli:</p>
+            <p>Per stabilire una connessione VPN al tuo database cloud dietro un endpoint pubblico, <a href="https://cloud.ibm.com/unifiedsupport/cases/add" target="_blank" class="external">crea un caso di supporto IBM Cloud</a> che include i seguenti dettagli:</p>
             <ul>
               <li><strong>Type of support</strong>: Technical </li>
               <li><strong>Category</strong>: Databases </li>
@@ -125,7 +125,7 @@
             </ul>
             <p>Dopo la ricezione della tua richiesta, i tecnici IBM Cloud apriranno le porte del firewall appropriate e inseriranno in whitelist l&#39;indirizzo IP fornito. Le comunicazioni e la risoluzione alla richiesta verranno effettuate tramite il ticket
               del caso di supporto IBM Cloud.</p>
-            <p><img src="images/public_connection_vpn.png" alt="Accesso di rete pubblica a IBM Cloud"></p>
+            <p><img src="images/public_connection_vpn.png" alt="Accesso di rete pubblica a IBM Cloud tramite una VPN" title="Vista geografica della connessione da utente al cloud"></p>
           </section>
         </section>
       </section>

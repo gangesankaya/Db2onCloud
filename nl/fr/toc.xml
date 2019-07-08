@@ -4,7 +4,7 @@
   <property name="subcollection" value="Db2onCloud"/>
   <property name="audience" value="service"/>
   <property name="arm" value="1920570"/>
-  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"/>
+  <property name="href" value="/docs/services/Db2onCloud?topic=Db2onCloud-getting-started#getting-started"/>
   <property name="path" value="services/Db2onCloud"/>
   <topic href="getting-started.html#getting-started" label="Tutoriel d&#39;initiation" id="getting-started">
     <property name="navgroup" value="learn"/>
@@ -109,6 +109,7 @@
         <property name="type" value="anchor"/>
       </topic>
     </topic>
+    <topic href="cdc.html#cdc" label="Capture de données de changement (CDC) InfoSphere" id="cdc"></topic>
   </topic>
   <topic href="free_plan.html#free_plan" label="Plan gratuit" id="free_plan">
     <property name="navgroup" value="learn"/>

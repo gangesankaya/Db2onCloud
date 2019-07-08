@@ -51,17 +51,17 @@
           <p>Un ID de service identifie un service ou une application de la même façon qu&#39;un ID utilisateur identifie un utilisateur. Les ID de service sont des ID pouvant être utilisés par les applications pour s&#39;authentifier auprès d&#39;un service
             IBM Cloud. Un ID de service représente une entité distincte de l&#39;IBMid. Par conséquent, différents droits et permissions peuvent être accordés de manière spécifique à l&#39;ID de service au sein de la base de données. Les ID de service
             n&#39;ont pas de mots de passe. Une clé d&#39;interface de programmation doit être créée pour chaque ID de service afin que ce dernier puisse se connecter à l&#39;instance de service de base de données. Pour plus d&#39;informations sur les
-            ID de service, voir : <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank">Introducing IBM Cloud IAM Service IDs and API Keys <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
+            ID de service, voir <a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/" target="_blank" class="external">Présentation des ID de service IBM Cloud IAM et des clés d&#39;API</a>.</p>
         </section>
         <section id="section-connect_user">
           <h2 id="connect_user">Connexions client et connexions utilisateur</h2>
           <p><strong>Prérequis </strong>: Db2 Client version 11.1 groupe de correctifs 3 et suivants.</p>
           <p>Les méthodes suivantes peuvent être utilisées pour l&#39;authentification IAM :</p>
           <p><strong>Jeton d&#39;accès</strong></p>
-          <p>Un jeton d&#39;accès peut être obtenu auprès du service IAM directement par l&#39;application via l&#39;API REST à l&#39;aide d&#39;une clé d&#39;interface de programmation. Pour plus d&#39;informations, voir : <a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey"
-              target="_blank">Obtention d&#39;un jeton IBM Cloud IAM à l&#39;aide d&#39;une clé d&#39;API <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>. Le jeton d&#39;accès a une période de validité
-            par défaut de 60 minutes avant qu&#39;il n&#39;expire. Si le jeton a expiré, le serveur Db2 ne permet pas l&#39;établissement de la connexion. La péremption du jeton n&#39;est pas vérifiée une fois la connexion établie. Tout comme préalablement
-            à l&#39;intégration IAM, la connexion est maintenue jusqu&#39;à ce que l&#39;application se déconnecte ou que la connexion s&#39;arrête pour d&#39;autres raisons.</p>
+          <p>Un jeton d&#39;accès peut être obtenu auprès du service IAM directement par l&#39;application via l&#39;API REST à l&#39;aide d&#39;une clé d&#39;interface de programmation. Pour plus d&#39;informations, voir <a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey"
+              target="_blank" class="external">Obtention d&#39;un jeton IBM Cloud IAM à l&#39;aide d&#39;une clé d&#39;API</a>. Le jeton d&#39;accès a une période de validité par défaut de 60 minutes avant qu&#39;il n&#39;expire. Si le jeton a expiré, le
+            serveur Db2 ne permet pas l&#39;établissement de la connexion. La péremption du jeton n&#39;est pas vérifiée une fois la connexion établie. Tout comme préalablement à l&#39;intégration IAM, la connexion est maintenue jusqu&#39;à ce que l&#39;application
+            se déconnecte ou que la connexion s&#39;arrête pour d&#39;autres raisons.</p>
           <pre><code class="hljs">curl -k -X POST \
   --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
   --header &quot;Accept: application/json&quot; \
@@ -76,7 +76,7 @@
             de se connecter à l&#39;instance de service de base de données dès lors que l&#39;IBMid ou l&#39;ID de service propriétaire est ajouté en tant qu&#39;utilisateur à la même instance de service de base de données. La clé d&#39;interface de programmation
             a les mêmes droits et permissions au sein de la base de données que l&#39;IBMid ou l&#39;ID de service propriétaire. Si une application ne doit plus être autorisée à se connecter à la base de données, la clé d&#39;interface de programmation
             correspondante peut être retirée. La méthode d&#39;authentification nécessite moins de changements dans l&#39;application que l&#39;utilisation d&#39;un jeton d&#39;accès car aucune interaction directe n&#39;est nécessaire avec le service
-            IAM. Pour plus d&#39;informations sur la création et la gestion des clés d&#39;interface de programmation, voir : <a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">Managing user API keys <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
+            IAM. Pour plus d&#39;informations sur la création et la gestion des clés d&#39;API, voir <a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank" class="external">Gestion des clés d&#39;API d&#39;utilisateur</a>.</p>
           <p><strong>IBMid/mot de passe</strong></p>
           <p>L&#39;IBMid/mot de passe peut être utilisé pour la connexion à la console et peut également être utilisé au sein de l&#39;application de la même manière qu&#39;un ID utilisateur/mot de passe. Il existe une exception lorsque l&#39;IBMid est fédéré
             car un réacheminement est impossible vers la page de connexion de votre organisation. Toutefois, la méthode recommandée pour qu&#39;une application puisse établir une connexion à l&#39;instance de service de base de données est l&#39;utilisation
@@ -134,7 +134,7 @@
                 <p> <strong>IBMid/mot de passe</strong></p>
                 <p> Connectez-vous au serveur de base de données <code>&lt;database_server_name&gt;</code> avec un IBMid/mot de passe en exécutant la commande suivante sur le script ou l&#39;invite de commande CLP :</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
-                <p> Pour en savoir plus sur la connexion à un serveur de base de données avec CLP, voir <a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.
+                <p> Pour plus d&#39;informations sur la connexion à un serveur de base de données avec CLP, voir <a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank" class="external">Instruction CONNECT (type 2)</a>.
                   </p>
               </li>
               <li>
@@ -148,7 +148,7 @@
                 <p> <strong>IBMid/mot de passe</strong></p>
                 <p> Connectez-vous à l&#39;alias DSN (<code>@&lt;data_source_name&gt;</code>) avec un IBMid/mot de passe en exécutant la commande suivante sur l&#39;invite de commande CLPPLUS ou le script :</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> Pour plus d&#39;informations sur la connexion aux alias DSN avec CLPPLUS, voir : <a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">DSN aliases in CLPPlus <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
+                <p> Pour plus d&#39;informations sur la connexion aux alias DSN avec CLPPLUS, voir <a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank" class="external">DSN aliases in CLPPlus</a>.</p>
               </li>
             </ul>
           </section>
@@ -238,15 +238,14 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
 </code></pre>
             </li>
           </ul>
-          <p>Pour plus de détails sur l&#39;API de votre service, voir : <a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>.</p>
+          <p>Pour plus d&#39;informations sur l&#39;API de votre service, voir <a href="http://ibm.biz/db2oc_api" target="_blank" class="external">API REST Db2 on Cloud</a>.</p>
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">Fédération avec IBMid</h2>
           <p>Pour utiliser votre propre fournisseur d&#39;identité, tel que LDAP, vous devez d&#39;abord fédérer votre serveur LDAP avec IBMid. Pour les instructions relatives à la fédération de votre serveur LDAP avec IBMid, voir <a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide"
-              target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe" title="Icône de lien externe"></a>. Une fois la fédération avec IBMid effectuée et dès lors que les utilisateurs
-            autorisés sont ajoutés à l&#39;instance de service de base de données par l&#39;administrateur de base de données, ces utilisateurs peuvent se connecter à la console à l&#39;aide de leurs ID utilisateur et mot de passe d&#39;entreprise. Ces
-            utilisateurs peuvent aussi utiliser un jeton d&#39;accès ou une clé d&#39;interface de programmation qui représente leur ID utilisateur pour se connecter à l&#39;instance de service de base de données via l&#39;une des interfaces client de
-            base de données prises en charge.</p>
+              target="_blank" class="external">IBMid Enterprise Federation Adoption Guide</a>. Une fois la fédération avec IBMid effectuée et dès lors que les utilisateurs autorisés sont ajoutés à l&#39;instance de service de base de données par l&#39;administrateur
+            de base de données, ces utilisateurs peuvent se connecter à la console à l&#39;aide de leurs ID utilisateur et mot de passe d&#39;entreprise. Ces utilisateurs peuvent aussi utiliser un jeton d&#39;accès ou une clé d&#39;interface de programmation
+            qui représente leur ID utilisateur pour se connecter à l&#39;instance de service de base de données via l&#39;une des interfaces client de base de données prises en charge.</p>
         </section>
         <section id="section-restrictions">
           <h2 id="restrictions">Restrictions</h2>

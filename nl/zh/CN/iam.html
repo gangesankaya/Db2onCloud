@@ -44,15 +44,15 @@
           <p>数据库管理员必须先通过控制台或 REST API 将具有 IBM 标识的用户添加到每个数据库服务实例中，然后这些用户才能连接到特定的数据库服务实例。就像非 IBM 标识用户一样，必须在添加 IBM 标识用户的同时输入数据库服务实例的用户标识。此用户标识在数据库服务实例中应该是唯一的。此用户标识也是数据库中的授权 (AUTH) 标识。数据库管理员可以根据 AUTH 标识授予或撤销许可权。</p>
           <p><strong>服务标识</strong></p>
           <p>服务标识用于标识服务或应用程序，类似于用户标识对用户进行标识的方式。服务标识是应用程序可以用来进行 IBM Cloud 服务认证的标识。服务标识表示不同于其所属 IBM 标识的单独实体。因此，在数据库中，可以为特定的服务标识授予不同的权限和许可权。服务标识没有密码。必须为每个服务标识创建 API 密钥，该服务标识才能连接到数据库服务实例。有关服务标识的更多信息，请参阅：<a href="https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/"
-              target="_blank">介绍 IBM Cloud IAM 服务标识和 API 密钥 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+              target="_blank" class="external">Introducing IBM Cloud IAM Service IDs and API Keys</a>。</p>
         </section>
         <section id="section-connect_user">
           <h2 id="connect_user">客户机连接和用户登录</h2>
           <p><strong>必备软件</strong>：Db2 Client V11.1 FP3 及更高版本。</p>
           <p>可以使用下列方法进行 IAM 认证：</p>
           <p><strong>访问令牌</strong></p>
-          <p>应用程序可以使用 API 密钥通过 REST API 直接从 IAM 服务获取访问令牌。有关更多信息，请参阅：<a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank">使用 API 密钥获取 IBM Cloud IAM 令牌 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。访问令牌的缺省有效期为
-            60 分钟，之后即到期。如果令牌已到期，那么 Db2 服务器不会允许建立连接。但在建立连接之后，不会检查令牌是否到期。就像在 IAM 集成之前一样，仍将保持已连接状态，直到应用程序断开连接或连接由于其他原因被终止。</p>
+          <p>应用程序可以使用 API 密钥通过 REST API 直接从 IAM 服务获取访问令牌。有关更多信息，请参阅：<a href="/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey" target="_blank" class="external">使用 API 密钥获取 IBM Cloud IAM 令牌</a>。访问令牌的缺省有效期为 60 分钟，之后即到期。如果令牌已到期，那么 Db2 服务器不会允许建立连接。但在建立连接之后，不会检查令牌是否到期。就像在
+            IAM 集成之前一样，仍将保持已连接状态，直到应用程序断开连接或连接由于其他原因被终止。</p>
           <pre><code class="hljs">curl -k -X POST \
   --header &quot;Content-Type: application/x-www-form-urlencoded&quot; \
   --header &quot;Accept: application/json&quot; \
@@ -63,7 +63,7 @@
           <p>访问令牌为数据库识别 IBM 标识用户或服务标识。数据库服务器先验证访问令牌的有效性，然后接受令牌。如果应用程序需要连接多个数据库服务实例或其他 IBM Cloud 服务实例，那么这是最佳方法，因为可以将与 IAM 服务进行通信已验证访问令牌的通信量降到最低。</p>
           <p><strong>API 密钥</strong></p>
           <p>可以为每个 IBM 标识用户或服务标识创建多个 API 密钥。通常情况下，每个 API 密钥都是为单个应用程序创建的。这样只要将其所属的 IBM 标识或服务标识作为用户添加到数据库服务实例中，应用程序就可以一直连接到该数据库服务实例。在数据库中，API 密钥与所属的 IBM 标识或服务标识具有相同的权限和许可权。如果应该不再允许应用程序连接到数据库，那么可以除去相应的 API 密钥。跟使用访问令牌相比，此认证方法需要在应用程序中进行的更改更少，这是因为它不需要与 IAM 服务进行直接交互。有关创建和管理
-            API 密钥的更多信息，请参阅：<a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank">管理用户 API 密钥 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+            API 密钥的更多信息，请参阅：<a href="/docs/iam?topic=iam-userapikey#userapikey" target="_blank" class="external">管理用户 API 密钥</a>。</p>
           <p><strong>IBM 标识/密码</strong></p>
           <p>IBM 标识/密码可用于登录控制台，也可在应用程序中发挥与用户标识/密码相同的作用。如果联合 IBM 标识，就会发生异常，这是因为无法重定向到组织的登录页面。但我们建议用使用访问令牌的方法来建立应用程序与数据库服务实例的连接。</p>
         </section>
@@ -117,8 +117,7 @@
                 <p> <strong>IBM 标识/密码</strong></p>
                 <p> 在 CLP 命令提示符或脚本处运行以下命令，通过使用 IBM 标识/密码来连接到数据库服务器 <code>&lt;database_server_name&gt;</code>：</p>
                 <p> <code>CONNECT TO &lt;database_server_name&gt; USER &lt;IBMid&gt; USING &lt;password&gt;</code></p>
-                <p> 有关使用 CLP 连接到数据库服务器的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank">CONNECT (type 2) statement <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。
-                  </p>
+                <p> 有关使用 CLP 连接到数据库服务器的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.sql.ref.doc/doc/r0000908.html" target="_blank" class="external">CONNECT (type 2) statement</a>。 </p>
               </li>
               <li>
                 <p>CLPPLUS CONNECT 语句可以包含以下某项：</p>
@@ -131,7 +130,7 @@
                 <p> <strong>IBM 标识/密码</strong></p>
                 <p> 在 CLPPLUS 命令提示符或脚本处运行以下命令，通过使用 IBM 标识/密码来连接到 DSN 别名 (<code>@&lt;data_source_name&gt;</code>)：</p>
                 <p> <code>connect &lt;IBMid&gt;/&lt;password&gt;@&lt;data_source_name&gt;</code></p>
-                <p> 有关使用 CLPPLUS 连接到 DSN 别名的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank">CLPPlUS 中的 DSN 别名 <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+                <p> 有关使用 CLPPLUS 连接到 DSN 别名的更多详细信息，请参阅：<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.clpplus.doc/doc/c0057148.html" target="_blank" class="external">DSN aliases in CLPPlus</a>。</p>
               </li>
             </ul>
           </section>
@@ -216,11 +215,11 @@ curl --tlsv1.2 &quot;https://&lt;IPaddress&gt;/dbapi/v3/users&quot; -H &quot;Aut
 </code></pre>
             </li>
           </ul>
-          <p>有关服务 API 的更多详细信息，请参阅：<a href="http://ibm.biz/db2oc_api" target="_blank">Db2 on Cloud REST API <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。</p>
+          <p>有关服务 API 的更多详细信息，请参阅：<a href="http://ibm.biz/db2oc_api" target="_blank" class="external">Db2 on Cloud REST API</a>。</p>
         </section>
         <section id="section-fed_ibmid">
           <h2 id="fed_ibmid">IBM 标识联合</h2>
-          <p>要使用您自己的身份提供程序（如 LDAP），必须先将 LDAP 服务器与 IBM 标识联合。有关将 LDAP 服务器与 IBM 标识联合的指示信息，请参阅：<a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide" target="_blank">IBMid Enterprise Federation Adoption Guide <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a>。在数据库管理员完成
+          <p>要使用您自己的身份提供程序（如 LDAP），必须先将 LDAP 服务器与 IBM 标识联合。有关将 LDAP 服务器与 IBM 标识联合的指示信息，请参阅：<a href="https://ibm.ent.box.com/notes/78040808400?v=IBMid-Federation-Guide" target="_blank" class="external">IBMid Enterprise Federation Adoption Guide</a>。在数据库管理员完成
             IBM 标识联合并将允许的用户添加到数据库服务实例之后，这些用户就可以使用他们的公司用户标识和密码登录到控制台。或者，这些用户也可以使用表示他们用户标识的访问令牌或 API 密钥通过一个受支持的数据库客户机接口来连接数据库服务实例。</p>
         </section>
         <section id="section-restrictions">

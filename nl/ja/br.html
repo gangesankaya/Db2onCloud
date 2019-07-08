@@ -31,11 +31,11 @@
       <section id="section-bnr">
         <h1 id="bnr">バックアップとリストア</h1>
         <p class="shortdesc">有料プランでは、データベースの暗号化されたバックアップが毎日行われます。 毎日のバックアップは、過去 14 日間にわたって保持されます。</p>
-        <p>標準バックアップに加え、<a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">タイム・トラベル照会 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を使用して、古いデータのインスタント照会や簡易監査などの他の目的のために履歴データを保持することもできます。
-          IBM Data Studio または任意の Db2 ツールを使用して、独自のエクスポートを実行することもできます。</p>
+        <p>標準バックアップに加え、<a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">タイム・トラベル照会</a>を使用して、古いデータのインスタント照会や簡易監査などの他の目的のために履歴データを保持することもできます。IBM Data Studio
+          または任意の Db2 ツールを使用して、独自のエクスポートを実行することもできます。</p>
         <p>ポイント・イン・タイム・リストアについては、<a href="#point-in-time">ポイント・イン・タイム・リストア</a>を参照してください。</p>
         <p>すべての有料プランでは通常、IBM Cloud Object Storage (COS) を利用して、オフサイトの 3 つの異なるデータ・センターでバックアップが保持されます。 ただし、現時点では、シドニー・データ・センターと小規模なデータ・センターの一部は、IBM COS によるオフサイト・レプリケーションをサポートしていません。 オフサイト・レプリケーションをサポートしている地域を判別するには、お客様の地域の <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">IBM COS の資料</a>を確認してください。</p>
-        <p><a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を使用して、Db2 on Cloud にデータをインポートすることもできます。</p>
+        <p>また、<a href="https://www.lift-cli.cloud.ibm.com/" target="_blank" class="external">IBM Lift CLI</a> を使用して、データを Db2 on Cloud にインポートすることもできます。</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">ポイント・イン・タイム・リストア</h2>
           <p>Db2 on Cloud にポイント・イン・タイム・リストア機能が追加されました。 バックアップから正確なポイント・イン・タイムにリストアできます。 現在、ほとんどのお客様はこのフィーチャーをアクティブにするようサポートに要求する必要があります。 次のロールアウト・スケジュールを参照してください。</p>
@@ -50,26 +50,25 @@
             <li>
               <p><strong>ポイント・イン・タイム</strong>・リストア戦略を選択し、データベースをリストアするターゲットのポイント・イン・タイム日付を選択します。 ポイント・イン・タイム・リストア・プロセスは、過去 14 日間に行われた保存バックアップのプールの中から、要求されたポイント・イン・タイム日付に最も近いバックアップを選択します。 </p>
               <p class="note">ポイント・イン・タイム・リストア・プロセスは、選択されたポイント・イン・タイム日付よりも後の日付で保存されている過去のバックアップをすべて無効にします。リストアの結果として時系列に相違が生じるためです。</p>
-              <p><img src="images/pit_restore_1.png" alt="ポイント・イン・タイム・リストア戦略の選択が強調表示されたビュー"></p>
+              <p><img src="images/pit_restore_1.png" alt="選択されて強調表示されたポイント・イン・タイム・リストア戦略を示すビュー" title="バックアップとリストア・コンソール・ページ"></p>
             </li>
             <li>
-              <p>選択したリストアを続行することを確認します。 リストア操作を開始したら、要求を変更することはできません。<br><img src="images/pit_restore_2.png" alt="ポイント・イン・タイム・リストア確認ダイアログのビュー"></p>
+              <p>選択したリストアを続行することを確認します。 リストア操作を開始したら、要求を変更することはできません。<br><img src="images/pit_restore_2.png" alt="ポイント・イン・タイム・リストアの確認ダイアログを示すビュー" title="確認ダイアログ"></p>
             </li>
             <li>
               <p>リストア・プロセスの初期化中です。
-                <img src="images/pit_restore_3.png" alt="ポイント・イン・タイム・リストア初期化のビュー"></p>
+                <img src="images/pit_restore_3.png" alt="ポイント・イン・タイムの初期化を示すビュー" title="ポイント・イン・タイム・リストアの初期化"></p>
             </li>
             <li>
-              <p>選択されたポイント・イン・タイムにデータベースをリストアしています。
-                <img src="images/pit_restore_4.png" alt="ポイント・イン・タイム・リストアの進行状況のビュー"></p>
+              <p>選択されたポイント・イン・タイムにデータベースをリストアしています。<img src="images/pit_restore_4.png" alt="ポイント・イン・タイム・リストアの進行状況を示すビュー" title="リストアの進行状況"></p>
             </li>
             <li>
               <p>新しいバックアップ・ポイントが作成されています。 ポイント・イン・タイム・リストア・データベースを使用できる状態になりました。
-                <img src="images/pit_restore_5.png" alt="新しいバックアップ・ポイントの作成のビュー"></p>
+                <img src="images/pit_restore_5.png" alt="バックアップ・ポイントの作成を示すビュー" title="バックアップ・ポイントの作成"></p>
             </li>
             <li>
               <p>リストア操作が正常に完了しました。
-                <img src="images/pit_restore_6.png" alt="リストア操作の正常完了のビュー"></p>
+                <img src="images/pit_restore_6.png" alt="リストアの正常完了を示すビュー" title="正常完了"></p>
             </li>
           </ol>
         </section>

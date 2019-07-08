@@ -6,8 +6,8 @@
   <meta name="DC.Publisher" content="IBM Corporation">
   <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-12-05">
-  <meta name="dcterms.date" content="2018-12-05">
+  <meta name="DC.date" content="2019-06-12">
+  <meta name="dcterms.date" content="2019-06-12">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
   <meta name="description" content="IBM&reg; Db2&reg; on Cloud 기능과 사양은 사용자 편의를 위해 여기에 요약되어 있습니다.">
@@ -31,11 +31,10 @@
       <section id="section-fs">
         <h1 id="fs">기능 &amp; 사양</h1>
         <p class="shortdesc">IBM&reg; Db2&reg; on Cloud 기능과 사양은 사용자 편의를 위해 여기에 요약되어 있습니다.</p>
-        <table>
-          <caption caption-side="top">표 1. Db2 on Cloud에서 지원되는 기능 및 스펙</caption>
+        <table class="simple-tab-table" id="simpletabtable1" tab-title="General" tab-group="fs">
+          <caption caption-side="top">표 1. 일반</caption>
           <thead>
             <tr>
-              <th>카테고리</th>
               <th>기능</th>
               <th>지원 여부?</th>
               <th>설명</th>
@@ -43,428 +42,412 @@
           </thead>
           <tbody>
             <tr>
-              <td>일반사항</td>
               <td>Db2 AESE</td>
               <td>Y</td>
               <td>Db2 v11.1.3.3</td>
             </tr>
             <tr>
-              <td></td>
               <td>대기 중 읽기</td>
               <td>Y</td>
               <td>오프사이트 DR 노드만 해당</td>
             </tr>
             <tr>
-              <td></td>
               <td>자동 롤링 업데이트</td>
               <td>Y</td>
               <td>HA 플랜 포함</td>
             </tr>
             <tr>
-              <td></td>
               <td>데이터 센터 위치 옵션</td>
               <td>Y</td>
-              <td><a href="https://ibm.biz/db2oncloud-locations" target="_blank">위치 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>. 배치 &amp; 스케일링 기간도 참조하십시오.</td>
+              <td><a href="https://ibm.biz/db2oncloud-locations" target="_blank" class="external">위치</a>. 배치 &amp; 스케일링 기간도 참조하십시오.</td>
             </tr>
             <tr>
-              <td></td>
               <td>BLU 인메모리</td>
               <td>Y</td>
               <td>기본값은 행입니다. BLU에 대해 <code>CREATE TABLE..AS COL</code>을 지정하십시오.</td>
             </tr>
             <tr>
-              <td></td>
               <td>활동 트래커</td>
-              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 내 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">로드맵 내</a></td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>루트 액세스 제공</td>
               <td>N</td>
               <td>루트 액세스가 필요한 경우 Db2 Hosted 사용</td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable2" tab-title="High availability & replication" tab-group="fs">
+          <caption caption-side="top">표 2. 고가용성 및 복제</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>고가용성 &amp; 복제</td>
               <td>오프사이트 DR</td>
               <td>Y</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>고가용성(한 구역에 노드 2개)</td>
               <td>Y</td>
               <td>99.99% 가동 시간 SLA</td>
             </tr>
             <tr>
-              <td></td>
               <td>동일한 데이터 센터의 다른 구역</td>
-              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 내 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">로드맵 내</a></td>
               <td><strong>참고</strong>: 오프사이트 HADR을 사용할 수 있음</td>
             </tr>
             <tr>
-              <td></td>
-              <td>CDC(Change Data Capture)</td>
+              <td>Change Data Capture(CDC)</td>
               <td>Y</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>온프레미스에서 HADR로 사용</td>
               <td>N</td>
-              <td>CDC를 사용하십시오. 자세한 정보는 <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank">Db2에서 Db2 on Cloud로 어떻게 데이터를 마이그레이션하거나 동기화할 수 있습니까? <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를
-                참조하십시오.</td>
+              <td>CDC를 사용하십시오. 자세한 정보는 <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank" class="external">Db2에서 Db2 on Cloud로 어떻게 데이터를 마이그레이션하거나 동기화할 수 있습니까?</a>를 참조하십시오.</td>
             </tr>
             <tr>
-              <td></td>
               <td>자율 장애 복구 - HA</td>
               <td>Y</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>자율 장애 복구 - 오프사이트 DR</td>
               <td>N</td>
               <td>단추 또는 API 사용</td>
             </tr>
             <tr>
-              <td></td>
               <td>장애 복구로 IP 이동</td>
               <td>Y</td>
               <td>로컬 HA만 해당, 오프사이트 HADR 아님</td>
             </tr>
             <tr>
-              <td></td>
               <td>RPO: 고가용성</td>
               <td>0s</td>
               <td>HA는 동기식임</td>
             </tr>
             <tr>
-              <td></td>
               <td>RTO: 고가용성</td>
               <td>일반적으로 0-10분</td>
               <td>재시도 코드를 사용하면 Db2 ACR을 사용할 때 느림으로 표시됩니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>RPO: 오프사이트 노드 HADR</td>
               <td>일반적으로 &lt; 15s</td>
               <td>오프사이트 DR이 비동기식임</td>
             </tr>
             <tr>
-              <td></td>
               <td>RTO: 오프사이트 노드 HADR</td>
               <td>&lt; 3분</td>
               <td>콘솔 단추 또는 API를 사용하여 시작해야 함</td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable3" tab-title="System configurations" tab-group="fs">
+          <caption caption-side="top">표 3. 시스템 구성</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>시스템 구성</td>
               <td>최대 RAM 및 코어 수</td>
               <td>1TB RAM, 48개의 코어</td>
               <td>Precise Performance XL 플랜에 적용</td>
             </tr>
             <tr>
-              <td></td>
               <td>최대 스토리지</td>
               <td>11TB</td>
               <td>Precise Performance XL 플랜에 적용됩니다. 데이터와 로그 모두에 사용할 디스크입니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>Flex: 기본 플랜</td>
               <td>4GB RAM, 1개의 코어, 2GB 디스크</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>Flex: 최대 RAM 및 코어 수</td>
               <td>128GB RAM, 32개의 코어</td>
               <td>더 높은 사양이 필요하십니까? Precise Performance 플랜을 사용하거나 IBM 지원 센터에 문의하십시오.</td>
             </tr>
             <tr>
-              <td></td>
               <td>Flex: 최대 스토리지</td>
               <td>4TB</td>
               <td>데이터와 로그 모두에 사용할 디스크입니다. 더 높은 사양이 필요하십니까? Precise Performance 플랜을 사용하거나 IBM 지원 센터에 문의하십시오.</td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable4" tab-title="Maintenance policies & SLAs" tab-group="fs">
+          <caption caption-side="top">표 4. 유지보수 정책 및 SLA</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>유지보수 정책 &amp; SLA</td>
               <td>고가용성 플랜</td>
               <td>99.99%</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>단일 서버 플랜</td>
               <td>99.5%</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>오프사이트 DR만 해당</td>
               <td>99.5%</td>
               <td>99.99% 달성을 위해서는 추가 로컬 HA를 사용해야 함</td>
             </tr>
             <tr>
-              <td></td>
               <td>유지보수 정책</td>
               <td>Y</td>
-              <td><a href="https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html" target="_blank">세부사항 읽기 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://developer.ibm.com/answers/questions/439146/where-can-i-find-detail-about-maintenance-and-noti.html" target="_blank" class="external">세부사항 읽기</a></td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable5" tab-title="Security compliances" tab-group="fs">
+          <caption caption-side="top">표 5. 보안 준수</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>보안 준수</td>
               <td>HIPAA 준비</td>
               <td>Y</td>
               <td>Flex 등의 모든 유료 플랜. IBM 지원 센터에서 HIPAA 모드를 요청해야 합니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>HITRUST</td>
-              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 내 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">로드맵 내</a></td>
               <td>이제 HITRUST에 Db2 Hosted를 사용할 수 있음</td>
             </tr>
             <tr>
-              <td></td>
               <td>국제 표준화 기구(ISO)</td>
               <td>Y</td>
               <td>ISO 27001, 27002, 27017 및 27018</td>
             </tr>
             <tr>
-              <td></td>
               <td>SOC(Service Organization Controls))</td>
               <td>Y</td>
               <td>SOC 2 유형 2</td>
             </tr>
             <tr>
-              <td></td>
               <td>GDPR</td>
               <td>Y</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>EU Cloud</td>
               <td>Y</td>
               <td>프랑크프루트 지역을 사용합니다. EU에서 물리적으로 지원이 제공됩니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>전체 준수 목록</td>
               <td>Y</td>
-              <td><a href="https://www.ibm.com/support/knowledgecenter/en/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" target="_blank">보안 준수 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://www.ibm.com/support/knowledgecenter/en/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/compliances.html" target="_blank" class="external">보안 준수</a></td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable6" tab-title="Backup & restore" tab-group="fs">
+          <caption caption-side="top">표 6. 백업 및 복원</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>백업 &amp; 복원</td>
               <td>일별 백업</td>
               <td>Y</td>
               <td>14일 동안의 일별 백업</td>
             </tr>
             <tr>
-              <td></td>
               <td>특정 시점 자체 복구</td>
               <td>2018년 11월 15일부터 사용 가능</td>
               <td><a href="/docs/services/Db2onCloud?topic=Db2onCloud-bnr#point-in-time">특정 시점 복원</a></td>
             </tr>
             <tr>
-              <td></td>
               <td>오프사이트에 백업 보관</td>
               <td>요청 시</td>
               <td>2018년 12월 1일부터 사용 가능. 오프사이트가 기본값입니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>최대 10년까지 백업 보관</td>
               <td>요청 시</td>
               <td>2018년 12월 1일부터 사용 가능. 지원 티켓이 필요합니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>복원 없이 이전 데이터 조회</td>
               <td>Y</td>
-              <td><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a>를 설정해야 합니다.</td>
+              <td><a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a>를 설정해야 합니다.</td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable7" tab-title="Networking, security, & VMs" tab-group="fs">
+          <caption caption-side="top">표 7. 네트워킹, 보안 및 VM</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>네트워킹, 보안 &amp; VM</td>
-              <td>단일 테넌트 가상 머신</td>
+              <td>싱글 테넌트 가상 머신</td>
               <td>Y</td>
-              <td>Flex 등의 모든 유료 플랜은 단일 테넌트 VM 또는 베어메탈입니다.</td>
+              <td>Flex 등의 모든 유료 플랜은 싱글 테넌트 VM 또는 베어메탈입니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>ICIAE</td>
               <td>Y</td>
               <td>IBM 지원 센터에서 요청. ICIAE가 기존 서비스 환경을 요청하는 경우 IBM 지원 센터에서 사용자 데이터를 ICIAE 환경으로 마이그레이션해야 합니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>VPN</td>
               <td>Y</td>
               <td>IBM 지원 센터에서 요청</td>
             </tr>
             <tr>
-              <td></td>
               <td>온디스크 암호화</td>
               <td>Y</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>SSL/TLS 연결</td>
               <td>Y</td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>IP 화이트리스팅</td>
               <td>일부</td>
               <td>Db2 사용자 레벨에서 사용 가능. 네트워크 레벨의 경우 ICIAE 또는 이와 유사한 항목을 고려하십시오.</td>
             </tr>
             <tr>
-              <td></td>
               <td>키 보호(고유 키 가져오기)</td>
-              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 내 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">로드맵 내</a></td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>MIS/상호연결된 서비스</td>
-              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 내 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">로드맵 내</a></td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>최대 동시 연결 한계: <strong>무료 플랜</strong></td>
               <td>Y</td>
               <td>최대: 5개의 연결</td>
             </tr>
             <tr>
-              <td></td>
               <td>최대 동시 연결 한계: <strong>유료 플랜</strong></td>
               <td>N</td>
               <td>무제한 연결</td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable8" tab-title="Pricing & purchasing" tab-group="fs">
+          <caption caption-side="top">표 8. 가격 및 구매</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>가격 &amp; 구매</td>
               <td>BYOL 할인</td>
               <td>Y</td>
-              <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank">공지사항 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-byol" target="_blank" class="external">공지사항</a></td>
             </tr>
             <tr>
-              <td></td>
               <td>IBM Cloud에서 사용 가능</td>
               <td>Y</td>
               <td>구독 및 종량과금제 모두</td>
             </tr>
             <tr>
-              <td></td>
               <td>소프트웨어 견적 주문을 통해 사용 가능</td>
               <td>Y</td>
-              <td>Flex 등의 모든 플랜. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank">파트 &amp; 세부사항 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td>Flex 등의 모든 플랜. <a href="https://ibm.biz/db2oncloud-parts-public" target="_blank" class="external">파트 &amp; 세부사항</a></td>
             </tr>
             <tr>
-              <td></td>
               <td>HDMP(Hybrid Data Management Platform)에서 사용 가능</td>
               <td>Y</td>
-              <td>Flex 플랜만 해당합니다. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank">HDMP에 관한 세부사항 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td>Flex 플랜만 해당합니다. <a href="https://www.ibm.com/ca-en/marketplace/hybrid-data-management-platform" target="_blank" class="external">HDMP에 대한 세부사항</a></td>
             </tr>
             <tr>
-              <td></td>
               <td>일별 비용 청구</td>
               <td>Y</td>
               <td>Flex 플랜에 대한 비용 청구는 일별 피크 사용량을 기반으로 합니다. 예를 들어 하루 한 시간 동안 2~8개의 코어를 스케일링하는 경우 해당 일에 대해서만 코어 8개의 비용을 청구하고 그 달의 다른 모든 날에 대해서는 코어 2개의 비용을 청구합니다.</td>
             </tr>
             <tr>
-              <td></td>
               <td>시간별 비용 청구</td>
-              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">로드맵 내 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘" title="외부 링크 아이콘"></a></td>
+              <td><a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">로드맵 내</a></td>
               <td>-</td>
             </tr>
             <tr>
-              <td></td>
               <td>기본 가격 메트릭</td>
               <td>월별</td>
               <td>가격이 월 단위로 책정됩니다(예: 월별 $189 USD). 비례 배분된 월별 가격은 서비스가 종료된 달에 활성화된 서비스 일 수를 기반으로 합니다. <a href="/docs/services/Db2onCloud?topic=Db2onCloud-plans_pricing#examples">예</a></td>
             </tr>
+          </tbody>
+        </table>
+        <table class="simple-tab-table" id="simpletabtable9" tab-title="Deployment & scaling durations" tab-group="fs">
+          <caption caption-side="top">표 9. 배치 및 스케일링 기간</caption>
+          <thead>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <th>기능</th>
+              <th>지원 여부?</th>
+              <th>설명</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>배치 &amp; 스케일링 기간</td>
               <td>댈러스</td>
               <td><strong>배치</strong>: &lt; 5분. <strong>스케일</strong>: &lt; 45분.</td>
               <td>Flex 플랜만 해당, 재고에 따라 다름</td>
             </tr>
             <tr>
-              <td></td>
               <td>기타 미국 남부</td>
               <td><strong>배치</strong>: 1일. <strong>스케일</strong>: 8시간.</td>
               <td>일부 지역은 다른 지역보다 짧음</td>
             </tr>
             <tr>
-              <td></td>
               <td>프랑크푸르트 &amp; 런던</td>
               <td><strong>배치</strong>: &lt; 5분. <strong>스케일</strong>: 2시간.</td>
               <td>Flex 플랜만 해당, 재고에 따라 다름</td>
             </tr>
             <tr>
-              <td></td>
               <td>기타 EU</td>
               <td><strong>배치</strong>: 3~5일. <strong>스케일</strong>: 1~2일.</td>
               <td>일부 지역은 다른 지역보다 짧음</td>
             </tr>
             <tr>
-              <td></td>
               <td>시드니</td>
               <td><strong>배치</strong>: &lt; 1시간. <strong>스케일</strong>: 2시간.</td>
               <td>Flex 플랜만 해당, 재고에 따라 다름</td>
             </tr>
             <tr>
-              <td></td>
               <td>기타 AP</td>
               <td><strong>배치</strong>: 3~5일. <strong>스케일</strong>: 3~5일.</td>
               <td>일부 지역은 다른 지역보다 짧음. AP에서는 볼륨이 작을수록 인프라 프로비저닝 시간이 느려집니다.</td>

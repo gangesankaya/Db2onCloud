@@ -31,11 +31,12 @@
       <section id="section-bnr">
         <h1 id="bnr">Backup e restauração</h1>
         <p class="shortdesc">Para planos pagos, backups criptografados do banco de dados são feitos diariamente. Um backup diário é mantido para cada um dos últimos 14 dias.</p>
-        <p>Além dos backups padrão, é possível usar a <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a>          para manter dados históricos para outros propósitos, como para consultar instantaneamente dados antigos ou para auditoria simplificada. Também é possível executar suas próprias exportações usando o IBM Data Studio ou qualquer ferramenta do Db2.</p>
+        <p>Além dos backups padrão, é possível usar o <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a> para manter dados históricos
+          para outros propósitos, tais como consultar dados antigos instantaneamente ou auditoria simplificada. Também é possível executar suas próprias exportações usando o IBM Data Studio ou qualquer ferramenta do Db2.</p>
         <p>Para obter informações sobre restaurações point-in-time, consulte <a href="#point-in-time">Restauração point-in-time</a>.</p>
         <p>Todos os planos pagos geralmente fazem uso do IBM Cloud Object Storage (COS) para manter os backups externos em três diferentes data centers. No entanto, Sydney e determinados data centers menores podem não suportar a replicação externa com o
           IBM COS neste momento. Consulte a <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">Documentação do IBM COS</a> da sua região para determinar quais regiões suportam replicação externa.</p>
-        <p>Também é possível usar a <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">CLI do IBM Lift <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo" title="Ícone de link externo"></a> para importar dados no Db2 on Cloud.</p>
+        <p>Também é possível usar o <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank" class="external">IBM Lift CLI</a> para importar dados para o Db2 on Cloud.</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">Restauração point-in-time</h2>
           <p>O Db2 on Cloud incluiu um recurso de restauração point-in-time. É possível restaurar para um momento exato por meio de seus backups. Atualmente, para a maioria dos clientes, deve-se solicitar suporte para ativar esse recurso. Consulte o planejamento
@@ -52,26 +53,27 @@
               <p>Selecione a estratégia de restauração <strong>Point-in-time</strong> e selecione uma data específica para a qual deseja restaurar o banco de dados. O processo de restauração point-in-time seleciona o backup mais próximo à data específica
                 solicitada do conjunto de backups retidos feitos durante os 14 dias anteriores. </p>
               <p class="note">O processo de restauração point-in-time invalida qualquer backup retido anteriormente com datas após a data específica selecionada devido a uma divergência resultante na linha de tempo.</p>
-              <p><img src="images/pit_restore_1.png" alt="Visualização da seleção destacada da estratégia de restauração point-in-time"></p>
+              <p><img src="images/pit_restore_1.png" alt="Visualização da seleção destacada da estratégia de restauração de momento" title="Página do console de backup e restauração"></p>
             </li>
             <li>
-              <p>Confirme que você deseja continuar com as suas seleções de restauração. Depois de iniciar a operação de restauração, não é possível mudar a solicitação.<br><img src="images/pit_restore_2.png" alt="Visualização do diálogo de confirmação da restauração point-in-time"></p>
+              <p>Confirme que você deseja continuar com as suas seleções de restauração. Depois de iniciar a operação de restauração, não é possível mudar a solicitação.<br><img src="images/pit_restore_2.png" alt="Visualização do diálogo de confirmação de restauração de momento"
+                  title="Diálogo de confirmação"></p>
             </li>
             <li>
               <p>O processo de restauração está inicializando.
-                <img src="images/pit_restore_3.png" alt="Visualização da inicialização da restauração point-in-time"></p>
+                <img src="images/pit_restore_3.png" alt="Visualização da inicialização da restauração de momento" title="Inicialização da restauração de momento"></p>
             </li>
             <li>
               <p>Restaurando o banco de dados para o momento selecionado.
-                <img src="images/pit_restore_4.png" alt="Visualização do progresso da restauração point-in-time"></p>
+                <img src="images/pit_restore_4.png" alt="Visualização do progresso da restauração de momento" title="Progresso da restauração"></p>
             </li>
             <li>
-              <p>Um novo ponto de backup está sendo criado. O banco de dados restaurado para o momento está pronto para uso.
-                <img src="images/pit_restore_5.png" alt="Visualização da criação do novo ponto de backup"></p>
+              <p>Um novo ponto de backup está sendo criado. O banco de dados restaurado de momento está pronto para uso.
+                <img src="images/pit_restore_5.png" alt="Visualização da criação de um ponto de backup" title="Criando um ponto de backup"></p>
             </li>
             <li>
-              <p>A operação de restauração foi concluída com êxito.
-                <img src="images/pit_restore_6.png" alt="Visualização da conclusão bem-sucedida da operação de restauração"></p>
+              <p>A operação de restauração foi concluída com sucesso.
+                <img src="images/pit_restore_6.png" alt="Visualização da conclusão bem-sucedida da restauração" title="Conclusão bem-sucedida"></p>
             </li>
           </ol>
         </section>

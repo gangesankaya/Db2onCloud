@@ -10,7 +10,8 @@
   <meta name="dcterms.date" content="2019-01-10">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
-  <meta name="description" content="Puede crear una política de auditoría de base de datos que le dé la capacidad de auditar diferentes categorías de sucesos almacenados en las tablas de auditoría de sucesos de la base de datos. Para obtener más información, consulte ">
+  <meta name="description" content="Puede crear una política de auditoría de base de datos que le dé la capacidad de auditar diferentes categorías de sucesos almacenados en las tablas de auditoría de sucesos de la base de datos. Para obtener más información, consulte
+">
   <meta name="source.format" content="markdown">
 
 
@@ -32,21 +33,23 @@
         <h1 id="aud-log-mon">Auditoría, registro y supervisión</h1>
         <section id="section-auditing">
           <h2 id="auditing">Auditoría</h2>
-          <p>Puede crear una política de auditoría de base de datos que le dé la capacidad de auditar diferentes categorías de sucesos almacenados en las tablas de auditoría de sucesos de la base de datos. Para obtener más información, consulte <a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html"
-              target="_blank">Directrices de políticas de auditoría <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+          <p>Puede crear una política de auditoría de base de datos que le dé la capacidad de auditar diferentes categorías de sucesos almacenados en las tablas de auditoría de sucesos de la base de datos. Para obtener más información, consulte
+            <a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.security.doc/doc/audit_policy_guidelines.html" target="_blank" class="external">Directrices de política de auditoria</a>.</p>
           <p>También puede auditar y realizar el seguimiento de cambios a la base de datos utilizando los métodos siguientes:</p>
           <ul>
             <li>Mediante la creación de un supervisor de sucesos de <code>CHANGE HISTORY</code>, puede consultar la tabla del supervisor de sucesos para determinar lo que se ha hecho dentro de la base de datos y quién lo ha hecho. Para obtener más información,
-              consulte <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank">Supervisor de sucesos <code>CHANGE HISTORY</code> <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</li>
+              consulte
+              <a href="https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.db2.luw.sql.ref.doc/doc/r0059363.html" target="_blank" class="external"><code>CHANGE HISTORY</code> supervisor de sucesos</a>.</li>
             <li>Time Travel Query facilita la tarea de almacenar todos los cambios en los datos y de consultar los datos antiguos en función de un punto en el tiempo seleccionado. Para utilizar este método de auditoría, asegúrese de configurar primero las
-              tablas para que den soporte a Time Travel Query. Para obtener más información, consulte <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank">Consulta de viaje en el tiempo <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a></li>
+              tablas para que den soporte a Time Travel Query. Para obtener más información, consulte <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl/" target="_blank" class="external">Time Travel Query</a></li>
           </ul>
-          <p>Para obtener más información sobre auditar y rastrear cambios en la base de datos, consulte <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank">Cómo puedo auditar y efectuar un seguimiento de los cambios <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+          <p>Para obtener más información sobre la auditoría y seguimiento de cambios en la base de datos, consulte
+            <a href="https://developer.ibm.com/answers/questions/427780/how-can-i-audit-or-track-changes-dropped-tables-to.html" target="_blank" class="external">¿Cómo puedo auditar y efectuar un seguimiento de los cambios?</a>.</p>
         </section>
         <section id="section-log_mon">
           <h2 id="log_mon">Registro y supervisión</h2>
           <p>La supervisión y el registro son parte del servicio; sin embargo, no están expuestos directamente al usuario final. En lugar de eso, el personal operativo de IBM utiliza la infraestructura para resolver problemas. </p>
-          <p>Para consultar la disponibilidad del Rastreador de disponibilidad, consulte la <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank">hoja de ruta <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo" title="Icono de enlace externo"></a>.</p>
+          <p>Para disponibilidad de Activity Tracker, consulte la <a href="https://ibm.biz/db2oncloud-roadmap" target="_blank" class="external">hoja de ruta</a>.</p>
           <p>Puede conectarse mediante un cliente de línea de mandatos de Db2, como CLPPlus, para acceder a información detallada y diagnósticos.</p>
           <section id="section-basic_overview">
             <h3 id="basic_overview">Una visión general básica:</h3>

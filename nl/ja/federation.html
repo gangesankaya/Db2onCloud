@@ -6,8 +6,8 @@
   <meta name="DC.Publisher" content="IBM Corporation">
   <meta name="DC.rights" content="&#xA9; Copyright IBM Corporation 2014, 2019">
   <meta name="IBM.Country" content="ZZ">
-  <meta name="DC.date" content="2018-10-26">
-  <meta name="dcterms.date" content="2018-10-26">
+  <meta name="DC.date" content="2019-05-31">
+  <meta name="dcterms.date" content="2019-05-31">
   <meta name="keywords" content="{{ keywords }}">
   <meta name="subcollection" content="Db2onCloud">
   <meta name="description" content="Db2 データ仮想化 (フェデレーション) は Db2 on Cloud でサポートされています。 データ仮想化によって、組織内の任意の場所にある複数の分散データベース上にあるすべてのデータに対して単一照会アクセスが可能になります。 クラウドとオンプレミスの両方の Db2 または Informix のデータ・ソースにあるデータにアクセスできます。 ">
@@ -132,27 +132,27 @@ located in the cloud and on-premises -->
             <p>Db2 on Cloud コンソールから、以下を行います。</p>
             <ol>
               <li>
-                <p>ターゲット・マシンと通信するサーバーを作成します。<br>
+                <p>ターゲット・マシンと通信するためのサーバーを作成します。<br>
                   <code>create server &lt;server_name&gt; type dashdb version 11 wrapper drda authorization &quot;&lt;admin_user_on_target&gt;&quot; password &quot;&lt;admin_password_on_target&gt;&quot; options (host &#39;&lt;target_host_name&gt;&#39;, port &#39;50000&#39;, dbname &#39;bludb&#39;)</code></p>
-                <p>例えば、以下のようにします。<br>
+                <p>例えば、以下を行えます。<br>
                   <code>create server db2server type dashdb version 11 wrapper drda authorization &quot;admin2&quot; password &quot;YYYY&quot; options (host &#39;targetdotcom&#39;, port &#39;50000&#39;, dbname &#39;bludb&#39;)</code></p>
               </li>
               <li>
-                <p>admin2 のユーザー・マッピングを作成します。<br>
+                <p>admin2 用のユーザー・マッピングを作成します。<br>
                   <code>create user mapping for &lt;admin_user&gt; server db2server options (remote_authid &#39;&lt;admin_user_on_target&gt;&#39;, remote_password &#39;&lt;admin_password_on_target&gt;&#39;)</code></p>
-                <p>例えば、以下のようにします。<br>
+                <p>例えば、以下を行えます。<br>
                   <code>create user mapping for admin1 server db2server options (remote_authid &#39;admin2&#39;, remote_password &#39;YYYY&#39;)</code></p>
               </li>
               <li>
                 <p>データベースのニックネームを作成します。<br>
                   <code>create nickname &lt;nickname&gt; for &lt;server_name&gt;.&lt;schema_name&gt;.&lt;table_name&gt;</code></p>
-                <p>例えば、以下のようにします。<br>
+                <p>例えば、以下を行えます。<br>
                   <code>create nickname ntest1 for db2server.admin2.testdata</code></p>
               </li>
               <li>
                 <p>ターゲット・サーバーからデータを取得できることをテストします。<br>
                   <code>select * from &lt;nickname&gt;</code></p>
-                <p>例えば、以下のようにします。<br>
+                <p>例えば、以下を行えます。<br>
                   <code>select * from ntest1</code></p>
               </li>
             </ol>
@@ -160,9 +160,9 @@ located in the cloud and on-premises -->
         </section>
         <section id="section-more_info">
           <h2 id="more_info">追加情報</h2>
-          <p>データ仮想化 (フェデレーション) について詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/fcontainer.html" target="_blank">フェデレーション <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
-          <p>デフォルトでは、Db2 on Cloud は Informix および Db2 (オンプレミス Db2 および Db2 Warehouse を含む) をサポートします。 特定のデータ・ソースのサポートを IBM サポートが要求に応じてインストールしなければならない場合があります。 フェデレーションでサポートされるデータ・ソースについて詳しくは、
-            <a href="https://www.ibm.com/support/docview.wss?uid=swg27050561" target="_blank">フェデレーションでサポートされるデータ・ソース <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン" title="外部リンク・アイコン"></a> を参照してください。</p>
+          <p>データ仮想化 (フェデレーション) について詳しくは、<a href="https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/fcontainer.html" target="_blank" class="external">フェデレーション</a>を参照してください。</p>
+          <p>デフォルトでは、Db2 on Cloud は Informix および Db2 (オンプレミス Db2 および Db2 Warehouse を含む) をサポートします。 特定のデータ・ソースのサポートを IBM サポートが要求に応じてインストールしなければならない場合があります。 フェデレーションでサポートされるデータ・ソースについて詳しくは、<a href="https://www.ibm.com/support/docview.wss?uid=swg27050561" target="_blank"
+              class="external">フェデレーションでサポートされるデータ・ソース</a>を参照してください。</p>
         </section>
       </section>
     </article>

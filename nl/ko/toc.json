@@ -16,7 +16,7 @@
             },
             {
                 "name": "href",
-                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting-started"
+                "value": "/docs/services/Db2onCloud?topic=Db2onCloud-getting-started#getting-started"
             },
             {
                 "name": "path",
@@ -442,6 +442,11 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "href": "services/Db2onCloud/cdc.html#cdc",
+                        "label": "InfoSphere CDC",
+                        "id": "Db2onCloud-cdc"
                     }
                 ]
             },
@@ -845,7 +850,7 @@
             },
             {
                 "href": "https://developer.ibm.com/answers/index.html",
-                "label": "IBM 개발자 답변",
+                "label": "IBM Developer Answers",
                 "properties": [
                     {
                         "name": "navgroup",
@@ -875,7 +880,7 @@
             },
             {
                 "href": "https://www.ibm.com/cloud/garage/demo/try-db2-on-cloud",
-                "label": "안내 데모: 웹 콘솔을 통해 공통 태스크 완료",
+                "label": "안내 데모: 웹 콘솔을 통해 공통 태스크 수행",
                 "properties": [
                     {
                         "name": "navgroup",

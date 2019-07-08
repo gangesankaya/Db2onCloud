@@ -31,11 +31,11 @@
       <section id="section-bnr">
         <h1 id="bnr">备份和复原</h1>
         <p class="shortdesc">对于付费套餐，每天完成加密数据库备份。保留最近 14 天中每天的每日备份。</p>
-        <p>除标准备份外，还可以使用 <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank">Time Travel Query <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a> 来保留历史数据以用于其他目的，例如即刻查询旧数据或简化审计流程。也可以使用
-          IBM Data Studio 或任何 Db2 工具自行执行导出操作。</p>
+        <p>除标准备份外，还可以使用 <a href="https://developer.ibm.com/answers/questions/426878/how-do-i-use-time-travel-query-in-db2-or-db2-on-cl.html" target="_blank" class="external">Time Travel Query</a> 来保留历史数据以用于其他目的，例如即刻查询旧数据或简化审计流程。也可以使用 IBM Data Studio 或任何
+          Db2 工具自行执行导出操作。</p>
         <p>有关时间点复原的信息，请参阅<a href="#point-in-time">时间点复原</a>。</p>
         <p>所有付费套餐通常都使用 IBM Cloud Object Storage (COS) 将备份保存在 3 个不同的非现场数据中心。但是，悉尼和某些较小的数据中心目前可能不支持使用 IBM COS 进行非现场复制。要确定哪些区域支持非现场复制，请查看适用于您区域的 <a href="/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-endpoints#endpoints">IBM COS 文档</a>。</p>
-        <p>此外，还可以使用 <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank">IBM Lift CLI <img src="../../icons/launch-glyph.svg" alt="外部链接图标" title="外部链接图标"></a> 将数据导入到 Db2 on Cloud 中。</p>
+        <p>您还可以使用 <a href="https://www.lift-cli.cloud.ibm.com/" target="_blank" class="external">IBM Lift CLI</a> 将数据导入到 Db2 on Cloud。</p>
         <section id="section-point-in-time">
           <h2 id="point-in-time">时间点复原</h2>
           <p>Db2 on Cloud 中添加了时间点复原功能。您可以从备份复原到准确的时间点。现在，对于大多数客户，必须向支持人员请求激活此功能。请参阅以下部署安排。</p>
@@ -50,26 +50,26 @@
             <li>
               <p>选择<strong>时间点</strong>复原策略，然后选择要复原数据库的时间点日期。时间点复原过程会从过去 14 天内保留的备份池中选择最接近您的请求时间点日期的备份。 </p>
               <p class="note">由于时间轴的结果差异，时间点复原过程会使保留日期晚于所选时间点日期的任何先前备份无效。</p>
-              <p><img src="images/pit_restore_1.png" alt="突出显示所选时间点复原策略的视图"></p>
+              <p><img src="images/pit_restore_1.png" alt="突出显示所选时间点复原策略的视图" title="备份和复原控制台页面"></p>
             </li>
             <li>
-              <p>确认您要继续按照所选复原选项操作。启动复原操作后，将无法更改请求。<br><img src="images/pit_restore_2.png" alt="时间点复原确认对话框的视图"></p>
+              <p>确认您要继续按照所选复原选项操作。启动复原操作后，将无法更改请求。<br><img src="images/pit_restore_2.png" alt="时间点复原确认对话框的视图" title="“确认”对话框"></p>
             </li>
             <li>
               <p>复原过程正在初始化。
-                <img src="images/pit_restore_3.png" alt="时间点复原初始化的视图"></p>
+                <img src="images/pit_restore_3.png" alt="时间点复原初始化的视图" title="时间点复原初始化"></p>
             </li>
             <li>
               <p>将数据库复原到所选时间点。
-                <img src="images/pit_restore_4.png" alt="时间点复原进度的视图"></p>
+                <img src="images/pit_restore_4.png" alt="时间点复原进度的视图" title="复原进度"></p>
             </li>
             <li>
               <p>正在创建新的备份点。时间点复原的数据库已就绪。
-                <img src="images/pit_restore_5.png" alt="创建新备份点的视图"></p>
+                <img src="images/pit_restore_5.png" alt="创建备份点的视图" title="创建备份点"></p>
             </li>
             <li>
-              <p>复原操作成功完成。
-                <img src="images/pit_restore_6.png" alt="成功完成复原操作的视图"></p>
+              <p>已成功完成复原操作。
+                <img src="images/pit_restore_6.png" alt="成功完成复原的视图" title="成功完成"></p>
             </li>
           </ol>
         </section>
