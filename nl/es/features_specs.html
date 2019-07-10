@@ -78,7 +78,8 @@
             </tr>
           </tbody>
         </table>
-        <table>
+        <table class="simple-tab-table" id="simpletabtable2" tab-title="High availability & replication" tab-group="fs">
+          <caption caption-side="top">Tabla 2. Alta disponibilidad y réplicas</caption>
           <thead>
             <tr>
               <th>Característica</th>
@@ -110,14 +111,45 @@
             <tr>
               <td>Utilizar como HADR para local</td>
               <td>No</td>
-              <td>Utilizar CDC. Para obtener información, consulte</td>
+              <td>Utilizar CDC. Para obtener información, consulte <a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank" class="external">¿Cómo puedo migrar o sincronizar los datos de Db2 a Db2 on Cloud?</a></td>
+            </tr>
+            <tr>
+              <td>Migración tras error autónoma - Alta disponibilidad</td>
+              <td>Sí</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Migración tras error autónoma - DR externo</td>
+              <td>No</td>
+              <td>Utilizar el botón o la API</td>
+            </tr>
+            <tr>
+              <td>La IP se mueve con la migración tras error</td>
+              <td>Sí</td>
+              <td>Solo alta disponibilidad local. Sin HADR externa</td>
+            </tr>
+            <tr>
+              <td>RPO: Alta disponibilidad</td>
+              <td>0 s</td>
+              <td>HA es síncrona</td>
+            </tr>
+            <tr>
+              <td>RTO: Alta disponibilidad</td>
+              <td>Normalmente 0-10 min</td>
+              <td>Con código de reintento, aparecerá como lentitud con ACR de Db2</td>
+            </tr>
+            <tr>
+              <td>RPO: Nodo HADR externo</td>
+              <td>Normalmente &lt; 15 s</td>
+              <td>El DR externo es asíncrono</td>
+            </tr>
+            <tr>
+              <td>RTO: Nodo HADR externo</td>
+              <td>&lt; 3 min</td>
+              <td>Debe iniciarse con botón de consola o API</td>
             </tr>
           </tbody>
         </table>
-        <p class="simple-tab-table" caption="Tabla 2. Alta disponibilidad y réplicas" caption-side="top" id="simpletabtable2" tab-title="High availability & replication" tab-group="fs"><a href="https://developer.ibm.com/answers/questions/426111/how-can-i-migrate-from-db2-to-db2-on-cloud/" target="_blank" class="external">¿Cómo puedo migrar o sincronizar los datos de Db2 a Db2 on Cloud?</a> | | Migración tras error autónoma -
-          Alta disponibilidad | Sí | - | | Migración tras error autónoma - DR externo | No | Utilizar el botón o la API | | La IP se mueve con la migración tras error | Sí | Solo alta disponibilidad local. Sin HADR externa | | RPO: Alta disponibilidad
-          | 0 s | HA es síncrona | | RTO: Alta disponibilidad | Normalmente 0-10 min | Con código de reintento, aparecerá como lentitud con ACR de Db2 | | RPO: Nodo HADR externo | Normalmente &lt; 15 s | El DR externo es asíncrono | | RTO: Nodo HADR externo
-          | &lt; 3 min | Debe iniciarse con botón de consola o API |</p>
         <table class="simple-tab-table" id="simpletabtable3" tab-title="System configurations" tab-group="fs">
           <caption caption-side="top">Tabla 3. Configuraciones del sistema</caption>
           <thead>
