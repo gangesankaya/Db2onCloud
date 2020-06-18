@@ -40,7 +40,7 @@ You can also use [IBM Lift CLI](https://www.lift-cli.cloud.ibm.com/){:external} 
 
 {{site.data.keyword.Db2_on_Cloud_short}} added a point-in-time restore capability for systems in {{site.data.keyword.Bluemix_notm}} Public. You can restore to an exact point in time from your backups. 
 
-The following are a selected example of screen captures of the web console UI in which the point-in-time restore operation is initiated and its progress is indicated:
+The following are a selected example of screen captures of the web console UI in which the point-in-time restore operation offers
 
 1. Select the **Point in Time** restore strategy and select a point-in-time date to which you want to restore the database. The point-in-time restore process selects the backup closest to your requested point-in-time date out of the pool of retained backups made during the previous 14 days. 
 
