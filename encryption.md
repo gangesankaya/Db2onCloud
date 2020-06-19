@@ -28,8 +28,10 @@ The {{site.data.keyword.Db2_on_Cloud_long}} service has security built into all 
 {: shortdesc}
 
 The following methods are used to secure your data:
-- Data at rest and database backups are encrypted using NIST SP 800-131A compliant cryptographic algorithms
-- Data in motion is encrypted through SSL/TLS
+-  The default keys are managed by Key Protect. Bring-your-own-key (BYOK) for encryption is also available through Key Protect Integration.
+backups are encrypted. 
+- Data in motion is encrypted through SSL/TLS. The current supported version of this encryption is TLS 1.2.
+- All Db2 on Cloud storage is provided on storage encrypted with LUKS using AES-256.
 - Backplane network connectivity is supported through IBM Cloud Service Endpoints
 - Database-level security is supported through Role-Based Access Control (RBAC) and Row and Column Access Control (RCAC)
 
