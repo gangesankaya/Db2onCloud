@@ -43,6 +43,47 @@ The easiest way to connect to your data is by way of the public host name that w
 4. After the credentials are created, under the `Actions` column, click **View credentials**.
 5. In the following JSON document example, note the contents of the hostname, password, and username fields. You use these three components to make the public endpoint connection:
 
+## Current Plans Connection String Breakdown
+
+### The Db2 on Cloud Section
+
+The "postgres" section contains information that is suited to applications that make connections to Db2 on Cloud.
+
+Field Name|Index|Description
+----------|-----|-----------
+`Type`||Type of connection - for Db2 on Cloud, it is "URI"
+`Scheme`||Scheme for a URI - for Db2 on Cloud, it is "Db2 on Cloud"
+`Path`||Path for a URI - for Db2 on Cloud, it is the database name. The default is `ibmclouddb`.
+`Authentication`|`Username`|The username that you use to connect.
+`Authentication`|`Password`|A password for the user - might be shown as `$PASSWORD`
+`Authentication`|`Method`|How authentication takes place; "direct" authentication is handled by the driver.
+`Hosts`|`0...`|A hostname and port to connect to
+`Composed`|`0...`|A URI combining Scheme, Authentication, Host, and Path
+`Certificate`|`Name`|The allocated name for the self-signed certificate for database deployment
+`Certificate`|Base64|A base64 encoded version of the certificate.
+`Host_ROS` |  | A hostname and port to connect to read on standby
+{: caption="Table 1. `Db2 on Cloud`/`URI` connection information" caption-side="top"}
+
+* `0...` indicates that there might be one or more of these entries in an array.
+
+### The CLI Section
+
+The "CLI" section contains information that is suited for connecting with `psql` .
+
+Field Name|Index|Description
+----------|-----|-----------
+`Bin`||The recommended binary to create a connection; in this case it is `psql`.
+`Composed`||A formatted command to establish a connection to your deployment. The command combines the `Bin` executable, `Environment` variable settings, and uses `Arguments` as command line parameters.
+`Environment`||A list of key/values you set as environment variables.
+`Arguments`|0...|The information that is passed as arguments to the command shown in the Bin field.
+`Certificate`|Base64|A self-signed certificate that is used to confirm that an application is connecting to the appropriate server. It is base64 encoded.
+`Certificate`|Name|The allocated name for the self-signed certificate.
+`Type`||The type of package that uses this connection information; in this case `cli`. 
+{: caption="Table 2. `psql`/`cli` connection information" caption-side="top"}
+
+* `0...` indicates that there might be one or more of these entries in an array.
+
+## Legacy Plans
    ```
    {
      "hostname": "dashdb-enterprise-xxxxxxx.services.dal.bluemix.net",
@@ -154,3 +195,6 @@ To establish a VPN connection to your cloud database behind a public endpoint, [
 After receipt of your request, {{site.data.keyword.cloud_notm}} technicians will open the appropriate firewall ports and whitelist the provided IP address. Communication and resolution to the request will be made through the {{site.data.keyword.cloud_notm}} Support case ticket.
 
 ![Public network access to {{site.data.keyword.cloud_notm}} through a VPN](images/public_connection_vpn.png "Graphical view of user to cloud connection"){: caption="Figure 2. Public network access to {{site.data.keyword.cloud_notm}} through a VPN" caption-side="bottom"}
+
+
+
