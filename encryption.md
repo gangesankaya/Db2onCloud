@@ -28,10 +28,10 @@ The {{site.data.keyword.Db2_on_Cloud_long}} service has security built into all 
 {: shortdesc}
 
 The following methods are used to secure your data:
--  The default keys are managed by Key Protect. Bring-your-own-key (BYOK) for encryption is also available through Key Protect Integration.
+-  The default keys are managed by [Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-importing-keys). Bring-your-own-key [BYOK](https://test.cloud.ibm.com/docs/Db2onCloud?topic=Db2onCloud-key-protect-v2) for encryption is also available through Key Protect Integration.
 backups are encrypted. 
 - Data in motion is encrypted through SSL/TLS. The current supported version of this encryption is TLS 1.2.
-- All Db2 on Cloud storage is provided on storage encrypted with LUKS using AES-256.
+- All Db2 on Cloud storage is provided on storage encrypted using AES-256 encryption.
 - Backplane network connectivity is supported through IBM Cloud Service Endpoints
 - Database-level security is supported through Role-Based Access Control (RBAC) and Row and Column Access Control (RCAC)
 
